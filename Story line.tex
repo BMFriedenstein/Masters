@@ -8,24 +8,42 @@
 	top=25mm,
 	bottom=25mm,
 }
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.7pt}
+\rhead{\leftmark}
+\cfoot{\thepage}
+\fancyhead[RO,RE]{\fontsize{10}{12}\selectfont\nouppercase\rightmark}
  
 \begin{document}
  
  
 \tableofcontents
- 
+\begin{abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\end{abstract}
+\chapter*{List of symbols}
+\addcontentsline{toc}{chapter}{List of symbols}
+\chapter*{Acronyms}
+\addcontentsline{toc}{chapter}{Acronyms}
+\chapter*{Glossary}
+\addcontentsline{toc}{chapter}{Glossary}
+
 \chapter{Introduction and background}
 \section{Preamble}
 	\section{Compressed air systems in the mining industry}
 	 \section{Characteristic inefficiencies within compressed air systems }
-	 \section{Present inefficiency identification methods}
+	 \section{Inefficiency identification methods in industry}
 	 \section{Problem statement}
-	 \section{Thesis overview}
+	 \section{Dissertation overview}
  
 \chapter{Literature study}
+	\section{Preamble}
 	\section{Identification of inefficiencies in compressed air systems}
-	\section{The use of simulation in DSM projects}
-	\section{Compressed air operational improvements in DSM projects}
+	\section{The use of simulation in industry}
+	\section{Compressed air operational improvements in industry}
+	\section{Conclusion}
 
 \chapter{Developing a periodic simulation process}
 	\section{Compressed air system investigation}
@@ -34,14 +52,17 @@
 	\section{Periodic implementation}
 	\section{Analysis of data}
 	\section{Identifying and quantifying operational improvements}
+	\section{conclusion}
 	
 \chapter{Validation of Results}
+	\section{Preamble}
 	\section{Case study: Mine A}
 	\section{Case study: Mine B}
-	\section{Findings}
+	\section{Discussion of results}
+	\section{conclusion}
 
 	
 \chapter{Conclusion}
 	 \section{Conclusion}
-	 \section{Recommendations for further studies}
+	 \section{Recommendations for future studies}
 \end{document}
