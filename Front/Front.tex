@@ -1,0 +1,40 @@
+% Define document class
+\documentclass[hidelinks,pdftex,12pt,a4paper]{report}
+\usepackage{eso-pic}
+\usepackage{pdfpages}
+\usepackage[bindingoffset=0.5cm, top=2.5cm, bottom=2.5cm, left=0.5cm, right=1cm]{geometry}
+\newcommand\BackgroundPic{%
+\put(0,0){%
+\parbox[b][\paperheight]{\paperwidth}{%
+
+\centering
+\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{includes/frontpage.pdf}%
+\vfill
+}}}
+
+\begin{document}
+
+\pagestyle{empty}
+\pagenumbering{gobble}
+\AddToShipoutPicture*{\BackgroundPic}
+
+%\mbox{}
+
+\addtolength{\voffset}{0cm}
+%\vfill
+{\centering \Huge \textbf{The use of simulations to identify operational improvements on compressed air systems}\\[5cm]}
+{ \center \huge  \textbf{BM Friedenstein  \\[0.2cm] \large  28354516 - 2016} \\[2.5cm]}
+
+%\vfill
+\begin{flushleft}
+	{\centering \LARGE Dissertation submitted in fulfilment of the requirements for the degree {\color{blue} \textit{Magister}} in {\color{blue}Computer and Electronic Engineering} at the Potchefstroom Campus of the North-West University\\[3cm]
+	}
+	{\LARGE \setlength{\parindent}{0.5cm} Supervisor: Dr JF van Rensburg \\[3cm]
+	
+	Novemeber 2017\\
+	 
+	}
+\end{flushleft}
+
+\ClearShipoutPicture
+\end{document}

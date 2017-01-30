@@ -1,0 +1,65 @@
+\documentclass[12pt, english, oneside, singlespacing, open=any]{report}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={210mm,297mm},
+	left=30mm,
+	right=20mm,
+	top=25mm,
+	bottom=25mm,
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.7pt}
+\rhead{\leftmark}
+\cfoot{\thepage}
+\fancyhead[RO]{\fontsize{10}{12}\selectfont\nouppercase\rightmark}
+
+
+\begin{document}
+	
+% Title page
+\begin{titlepage}
+	\title{The use of simulations to identify
+		operational improvements on compressed
+		air systems}
+	\date{\today}
+	\author{Brandon Friedenstein}
+	\maketitle
+\end{titlepage}
+
+%Abstract
+\begin{abstract}
+	\thispagestyle{plain}
+	\pagenumbering{roman}
+	\setcounter{page}{2}
+	\addcontentsline{toc}{chapter}{Abstract}
+\end{abstract}
+
+	%Table of Contents
+\setcounter{page}{3}
+\tableofcontents
+
+
+
+%List of symbals
+\chapter*{List of symbols}
+	\addcontentsline{toc}{chapter}{List of symbols}
+
+%List of accronyms
+\chapter*{Acronyms}
+	\addcontentsline{toc}{chapter}{Acronyms}
+
+%Glossary 
+\chapter*{Glossary}
+	\addcontentsline{toc}{chapter}{Glossary}	
+
+%Chapters
+\input{Chapter_1/Chapter_1}
+\input{Chapter_2/Chapter_2}
+\input{Chapter_3/Chapter_3}
+\input{Chapter_4/Chapter_4}
+\input{Chapter_5/Chapter_5}
+\input{Apendices/Apendices}
+\end{document}

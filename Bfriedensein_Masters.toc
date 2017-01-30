@@ -1,0 +1,38 @@
+\contentsline {chapter}{Abstract}{ii}
+\contentsline {chapter}{List of symbols}{v}
+\contentsline {chapter}{Acronyms}{vi}
+\contentsline {chapter}{Glossary}{vii}
+\contentsline {chapter}{\numberline {1}Introduction and background}{1}
+\contentsline {section}{\numberline {1.1}Preamble}{1}
+\contentsline {section}{\numberline {1.2}Simulation}{1}
+\contentsline {section}{\numberline {1.3}Inefficiency identification methods in industry}{1}
+\contentsline {section}{\numberline {1.4}Compressed air systems in the mining industry}{1}
+\contentsline {subsection}{\numberline {1.4.1}Compressed air background}{1}
+\contentsline {subsection}{\numberline {1.4.2}Characteristic inefficiencies}{1}
+\contentsline {section}{\numberline {1.5}Problem statement}{1}
+\contentsline {section}{\numberline {1.6}Dissertation overview}{1}
+\contentsline {chapter}{\numberline {2}Literature study}{2}
+\contentsline {section}{\numberline {2.1}Preamble}{2}
+\contentsline {section}{\numberline {2.2}The use of simulation in industry}{2}
+\contentsline {section}{\numberline {2.3}Identification of inefficiencies in compressed air systems}{2}
+\contentsline {section}{\numberline {2.4}Compressed air operational improvements in industry}{2}
+\contentsline {section}{\numberline {2.5}Conclusion}{2}
+\contentsline {chapter}{\numberline {3}Developing a periodic simulation process}{3}
+\contentsline {section}{\numberline {3.1}Preamble}{3}
+\contentsline {section}{\numberline {3.2}Investigation}{3}
+\contentsline {section}{\numberline {3.3}Model development and verification}{3}
+\contentsline {section}{\numberline {3.4}Periodic implementation}{3}
+\contentsline {section}{\numberline {3.5}Analysis of data}{3}
+\contentsline {section}{\numberline {3.6}Identifying and quantifying operational improvements}{3}
+\contentsline {section}{\numberline {3.7}Conclusion}{3}
+\contentsline {chapter}{\numberline {4}Validation of Results}{4}
+\contentsline {section}{\numberline {4.1}Preamble}{4}
+\contentsline {section}{\numberline {4.2}Case study: Mine A}{4}
+\contentsline {section}{\numberline {4.3}Case study: Mine B}{4}
+\contentsline {section}{\numberline {4.4}Discussion of results}{4}
+\contentsline {section}{\numberline {4.5}Conclusion}{4}
+\contentsline {chapter}{\numberline {5}Conclusion}{5}
+\contentsline {section}{\numberline {5.1}Conclusion}{5}
+\contentsline {section}{\numberline {5.2}Recommendations for future studies}{5}
+\contentsline {chapter}{\numberline {A}Something}{6}
+\contentsline {chapter}{\numberline {B}Something else}{7}
