@@ -1,4 +1,7 @@
 \documentclass[12pt, english, oneside, singlespacing, open=any]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{natbib}
 \usepackage{geometry}
 \geometry{
 	a4paper,
@@ -8,6 +11,9 @@
 	top=25mm,
 	bottom=25mm,
 }
+
+%\usepackage[acronym]{glossaries}
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -15,14 +21,15 @@
 \rhead{\leftmark}
 \cfoot{\thepage}
 \fancyhead[RO]{\fontsize{10}{12}\selectfont\nouppercase\rightmark}
-
+ 
+\usepackage{color}
 
 \begin{document}
 	
 % Title page
 \begin{titlepage}
 	\title{The use of simulations to identify
-		operational improvements on compressed
+		operational improvements on deep level mine compressed
 		air systems}
 	\date{\today}
 	\author{Brandon Friedenstein}
@@ -62,4 +69,7 @@
 \input{Chapter_4/Chapter_4}
 \input{Chapter_5/Chapter_5}
 \input{Apendices/Apendices}
+\bibliographystyle{plain}
+\bibliography{Bibliography}
+
 \end{document}
