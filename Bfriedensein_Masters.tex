@@ -11,7 +11,7 @@
 	top=25mm,
 	bottom=25mm,
 }
-
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 %\usepackage[acronym]{glossaries}
 
 \usepackage{fancyhdr}
@@ -22,9 +22,11 @@
 \cfoot{\thepage}
 \fancyhead[RO]{\fontsize{10}{12}\selectfont\nouppercase\rightmark}
  
-\usepackage{color}
 \usepackage[hidelinks]{hyperref}
-
+\usepackage{graphics}
+\usepackage{epstopdf}
+\usepackage{color}
+\usepackage[pdftex]{graphicx}
 \begin{document}
 	
 % Title page
@@ -44,17 +46,15 @@
 	\setcounter{page}{2}
 	\addcontentsline{toc}{chapter}{Abstract}
 	
-	Increased energy tariff from Eskom has factored into larger operational costs of deep level mines. This increase has made mining profitability more difficult.  Compressed air systems utilise a large portion of a mine's total energy usage. It has been shown that many large compressed air networks are inefficient and often can not meet demand requirements. Therefore improving their efficiency could result in a reduction of operational costs and an improvement in service delivered. \\
-	Simulation has been used to identify and quantify improvement to system. Literature... \\
-		A simulation methodology was developed to identify system inefficiencies and quantify interventions. Two case studies were performed. In each case study several scenarios were implemented in simulation. The results showed improvements in compressed air system efficiency and performance delivered service could be achieved. Application of simulated scenarios verified the results of simulation. 
+	 As operational costs of deep level mines increases and gold ore grades decrease, profitability in the gold mining sector is becoming difficult. Electricity tariff increases have contributed a rise in cost to operate a mine.  Compressed air systems utilise a large portion of a mine's total energy. It has been shown that many deep level mine compressed air networks have large inefficiencies and often can not meet performance set-points. Therefore improving the efficiency could result in a reduction of operational costs by reducing the energy required to produce compressed air. Additionally an improvement in service delivery could be achieved. \\
+	Previous studies have shown the use of simulation to develop improvements for large mining systems. Literature has shown identification compressed  air inefficiencies as well their interventions.\\
+	A methodology was then developed to identify system inefficiencies and quantify improvement strategies through simulation. Two case studies were evaluated. Several scenarios  were simulated in each case study. The studies showed that improvements in compressed air system efficiency. An application of the simulated scenarios verified the simulations. 
 	
 \end{abstract}
 
 	%Table of Contents
 \setcounter{page}{3}
 \tableofcontents
-
-
 
 %List of symbals
 \chapter*{List of symbols}
