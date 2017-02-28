@@ -1,4 +1,4 @@
-\documentclass[11pt, english, oneside, singlespacing, open=any]{report}
+\documentclass[11.5pt, english, oneside, singlespacing, open=any]{report}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{natbib}
@@ -27,18 +27,46 @@
 \usepackage{epstopdf}
 \usepackage{color}
 \usepackage[pdftex]{graphicx}
+\usepackage[pages=some]{background}
+
+\backgroundsetup{
+	scale=1,
+	opacity=1,
+	angle=0,
+	contents={%
+		\includegraphics[width=\paperwidth,height=\paperheight]{Images/frontpage.pdf}
+	}%
+}
+
+\usepackage{datetime}
+\newdateformat{monthyeardate}{%
+	\monthname[\THEMONTH], \THEYEAR}
+
 \begin{document}
 	
 % Title page
 \begin{titlepage}
-	\title{The use of simulations to identify
-		operational improvements on deep level mine compressed
-		air systems}
-	\date{\today}
-	\author{Brandon Friedenstein}
-	\maketitle
+	\BgThispage	
+		\vspace{0cm}
+		\begin{center}
+			\Huge{The use of simulations to identify operational improvements on deep level mine compressed air systems}\\
+			\vspace{4cm}
+			\huge{B. Friedenstein \\28354516}\\
+		\end{center}
+	
+	\vspace{2cm}
+	
+\begin{flushleft}
+	{\centering \LARGE Dissertation submitted in fulfilment of the requirements for the degree {\color{blue} \textit{Magister}} in {\color{blue}Computer and Electronic Engineering} at the Potchefstroom Campus of the North-West University\\
+	}
+	\vspace{3cm}
+	{\LARGE \setlength{\parindent}{0.5cm} Supervisor: Dr Johann van Rensberg \\
+	\vspace{3cm}
+	\LARGE{\monthyeardate\today}\\		
+	}
+\end{flushleft}
 \end{titlepage}
-
+\clearpage
 %Abstract
 \begin{abstract}
 	\thispagestyle{plain}
@@ -47,11 +75,10 @@
 	\addcontentsline{toc}{chapter}{Abstract}
 	
 	 As operational costs of deep level mines increases and gold ore grades decrease, profitability in the gold mining sector is becoming difficult. Electricity tariff increases have contributed a rise in cost to operate a mine.  Compressed air systems utilise a large portion of a mine's total energy. It has been shown that many deep level mine compressed air networks have large inefficiencies and often can not meet performance set-points. Therefore improving the efficiency could result in a reduction of operational costs by reducing the energy required to produce compressed air. Additionally an improvement in service delivery could be achieved. \\
-	Previous studies have shown the usefulness of simulations to develop improvements for large mining systems.
-	.... Add more for literature.... \\
+	Previous studies have shown the usefulness of simulations to develop improvements for large mining systems.  J. Marais developed  a simplified "vessel" model of a mining compressed air system. CJR Kriel created a simulation using KY pipe software to validate intervention proposals. AJM van Tonder developed an innovative component model to simulate dynamic compressor  selection (DCS). \\
 	A simulation methodology was developed to achieve the study objects. Firstly an investigation into the compressed air system is performed. Next a model is developed in software to accurately recreate the system outputs. Finally an proposed method of improvement is simulated, analysed and quantified in terms of improvements in energy savings and service delivery.\\
-	 Two case studies were evaluated. For each case study a variety of methods of improvements were simulated. In case study by reducing air used by refuge bays in simulation, a reduction of 1 MW E.E would be achieved with addition to an improvement of 18 kPa to system pressure.\\
-	 The study showed that simulation is a important tool for improvements in large compressed air systems. The value of simulation is the ability to accurately predict outcomes of interventions without doing costly tests on the actual system. It was shown that simulation can also be used to identify when a system is not in typical operation.
+	 Two case studies were evaluated. For each case study a variety of methods of improvements were simulated. In case study by reducing air used by refuge bays in simulation, a reduction of 1 MW E.E. would be achieved with addition to an improvement of 18 kPa to system pressure.\\
+	 The study showed that simulation is a important tool for identification improvements in large compressed air systems. The value of simulation is the ability to accurately predict outcomes of interventions without doing costly tests on an actual system. 
 	
 \end{abstract}
 
