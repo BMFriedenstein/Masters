@@ -3,7 +3,7 @@
 \doublespacing
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-\usepackage{natbib}
+\usepackage[square,sort,comma,numbers]{natbib}
 \usepackage{geometry}
 \geometry{
 	a4paper,
@@ -15,8 +15,8 @@
 }
 \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 %\usepackage[acronym]{glossaries}
-\setlength{\parindent}{2em}
-\setlength{\parskip}{0em}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{2em}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -44,7 +44,6 @@
 \usepackage{datetime}
 \newdateformat{monthyeardate}{%
 	\monthname[\THEMONTH], \THEYEAR}
-
 \begin{document}
 	
 % Title page
@@ -91,7 +90,7 @@
 	Previous studies have shown the usefulness of simulations to develop improvements for large mining systems.  J. Marais developed  a simplified "vessel" model of a mining compressed air system. CJR Kriel created a simulation using KY pipe software to validate intervention proposals. AJM van Tonder developed an innovative component model to simulate dynamic compressor  selection (DCS). \par
 	A simulation methodology was developed to achieve the study objects. Firstly an investigation into the compressed air system is performed. Next a model is developed in software to accurately recreate the system outputs. Finally an proposed method of improvement is simulated, analysed and quantified in terms of improvements in energy savings and service delivery.\par
 	 Two case studies were evaluated. For each case study a variety of methods of improvements were simulated. In case study by reducing air used by refuge bays in simulation, a reduction of 1 MW E.E. would be achieved with addition to an improvement of 18 kPa to system pressure.\par
-	 The study showed that simulation is a important tool for identification improvements in large compressed air systems. The value of simulation is the ability to accurately predict outcomes of interventions without doing costly tests on an actual system. 
+	 The study showed that simulation is a important tool for identification improvements in large compressed air systems. The value of simulation is the ability to accurately predict outcomes of interventions without doing costly tests on an actual system. \\
 	 \vspace{2cm}
 	\begin{tabular}{p{2.35cm}p{13.35cm}}
 		\textbf{Keywords:} & Mining, Energy, Compressed air, modelling, Simulation, operational improvements  \\
@@ -100,8 +99,11 @@
 
 	%Table of Contents
 \setcounter{page}{3}
+\SetSinglespace{0.5}
+\singlespacing
 \tableofcontents
-
+\SetSinglespace{1}
+\doublespacing
 %List of symbals
 \chapter*{List of symbols}
 	\addcontentsline{toc}{chapter}{List of symbols}
@@ -121,7 +123,7 @@
 \input{Chapter_4/Chapter_4}
 \input{Chapter_5/Chapter_5}
 \input{Apendices/Apendices}
-\bibliographystyle{plain}
+\bibliographystyle{IEEEtran}
 \bibliography{Bibliography}
 
 \end{document}
