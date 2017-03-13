@@ -1,9 +1,9 @@
 \documentclass[12pt, english, oneside, open=any]{report}
-\usepackage{setspace} 
-\doublespacing
 \usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
-\usepackage[square,sort,comma,numbers]{natbib}
+\usepackage{csquotes}
+\usepackage[UKenglish]{babel}
+\usepackage[square,comma,numbers]{natbib}
+
 \usepackage{geometry}
 \geometry{
 	a4paper,
@@ -13,10 +13,11 @@
 	top=20mm,
 	bottom=20mm,
 }
+
 \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
-%\usepackage[acronym]{glossaries}
-\setlength{\parindent}{0em}
-\setlength{\parskip}{2em}
+\usepackage{setspace} 
+\doublespacing
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -24,6 +25,13 @@
 \rhead{\leftmark}
 \cfoot{\thepage}
 \fancyhead[RO]{\fontsize{10}{12}\selectfont\nouppercase\rightmark}
+
+	
+\input{Acronyms}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{2em}
+
  
 \usepackage[hidelinks]{hyperref}
 \usepackage{graphics}
@@ -40,10 +48,10 @@
 		\includegraphics[width=\paperwidth,height=\paperheight]{Images/frontpage.pdf}
 	}%
 }
-
 \usepackage{datetime}
 \newdateformat{monthyeardate}{%
 	\monthname[\THEMONTH], \THEYEAR}
+
 \begin{document}
 	
 % Title page
@@ -70,6 +78,7 @@
 \end{flushleft}
 \end{titlepage}
 \clearpage
+
 %Abstract
 \section*{Abstract}
 	\vspace{0.2cm}
@@ -104,18 +113,15 @@
 \tableofcontents
 \SetSinglespace{1}
 \doublespacing
+
+
 %List of symbals
-\chapter*{List of symbols}
-	\addcontentsline{toc}{chapter}{List of symbols}
-
-%List of accronyms
-\chapter*{Acronyms}
-	\addcontentsline{toc}{chapter}{Acronyms}
-
-%Glossary 
-\chapter*{Glossary}
-	\addcontentsline{toc}{chapter}{Glossary}	
-
+%List of aabreviations
+%	\addcontentsline{toc}{chapter}{Abbreviations}
+%	\addcontentsline{toc}{chapter}{Nomenclature}
+	\printglossary[type=\acronymtype,title=Abbreviations, nonumberlist]
+	\printglossary[title=Nomenclature, nonumberlist]
+	
 %Chapters
 \input{Chapter_1/Chapter_1}
 \input{Chapter_2/Chapter_2}
@@ -123,7 +129,7 @@
 \input{Chapter_4/Chapter_4}
 \input{Chapter_5/Chapter_5}
 \input{Apendices/Apendices}
-\bibliographystyle{IEEEtranSN}
+\bibliographystyle{IEEEtran}
 \bibliography{Bibliography}
 
 \end{document}
