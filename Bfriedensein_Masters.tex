@@ -1,9 +1,19 @@
 \documentclass[12pt, english, oneside, open=any]{report}
+%---------------------------------------
+%Language, text and grammer
 \usepackage[utf8]{inputenc}
+%Quotation marks
 \usepackage{csquotes}
+%Uk english text 
 \usepackage[UKenglish]{babel}
+%Bibliography
 \usepackage[square,comma,numbers]{natbib}
+%List of accronyms, Nomenclature
+\input{Acronyms}
+%---------------------------------------
 
+%APPEARANCE%
+%% Page dimensions 
 \usepackage{geometry}
 \geometry{
 	a4paper,
@@ -14,10 +24,24 @@
 	bottom=20mm,
 }
 
-\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+%%Chapter formatting 
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\bfseries\Large}
+{\filright\MakeUppercase{\chaptertitlename} \Huge\thechapter}
+{0.5ex}
+{\titlerule\filleft}
+\titlespacing*{\chapter}{0pt}{-50pt}{40pt}
+
+
+
+%Line Spacing
 \usepackage{setspace} 
 \doublespacing
+\setlength{\parindent}{0em}
+\setlength{\parskip}{2em}
 
+%Page headers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -26,20 +50,17 @@
 \cfoot{\thepage}
 \fancyhead[RO]{\fontsize{10}{12}\selectfont\nouppercase\rightmark}
 
-	
-\input{Acronyms}
-
-\setlength{\parindent}{0em}
-\setlength{\parskip}{2em}
-
- 
+%Links
 \usepackage[hidelinks]{hyperref}
+
+%Graphs 
 \usepackage{graphics}
 \usepackage{epstopdf}
 \usepackage{color}
 \usepackage[pdftex]{graphicx}
-\usepackage[pages=some]{background}
 
+%Title page
+\usepackage[pages=some]{background}
 \backgroundsetup{
 	scale=1,
 	opacity=0.75,
@@ -52,6 +73,8 @@
 \newdateformat{monthyeardate}{%
 	\monthname[\THEMONTH], \THEYEAR}
 
+%Table of contents page
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 \begin{document}
 	
 % Title page
@@ -113,6 +136,7 @@
 \tableofcontents
 \SetSinglespace{1}
 \doublespacing
+\clearpage
 
 
 %List of symbals
@@ -121,8 +145,12 @@
 %	\addcontentsline{toc}{chapter}{Nomenclature}
 	\printglossary[type=\acronymtype,title=Abbreviations, nonumberlist]
 	\printglossary[title=Nomenclature, nonumberlist]
+	\newpage
+	\listoffigures
+	\listoftables
 	
 %Chapters
+
 \input{Chapter_1/Chapter_1}
 \input{Chapter_2/Chapter_2}
 \input{Chapter_3/Chapter_3}
