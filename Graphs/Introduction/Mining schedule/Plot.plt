@@ -1,11 +1,14 @@
 reset
-#set terminal wxt size 600,262 enhanced font 'Verdana,10' persist
+# terminal wxt size 1500,600
 set terminal epslatex color colortext
-set output 'EVperT.tex'
+set output 'MiningSchedule.tex'
 my_line_width = "2"
 my_axis_width = "1.5"
 my_ps = "1.2"
+set xdata time
+set timefmt "%H:%M"
 
+set format x "%H:%M"
 red_000 = "#F9B7B0"
 red_025 = "#F97A6D"
 red_050 = "#E62B17"
@@ -55,14 +58,30 @@ set border 31 lw @my_axis_width lc rgb text_color
 set key out horiz bot center
 set grid lc rgb grid_color
 
-set xlabel 'Year'
-set ylabel 'kWh/t'
-set y2label "$m^3$/t";
-set yrange [0:40]
-set y2range [0:400]
-set ytics 5 nomirror
-set y2tics 50 nomirror
-set title "Compressed air energy and Volume consumed per ton"
+set xlabel 'Time of day'
+set xrange ["00:00":"23:00"]
+set xtics "01:00" rotate
+set ylabel 'kPa'
+#set y2label "$m^3$/t";
+set yrange [500:560]
+#set y2range [0:400]
+set ytics 20 nomirror
+#set y2tics 50 nomirror
+set title "Typical mining schedule and pressure requirement"
 set size 1.3,0.8
-plot 'Data.dat' using 1:3 title "Energy per Ton (kWh/t)" with linespoints ls 1, \
-     'Data.dat' using 1:2 title "Volume per Ton ($m^3$/t)" with linespoints ls 4 axes x1y2
+
+set object 1 rect from first '00:00', graph 0 to first '05:00', graph 1
+set object 1 rect fc rgb blue_000 fillstyle solid 0.5
+set object 2 rect from first '05:00', graph 0 to first '07:00', graph 1
+set object 2 rect fc rgb brown_000 fillstyle solid 0.5
+set object 3 rect from first '07:00', graph 0 to first '14:00', graph 1
+set object 3 rect fc rgb green_000 fillstyle solid 0.5
+set object 4 rect from first '14:00', graph 0 to first '16:00', graph 1
+set object 4 rect fc rgb red_000 fillstyle solid 0.5
+set object 5 rect from first '16:00', graph 0 to first '21:00', graph 1
+set object 5 rect fc rgb red_075 fillstyle solid 0.5
+set object 6 rect from first '21:00', graph 0 to graph 1, graph 1
+set object 6 rect fc rgb blue_000 fillstyle solid 0.5
+
+plot 'Data.dat' using 1:2 title "Pressure requirement (kPa)" with line ls 3#, \
+     #'Data.dat' using 1:2 title "Volume per Ton ($m^3$/t)" with linespoints ls 4 axes x1y2

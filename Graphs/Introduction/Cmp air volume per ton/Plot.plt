@@ -1,5 +1,5 @@
 reset
-
+#set terminal wxt size 600,262 enhanced font 'Verdana,10' persist
 set terminal epslatex color colortext
 set output 'EVperT.tex'
 my_line_width = "2"
@@ -63,8 +63,6 @@ set y2range [0:400]
 set ytics 5 nomirror
 set y2tics 50 nomirror
 set title "Compressed air energy and Volume consumed per ton"
-set size 1.2,0.8
+set size 1.3,0.8
 plot 'Data.dat' using 1:3 title "Energy per Ton (kWh/t)" with linespoints ls 1, \
      'Data.dat' using 1:2 title "Volume per Ton ($m^3$/t)" with linespoints ls 4 axes x1y2
-
-set output 
