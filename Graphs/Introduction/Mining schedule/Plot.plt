@@ -1,5 +1,5 @@
 reset
-# terminal wxt size 1500,600
+#set terminal wxt size 1500,600
 set terminal epslatex color colortext
 set output 'MiningSchedule.tex'
 my_line_width = "2"
@@ -82,6 +82,14 @@ set object 5 rect from first '16:00', graph 0 to first '21:00', graph 1
 set object 5 rect fc rgb red_075 fillstyle solid 0.5
 set object 6 rect from first '21:00', graph 0 to graph 1, graph 1
 set object 6 rect fc rgb blue_000 fillstyle solid 0.5
+
+set label '\shortstack{Sweeping and \\ cleaning}' at first '02:30', graph 0.5 center rotate front 
+set label '\shortstack{Workers travel to \\ working areas}' at first '06:00', graph 0.5 center rotate front
+set label '\shortstack{Drilling}' at first '10:30', graph 0.5 center front
+set label '\shortstack{Explosive charge \\ up}' at first '15:00', graph 0.5 center rotate front
+set label '\shortstack{Blasting}' at first '18:30', graph 0.5 center front
+set label '\shortstack{Sweeping and \\ cleaning}' at first '22:00', graph 0.5 center rotate front 
+
 
 plot 'Data.dat' using 1:2 title "Pressure requirement (kPa)" with line ls 3#, \
      #'Data.dat' using 1:2 title "Volume per Ton ($m^3$/t)" with linespoints ls 4 axes x1y2
