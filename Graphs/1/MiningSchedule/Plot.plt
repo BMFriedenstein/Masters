@@ -91,5 +91,5 @@ set label '\shortstack{Blasting}' at first '18:30', graph 0.5 center front
 set label '\shortstack{Sweeping and \\ cleaning}' at first '22:00', graph 0.5 center rotate front 
 
 
-plot 'Data.dat' using 1:2 title "Pressure requirement (kPa)" with line ls 3#, \
+plot 'Data.dat' using 1:2 title "Pressure requirement (kPa)" with line ls 1#, \
      #'Data.dat' using 1:2 title "Volume per Ton ($m^3$/t)" with linespoints ls 4 axes x1y2

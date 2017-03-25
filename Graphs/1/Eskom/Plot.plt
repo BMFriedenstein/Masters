@@ -62,4 +62,6 @@ set yrange [0:40]
 set ytics 5 nomirror
 set title "Electricity price increases in South Africa"
 set size 1.3,0.8
-plot 'Data.dat' using 1:2 with boxes ls 1
+#set key off
+plot 'Data.dat' using 1:2 title "Eskom general tariff increases (\\%)" with boxes ls 1, 'Data.dat' using 1:($2+1.5):2 title "" with labels, \
+     'Data.dat' using 1:3 title "Inflation rate in south Africa (\\%)" with linespoints ls 4 
