@@ -58,19 +58,21 @@ Large compressed air systems are likely inefficient. Internationally, the expect
 	Drilling is mainly performed in the production areas or stopes of a mine. The drills are used to drill holes into the rock face. Once the holes have been drilled, explosives are installed to break up the rock.\par
 	A study by  Bester \textit{et al.} showed that between 2002 and 2013 compressed air and energy consumption per tonne of ore produced had steadily increased as shown in figure \ref{fig: Compressed energy and air flow per ton}. The increase in consumption is a result of a reduction in air pressure at the mining stopes. Measurements indicated that the pressure was as low as 300 \gls{kpa}. This effected the efficiency of the rock drills. Before 2002 pressure was maintained above 500 \gls{kpa} at the stopes.  The study showed that as pressure decreased, rock drilling efficiency also decreased.\cite{bester2013effect} \par
 	
-	\begin{figure}[h]
-		\centering
-		\fbox{\input{Graphs/1/EVperT/EVperT}}
-		\caption[The compressed air energy and flow per tonne of ore produced.]{The compressed air energy and flow per \gls{t} of ore produced, adopted from Bester \textit{et al.} \cite{bester2013effect}.}
-		\label{fig: Compressed energy and air flow per ton}
-	\end{figure}
+
 \paragraph*{Refuge bays}\leavevmode\\
 \paragraph*{Compressed air control}\leavevmode\\
-Compressed air is controlled from the compressor as well as from numerous valves installed throughout the system. \par
+
 On many large compressed air networks, the intake guide vain position on a compressor is manipulated in order to obtain the air flow and pressure requirements. Typically, guide vains are closed to reduce pressure and opened to increase pressure. When more pressure is required than can be obtained with the guide vains fully opened, another compressor is needed to operate.\par
-reducing and increasing the guide vain position will effect the power output of the compressor.Typically com
+ As shown in figure \ref{fig: Guide vain position}, typically guide vains are controlled between 40\% and 100\% of their fully open position. Reducing and increasing the guide vain position will effect the power output of the compressor. As can be seen in the figure, the relationship between compressor power output and guide vain position is non linear. A guide vain position of 40\% will relate to an output power of about 60\% of the compressors rated maximum power.
+ 	\begin{figure}[h]
+ 	\centering
+ 	\fbox{\input{Graphs/1/GuideVainPosition/GuideVainPosition}}
+ 	\caption[The relation between guide vain position and compressor output power.]{The relation between guide vain position and compressor output power.}
+ 	\label{fig: Guide vain position}
+ \end{figure}
+ 
 	\subsection{Characteristic inefficiencies}
-	\texttt{Discuss typical inneficiencies in large  compressed air systems: leaks, Filters, Compressors, valves, piping changes}
+	\texttt{Discuss typical inefficiencies in large  compressed air systems: leaks, Filters, Compressors, valves, piping changes}
 	\subsection{Instrumentation and measurements}
 	\texttt{Instrumentation and monitoring systems on compressed air networks: Sensors -> PLC -> SCADA}
 	\subsection{Inefficiency identification methods}
