@@ -54,6 +54,8 @@ set style line 17 linecolor rgbcolor "#224499" linewidth @my_line_width pt 5
 set border 31 lw @my_axis_width lc rgb text_color
 set key out horiz bot center
 set grid lc rgb grid_color
+f(x) = 0.6*x + 40
+
 
 set xlabel 'Guide Vain Position'
 set ylabel 'Output power'
@@ -61,5 +63,4 @@ set yrange [0:120]
 set title "Guide Vain position and compressor output power"
 set size 1.3,0.8
 set key off
-plot 'Data.dat' using 2:1 with dots ls 1
-     
+plot 'Data.dat' using 2:1 with dots ls 1, f(x) with line ls 4 title 'Model Fit'

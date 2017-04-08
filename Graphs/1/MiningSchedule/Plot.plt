@@ -63,7 +63,7 @@ set xrange ["00:00":"23:00"]
 set xtics "01:00" rotate
 set ylabel 'kPa'
 #set y2label "$m^3$/t";
-set yrange [500:560]
+set yrange [400:560]
 #set y2range [0:400]
 set ytics 20 nomirror
 #set y2tics 50 nomirror
