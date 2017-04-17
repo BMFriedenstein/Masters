@@ -31,7 +31,7 @@ brown_075 = "#8F743F"
 brown_100 = "#6D4903"
 
 grid_color = "#d5e0c9"
-text_color = "#6a6a6a"
+text_color = "#000000"
 
 set style line 1 linecolor rgbcolor blue_025 linewidth @my_line_width pt 7
 set style line 2 linecolor rgbcolor green_025 linewidth @my_line_width pt 5

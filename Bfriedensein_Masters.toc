@@ -17,7 +17,8 @@
 \contentsline {subsection}{\numberline {1.3.4}Inefficiency identification methods}{8}{subsection.1.3.4}
 \contentsline {section}{\numberline {1.4}Simulations in industry}{8}{section.1.4}
 \contentsline {subsection}{\numberline {1.4.1}Thermal-hydraulic simulation}{8}{subsection.1.4.1}
-\contentsline {paragraph}{Simulation toolbox}{9}{paragraph*.7}
+\contentsline {paragraph}{KY Pipe}{9}{paragraph*.7}
+\contentsline {paragraph}{Simulation toolbox}{9}{paragraph*.8}
 \contentsline {section}{\numberline {1.5}Problem statement and objectives}{9}{section.1.5}
 \contentsline {subsection}{\numberline {1.5.1}Problem statement}{9}{subsection.1.5.1}
 \contentsline {subsection}{\numberline {1.5.2}Research objectives}{9}{subsection.1.5.2}
