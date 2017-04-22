@@ -2,7 +2,7 @@ reset
 #set terminal wxt size 1500,600
 set terminal epslatex color colortext
 set output 'MiningSchedule.tex'
-my_line_width = "2"
+my_line_width = "5"
 my_axis_width = "1.5"
 my_ps = "1.2"
 set xdata time
@@ -61,27 +61,26 @@ set grid lc rgb grid_color
 set xlabel 'Time of day'
 set xrange ["00:00":"23:00"]
 set xtics "01:00" rotate
-set ylabel 'kPa'
+set ylabel 'Pressure (kPa)'
 #set y2label "$m^3$/t";
 set yrange [400:560]
 #set y2range [0:400]
 set ytics 20 nomirror
 #set y2tics 50 nomirror
-set title "Typical mining schedule and pressure requirement"
 set size 1.3,0.8
 
 set object 1 rect from first '00:00', graph 0 to first '05:00', graph 1
-set object 1 rect fc rgb blue_000 fillstyle solid 0.5
+set object 1 rect fc rgb blue_000 fillstyle solid 0.85
 set object 2 rect from first '05:00', graph 0 to first '07:00', graph 1
-set object 2 rect fc rgb brown_000 fillstyle solid 0.5
+set object 2 rect fc rgb brown_000 fillstyle solid 0.85
 set object 3 rect from first '07:00', graph 0 to first '14:00', graph 1
-set object 3 rect fc rgb green_000 fillstyle solid 0.5
+set object 3 rect fc rgb green_000 fillstyle solid 0.85
 set object 4 rect from first '14:00', graph 0 to first '16:00', graph 1
-set object 4 rect fc rgb red_000 fillstyle solid 0.5
+set object 4 rect fc rgb red_000 fillstyle solid 0.85
 set object 5 rect from first '16:00', graph 0 to first '21:00', graph 1
-set object 5 rect fc rgb red_075 fillstyle solid 0.5
+set object 5 rect fc rgb red_075 fillstyle solid 0.85
 set object 6 rect from first '21:00', graph 0 to graph 1, graph 1
-set object 6 rect fc rgb blue_000 fillstyle solid 0.5
+set object 6 rect fc rgb blue_000 fillstyle solid 0.85
 
 set label '\shortstack{Sweeping and \\ cleaning}' at first '02:30', graph 0.5 center rotate front 
 set label '\shortstack{Workers travel to \\ working areas}' at first '06:00', graph 0.5 center rotate front
@@ -91,5 +90,4 @@ set label '\shortstack{Blasting}' at first '18:30', graph 0.5 center front
 set label '\shortstack{Sweeping and \\ cleaning}' at first '22:00', graph 0.5 center rotate front 
 
 
-plot 'Data.dat' using 1:2 title "Pressure requirement (kPa)" with line ls 1#, \
-     #'Data.dat' using 1:2 title "Volume per Ton ($m^3$/t)" with linespoints ls 4 axes x1y2
+plot 'Data.dat' using 1:2 title "Pressure requirement (kPa)" with line ls 1,

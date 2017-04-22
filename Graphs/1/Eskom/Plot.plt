@@ -1,5 +1,5 @@
 reset
-#set terminal wxt size 600,262 enhanced font 'Verdana,10' persist
+set terminal wxt size 600,262 enhanced font 'Verdana,10' persist
 set terminal epslatex color colortext
 set output 'Eskom.tex'
 my_line_width = "2"
@@ -57,11 +57,11 @@ set grid lc rgb grid_color
 set boxwidth 0.75
 set style fill solid
 set xlabel 'Year'
+set xrange [2007.5:2017.5]
 set ylabel '\% increase'
 set yrange [0:40]
 set ytics 5 nomirror
-set title "Electricity price increases in South Africa"
 set size 1.3,0.8
 #set key off
-plot 'Data.dat' using 1:2 title "Eskom general tariff increases (\\%)" with boxes ls 1, 'Data.dat' using 1:($2+1.5):2 title "" with labels, \
-     'Data.dat' using 1:3 title "Inflation rate in south Africa (\\%)" with linespoints ls 4 
+plot 'Data.dat' using 1:2 title "Eskom tariff increases (\\%)" with boxes ls 1, 'Data.dat' using 1:($2+2):2 title "" with labels, \
+     'Data.dat' using 1:3 title "Inflation in SA (\\%)" with linespoints ls 4 ,'Data.dat' using 1:($3 -2):3 title "" with labels
