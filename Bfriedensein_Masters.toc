@@ -5,26 +5,25 @@
 \contentsline {chapter}{List of figures}{vii}{section*.3}
 \contentsline {chapter}{List of tables}{vii}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction and background}{}{chapter.1}
-\contentsline {section}{\numberline {1.1}Preamble}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Background on deep level mining}{1}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Mining profitability}{1}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Mining Process}{2}{subsection.1.2.2}
-\contentsline {subsection}{\numberline {1.2.3}Mining Services}{2}{subsection.1.2.3}
-\contentsline {paragraph}{Energy usage}{2}{paragraph*.6}
-\contentsline {section}{\numberline {1.3}Compressed air systems in mining}{2}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Compressed air in operation}{2}{subsection.1.3.1}
-\contentsline {subsection}{\numberline {1.3.2}Operation schedules}{5}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Characteristic inefficiencies}{6}{subsection.1.3.3}
-\contentsline {subsection}{\numberline {1.3.4}Instrumentation and measurements}{6}{subsection.1.3.4}
-\contentsline {subsection}{\numberline {1.3.5}Inefficiency identification methods}{6}{subsection.1.3.5}
-\contentsline {subsection}{\numberline {1.3.6}Compressed air savings strategies}{6}{subsection.1.3.6}
-\contentsline {section}{\numberline {1.4}Simulations in industry}{7}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Thermal-hydraulic simulation}{7}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}Use in mining}{7}{subsection.1.4.2}
-\contentsline {section}{\numberline {1.5}Problem statement and objectives}{7}{section.1.5}
-\contentsline {subsection}{\numberline {1.5.1}Problem statement}{8}{subsection.1.5.1}
-\contentsline {subsection}{\numberline {1.5.2}Research objectives}{8}{subsection.1.5.2}
-\contentsline {section}{\numberline {1.6}Dissertation overview}{8}{section.1.6}
+\contentsline {section}{\numberline {1.1}Preamble}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Background on deep level mining}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Mining profitability}{2}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Mining Process}{3}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Mining Services}{3}{subsection.1.2.3}
+\contentsline {paragraph}{Energy usage}{3}{paragraph*.6}
+\contentsline {section}{\numberline {1.3}Compressed air systems in mining}{3}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Compressed air in operation}{3}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}Characteristic inefficiencies}{6}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}Inefficiency identification methods}{7}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.4}Instrumentation and measurements}{7}{subsection.1.3.4}
+\contentsline {subsection}{\numberline {1.3.5}Compressed air savings strategies}{7}{subsection.1.3.5}
+\contentsline {section}{\numberline {1.4}Simulations in industry}{8}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Thermal-hydraulic simulation}{8}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Use in mining}{8}{subsection.1.4.2}
+\contentsline {section}{\numberline {1.5}Problem statement and objectives}{8}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Problem statement}{9}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Research objectives}{9}{subsection.1.5.2}
+\contentsline {section}{\numberline {1.6}Dissertation overview}{9}{section.1.6}
 \contentsline {chapter}{\numberline {2}Literature study}{}{chapter.2}
 \contentsline {section}{\numberline {2.1}Preamble}{}{section.2.1}
 \contentsline {section}{\numberline {2.2}Methods to identify operational improvements}{}{section.2.2}

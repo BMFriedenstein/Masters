@@ -81,10 +81,6 @@ Marais \emph{et~al.}, ``Simplification of mine compressed air systems,'' in
   Proceedings of the 10th}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2013,
   pp. 1--8.
 
-\bibitem{Kriel2014Masters}
-C.~Kriel, ``Modernising underground compressed air dsm projects to reduce
-  operating costs,'' {Masters} dissertation, North-West University, 2014.
-
 \bibitem{van2008development}
 A.~van Jaarsveld, S.~Ebben, and A.~Ashanti, ``Development and implementation of
   an electrically powered stope rockdrill for tau tona mine,'' in \emph{SAIMM
@@ -102,10 +98,24 @@ D.~Brake and G.~Bates, ``Criteria for the design of emergency refuge stations
   no.~2.\hskip 1em plus 0.5em minus 0.4em\relax The Australian Institute of
   Mining and Metallurgy, 1999, pp. 1--8.
 
+\bibitem{Kriel2014Masters}
+C.~Kriel, ``Modernising underground compressed air dsm projects to reduce
+  operating costs,'' {Masters} dissertation, North-West University, 2014.
+
 \bibitem{Lawrence2004Improving}
 L.~B.~N. Laboratory, \emph{Improving Compressed Air System Performance: A
   Sourcebook for Industry}.\hskip 1em plus 0.5em minus 0.4em\relax Washington
   DC: US Department of Energy.
+
+\bibitem{vanTonder2010Masters}
+A.~van Tonder, ``Sustaining compressed air dsm project savings using an air
+  leakage management system,'' {Masters} dissertation, North-West University,
+  2011.
+
+\bibitem{Snyman2011Masters}
+J.~Snyman, ``Integrating various energy saving initiatives on compressed air
+  systems of typical south african gold mines,'' {Masters} dissertation,
+  North-West University, 2010.
 
 \bibitem{kocsis2003integration}
 Kocsis \emph{et~al.}, ``The integration of mine simulation and ventilation
