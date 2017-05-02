@@ -33,15 +33,16 @@
 \contentsline {section}{\numberline {2.2}Methods to identify operational improvements}{11}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Identifying areas for improvement}{11}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Leakage detection}{11}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Summary}{11}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.3}Estimation techniques}{11}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Summary}{11}{subsection.2.2.4}
 \contentsline {section}{\numberline {2.3}Review of compressed air energy interventions in industry}{11}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Strategies to improve compressed air supply}{11}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.1}Strategies to improve compressed air supply}{12}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Strategies to reduce/optimise compressed air consumption}{12}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Summary}{12}{subsection.2.3.3}
 \contentsline {section}{\numberline {2.4}Use of simulations to identify improvements in mining systems}{12}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Value of simulation in DSM projects}{12}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Simulation procedure}{12}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}Verifying simulations}{12}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.2}Simulation procedure}{13}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Verifying simulations}{13}{subsection.2.4.3}
 \contentsline {subsection}{\numberline {2.4.4}Shortcoming of previous simulations}{13}{subsection.2.4.4}
 \contentsline {subsection}{\numberline {2.4.5}Summary}{13}{subsection.2.4.5}
 \contentsline {section}{\numberline {2.5}Conclusion}{13}{section.2.5}
