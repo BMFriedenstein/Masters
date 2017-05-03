@@ -82,7 +82,7 @@
 \addtocontents{toc}{\protect\setcounter{tocdepth}{5}}
 \usepackage[titletoc]{appendix}
 \begin{document}
-	
+\pagenumbering{roman}	
 % Title page
 \begin{titlepage}
 	\BgThispage	
@@ -110,10 +110,8 @@
 
 %Abstract
 \section*{Abstract}
-	\vspace{0.2cm}
 	\thispagestyle{plain}
-	\pagenumbering{roman}
-	\setcounter{page}{2}
+	\vspace{0.2cm}
 	\addcontentsline{toc}{chapter}{Abstract}
 	\begin{tabular}{p{2.35cm}p{13cm}}
 		\textbf{Title:} & The use of simulations to identify operational improvements on mining compressed air systems  \\
@@ -141,8 +139,6 @@
 	\end{tabular}
 \clearpage
 
-	%Table of Contents
-\setcounter{page}{4}
 \begin{spacing}{0.2} 
 \tableofcontents
 
@@ -161,13 +157,11 @@
 	\listoftables
 \end{spacing}	
 %Chapters
-
 \input{Chapter_1/Chapter_1}
 \input{Chapter_2/Chapter_2}
 \input{Chapter_3/Chapter_3}
 \input{Chapter_4/Chapter_4}
 \input{Chapter_5/Chapter_5}
-%\nocite{*}
 \bibliographystyle{IEEEtran}
 \bibliography{Bibliography}
 \input{Apendices/Apendices}
