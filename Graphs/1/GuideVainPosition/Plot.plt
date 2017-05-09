@@ -54,7 +54,7 @@ set style line 17 linecolor rgbcolor "#224499" linewidth @my_line_width pt 5
 set border 31 lw @my_axis_width lc rgb text_color
 set key out horiz bot center
 set grid lc rgb grid_color
-f(x) = 0.6*x + 40
+
 
 
 set xlabel 'Guide Vain Position (%)'

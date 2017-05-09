@@ -5,92 +5,32 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction and background}{}% 5
 \BOOKMARK [1][-]{section.1.1}{Preamble}{chapter.1}% 6
 \BOOKMARK [1][-]{section.1.2}{Background on deep level mining}{chapter.1}% 7
-\BOOKMARK [2][-]{subsection.1.2.1}{Mining profitability}{section.1.2}% 8
-\BOOKMARK [2][-]{subsection.1.2.2}{Mining Process}{section.1.2}% 9
-\BOOKMARK [2][-]{subsection.1.2.3}{Mining Services}{section.1.2}% 10
-\BOOKMARK [3][-]{paragraph*.6}{Energy usage}{subsection.1.2.3}% 11
-\BOOKMARK [1][-]{section.1.3}{Compressed air systems in mining}{chapter.1}% 12
-\BOOKMARK [2][-]{subsection.1.3.1}{Compressed air in operation}{section.1.3}% 13
-\BOOKMARK [3][-]{paragraph*.7}{Pneumatic rock drills}{subsection.1.3.1}% 14
-\BOOKMARK [4][-]{paragraph*.8}{Refuge bays}{paragraph*.7}% 15
-\BOOKMARK [4][-]{paragraph*.9}{Compressed air control}{paragraph*.7}% 16
-\BOOKMARK [4][-]{paragraph*.10}{Operation schedule}{paragraph*.7}% 17
-\BOOKMARK [2][-]{subsection.1.3.2}{Characteristic inefficiencies}{section.1.3}% 18
-\BOOKMARK [2][-]{subsection.1.3.3}{Inefficiency identification methods}{section.1.3}% 19
-\BOOKMARK [2][-]{subsection.1.3.4}{Instrumentation and measurements}{section.1.3}% 20
-\BOOKMARK [2][-]{subsection.1.3.5}{Compressed air savings strategies}{section.1.3}% 21
-\BOOKMARK [1][-]{section.1.4}{Simulations in industry}{chapter.1}% 22
-\BOOKMARK [2][-]{subsection.1.4.1}{Thermal-hydraulic simulation}{section.1.4}% 23
-\BOOKMARK [2][-]{subsection.1.4.2}{Use in mining}{section.1.4}% 24
-\BOOKMARK [1][-]{section.1.5}{Problem statement and objectives}{chapter.1}% 25
-\BOOKMARK [2][-]{subsection.1.5.1}{Problem statement}{section.1.5}% 26
-\BOOKMARK [2][-]{subsection.1.5.2}{Research objectives}{section.1.5}% 27
-\BOOKMARK [1][-]{section.1.6}{Dissertation overview}{chapter.1}% 28
-\BOOKMARK [0][-]{chapter.2}{Literature study}{}% 29
-\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 30
-\BOOKMARK [1][-]{section.2.2}{Methods to identify operational improvements}{chapter.2}% 31
-\BOOKMARK [2][-]{subsection.2.2.1}{Preamble}{section.2.2}% 32
-\BOOKMARK [2][-]{subsection.2.2.2}{Identifying areas for improvement}{section.2.2}% 33
-\BOOKMARK [2][-]{subsection.2.2.3}{Leakage detection}{section.2.2}% 34
-\BOOKMARK [2][-]{subsection.2.2.4}{Estimation techniques}{section.2.2}% 35
-\BOOKMARK [2][-]{subsection.2.2.5}{Summary}{section.2.2}% 36
-\BOOKMARK [1][-]{section.2.3}{Review of compressed air energy interventions in industry}{chapter.2}% 37
-\BOOKMARK [2][-]{subsection.2.3.1}{Preamble}{section.2.3}% 38
-\BOOKMARK [2][-]{subsection.2.3.2}{Strategies to improve compressed air supply}{section.2.3}% 39
-\BOOKMARK [2][-]{subsection.2.3.3}{Strategies to reduce/optimise compressed air consumption}{section.2.3}% 40
-\BOOKMARK [2][-]{subsection.2.3.4}{Summary}{section.2.3}% 41
-\BOOKMARK [1][-]{section.2.4}{Use of simulations to identify improvements in mining systems}{chapter.2}% 42
-\BOOKMARK [2][-]{subsection.2.4.1}{Preamble}{section.2.4}% 43
-\BOOKMARK [2][-]{subsection.2.4.2}{Value of simulation in DSM projects}{section.2.4}% 44
-\BOOKMARK [2][-]{subsection.2.4.3}{Simulation procedure}{section.2.4}% 45
-\BOOKMARK [2][-]{subsection.2.4.4}{Verifying simulations}{section.2.4}% 46
-\BOOKMARK [2][-]{subsection.2.4.5}{Shortcoming of previous simulations}{section.2.4}% 47
-\BOOKMARK [2][-]{subsection.2.4.6}{Summary}{section.2.4}% 48
-\BOOKMARK [1][-]{section.2.5}{Conclusion}{chapter.2}% 49
-\BOOKMARK [0][-]{chapter.3}{Developing a simulation methodology}{}% 50
-\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 51
-\BOOKMARK [1][-]{section.3.2}{System investigation}{chapter.3}% 52
-\BOOKMARK [2][-]{subsection.3.2.1}{Preamble}{section.3.2}% 53
-\BOOKMARK [2][-]{subsection.3.2.2}{Data acquisition}{section.3.2}% 54
-\BOOKMARK [2][-]{subsection.3.2.3}{Manual measurements}{section.3.2}% 55
-\BOOKMARK [2][-]{subsection.3.2.4}{Mining schedule}{section.3.2}% 56
-\BOOKMARK [2][-]{subsection.3.2.5}{Summary}{section.3.2}% 57
-\BOOKMARK [1][-]{section.3.3}{Model development and verification}{chapter.3}% 58
-\BOOKMARK [2][-]{subsection.3.3.1}{preamble}{section.3.3}% 59
-\BOOKMARK [2][-]{subsection.3.3.2}{Compressed air component models}{section.3.3}% 60
-\BOOKMARK [3][-]{paragraph*.11}{Compressors}{subsection.3.3.2}% 61
-\BOOKMARK [4][-]{paragraph*.12}{Pipes}{paragraph*.11}% 62
-\BOOKMARK [4][-]{paragraph*.13}{Demand/leak}{paragraph*.11}% 63
-\BOOKMARK [4][-]{paragraph*.14}{Ambient conditions}{paragraph*.11}% 64
-\BOOKMARK [4][-]{paragraph*.15}{Controllers}{paragraph*.11}% 65
-\BOOKMARK [4][-]{paragraph*.16}{Cooling}{paragraph*.11}% 66
-\BOOKMARK [2][-]{subsection.3.3.3}{Simulation inputs}{section.3.3}% 67
-\BOOKMARK [2][-]{subsection.3.3.4}{Verification of model}{section.3.3}% 68
-\BOOKMARK [2][-]{subsection.3.3.5}{Summary}{section.3.3}% 69
-\BOOKMARK [1][-]{section.3.4}{Implementation of method}{chapter.3}% 70
-\BOOKMARK [2][-]{subsection.3.4.1}{preamble}{section.3.4}% 71
-\BOOKMARK [2][-]{subsection.3.4.2}{Analyses of data}{section.3.4}% 72
-\BOOKMARK [2][-]{subsection.3.4.3}{Quantifying operational improvements}{section.3.4}% 73
-\BOOKMARK [2][-]{subsection.3.4.4}{Summary}{section.3.4}% 74
-\BOOKMARK [1][-]{section.3.5}{Conclusion}{chapter.3}% 75
-\BOOKMARK [0][-]{chapter.4}{Results and validation}{}% 76
-\BOOKMARK [1][-]{section.4.1}{Preamble}{chapter.4}% 77
-\BOOKMARK [1][-]{section.4.2}{Case study: Mine A blue\(Kusasalethu\)}{chapter.4}% 78
-\BOOKMARK [2][-]{subsection.4.2.1}{Background}{section.4.2}% 79
-\BOOKMARK [2][-]{subsection.4.2.2}{Scenario 1. Refuge bay simulation}{section.4.2}% 80
-\BOOKMARK [2][-]{subsection.4.2.3}{Scenario 2. Closing off levels/stopes}{section.4.2}% 81
-\BOOKMARK [2][-]{subsection.4.2.4}{Scenario 3. Periodic simulation}{section.4.2}% 82
-\BOOKMARK [2][-]{subsection.4.2.5}{Summary}{section.4.2}% 83
-\BOOKMARK [1][-]{section.4.3}{Case study: Mine B blue\(Beatrix 123\)}{chapter.4}% 84
-\BOOKMARK [2][-]{subsection.4.3.1}{Background}{section.4.3}% 85
-\BOOKMARK [2][-]{subsection.4.3.2}{Compressor set points}{section.4.3}% 86
-\BOOKMARK [2][-]{subsection.4.3.3}{Control valves set points}{section.4.3}% 87
-\BOOKMARK [2][-]{subsection.4.3.4}{Summary}{section.4.3}% 88
-\BOOKMARK [1][-]{section.4.4}{Validation of results}{chapter.4}% 89
-\BOOKMARK [1][-]{section.4.5}{Conclusion}{chapter.4}% 90
-\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 91
-\BOOKMARK [1][-]{section.5.1}{Conclusion}{chapter.5}% 92
-\BOOKMARK [1][-]{section.5.2}{Limits of this study}{chapter.5}% 93
-\BOOKMARK [1][-]{section.5.3}{Recommendations for future studies}{chapter.5}% 94
-\BOOKMARK [0][-]{Appendix.1.A}{Appendix 1}{}% 95
-\BOOKMARK [0][-]{Appendix.1.B}{Appendix 2}{}% 96
+\BOOKMARK [1][-]{section.1.3}{Compressed air systems in mining}{chapter.1}% 8
+\BOOKMARK [1][-]{section.1.4}{Simulations in industry}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.5}{Problem statement and objectives}{chapter.1}% 10
+\BOOKMARK [1][-]{section.1.6}{Dissertation overview}{chapter.1}% 11
+\BOOKMARK [0][-]{chapter.2}{Literature study}{}% 12
+\BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 13
+\BOOKMARK [1][-]{section.2.2}{Methods to identify operational improvements}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.3}{Review of compressed air energy interventions in industry}{chapter.2}% 15
+\BOOKMARK [1][-]{section.2.4}{Use of simulations to identify improvements in mining systems}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.5}{Conclusion}{chapter.2}% 17
+\BOOKMARK [0][-]{chapter.3}{Developing a simulation methodology}{}% 18
+\BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.2}{System investigation method}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.3}{Model development and verification}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.4}{Approach to method implementation}{chapter.3}% 22
+\BOOKMARK [1][-]{section.3.5}{Conclusion}{chapter.3}% 23
+\BOOKMARK [0][-]{chapter.4}{Results and validation}{}% 24
+\BOOKMARK [1][-]{section.4.1}{Preamble}{chapter.4}% 25
+\BOOKMARK [1][-]{section.4.2}{Case study: Mine A blue\(Kusasalethu\)}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.3}{Case study: Mine B blue\(Beatrix 123\)}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.4}{Periodic simulation analysis}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.5}{Validation of results}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.6}{Conclusion}{chapter.4}% 30
+\BOOKMARK [0][-]{chapter.5}{Conclusion}{}% 31
+\BOOKMARK [1][-]{section.5.1}{Conclusion}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.2}{Limits of this study}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.3}{Recommendations for future studies}{chapter.5}% 34
+\BOOKMARK [0][-]{Appendix.1.A}{Appendix 1}{}% 35
+\BOOKMARK [0][-]{Appendix.1.B}{Appendix 2}{}% 36

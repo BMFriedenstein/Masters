@@ -32,11 +32,6 @@ Eskom, ``Revenue application - multi year price determination 2013/14 to
   \url{http://www.eskom.co.za/CustomerCare/MYPD3/Documents/NersaReasonsforDecision.pdf},
   2013, [Accessed 22 March 2017].
 
-\bibitem{Inflation2013}
-inflation.eu, ``Historic inflation south africa - cpi inflation,'' [Online]
-  \url{http://www.inflation.eu/inflation-rates/south-africa/historic-inflation/cpi-inflation-south-africa.aspx},
-  2017, [Accessed 25 March 2017].
-
 \bibitem{mudd2007global}
 G.~M. Mudd, ``Global trends in gold mining: Towards quantifying environmental
   and resource sustainability,'' \emph{Resources Policy}, vol.~32, no.~1, pp.
@@ -52,6 +47,10 @@ J.~M{\"u}ller and H.~Frimmel, ``Numerical analysis of historic gold production
   series - towards an energy efficient mining sector,'' [Online]
   \url{http://www.eskom.co.za/sites/idm/Documents/121040ESKD_Mining_Brochure_paths.pdf},
   February 2010, [Accessed 19 March 2017].
+
+\bibitem{le2005energy}
+H.~Le~Roux, ``Energy consumption reduction challenge,'' \emph{Mining Weekly, PO
+  Box}, vol. 75316, p.~30, 2005.
 
 \bibitem{Marais2012PhD}
 J.~Marais, ``An integrated approach to optimise energy consumption of mine
@@ -96,12 +95,6 @@ A.~van Tonder, ``Sustaining compressed air dsm project savings using an air
   leakage management system,'' {Masters} dissertation, North-West University,
   2011.
 
-\bibitem{bester2013effect}
-Bester \emph{et~al.}, ``The effect of compressed air pressure on mining
-  production and energy demand,'' in \emph{Industrial and Commercial Use of
-  Energy Conference (ICUE), 2013 Proceedings of the 10th}.\hskip 1em plus 0.5em
-  minus 0.4em\relax IEEE, 2013, pp. 1--4.
-
 \bibitem{brake1999criteria}
 D.~Brake and G.~Bates, ``Criteria for the design of emergency refuge stations
   for an underground metal mine,'' in \emph{AusIMM Proceedings}, vol. 304,
@@ -114,8 +107,8 @@ C.~Kriel, ``Modernising underground compressed air dsm projects to reduce
 
 \bibitem{Lawrence2004Improving}
 L.~B.~N. Laboratory, \emph{Improving Compressed Air System Performance: A
-  Sourcebook for Industry}.\hskip 1em plus 0.5em minus 0.4em\relax Washington
-  DC: US Department of Energy.
+  Sourcebook for Industry}, 2nd~ed.\hskip 1em plus 0.5em minus 0.4em\relax
+  Washington DC: US Department of Energy, 2004.
 
 \bibitem{Snyman2011Masters}
 J.~Snyman, ``Integrating various energy saving initiatives on compressed air
@@ -143,5 +136,11 @@ J.~Marais, M.~Kleingeld, and R.~Pelzer, ``Increased energy savings through a
 J.~Marais and M.~Kleingeld, ``An expert control system to achieve energy
   savings on mine compressed air systems,'' \emph{Industrial and commersial use
   of energy (ICUE)}, 2010.
+
+\bibitem{bester2013effect}
+Bester \emph{et~al.}, ``The effect of compressed air pressure on mining
+  production and energy demand,'' in \emph{Industrial and Commercial Use of
+  Energy Conference (ICUE), 2013 Proceedings of the 10th}.\hskip 1em plus 0.5em
+  minus 0.4em\relax IEEE, 2013, pp. 1--4.
 
 \end{thebibliography}

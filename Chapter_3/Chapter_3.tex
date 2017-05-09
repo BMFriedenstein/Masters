@@ -7,12 +7,12 @@
 \enquote*{\textit{Quote.}} - Somebody\\
 \newpage
 \section{Introduction}
-\section{System investigation}
+\section{System investigation method}
 	\subsection{Preamble}
-		Developing a detailed simulation model of a compressed air requires thorough comprehension of the inner workings of the network. This section will discuss the investigations required to obtain this understanding.
-	\subsection{Data acquisition} % 
+		Developing a detailed simulation model of a compressed air requires thorough comprehension of the inner workings of the air network. This section will discuss the investigations required to obtain this understanding.
+	\subsection{Data acquisition and verification} % 
 		-Layouts, data from SCADA Instrumentation, etc.
-	\subsection{Manual measurements}
+	\subsection{Solutions to unavailable data}
 		- When instrumentation isn't available\\
 		- locate leaks etc.\\
 		- Estimate/ measure typical flows to sections\\
@@ -20,28 +20,59 @@
 		- Manual measurements required
 	\subsection{Mining schedule}
 		- Identify typical mining procedures and philosophies that influence the consumption of compressed air.\\
-		- eg. Drilling throughout the day or shift, diferent types of shift, air requirements
+		- eg. Drilling throughout the day or shift, different types of shift, air requirements
 	\subsection{Summary}
 \section{Model development and verification}
-	\subsection{preamble}
-		- This section will discuss the development of a simulation model.
+	\subsection{Preamble}
+	This section will discuss the development of a compressed air simulation model in \gls{stb}.
 	\subsection{Compressed air component models}
-		- Modelling components ( Pipes, leaks, compressors,  ambient conditions, after coolers, controllers(guide vain vs VSD) etc.)
-		\paragraph{Compressors}\leavevmode\\
-		\paragraph{Pipes}\leavevmode\\
-		\paragraph{Demand/leak}\leavevmode\\
-		\paragraph{Ambient conditions}\leavevmode\\
-		\paragraph{Controllers}\leavevmode\\
-		\paragraph{Cooling}\leavevmode\\
+		\gls{stb} 
+		\subsubsection{Pipes}
+		\subsubsection{Ambient conditions}
+		Ambient air condition will vary greatly throughout a mining air network. Pressure and temperature increases with depth  as a result of auto compression. Underground conditions maintain relatively stable compared to the surface. Air condition can effect the performance of the network therefore it is important to include them in the model.
+		\par 
+		Surface conditions can be obtained through average weather measurements taken near or at the required site or estimated from measurements at other location. Underground conditions can be obtained through measurements if available. Alternative the conditions can be estimated by using the depth below the surface. The obtained pressure, temperature and humidity parameters can be imported directly into the air boundary component.
+		\paragraph{Compressor model}\leavevmode\\
+		\gls{stb} provides three compressor models with varying complexity:a air compressor, dynamic compressor and positive displacement compressor. When utilised, the
+		 compressor component is added to the air network in the arrangement shown in figure \ref{fig: Compressor models}. The Compressor is connected to the inlet air source via an inlet pipe and air node and to the rest of the network via an air node and outlet pipe. This is is to allow the inlet and outlet parameters and conditions to be be monitored and controlled.
+		\begin{figure}[h]
+			\centering
+			\fbox{\includegraphics[trim =-4cm 0 -4cm 0cm, width=\textwidth]{Images/3/Compressors}}
+			\caption{Modelling a compressor in \gls{stb}.}
+			\label{fig: Compressor models}
+		\end{figure}
+		\par
+		 The air compressor model is a general, simplified compressor model. This model requires minimal user inputs by making several assumptions. This is useful when parameters for a compressor are not available. Or when doing a quick preliminary simulation. However it is not ideal for detailed simulations which require more precision.
+		 \par 
+		 The dynamic and positive displacement compressor models are more complex, taking into account factors such as heat caused by polytopic compression and inefficiencies. The models do still make several assumptions for example, the compressor efficiency at different loads is assumed to remain the same. This can cause the operation of the model can differ slightly from the real life compressor.
+		 \par
+		 For most scenarios, the dynamic compressor model will be suitable. This models fits a quadratic curve through three points to obtain an equation for corrected mass flow as a function of the pressure ratio. This characteristic compressor curve as shown in figure \ref{fig: Compressor Curve} can be accurately estimated even when only one data point is available by making approximations for the zero flow and pressure points on the curve.\footnote{TEMM International, \enquote*{Process toolbox - Thermal hydraulic simulation flow solver,} User Manual, 2014} 
+			\begin{figure}[h]
+				\centering
+				\fbox{\input{Graphs/3/AproxCurve/AproxCurve}}
+				\caption{Estimating the characteristic curve of a compressor using the dynamic compressor model.}
+				\label{fig: Compressor Curve}
+			\end{figure}
+		\subsubsection{Demand/leak}
+	
+		\subsubsection{Controllers}
+		Compressed air networks rely on controllers
+\begin{figure}[h]
+	\centering
+	\fbox{\includegraphics[trim =-4cm 0 -4cm 0cm, width=\textwidth]{Images/3/Controller}}
+	\caption{Control components in \gls{stb}.}
+	\label{fig: Controller models}
+\end{figure}
+		\subsubsection{After Cooling}
 	\subsection{Simulation inputs}
 		-Discuss inputs of the simulation, (compressor setpoints, ambient conditions, demands)
-	\subsection{Verification of model}
+	\subsection{Verification of simulation model}
 		- Steps to validate  the model accuracy .\\
 		- Compare parameters to actuals
 	\subsection{Summary}
-\section{Implementation of method}
-	\subsection{preamble}
-		- This section will discuss the implementation and analysis of the simulation.
+\section{Approach to method implementation}
+	\subsection{Preamble}
+		- This section will discuss the approach to implementation and analysis of the simulation.
 	\subsection{Analyses of data}
 		- Baseline vs Optimised comparison \\
 	\subsection{Quantifying operational improvements}
