@@ -59,22 +59,22 @@
 \contentsline {subsection}{\numberline {3.2.1}Preamble}{16}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Data acquisition and verification}{16}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Solutions to unavailable data}{16}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Mining schedule}{16}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Summary}{16}{subsection.3.2.5}
-\contentsline {section}{\numberline {3.3}Model development and verification}{16}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Preamble}{16}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.2.4}Mining schedule}{17}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Summary}{17}{subsection.3.2.5}
+\contentsline {section}{\numberline {3.3}Model development and verification}{17}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Preamble}{17}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Compressed air component models}{17}{subsection.3.3.2}
 \contentsline {subsubsection}{Pipes}{17}{subsubsection*.14}
 \contentsline {subsubsection}{Ambient conditions}{17}{subsubsection*.15}
-\contentsline {paragraph}{Compressor model}{17}{paragraph*.16}
+\contentsline {paragraph}{Compressor model}{18}{paragraph*.16}
 \contentsline {subsubsection}{Demand/leak}{19}{subsubsection*.17}
 \contentsline {subsubsection}{Controllers}{19}{subsubsection*.18}
 \contentsline {subsubsection}{After Cooling}{19}{subsubsection*.19}
 \contentsline {subsection}{\numberline {3.3.3}Simulation inputs}{19}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Verification of simulation model}{19}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Summary}{19}{subsection.3.3.5}
-\contentsline {section}{\numberline {3.4}Approach to method implementation}{19}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Preamble}{19}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.3.4}Verification of simulation model}{20}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Summary}{20}{subsection.3.3.5}
+\contentsline {section}{\numberline {3.4}Approach to method implementation}{20}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Preamble}{20}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Analyses of data}{20}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Quantifying operational improvements}{20}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Summary}{20}{subsection.3.4.4}

@@ -9,10 +9,17 @@
 \section{Introduction}
 \section{System investigation method}
 	\subsection{Preamble}
-		Developing a detailed simulation model of a compressed air requires thorough comprehension of the inner workings of the air network. This section will discuss the investigations required to obtain this understanding.
+		Developing a detailed simulation model of a compressed air network requires thorough comprehension of the inner workings of the system. This section will discuss the investigations required to obtain this understanding.
 	\subsection{Data acquisition and verification} % 
 		-Layouts, data from SCADA Instrumentation, etc.
 	\subsection{Solutions to unavailable data}
+	Parameters that are required to develop the simulation model, such as flows, pressures, specifications etc., may not be actively recorded by mine personnel or computer systems. In order to obtain this data it is necessary to investigate alternative sources.
+	\par 
+	Flow and pressure instrumentation measurements are most often not available throughout the air network. At points where these measurement are absent, estimations can be made from assumptions f
+	\par 
+	Air network specifications such as piping sizes and compressor parameters is often outdated or not recorded. Audits and manual investigations should be implemented to obtain this data. If these investigations are not possible estimations should be made using the available data.
+	\par 
+	
 		- When instrumentation isn't available\\
 		- locate leaks etc.\\
 		- Estimate/ measure typical flows to sections\\
@@ -33,8 +40,7 @@
 		\par 
 		Surface conditions can be obtained through average weather measurements taken near or at the required site or estimated from measurements at other location. Underground conditions can be obtained through measurements if available. Alternative the conditions can be estimated by using the depth below the surface. The obtained pressure, temperature and humidity parameters can be imported directly into the air boundary component.
 		\paragraph{Compressor model}\leavevmode\\
-		\gls{stb} provides three compressor models with varying complexity:a air compressor, dynamic compressor and positive displacement compressor. When utilised, the
-		 compressor component is added to the air network in the arrangement shown in figure \ref{fig: Compressor models}. The Compressor is connected to the inlet air source via an inlet pipe and air node and to the rest of the network via an air node and outlet pipe. This is is to allow the inlet and outlet parameters and conditions to be be monitored and controlled.
+		In \gls{stb} three compressor models are available with varying complexity: air compressor, dynamic compressor and positive displacement compressor. When used, the compressor component is added to the air network in the arrangement shown in figure \ref{fig: Compressor models}. The Compressor is connected to the inlet air source via an inlet pipe and air node and to the rest of the network via an air node and outlet pipe. This is is to allow the inlet and outlet parameters and conditions to be be monitored and controlled.
 		\begin{figure}[h]
 			\centering
 			\fbox{\includegraphics[trim =-4cm 0 -4cm 0cm, width=\textwidth]{Images/3/Compressors}}
