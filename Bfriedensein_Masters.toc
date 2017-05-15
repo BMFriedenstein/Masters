@@ -11,22 +11,22 @@
 \contentsline {subsection}{\numberline {1.2.2}Process of a deep level mine}{2}{subsection.1.2.2}
 \contentsline {subsection}{\numberline {1.2.3}Mining Services}{3}{subsection.1.2.3}
 \contentsline {subsubsection}{Energy usage}{3}{subsubsection*.6}
-\contentsline {section}{\numberline {1.3}Compressed air systems in mining}{3}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Compressed air in operation}{3}{subsection.1.3.1}
+\contentsline {section}{\numberline {1.3}Compressed air systems in mining}{4}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Compressed air in operation}{4}{subsection.1.3.1}
 \contentsline {paragraph}{Pneumatic rock drills}{4}{paragraph*.7}
-\contentsline {paragraph}{Refuge bays}{4}{paragraph*.8}
+\contentsline {paragraph}{Refuge bays}{5}{paragraph*.8}
 \contentsline {paragraph}{Compressed air control}{5}{paragraph*.9}
 \contentsline {paragraph}{Operation schedule}{5}{paragraph*.10}
 \contentsline {subsection}{\numberline {1.3.2}Characteristic inefficiencies of compressed air systems}{6}{subsection.1.3.2}
-\contentsline {subsection}{\numberline {1.3.3}Instrumentation and measurements}{6}{subsection.1.3.3}
+\contentsline {subsection}{\numberline {1.3.3}Instrumentation and measurements}{7}{subsection.1.3.3}
 \contentsline {subsection}{\numberline {1.3.4}Inefficiency identification methods}{7}{subsection.1.3.4}
 \contentsline {subsection}{\numberline {1.3.5}Compressed air savings strategies}{7}{subsection.1.3.5}
-\contentsline {section}{\numberline {1.4}Simulations }{7}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Background in industrial simulation}{7}{subsection.1.4.1}
+\contentsline {section}{\numberline {1.4}Simulations }{8}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Background in industrial simulation}{8}{subsection.1.4.1}
 \contentsline {subsection}{\numberline {1.4.2}Thermal-hydraulic simulation}{8}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Use of simulation in mining}{8}{subsection.1.4.3}
-\contentsline {section}{\numberline {1.5}Problem statement and objectives}{8}{section.1.5}
-\contentsline {subsection}{\numberline {1.5.1}Problem statement}{8}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.4.3}Use of simulation in mining}{9}{subsection.1.4.3}
+\contentsline {section}{\numberline {1.5}Problem statement and objectives}{9}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Problem statement}{9}{subsection.1.5.1}
 \contentsline {subsection}{\numberline {1.5.2}Research objectives}{9}{subsection.1.5.2}
 \contentsline {section}{\numberline {1.6}Dissertation overview}{9}{section.1.6}
 \contentsline {chapter}{\numberline {2}Literature study}{10}{chapter.2}
