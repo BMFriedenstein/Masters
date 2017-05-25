@@ -1,28 +1,51 @@
 \usepackage{longtable}
-\usepackage[section,acronym]{glossaries}
+\usepackage[section,acronym,nogroupskip]{glossaries}
 
+\newglossarystyle{formel_altlong4colheader}{%
+	\setglossarystyle{altlong4colheader}%
+	% 
+	\renewcommand*{\glossaryheader}{}%
+	\renewcommand{\glossentry}[2]{% 
+		\glstarget{##1}{\glossentryname{##1}}% 
+		& \glossentrydesc{##1}% 
+		& \glossentrysymbol{##1}% 
+		\tabularnewline % end of row
+	}%
+}
+\setlength{\glsdescwidth}{3in}
+\setglossarystyle{formel_altlong4colheader}
 \newacronym{calds}{CALDS}{Compressed Air Leakage Documentation System}
 \newacronym{dsm}{DSM}{Demand Side Management}
 \newacronym{pi}{PI}{Proportional-Integral}
 \newacronym{plc}{PLC}{Programmable logic controller}
-\newacronym{scada}{SCADA}{Supervisory control and data acquisition}
+\newacronym{scada}{SCADA    }{Supervisory control and data acquisition}
 \newacronym{stb}{STB}{Simulation Toolbox}
 \newacronym{ths}{THS}{Thermal-hydraulic simulation}
 \newacronym{vsd}{VSD}{Variable Speed Drive}
 \newacronym{vfd}{VFD}{Variable Frequency Drive}
+\newacronym{si}{SI}{ Le Système International d'Unités (International System of Units) }
 
 \newglossaryentry{kpa}{
-	name = kPa ,
-	description =  - Kilopascal
+	name = kilopascals,
+	description =  The international measure of pressure,
+	symbol = kPa
 }
-\newglossaryentry{mw}{
-	name = MW ,
-	description =  - MegaWatt
+\newglossaryentry{polyCof}{
+	name = polytropic\\ coefficient, 
+	description =  The thermodynamic coeificient used when describing the heat transfer due to compression or expansion,
+	symbol = ---
 }
 
+\newglossaryentry{mw}{
+	name = Watt,
+	description =  The SI measure of power,
+	symbol = MW
+} 
+
 \newglossaryentry{t}{
-	name = T,
-	description =  - Tonne
+	name = Tonne,
+	description =  The non-SI measure for 1000 kilograms,
+	symbol = T
 }
 
 \makeglossaries

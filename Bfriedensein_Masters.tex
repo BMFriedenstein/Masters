@@ -47,6 +47,8 @@
 \titlespacing*{\paragraph}{0pt}{-10pt}{-10pt}
 \usepackage{enumitem}
 \setlist[itemize]{noitemsep, topsep=-20pt}
+\setlength{\glsdescwidth}{0.7\textwidth}
+\setlength{\glspagelistwidth}{0.3\linewidth}
 
 %Page headers
 \usepackage{fancyhdr}
@@ -141,7 +143,7 @@
 	\end{tabular}
 \clearpage
 
-\begin{spacing}{0.2} 
+\begin{spacing}{1.2} 
 \tableofcontents
 
 \clearpage
@@ -150,9 +152,12 @@
 %List of symbals
 %List of abreviations
 	\addcontentsline{toc}{chapter}{Abbreviations and nomenclature}
-	\printglossary[type=\acronymtype,title=Abbreviations, nonumberlist]
-	\printglossary[title=Nomenclature, nonumberlist]
+	\printglossary[type=\acronymtype]
+	\printglossary[title=Nomenclature]
 	\newpage
+	
+	%\printglossaries
+	
 	\addcontentsline{toc}{chapter}{List of figures}
 	\listoffigures
 	\addcontentsline{toc}{chapter}{List of tables}
@@ -167,5 +172,5 @@
 \bibliographystyle{IEEEtran}
 \bibliography{Bibliography}
 \input{Apendices/Apendices}
-
+\glsaddall
 \end{document}

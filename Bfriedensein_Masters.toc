@@ -2,7 +2,7 @@
 \select@language {english}
 \contentsline {chapter}{Abstract}{i}{Doc-Start}
 \contentsline {chapter}{Abbreviations and nomenclature}{v}{chapter*.1}
-\contentsline {chapter}{List of figures}{vi}{section*.3}
+\contentsline {chapter}{List of figures}{vi}{table.0.2}
 \contentsline {chapter}{List of tables}{vi}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction and background}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Preamble}{2}{section.1.1}
@@ -63,7 +63,7 @@
 \contentsline {section}{\numberline {3.3}Model development and verification}{18}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Preamble}{18}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Compressed air component models}{18}{subsection.3.3.2}
-\contentsline {subsubsection}{Air pipes and valves}{18}{subsubsection*.13}
+\contentsline {subsubsection}{Air pipes}{18}{subsubsection*.13}
 \contentsline {subsubsection}{Ambient conditions}{19}{subsubsection*.14}
 \contentsline {paragraph}{Compressors}{19}{paragraph*.15}
 \contentsline {subsubsection}{Demand/leak}{20}{subsubsection*.16}
@@ -74,7 +74,7 @@
 \contentsline {subsection}{\numberline {3.3.5}Summary}{21}{subsection.3.3.5}
 \contentsline {section}{\numberline {3.4}Implementation of simulation method}{21}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Preamble}{21}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Analyses of data}{21}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.2}Analyses of data}{22}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Quantifying operational improvements}{22}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Summary}{22}{subsection.3.4.4}
 \contentsline {section}{\numberline {3.5}Conclusion}{22}{section.3.5}
