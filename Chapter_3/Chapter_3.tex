@@ -64,26 +64,39 @@
 		\subsubsection{Demand/leak}
 			A flow demand 
 		\subsubsection{Controllers}\label{Controllers}
-		Simulated components need to be dynamically controlled as in the actual air network. Typically compressors and valves are controlled to certain set-points and schedules. It is important to model the nonlinearities of these controllers to ensure the simulation reacts in the same way the actual network would.
+		Simulation components need to be dynamically controlled as in the actual air network. Control is typically implemented on compressors and valves throughout the network to follow certain set-points and schedules. It is important to not only include the controllers in the simulation, but to replicate the non-linearities, limitations and responsiveness related to their use. This ensures the model reacts in the same way the actual network would, improving accuracy.
 		\par 
-		On a typical mine, compressors power is controlled such that the discharge pressure matches a specified set-point. Power control is achieved through either \glspl{vsd} \slash \glspl{vfd} or guide-vain control. \glspl{vfd} provide a wide range of power control and can be estimated using a \gls{pi} controller as in figure \ref{fig: Controller models} where discharge pressure is used as feedback for the controller. 
+		On a typical mine, compressors power is controlled to ensure that the discharge pressure matches a specified set-point. This control is achieved through either \glspl{vsd} (or \glspl{vfd}) ad guide-vain control. \glspl{vfd} gives a wide range of power control and can be estimated using a \gls{pi} controller as in figure \ref{fig: Controller models} where discharge pressure is used as feedback for the controller. 
 	\begin{figure}[h]
 		\centering
 		\fbox{\includegraphics[trim =-4cm 0 -4cm 0cm, width=\textwidth]{Images/3/Controller}}
 		\caption{Control components in \gls{stb}.}
 		\label{fig: Controller models}
 	\end{figure}
-		A guide vain controller is developed a \gls{pi} controller as with the \gls{vsd}. However the control limitations of guide vain control, as shown in figure \ref{fig: Guide vain position}, must be added to the model. Figure \ref{fig: Guide vain position} also shows that the typical minimum guide vain control position of 40\% will map to a output power of approx. 60\% of the maximum output power of the compressor.
-		\subsubsection{After Cooling}
+		A guide vain controller is modelled using a \gls{pi} controller, as with the \gls{vsd} controller. However the limitations of guide vain control, as shown in figure \ref{fig: Guide vain position}, must be implemented to the controller. This is done by adding a minimum output that would match the minimum factor of power reduction the guide vain achieved by closing the guide vain. Figure \ref{fig: Guide vain position} shows that the typical minimum guide vain control position of 40\% will map to a output power of approx. 60\% of the maximum output power of the compressor. 
+		\par 
+		Mines utilise control valves underground sections to control the pressure at individual mining stations independently \cite{Heyns2014Masters}. Controlling of valve components is perfomed similarly as control of the compressor components. As shown in figure \ref{fig: Controller models} the outlet pressure is used as feedback for a pi controller. The controller output is mapped to the valve fraction of a pipe component.
+		\subsubsection{Compressed air after-cooling}
+		The air compression process generates significant heat. Compressed air at high temperatures contains a large amount of water vapour. To prevent condensation later in the air network, improve the system capacity and protect equipment from excessive heat, after-coolers are installed to the outlet of the compressor \cite{schroeder2009energy}.
+		\par 
+		After-cooling reduces the compressed air temperature to within a margin of ambient. This cooling could have a large effect on the performance of the network. Hence including after-cooling to the simulation model should improve accuracy.
+		\par 
+		To replicate this effect, a heat transfer node can be added to the outlet of the compressor component. \gls{stb} utilises the following heat transfer parameters of the air node to solve for outlet temperature:
+		\par 
+		\begin{tabular}{p{1.3cm}p{13cm}}
+			$Area$ & The heat transfer area ($m^2$) \\
+			$UA$ & Heat transfer coefficient ($kW/^{\circ} C$) \\
+			$T_{amb}$ & Ambient air temperature ($^{\circ} C$) \\
+		\end{tabular} \\	
 	\subsection{Simulation inputs}
-		-Discuss inputs of the simulation, (compressor setpoints, ambient conditions, demands)
+		- Discuss inputs of the simulation, (compressor setpoints, ambient conditions, demands)
 	\subsection{Verification of simulation model}
 		- Steps to validate  the model accuracy .\\
 		- Compare parameters to actuals
 	\subsection{Summary}
 \section{Implementation of simulation method}
 	\subsection{Preamble}
-		Once a model has been developed and verified, the implementation of simulated interventions and scenarios follows. In this section, the approach of implementation, and analysis of interventions in simulation will be discussed.
+		Once a simulation has been developed and verified, the implementation of interventions and scenarios follows. In this section, the approach of implementation, and analysis of interventions in simulation will be discussed.
 	\subsection{Analyses of data}
 		- Baseline vs Optimised comparison \\
 	\subsection{Quantifying operational improvements}
