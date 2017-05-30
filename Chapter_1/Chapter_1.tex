@@ -61,15 +61,6 @@ This chapter firstly discusses background regarding deep level mining in South A
 				Large processing plants are constructed near gold and mines to extract metal from the ore. These plants utilise compressed air for various systems, processes and instrumentation. Processing plants are of ten connected to the same compressed air network as the mine \cite{Marais2012PhD}. The plants use relatively low amounts of air compared to mines, however they can have pressure requirements that can complicate compressed air network optimisations .
 			\subsubsection{Other compressed air usages}
 			 	 Due to the availability underground, compressed air is utilised for a number of other applications. These usages include, pneumatic loaders or rock shovels, pneumatic cylinders, dam sediment agitation, cooling and ventilation and many other applications. This vast variety of of applications also leads to misuse of compressed air this leads to inefficient operation.
-			\subsubsection{Compressed air control}
-				On many large compressed air networks, the intake guide vain position on a compressor is manipulated in order to obtain the air flow and pressure requirements. Typically, guide vains are opened and closed to increase and decrease the compressors discharge pressure. When more pressure is required than can be obtained with the guide vains fully opened, another compressor is needed to operate.\par
-				As shown in the figure \ref{fig: Guide vain position}, showing guide vain positions vs power for a typical mining compressor, the guide vains are controlled between 40\% and 100\% of their fully open position. Reducing and increasing the guide vain position will effect the power output of the compressor.The relationship between power and guide vain position of a compressor can be approximated as a linear function. A guide vain position of 40\% will relate to an output power of about 60\% of maximum power.
-				\begin{figure}[h]
-					\centering
-					\fbox{\input{Graphs/1/GuideVainPosition/GuideVainPosition}}
-					\caption[The relation between guide vain position and compressor output power.]{The relation between guide vain position and compressor output power.}
-					\label{fig: Guide vain position}
-				\end{figure}
 			\subsubsection{Operation schedule}
 				On a typical mine, various operations will take place at different times of the day. Depending on the activity taking place, many mines will control the pressure to meet the requirements \cite{Kriel2014Masters},\cite{Marais2012PhD}. Figure \ref{fig: Mining schedule} shows the schedule and pressure requirement on a typical deep level mine.\par 
 				As shown in the figure, the pressure requirement changes depending on the activity taking place. The drilling shift typically has the highest pressure requirement whilst blasting shift requires the lowest. Schedules and operation philosophies can differ between mines. Different operational schedules require alternative pressure requirement profiles.
@@ -84,18 +75,14 @@ This chapter firstly discusses background regarding deep level mining in South A
 		\par 
 		Compressed air leakage accounts for as much as 35\% of the energy losses of a compressed air network \cite{Lawrence2004Improving}. Other systemic losses include, faulty valves, pipe diameter fluctuations, obstructed air compressor intake filters and inefficient compressors. 	
 		\subsection{Instrumentation and measurements}
-		For large industrial systems, thorough instrumentation is necessary in order to monitor performance and condition throughout the system. In a mining compressed air network, instrumentation is installed on the compressor to monitor flows, pressures, temperatures and guide vain position. Electrical instrumentation is also installed for sensing currents, power factors, voltages and power. On control valves, input/output pressures, flows and valve position are usually measured with instrumentation.	
+		For large industrial systems, thorough instrumentation is necessary in order to monitor performance and equipment condition throughout the system. In a mining compressed air network, instrumentation is installed to monitor flows, pressures, temperatures ,etc.. Electrical instrumentation is also installed for sensing currents, power factors, voltages and power. On control valves, input/output pressures, flows and valve position are usually measured with instrumentation.	
 		\par
-		\Glspl{plc}. A \gls{scada} system is is used to observe and monitor all of the instrumentation. 
-		\par
-		When instrumentation is not installed. Manual measurements are performed.
-		\\
-		\texttt{Not finnished}
+		 A \gls{scada} system is used to monitor and control processes throughout the mine from a control room. The \gls{scada} centralises instrumentation data from \glspl{plc} throughout the mine. The \gls{scada} can also be used to control machines and instrumentation by sending control signals to the relevant \gls{plc}.  Communication to the underground \glspl{plc} is achieved using a substantial fibre optic network.\cite{schroeder2009energy}
+
 	\subsection{Inefficiency identification methods}
 		Leakage and inefficiency detection strategies is not often pursued in the South African mining industry \cite{vanTonder2010Masters}. Many mines do however perform leak inspections either internally or by a outside company. In these inspections, an ultrasonic detector is used to locate the leak. Alternatively, some mines employ the \enquote{walk and listen} method to identify leaks from the audible sound that it produces \cite{vanTonder2010Masters}. Once the inspection is completed, the findings, including the locations and estimated costs of all identified leaks, are reported.
-		\texttt{Need to added a citation or two}
 	\subsection{Compressed air savings strategies}
-		The main strategies fo reducing energy on compressed air systems are summarised as follows \cite{Snyman2011Masters}:
+		Strategies to reduce energy on compressed air systems can be summarised as follows \cite{Snyman2011Masters}:
 		\begin{itemize}
 			\item Reducing leaks.
 			\item Reducing demand.
@@ -103,7 +90,7 @@ This chapter firstly discusses background regarding deep level mining in South A
 			\item Increasing supply efficiency.
 			\item Optimising supply.
 		\end{itemize}
-	\texttt{Still need to discuss more detailed}
+	Often a combination of energy strategies will lead to the most savings \cite{Marais2012PhD}. Specific energy saving measures that have successfully reduced energy on mine compressed air systems will be discussed in Chapter 2.
 	\section{Use of simulation in industry }
 	\subsection{Background in industrial simulation}
 		Continuous improvements in computing hardware has led to major advancement in software technology. Consequently the use of computational simulation has become an increasingly valuable tool for many industries.\cite{kocsis2003integration} \par 
@@ -115,6 +102,7 @@ This chapter firstly discusses background regarding deep level mining in South A
 			\item The capability to determine the limits and constraints within a system.
 			\item The potential to build consensus with regard to proposed designs or modifications.
 		\end{itemize}
+
 	\subsection{Simulation usage in mining}
 		Simulation has been used to test and identify energy and operational improvements in mining systems. However,  existing tools required to much data to model the systems accurately, [CITATION NEEDED] Resulting in simplified simulation models.  New tools such the \gls{stb} software, have made it possible to develop highly accurate, detailed simulations for mining systems. This will alolow more complex intervention to be tested with more accuracy.
 		

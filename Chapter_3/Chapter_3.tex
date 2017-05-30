@@ -23,9 +23,10 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 	\subsection{Mining schedule}
 		A crucial aspect to developing an accurate model of a mining compressed air system is understanding the the operational philosophy of the mine. The schedule for operations such as drilling,  blasting or cleaning can have a major impact on compressed air requirements at different times of the day. By utilizing the operational schedule, simulation scenarios can be optimized for the air requirements throughout the day.
 	\subsection{Summary}
+		
 \section{Model development and verification}
 	\subsection{Preamble}
-	Compressed air networks are comprised of components such as compressors, valves, pipes, etc. This section discusses the development and calibration and verification of component models that make up a compressed air simulation is. 
+	Compressed air networks are comprised of components such as compressors, valves, pipes, etc. This section will discus the development, calibration and verification of component models that make up a compressed air simulation is. 
 	\subsection{Compressed air component models}
 		\subsubsection{Air pipes}
 		Pressure losses occur over compressed air networks due to friction in the pipe, these losses should be taken into account in the simulation for large piping sections. A pipe model is used to account for these losses which are defined by the \textit{Darcy-Weisbach equation}\footnote{ B. Glenn, \enquote*{The Darcy–Weisbach Equation,}[Online] \url{https://bae.okstate.edu/faculty-sites/Darcy/DarcyWeisbach/Darcy-WeisbachEq.htm}, [Accessed 20-05-2017]}:
@@ -68,17 +69,26 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 			A flow demand represents any air flow leaving the network. This includes equipment that uses air such as drills and agitators etc. as well as inefficiencies like leaks and open pipes. Generally  the air flow to dependant on pressure and the specific resistance to flow of the outlet. 
 			\par 
 			The specific resistance of the flow demand can be obtained using the inlet pressure, outlet pressure and flow. If the flow is not known, a reasonably accurate estimation can be made by calculating the expected flow from the size of the outlet.
-		\subsubsection{Controllers}\label{Controllers}
+		\subsubsection{Compressed air control}\label{Controllers}
 			Simulation components need to be dynamically controlled as in the actual air network. Control is typically implemented on compressors and valves throughout the network to follow certain set-points and schedules. It is important to not only include the controllers in the simulation, but to replicate the non-linearities, limitations and responsiveness related to their use. This ensures the model reacts in the same way the actual network would, improving accuracy.
 			\par 
-			On a typical mine, compressors power is controlled to ensure that the discharge pressure matches a specified set-point. This control is achieved through either \glspl{vsd} (or \glspl{vfd}) ad guide-vain control. \glspl{vfd} gives a wide range of power control and can be estimated using a \gls{pi} controller as in figure \ref{fig: Controller models} where discharge pressure is used as feedback for the controller. 
+			On a typical mine, compressors power is controlled to ensure that the discharge pressure matches a specified set-point. This control is achieved through either \glspl{vsd} (or \glspl{vfd}) and guide-vain control. \glspl{vfd} gives a wide range of power control and can be estimated using a \gls{pi} controller as in figure \ref{fig: Controller models} where discharge pressure is used as feedback for the controller. 
 	\begin{figure}[h]
 		\centering
 		\fbox{\includegraphics[trim =-4cm 0 -4cm 0cm, width=\textwidth]{Images/3/Controller}}
 		\caption{Control components in \gls{stb}.}
 		\label{fig: Controller models}
 	\end{figure}
-		A guide vain controller is modelled using a \gls{pi} controller, as with the \gls{vsd} controller. However the limitations of guide vain control, as shown in figure \ref{fig: Guide vain position}, must be implemented to the controller. This is done by adding a minimum output that would match the minimum factor of power reduction the guide vain achieved by closing the guide vain. Figure \ref{fig: Guide vain position} shows that the typical minimum guide vain control position of 40\% will map to a output power of approx. 60\% of the maximum output power of the compressor. 
+	\subsubsection{Compressed air control}
+		On many large compressed air networks, the intake guide vain position on a compressor is controlled. Typically, a guide vain is opened or closed to control the compressors discharge pressure.  Manipulating the guide vain position will effect the power of the compressor. The relationship between power and guide vain position of a compressor can be approximated as a linear function. A guide vain position of 40\% will map to an output power of about 60\% of the maximum power. When more pressure is required than can be obtained with the guide vains fully opened, another compressor is needed to operate. Figure \ref{fig: Guide vain position} shows the trend of output power of a compressor vs. inlet guide vain position.
+		\begin{figure}[h]
+			\centering
+			\fbox{\input{Graphs/1/GuideVainPosition/GuideVainPosition}}
+			\caption[The relation between guide vain position and compressor output power.]{The relation between guide vain position and compressor output power.}
+			\label{fig: Guide vain position}
+		\end{figure}
+		\par
+		A guide vain controller is modelled using a \gls{pi} controller, as with the \gls{vsd} controller. However the limitations of guide vain control, as shown in figure \ref{fig: Guide vain position}, must be implemented to the controller. This is implemented by using a minimum output that would match the minimum power reduction fraction the guide vain achieved by closing the guide vain. For example, a \gls{pi} control for the compressor from figure \ref{fig: Guide vain position} would have a minimum control output of approximately 60\%.
 		\par 
 		Mines utilise control valves underground sections to control the pressure at individual mining stations independently \cite{Heyns2014Masters}. Controlling of valve components is perfomed similarly as control of the compressor components. As shown in figure \ref{fig: Controller models} the outlet pressure is used as feedback for a pi controller. The controller output is mapped to the valve fraction of a pipe component.
 		\begin{figure}[h]
