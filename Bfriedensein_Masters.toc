@@ -60,7 +60,7 @@
 \contentsline {subsection}{\numberline {3.2.1}Preamble}{17}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Data acquisition and verification}{17}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Solutions to unavailable data}{17}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Mining schedule}{17}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.4}Mining schedule}{18}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}Summary}{18}{subsection.3.2.5}
 \contentsline {section}{\numberline {3.3}Model development and verification}{18}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Preamble}{18}{subsection.3.3.1}
@@ -71,8 +71,8 @@
 \contentsline {subsubsection}{Demand/leak}{20}{subsubsection*.18}
 \contentsline {subsubsection}{Controllers}{21}{subsubsection*.19}
 \contentsline {subsubsection}{Compressed air after-cooling}{22}{subsubsection*.20}
-\contentsline {subsection}{\numberline {3.3.3}Simulation inputs}{22}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Verification of simulation model}{22}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.3}Simulation inputs}{23}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Verification of simulation model}{23}{subsection.3.3.4}
 \contentsline {subsection}{\numberline {3.3.5}Summary}{23}{subsection.3.3.5}
 \contentsline {section}{\numberline {3.4}Implementation of simulation method}{23}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Preamble}{23}{subsection.3.4.1}

@@ -7,6 +7,9 @@
 \enquote*{\textit{Quote.}} - Somebody\\
 \newpage
 \section{Introduction}
+This chapter details the implementation methodology of simulations to optimize mining compressed air systems. The methodology discussed in this chapter will utilize insights from previous studies. Improving on shortcomings discussed in section \ref{Shortcomings of previous work}.
+\par 
+Implementation of a simulation is split into three steps. Firstly, an investigation on the specific air network to is performed. The data acquired from this investigation is then utilized to develop and verify a simulation model. Finally scenarios are implemented using the simulations and the results are quantified and ranked. A simulation  report is then produced and passed to the mine.
 \section{System investigation method}
 	\subsection{Preamble}
 		Developing a detailed simulation model of a compressed air network requires thorough comprehension of the inner workings of the system. This section will discuss the investigations needed to obtain the required understanding.
@@ -16,7 +19,7 @@
 	\subsection{Solutions to unavailable data}
 		Parameters that are required to develop the simulation model, such as flows, pressures, may not be actively logged by mine systems. To obtain this data it is necessary to investigate alternative sources. At points where instrumentation is absent, estimations can be made from assumptions made using instrumentation on the network or spot inspections.
 		\par 
-		Air network specifications such as piping sizes, technical layouts, major leak locations or specifications is often outdated or not recorded. Critical data should be obtained through audits and inspections of the system. If manual inspection is not possible, estimations should be made using the available data or approximation techniques discussed in literature. \texttt{REMEMBER TO REFERENCE\\ SPECIFIC LOCATION LITERATURE}.
+		Air network specifications such as piping sizes, technical layouts, major leak locations or specifications is often outdated or not recorded. Critical data should be obtained through audits and inspections of the system. If manual inspection is not possible, estimations should be made using the available data or approximation techniques discussed in literature. %\texttt{REMEMBER TO REFERENCE\\ SPECIFIC LOCATION LITERATURE}.
 	\subsection{Mining schedule}
 		A crucial aspect to developing an accurate model of a mining compressed air system is understanding the the operational philosophy of the mine. The schedule for operations such as drilling,  blasting or cleaning can have a major impact on compressed air requirements at different times of the day. By utilizing the operational schedule, simulation scenarios can be optimized for the air requirements throughout the day.
 	\subsection{Summary}
@@ -66,9 +69,9 @@
 			\par 
 			The specific resistance of the flow demand can be obtained using the inlet pressure, outlet pressure and flow. If the flow is not known, a reasonably accurate estimation can be made by calculating the expected flow from the size of the outlet.
 		\subsubsection{Controllers}\label{Controllers}
-		Simulation components need to be dynamically controlled as in the actual air network. Control is typically implemented on compressors and valves throughout the network to follow certain set-points and schedules. It is important to not only include the controllers in the simulation, but to replicate the non-linearities, limitations and responsiveness related to their use. This ensures the model reacts in the same way the actual network would, improving accuracy.
-		\par 
-		On a typical mine, compressors power is controlled to ensure that the discharge pressure matches a specified set-point. This control is achieved through either \glspl{vsd} (or \glspl{vfd}) ad guide-vain control. \glspl{vfd} gives a wide range of power control and can be estimated using a \gls{pi} controller as in figure \ref{fig: Controller models} where discharge pressure is used as feedback for the controller. 
+			Simulation components need to be dynamically controlled as in the actual air network. Control is typically implemented on compressors and valves throughout the network to follow certain set-points and schedules. It is important to not only include the controllers in the simulation, but to replicate the non-linearities, limitations and responsiveness related to their use. This ensures the model reacts in the same way the actual network would, improving accuracy.
+			\par 
+			On a typical mine, compressors power is controlled to ensure that the discharge pressure matches a specified set-point. This control is achieved through either \glspl{vsd} (or \glspl{vfd}) ad guide-vain control. \glspl{vfd} gives a wide range of power control and can be estimated using a \gls{pi} controller as in figure \ref{fig: Controller models} where discharge pressure is used as feedback for the controller. 
 	\begin{figure}[h]
 		\centering
 		\fbox{\includegraphics[trim =-4cm 0 -4cm 0cm, width=\textwidth]{Images/3/Controller}}
@@ -78,12 +81,18 @@
 		A guide vain controller is modelled using a \gls{pi} controller, as with the \gls{vsd} controller. However the limitations of guide vain control, as shown in figure \ref{fig: Guide vain position}, must be implemented to the controller. This is done by adding a minimum output that would match the minimum factor of power reduction the guide vain achieved by closing the guide vain. Figure \ref{fig: Guide vain position} shows that the typical minimum guide vain control position of 40\% will map to a output power of approx. 60\% of the maximum output power of the compressor. 
 		\par 
 		Mines utilise control valves underground sections to control the pressure at individual mining stations independently \cite{Heyns2014Masters}. Controlling of valve components is perfomed similarly as control of the compressor components. As shown in figure \ref{fig: Controller models} the outlet pressure is used as feedback for a pi controller. The controller output is mapped to the valve fraction of a pipe component.
+		\begin{figure}[h]
+			\centering
+			\fbox{\includegraphics[trim =-4cm 0 -4cm 0cm, width=\textwidth]{Images/3/Valve.jpg}}
+			\caption[An example of a compressed air control valve.]{An example of a compressed air control valve\cite{van2015implementation}.} 
+			\label{fig: Control}
+		\end{figure}
 		\subsubsection{Compressed air after-cooling}
 		The air compression process generates significant heat. Compressed air at high temperatures contains a large amount of water vapour. To prevent condensation later in the air network, improve the system capacity and protect equipment from excessive heat, after-coolers are installed to the outlet of the compressor \cite{schroeder2009energy}.
 		\par 
 		After-cooling reduces the compressed air temperature to within a margin of ambient. This cooling could have a large effect on the performance of the network. Hence including after-cooling to the simulation model should improve accuracy.
 		\par 
-		To replicate this effect, a heat transfer node can be added to the outlet of the compressor component. \gls{stb} utilises the following heat transfer parameters of the air node to solve for outlet temperature:
+		To replicate this effect, a heat transfer node can be added to the outlet of the compressor component. \gls{stb} utilizes the following heat transfer parameters of the air node to solve for outlet temperature:
 		\par 
 		\begin{tabular}{p{1.3cm}p{13cm}}
 			$Area$ & The heat transfer area ($m^2$) \\
@@ -94,7 +103,9 @@
 		- Discuss inputs of the simulation, (compressor setpoints, ambient conditions, demands)
 	\subsection{Verification of simulation model}
 		- Steps to validate  the model accuracy .\\
-		- Compare parameters to actuals
+		- Compare parameters to actuals\\
+		- First principles\\
+		-
 	\subsection{Summary}
 \section{Implementation of simulation method}
 	\subsection{Preamble}
