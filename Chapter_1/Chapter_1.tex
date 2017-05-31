@@ -12,11 +12,11 @@
 This chapter firstly discusses background regarding deep level mining in South Africa. Next, the need to reduce costs of operation in the mining sector is examined. From this a focus in reducing energy consumption of compressed air systems is developed. Next, background on compressed air operation and energy interventions are discussed. Simulations and their value in industry is discussed leading to a problem statement and objectives of the study. Finally, an overview for the dissertation is provided.
 \section{Background on deep level mining}
 	\subsection{Mining profitability}
-	\footnotetext[1]{inflation.eu, "Historic inflation South Africa - cpi inflation." [Online] \url{http://www.inflation.eu/inflation-rates/south-africa/historic-inflation/cpi-inflation-south-africa.aspx}, [Accessed 25 March 2017].}
-	 	Various technical, economic, social and operational challenges are posing a risk to the profitability of the South African mining sector. One of the challenges the sector faces  is a rise in the cost of operation \cite{neingo2016trends}.\par
-		%\paragraph*{Falling ore grades}\leavevmode\\
+	\footnotetext[1]{inflation.eu, "Historic inflation South Africa." [Online] \url{http://www.inflation.eu/inflation-rates/south-africa/historic-inflation/cpi-inflation-south-africa.aspx}, [Accessed 25 March 2017].}
+	 	Various technical, economic, social and operational challenges are posing a risk to the profitability of the South African mining sector. One of the challenges the sector faces  is a rise in the cost of operation \cite{neingo2016trends}.
+	 	\par
 		A considerable factor that is contributing to the rise of operational costs in South African gold mines has been the increase in electricity costs. As shown in figure \ref{fig: Eskom tariffs}, the general cost of electricity has increased at a rate greater than inflation since 2008 \cite{Eskom2013Tariffs}.
-		\begin{figure}[h!]
+		\begin{figure}[h]
 			\centering
 			\fbox{\input{Graphs/1/Eskom/Eskom}}
 			\caption[Electricity price increases between 2007 and 2017 compared to the inflation rate in South Africa..]{Electricity price increases between 2007 and 2017 \cite{Eskom2013Tariffs} compared to the inflation rate in South Africa.\protect\footnotemark[1] }
@@ -38,7 +38,7 @@ This chapter firstly discusses background regarding deep level mining in South A
 		\subsubsection{Energy usage}
 			The mining industry uses extensive amounts of energy. In South Africa, the industry utilizes approximately 15\% of the national electricity supplier's yearly output, of which, gold and platinum mines use 80\%.\cite{Eskom2010Energy}
 			\par
-			Figure \ref{fig: Energy Split} shows the division of energy within the mining industry. The chart shows that compressed air systems utilises the most energy within a mining industry. It is reasoned that energy can be most effectively reduced through the implementation of energy interventions on compressed air systems.
+			Figure \ref{fig: Energy Split} shows the division of energy within the mining industry. The chart shows that compressed air systems utilizes the most energy within a mining industry. It is reasoned that energy can be most effectively reduced through the implementation of energy interventions on compressed air systems.
 			\begin{figure}[h]
 				\centering
 				\fbox{\includegraphics[ trim=-10cm -0.4cm -10cm -0.4cm,width=\textwidth]{Graphs/1/EnergySplit/EnergySplit}}
@@ -55,11 +55,20 @@ This chapter firstly discusses background regarding deep level mining in South A
 	 		\par
 	  		Compressed air is used to power pneumatic rock drills within a mine. Pneumatic rock drills run at an efficiency of 2\%. This is low when compared to alternative rock drills such as electric, oil electro-hydraulic and hydro-powered drills that run at an efficiency of between 20-31\% \cite{fraser2008saving},\cite{vanTonder2010Masters}. 
 			\subsubsection{Refuge bays}
-				Refuge bays are installed in mines to provide safety to miners during emergencies. Most mines will utilise compressed air to deliver safe, cool air to the refuge bay. The provision of 1.42 $l/s$ of air per person at a pressure between 200 and 300 \gls{kpa} is required to provide oxygen and prevent any poisonousness gas entering the refuge \cite{brake1999criteria}.\par
-				Airflow in the refuge bays can be controlled with a manual valve within the chamber. Any many cases, this valve is often misused by mine workers who open the valves fully in order to cool the bay through the decompression of the air. \texttt{*** need source ***}
+				Refuge bays are installed underground in deep level mines to provide safety to miners in the event of an emergency. To satisfy the safety criteria, most mines will utilize compressed air to deliver cool air to the chamber \cite{brake1999criteria}. Figure \ref{fig: Refuge Bay} shows an example of a compressed air inlet at an underground refuge bay. A muffler is installed to the end of the inlet air pipe to reduce noise.
+				\begin{figure}[h]
+					\centering
+					\fbox{\includegraphics[ trim=-5cm -0.4cm -5cm -0.4cm,width=\textwidth]{Images/1/RefugeBay}}
+					\caption{An example of compressed air inlet in an underground refuge bay chamber of a mine.}
+					\label{fig: Refuge Bay}
+				\end{figure}
+				\par The provision of 1.42 $l/s$ of air per person at a pressure between 200 and 300 \gls{kpa} is required to provide oxygen and prevent any poisonousness gas entering the refuge \cite{brake1999criteria}.\par
+				Airflow in the refuge bays can be controlled with a manual valve within the chamber. Often, this valve is often misused by mine workers who open the valves fully in order to cool the bay through decompression of the air.[CitationNeeded]
 			\subsubsection{Processing plants}
-				Large processing plants are constructed near gold and mines to extract metal from the ore. These plants utilise compressed air for various systems, processes and instrumentation. Processing plants are of ten connected to the same compressed air network as the mine \cite{Marais2012PhD}. The plants use relatively low amounts of air compared to mines, however they can have pressure requirements that can complicate compressed air network optimisations .
-			\subsubsection{Other compressed air usages}
+				Processing plants are constructed near gold and mines. They are used to extract metal from the ore obtained from the mining operation. These plants utilize compressed air for various systems, processes and equipment. 
+				\par 
+				To save costs, processing plants often share compressed air network with mine \cite{Marais2012PhD}. The plants use relatively low amounts of air compared to mines, however plant processes have pressure requirements that differ from the rest of the air network. If the plant is not isolated from the mine air network, compressed air optimizations on the mine can be complicated. 
+			\subsubsection{Other compressed air uses}
 			 	 Due to the availability underground, compressed air is utilised for a number of other applications. These usages include, pneumatic loaders or rock shovels, pneumatic cylinders, dam sediment agitation, cooling and ventilation and many other applications. This vast variety of of applications also leads to misuse of compressed air this leads to inefficient operation.
 			\subsubsection{Operation schedule}
 				On a typical mine, various operations will take place at different times of the day. Depending on the activity taking place, many mines will control the pressure to meet the requirements \cite{Kriel2014Masters},\cite{Marais2012PhD}. Figure \ref{fig: Mining schedule} shows the schedule and pressure requirement on a typical deep level mine.\par 
@@ -104,7 +113,7 @@ This chapter firstly discusses background regarding deep level mining in South A
 		\end{itemize}
 
 	\subsection{Simulation usage in mining}
-		Simulation has been used to test and identify energy and operational improvements in mining systems. However,  existing tools required to much data to model the systems accurately, [CITATION NEEDED] Resulting in simplified simulation models.  New tools such the \gls{stb} software, have made it possible to develop highly accurate, detailed simulations for mining systems. This will alolow more complex intervention to be tested with more accuracy.
+		Simulation has been used to test and identify energy and operational improvements in mining systems. However,  existing tools require to much data to model the systems accurately [CitationNeeded].  New tools such the \gls{stb} software, have made it possible to develop accurate, detailed simulations for mining systems. This allows for testing of more complex intervention scenarios, leading to more improvements for the mine than could be previously obtained.
 		
 	\section{Problem statement and objectives}
 	\subsection{Problem statement}
