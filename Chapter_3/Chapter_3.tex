@@ -13,15 +13,21 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 \section{System investigation method}
 	\subsection{Preamble}
 		Developing a detailed simulation model of a compressed air network requires thorough comprehension of the inner workings of the system. This section will discuss the investigations needed to obtain the required understanding.
-	\subsection{Data acquisition and verification} % 
-		- Layouts, data from SCADA Instrumentation, etc.\\
-		- Verification of accurate data - Gous article
+	\subsection{Acquiring data} % 
+	The first step of the system investigation is to acquire the data and understanding that will be required to model compressed air system's function. This will requires access to mine resources such as data storage systems, instrumentation, and communication with relevant engineers and personnel.
+	\par 
+	Comprehensive and up to date layouts illustrate a compressed air network's unique set-up, scale and location of instrumentation. More detailed layouts can provide per-level air consumption breakdowns of the network, locations of refuge bays, mining cross-sections and identified inefficiencies. This is vital to understand the operation and identify what data parameters will be required for the model. 
+	\par 
+	
+	\subsection{Mining schedule}
+	A critical aspect to developing an accurate model of a mining compressed air system is understanding the the operational philosophy of the mine. The schedule for operations such as drilling,  blasting or cleaning can have a major impact on compressed air requirements at different times of the day. By utilizing the operational schedule, simulation scenarios can be optimized for the air requirements throughout the day.	
+	\subsection{Data accuracy and verification}
+	
 	\subsection{Solutions to unavailable data}
 		Parameters that are required to develop the simulation model, such as flows, pressures, may not be actively logged by mine systems. To obtain this data it is necessary to investigate alternative sources. At points where instrumentation is absent, estimations can be made from assumptions made using instrumentation on the network or spot inspections.
 		\par 
 		Air network specifications such as piping sizes, technical layouts, major leak locations or specifications is often outdated or not recorded. Critical data should be obtained through audits and inspections of the system. If manual inspection is not possible, estimations should be made using the available data or approximation techniques discussed in literature. %\texttt{REMEMBER TO REFERENCE\\ SPECIFIC LOCATION LITERATURE}.
-	\subsection{Mining schedule}
-		A crucial aspect to developing an accurate model of a mining compressed air system is understanding the the operational philosophy of the mine. The schedule for operations such as drilling,  blasting or cleaning can have a major impact on compressed air requirements at different times of the day. By utilizing the operational schedule, simulation scenarios can be optimized for the air requirements throughout the day.
+	
 	\subsection{Summary}
 		
 \section{Model development and verification}
@@ -41,7 +47,14 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 		\end{tabular} \\
 		The pipe component can be used as a valve by controlling the open fraction between 0 and 1. Modelling the valve flow characteristics is discussed in \ref{Controllers} \textit{Controllers}.
 		\subsubsection{Ambient conditions}
-		Ambient air condition underground and on surface can effect the performance of the network [\texttt{Citation needed}]. Pressure and temperature increases with depth as a result of auto compression and rock face temperature [\texttt{Citation needed}]. Therefore it is important to take into account conditions for the boundary conditions at each mining level or area where compressed air is used.   
+		Ambient air condition underground and on surface change the characteristics of the air, effecting the operation of the system. Figure \ref{fig: Ambient} shows the average summer air conditions. If no data is available for the specific simulation period, the conditions can be estimated by scaling this profile. 
+		\begin{figure}[h]
+			\centering
+			\fbox{\input{Graphs/3/Ambient/Ambient}}
+			\caption{Average summer ambient air conditions at a South African gold mine.}
+			\label{fig: Ambient}
+		\end{figure}
+		The assumption is made that underground conditions remain constant at each mining level. Pressure and temperature increases with depth as a result of auto compression and rock face temperature. Therefore the conditions can be estimated using only the depth at each level.   
 		\subsubsection{Compressors}
 		Three compressor models were investigated, each with varying complexity. The models are: air compressor, dynamic compressor and positive displacement compressor. The air compressor is a general, simplified model. It requires minimal user inputs by making several assumptions. This is useful when parameters for a compressor are not available. Or when doing a quick preliminary simulation. However it is not ideal for detailed simulations which require more precision. 
 		\par 
@@ -116,13 +129,24 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 			$UA$ & Heat transfer coefficient ($kW/^{\circ} C$) \\
 			$T_{amb}$ & Ambient air temperature ($^{\circ} C$) \\
 		\end{tabular} \\	
-	\subsection{Simulation inputs}
-		- Discuss inputs of the simulation, (compressor setpoints, ambient conditions, demands)
+	
+
 	\subsection{Verification of simulation model}
 		- Steps to validate  the model accuracy .\\
 		- Compare parameters to actuals\\
 		- First principles\\
 		-
+		
+	\subsection{Simulation inputs}
+		The inputs of a simulation are any parameters that do not remain static, or follow the same profile in day to day operation of the system. Examples of such parameters in a compressed air simulation are:
+		\begin{itemize}
+			\item Simulation period
+			\item Surface ambient conditions
+			\item Compressor selection and schedules
+			\item Flow demands
+			\item Operational changes
+		\end{itemize} 
+		Changing the simulation baseline period for a calibrated simulation should only require the updating of the input parameters. Figured ??? shows an example of a changing compressor schedule where an input parameter would need to be updated in the simulation.
 	\subsection{Summary}
 \section{Implementation of simulation method}
 	\subsection{Preamble}

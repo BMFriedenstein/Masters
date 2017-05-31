@@ -8,12 +8,13 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces The Compressed air energy and flow consumed per T of ore produced.}}{14}{figure.2.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Estimating the characteristic curve of a compressor by fitting a quadratic function to points of operation.}}{20}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Integrating the compressor component into the simulation.}}{20}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Implementing flow demands and leaks into the simulation.}}{21}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Control components in \gls {stb}.}}{22}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces The relation between guide vain position and compressor output power.}}{22}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces An example of a compressed air control valve.}}{23}{figure.3.6}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Average summer ambient air conditions at a South African gold mine.}}{20}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Estimating the characteristic curve of a compressor by fitting a quadratic function to points of operation.}}{21}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Integrating the compressor component into the simulation.}}{21}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Implementing flow demands and leaks into the simulation.}}{22}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Control components in \gls {stb}.}}{22}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces The relation between guide vain position and compressor output power.}}{23}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces An example of a compressed air control valve.}}{24}{figure.3.7}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

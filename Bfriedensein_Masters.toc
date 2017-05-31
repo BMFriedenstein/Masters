@@ -57,50 +57,51 @@
 \contentsline {section}{\numberline {3.1}Introduction}{17}{section.3.1}
 \contentsline {section}{\numberline {3.2}System investigation method}{17}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Preamble}{17}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Data acquisition and verification}{17}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Solutions to unavailable data}{17}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Mining schedule}{18}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Summary}{18}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.2}Acquiring data}{17}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Mining schedule}{18}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Data accuracy and verification}{18}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Solutions to unavailable data}{18}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}Summary}{18}{subsection.3.2.6}
 \contentsline {section}{\numberline {3.3}Model development and verification}{18}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Preamble}{18}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Compressed air component models}{18}{subsection.3.3.2}
-\contentsline {subsubsection}{Air pipes}{18}{subsubsection*.14}
+\contentsline {subsection}{\numberline {3.3.2}Compressed air component models}{19}{subsection.3.3.2}
+\contentsline {subsubsection}{Air pipes}{19}{subsubsection*.14}
 \contentsline {subsubsection}{Ambient conditions}{19}{subsubsection*.15}
 \contentsline {subsubsection}{Compressors}{19}{subsubsection*.16}
-\contentsline {subsubsection}{Demand/leak}{20}{subsubsection*.17}
-\contentsline {subsubsection}{Compressed air control}{21}{subsubsection*.18}
+\contentsline {subsubsection}{Demand/leak}{21}{subsubsection*.17}
+\contentsline {subsubsection}{Compressed air control}{22}{subsubsection*.18}
 \contentsline {subsubsection}{Compressed air after-cooling}{23}{subsubsection*.19}
-\contentsline {subsection}{\numberline {3.3.3}Simulation inputs}{23}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Verification of simulation model}{24}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Summary}{24}{subsection.3.3.5}
-\contentsline {section}{\numberline {3.4}Implementation of simulation method}{24}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Preamble}{24}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Analyses of data}{24}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Quantifying operational improvements}{24}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Summary}{24}{subsection.3.4.4}
-\contentsline {section}{\numberline {3.5}Conclusion}{24}{section.3.5}
-\contentsline {chapter}{\numberline {4}Results and validation}{25}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{26}{section.4.1}
-\contentsline {section}{\numberline {4.2}Case study: Mine A \color {blue}(Kusasalethu)}{26}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Preamble}{26}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Scenario 1. Refuge bay simulation}{26}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Verification of baseline simulation}{26}{subsection.4.2.3}
-\contentsline {subsubsection}{Validation of results}{26}{subsubsection*.20}
-\contentsline {subsection}{\numberline {4.2.4}Scenario 2. Closing off levels/stopes}{26}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Summary}{26}{subsection.4.2.5}
-\contentsline {section}{\numberline {4.3}Case study: Mine B \color {blue}(Beatrix 123)}{26}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Preamble}{26}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Scenario 1. Compressor set points}{26}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Scenario 2. Control valves set points}{26}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Summary}{26}{subsection.4.3.4}
-\contentsline {section}{\numberline {4.4}Periodic simulation analysis}{26}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Preamble}{26}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Summary}{26}{subsection.4.4.2}
-\contentsline {section}{\numberline {4.5}Potential benefit for SA mines}{26}{section.4.5}
-\contentsline {section}{\numberline {4.6}Conclusion}{26}{section.4.6}
-\contentsline {chapter}{\numberline {5}Conclusion}{27}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclusion}{28}{section.5.1}
-\contentsline {section}{\numberline {5.2}Limits of this study}{28}{section.5.2}
-\contentsline {section}{\numberline {5.3}Recommendations for future studies}{28}{section.5.3}
-\contentsline {chapter}{Appendix \numberline {A}1}{32}{Appendix.1.A}
-\contentsline {chapter}{Appendix \numberline {B}2}{33}{Appendix.1.B}
+\contentsline {subsection}{\numberline {3.3.3}Verification of simulation model}{24}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Simulation inputs}{25}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Summary}{25}{subsection.3.3.5}
+\contentsline {section}{\numberline {3.4}Implementation of simulation method}{25}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Preamble}{25}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Analyses of data}{25}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Quantifying operational improvements}{25}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Summary}{25}{subsection.3.4.4}
+\contentsline {section}{\numberline {3.5}Conclusion}{25}{section.3.5}
+\contentsline {chapter}{\numberline {4}Results and validation}{26}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{27}{section.4.1}
+\contentsline {section}{\numberline {4.2}Case study: Mine A \color {blue}(Kusasalethu)}{27}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Preamble}{27}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Scenario 1. Refuge bay simulation}{27}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Verification of baseline simulation}{27}{subsection.4.2.3}
+\contentsline {subsubsection}{Validation of results}{27}{subsubsection*.20}
+\contentsline {subsection}{\numberline {4.2.4}Scenario 2. Closing off levels/stopes}{27}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Summary}{27}{subsection.4.2.5}
+\contentsline {section}{\numberline {4.3}Case study: Mine B \color {blue}(Beatrix 123)}{27}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Preamble}{27}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Scenario 1. Compressor set points}{27}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Scenario 2. Control valves set points}{27}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Summary}{27}{subsection.4.3.4}
+\contentsline {section}{\numberline {4.4}Periodic simulation analysis}{27}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Preamble}{27}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Summary}{27}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}Potential benefit for SA mines}{27}{section.4.5}
+\contentsline {section}{\numberline {4.6}Conclusion}{27}{section.4.6}
+\contentsline {chapter}{\numberline {5}Conclusion}{28}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclusion}{29}{section.5.1}
+\contentsline {section}{\numberline {5.2}Limits of this study}{29}{section.5.2}
+\contentsline {section}{\numberline {5.3}Recommendations for future studies}{29}{section.5.3}
+\contentsline {chapter}{Appendix \numberline {A}1}{33}{Appendix.1.A}
+\contentsline {chapter}{Appendix \numberline {B}2}{34}{Appendix.1.B}
