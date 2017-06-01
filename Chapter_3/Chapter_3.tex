@@ -110,7 +110,7 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 		\par
 		A guide vain controller is modeled using a \gls{pi} controller component. However the limitations of guide vain control, as represented in figure \ref{fig: Guide vain position}, must be implemented in the controller. This is done by using a minimum output that would match the minimum power reduction the guide vain achieved by closing the guide vain. For example, a \gls{pi} controller for the compressor from figure \ref{fig: Guide vain position} would have a minimum control output of approximately 60\%.
 		\par 
-		Mines utilise control valves underground sections to control the pressure at individual mining stations independently \cite{Heyns2014Masters}. Controlling of valve components is perfomed similarly as control of the compressor components. As shown in figure \ref{fig: Controller models} the outlet pressure is used as feedback for a pi controller. The controller output is mapped to the valve fraction of a pipe component.
+		Mines utilize control valves at underground sections to control the pressure at individual mining stations independently \cite{Heyns2014Masters}. Controlling of valve components is perfomed similarly as control of the compressor components. As shown in figure \ref{fig: Controller models} the outlet pressure is used as feedback for a pi controller. The controller output is mapped to the valve fraction of a pipe component.
 		\begin{figure}[h]
 			\centering
 			\fbox{\includegraphics[trim =-2cm 0 -2cm 0cm, width=\textwidth]{Images/3/Valve.jpg}}
@@ -118,7 +118,7 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 			\label{fig: Control}
 		\end{figure}
 		\subsubsection{Compressed air after-cooling}
-		The air compression process generates significant heat. Compressed air at high temperatures contains a large amount of water vapour. To prevent condensation later in the air network, improve the system capacity and protect equipment from excessive heat, after-coolers are installed to the outlet of the compressor \cite{schroeder2009energy}.
+		The air compression process generates significant heat. Compressed air at high temperatures contains a large amount of water vapor. To prevent condensation later in the air network, improve the system capacity and protect equipment from excessive heat, after-coolers are installed to the outlet of the compressor \cite{schroeder2009energy}.
 		\par 
 		After-cooling reduces the compressed air temperature to within a margin of ambient. This cooling could have a large effect on the performance of the network. Hence including after-cooling to the simulation model should improve accuracy.
 		\par 
@@ -130,7 +130,7 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 			$T_{amb}$ & Ambient air temperature ($^{\circ} C$) \\
 		\end{tabular} \\	
 	
-
+	
 	\subsection{Verification of simulation model}
 		- Steps to validate  the model accuracy .\\
 		- Compare parameters to actuals\\
@@ -146,7 +146,13 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 			\item Flow demands
 			\item Operational changes
 		\end{itemize} 
-		Changing the simulation baseline period for a calibrated simulation should only require the updating of the input parameters. Figured ??? shows an example of a changing compressor schedule where an input parameter would need to be updated in the simulation.
+		Changing the simulation baseline period for a calibrated simulation should only require the updating of the input parameters. Figured \ref{fig: Compressor schedule} shows an example of a changing compressor schedule where an input parameter would need to be updated in the simulation.
+		\begin{figure}[h]
+			\centering
+			\fbox{\input{Graphs/3/CompSelection/CompSelection}}
+			\caption{An example of two simulation periods, showing a changed compressor schedule.}
+			\label{fig: Compressor schedule}
+		\end{figure}
 	\subsection{Summary}
 \section{Implementation of simulation method}
 	\subsection{Preamble}
