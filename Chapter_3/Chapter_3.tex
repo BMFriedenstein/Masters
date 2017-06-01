@@ -18,11 +18,22 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 	\par 
 	Comprehensive and up to date layouts illustrate a compressed air network's unique set-up, scale and location of instrumentation. More detailed layouts can provide per-level air consumption breakdowns of the network, locations of refuge bays, mining cross-sections and identified inefficiencies. This is vital to understand the operation and identify what data parameters will be required for the model. 
 	\par 
-	
+	A baseline period that best represents the typical operation of the mine. Additionally availability of data should be considered. The length of the baseline period is selected based on the scenarios that are to be tested, this can be changed later. For calibrating a compressed air system a 24 hours period of normal operation is usually sufficient. A longer period may be needed to verify the model.
+	Next data 
 	\subsection{Mining schedule}
 	A critical aspect to developing an accurate model of a mining compressed air system is understanding the the operational philosophy of the mine. The schedule for operations such as drilling,  blasting or cleaning can have a major impact on compressed air requirements at different times of the day. By utilizing the operational schedule, simulation scenarios can be optimized for the air requirements throughout the day.	
-	\subsection{Data accuracy and verification}
 	
+	\subsection{Data verification}
+	Data verification is the process where data is evaluated to ensure accuracy. It is important to verify data that is used for model development as an accurate representation of the operation of a system can only be achieved utilising data of high quality \cite{gous2016data}. The factors that influence a dataset's quality, accuracy and integrity  summarised as follows:
+	\begin{itemize}
+		\item Conversion of measurement value \cite{meijsen2015verification}
+		\item Storage and collection of the system \cite{vanNiekerk2016quantification},\cite{Jansevan2016structuring}
+		\item Traceability of measurement sources \cite{Jansevan2016structuring}
+		\item Measurement equipment accuracy and malfunctions \cite{gous2016data}
+		\item Data abnormalities \cite{gous2016data}
+	\end{itemize} 
+	\par 
+	Therefore a data verification methodology is utilised to ensure datasets are of high quality. 
 	\subsection{Solutions to unavailable data}
 		Parameters that are required to develop the simulation model, such as flows, pressures, may not be actively logged by mine systems. To obtain this data it is necessary to investigate alternative sources. At points where instrumentation is absent, estimations can be made from assumptions made using instrumentation on the network or spot inspections.
 		\par 
@@ -32,7 +43,7 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 		
 \section{Model development and verification}
 	\subsection{Preamble}
-	Compressed air networks are comprised of components such as compressors, valves, pipes, etc. This section will discus the development, calibration and verification of component models that make up a compressed air simulation is. 
+	Compressed air networks are comprised of components such as compressors, valves, pipes, etc. This section will discuss the development, calibration and verification of component models that make up a compressed air simulation. 
 	\subsection{Compressed air component models}
 		\subsubsection{Air pipes}
 		Pressure losses occur over compressed air networks due to friction in the pipe, these losses should be taken into account in the simulation for large piping sections. A pipe model is used to account for these losses which are defined by the \textit{Darcy-Weisbach equation}\footnote{ B. Glenn, \enquote*{The Darcy–Weisbach Equation,}[Online] \url{https://bae.okstate.edu/faculty-sites/Darcy/DarcyWeisbach/Darcy-WeisbachEq.htm}, [Accessed 20-05-2017]}:
@@ -99,7 +110,6 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 		\caption{Control components in \gls{stb}.}
 		\label{fig: Controller models}
 	\end{figure}
-	\par 
 		Guide vain control is most commonly used in mining to control compressors. This entails controlling the position of the inlet guide vain . The guide vain is opened or closed to control the compressors discharge pressure.  Manipulating the guide vain position will effect the power the compressor inputs into the system. Figure \ref{fig: Guide vain position} shows the relationship between compressor power and guide vain position. This relationship can be approximated as a linear function. A guide vain position of 40\%  maps to an output power of about 60\% of the maximum power. When more pressure is required than can be obtained with the guide vains fully opened, another compressor is needed to operate. 
 		\begin{figure}[h]
 			\centering
@@ -108,9 +118,9 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 			\label{fig: Guide vain position}
 		\end{figure}
 		\par
-		A guide vain controller is modeled using a \gls{pi} controller component. However the limitations of guide vain control, as represented in figure \ref{fig: Guide vain position}, must be implemented in the controller. This is done by using a minimum output that would match the minimum power reduction the guide vain achieved by closing the guide vain. For example, a \gls{pi} controller for the compressor from figure \ref{fig: Guide vain position} would have a minimum control output of approximately 60\%.
+		A guide vain controller is modelled using a \gls{pi} controller component. However the limitations of guide vain control, as represented in figure \ref{fig: Guide vain position}, must be implemented in the controller. This is done by using a minimum output that would match the minimum power reduction the guide vain achieved by closing the guide vain. For example, a \gls{pi} controller for the compressor from figure \ref{fig: Guide vain position} would have a minimum control output of approximately 60\%.
 		\par 
-		Mines utilize control valves at underground sections to control the pressure at individual mining stations independently \cite{Heyns2014Masters}. Controlling of valve components is perfomed similarly as control of the compressor components. As shown in figure \ref{fig: Controller models} the outlet pressure is used as feedback for a pi controller. The controller output is mapped to the valve fraction of a pipe component.
+		Mines utilize control valves at underground sections to control the pressure at individual mining stations independently \cite{Heyns2014Masters}. Controlling of valve components is performed similarly as control of the compressor components. As shown in figure \ref{fig: Controller models} the outlet pressure is used as feedback for a pi controller. The controller output is mapped to the valve fraction of a pipe component.
 		\begin{figure}[h]
 			\centering
 			\fbox{\includegraphics[trim =-2cm 0 -2cm 0cm, width=\textwidth]{Images/3/Valve.jpg}}
@@ -118,32 +128,26 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 			\label{fig: Control}
 		\end{figure}
 		\subsubsection{Compressed air after-cooling}
-		The air compression process generates significant heat. Compressed air at high temperatures contains a large amount of water vapor. To prevent condensation later in the air network, improve the system capacity and protect equipment from excessive heat, after-coolers are installed to the outlet of the compressor \cite{schroeder2009energy}.
+		The air compression process generates significant heat. Compressed air at high temperatures contains a large amount of water vapour. To prevent condensation later in the air network, improve the system capacity and protect equipment from excessive heat, after-coolers are installed to the outlet of the compressor \cite{schroeder2009energy}.
 		\par 
 		After-cooling reduces the compressed air temperature to within a margin of ambient. This cooling could have a large effect on the performance of the network. Hence including after-cooling to the simulation model should improve accuracy.
 		\par 
-		To replicate this effect, a heat transfer node can be added to the outlet of the compressor component. \gls{stb} utilizes the following heat transfer parameters of the air node to solve for outlet temperature:
-		\par 
+		To replicate this effect, a heat transfer node can be added to the outlet of the compressor component. \gls{stb} utilizes the following heat transfer parameters of the air node to solve for outlet temperature: 
 		\begin{tabular}{p{1.3cm}p{13cm}}
 			$Area$ & The heat transfer area ($m^2$) \\
 			$UA$ & Heat transfer coefficient ($kW/^{\circ} C$) \\
 			$T_{amb}$ & Ambient air temperature ($^{\circ} C$) \\
 		\end{tabular} \\	
-	
-	
 	\subsection{Verification of simulation model}
-		- Steps to validate  the model accuracy .\\
-		- Compare parameters to actuals\\
-		- First principles\\
-		-
-		
+		- Steps to validate  the model accuracy - Compare parameters to actuals\\
+		- First principles     - Comparison to other models
 	\subsection{Simulation inputs}
 		The inputs of a simulation are any parameters that do not remain static, or follow the same profile in day to day operation of the system. Examples of such parameters in a compressed air simulation are:
 		\begin{itemize}
 			\item Simulation period
 			\item Surface ambient conditions
-			\item Compressor selection and schedules
-			\item Flow demands
+			\item Machine operation schedules
+			\item Air demands
 			\item Operational changes
 		\end{itemize} 
 		Changing the simulation baseline period for a calibrated simulation should only require the updating of the input parameters. Figured \ref{fig: Compressor schedule} shows an example of a changing compressor schedule where an input parameter would need to be updated in the simulation.
@@ -154,12 +158,15 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 			\label{fig: Compressor schedule}
 		\end{figure}
 	\subsection{Summary}
+	\textit{Unfinnished}
 \section{Implementation of simulation method}
 	\subsection{Preamble}
-		Once a simulation has been developed and verified, the implementation of interventions and scenarios follows. In this section, the approach of implementation, and analysis of interventions in simulation will be discussed.
+		Once a simulation has been developed and verified, the implementation of interventions and scenarios follows. In this section, the approach of implementation the simulation methodology, and analysis of simulation interventions  will be discussed.
 	\subsection{Analyses of data}
 		- Baseline vs Optimised comparison \\
+		\textit{Unfinnished}
 	\subsection{Quantifying operational improvements}
-		- Estimating cost savings
+		- Estimating cost savings \\
+		\textit{Unfinnished}
 	\subsection{Summary}
 \section{Conclusion}

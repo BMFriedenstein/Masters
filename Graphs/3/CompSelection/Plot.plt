@@ -63,7 +63,7 @@ set ylabel 'Compressor'
 set ytics 1 nomirror
 set yrange [0:8.5]
 set size 1.3,0.8
-plot 'Day1.csv' using 1:($2) title "Baseline 1" with lines ls 1,\
+plot 'Day1.csv' using 1:($2) title "Period 1" with lines ls 1,\
 'Day1.csv' using 1:($3- 0.1) notitle  with lines ls 1,\
 'Day1.csv' using 1:($4- 0.1) notitle  with lines ls 1,\
 'Day1.csv' using 1:($5- 0.1) notitle  with lines ls 1,\
@@ -72,13 +72,13 @@ plot 'Day1.csv' using 1:($2) title "Baseline 1" with lines ls 1,\
 'Day1.csv' using 1:($8- 0.1) notitle  with lines ls 1,\
 'Day1.csv' using 1:($9- 0.1) notitle with lines ls 1,\
 'Day2.csv' using 1:($2+ 0.1) notitle  with lines ls 5,\
-'Day2.csv' using 1:($3+ 0.1) title "Baseline 2" with lines ls 5,\
-'Day2.csv' using 1:($4+ 0.1) notitle with lines ls 5,\
-'Day2.csv' using 1:($5+ 0.1) notitle with lines ls 5,\
-'Day2.csv' using 1:($6+ 0.1) notitle with lines ls 5,\
-'Day2.csv' using 1:($7+ 0.1) notitle with lines ls 5,\
-'Day2.csv' using 1:($8+ 0.1) notitle with lines ls 5,\
-'Day2.csv' using 1:($9+ 0.1) notitle with lines ls 5,\
+'Day2.csv' using 1:($3+ 0.1) title "Period 2" with lines ls 13,\
+'Day2.csv' using 1:($4+ 0.1) notitle with lines ls 13,\
+'Day2.csv' using 1:($5+ 0.1) notitle with lines ls 13,\
+'Day2.csv' using 1:($6+ 0.1) notitle with lines ls 13,\
+'Day2.csv' using 1:($7+ 0.1) notitle with lines ls 13,\
+'Day2.csv' using 1:($8+ 0.1) notitle with lines ls 13,\
+'Day2.csv' using 1:($9+ 0.1) notitle with lines ls 13,\
 
 
 
