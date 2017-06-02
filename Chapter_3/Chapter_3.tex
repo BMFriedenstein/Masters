@@ -14,17 +14,17 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 	\subsection{Preamble}
 		Developing a detailed simulation model of a compressed air network requires thorough comprehension of the inner workings of the system. This section will discuss the investigations needed to obtain the required understanding.
 	\subsection{Acquiring data} % 
-	The first step of the system investigation is to acquire the data and understanding that will be required to model compressed air system's function. This will requires access to mine resources such as data storage systems, instrumentation, and communication with relevant engineers and personnel.
+	The first step of the system investigation is to acquire the data and understanding that will be required to model compressed air system's function. This will require access to mine resources such as data storage systems, instrumentation, and communication with relevant engineers and personnel.
 	\par 
 	Comprehensive and up to date layouts illustrate a compressed air network's unique set-up, scale and location of instrumentation. More detailed layouts can provide per-level air consumption breakdowns of the network, locations of refuge bays, mining cross-sections and identified inefficiencies. This is vital to understand the operation and identify what data parameters will be required for the model. 
 	\par 
-	A baseline period that best represents the typical operation of the mine. Additionally availability of data should be considered. The length of the baseline period is selected based on the scenarios that are to be tested, this can be changed later. For calibrating a compressed air system a 24 hours period of normal operation is usually sufficient. A longer period may be needed to verify the model.
+	A baseline period that best represents the typical operation of the mine. Additionally, availability of data should be considered. The length of the baseline period is selected based on the scenarios that are to be tested, this can be changed later. For calibrating a compressed air system a 24 hours period of normal operation is usually sufficient. A longer period may be needed to verify the model.
 	Next data 
 	\subsection{Mining schedule}
-	A critical aspect to developing an accurate model of a mining compressed air system is understanding the the operational philosophy of the mine. The schedule for operations such as drilling,  blasting or cleaning can have a major impact on compressed air requirements at different times of the day. By utilizing the operational schedule, simulation scenarios can be optimized for the air requirements throughout the day.	
+	A critical aspect to developing an accurate model of a mining compressed air system is apprehension of the operational philosophy of the mine. The schedule for operations such as drilling,  blasting or cleaning can have a major impact on compressed air requirements at different times of the day. By utilizing the operational schedule, simulation scenarios can be optimized for the air requirements throughout the day.	
 	
 	\subsection{Data verification}
-	Data verification is the process where data is evaluated to ensure accuracy. It is important to verify data that is used for model development as an accurate representation of the operation of a system can only be achieved utilising data of high quality \cite{gous2016data}. The factors that influence a dataset's quality, accuracy and integrity  summarised as follows:
+	Data verification is the process where data is evaluated to ensure accuracy. It is important to verify data that is used for model development as an accurate representation of the operation of a system can only be achieved utilising data of high quality \cite{gous2016data}. The factors that influence a data-set's quality, accuracy and integrity  summarised as follows:
 	\begin{itemize}
 		\item Conversion of measurement value \cite{meijsen2015verification}
 		\item Storage and collection of the system \cite{vanNiekerk2016quantification},\cite{Jansevan2016structuring}
@@ -67,9 +67,15 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 		\end{figure}
 		The assumption is made that underground conditions remain constant at each mining level. Pressure and temperature increases with depth as a result of auto compression and rock face temperature. Therefore the conditions can be estimated using only the depth at each level.   
 		\subsubsection{Compressors}
-		Three compressor models were investigated, each with varying complexity. The models are: air compressor, dynamic compressor and positive displacement compressor. The air compressor is a general, simplified model. It requires minimal user inputs by making several assumptions. This is useful when parameters for a compressor are not available. Or when doing a quick preliminary simulation. However it is not ideal for detailed simulations which require more precision. 
+		Three compressor models were investigated, each with varying complexity. The models are:
+		\begin{itemize}
+			\item Air compressor
+			\item Dynamic compressor 
+			\item Positive displacement compressor
+		\end{itemize}  
+		The air compressor is a general, simplified model. It requires minimal user inputs by making several assumptions. This is useful when parameters for a compressor are not available. Or when doing a quick preliminary simulation. However, it is not ideal for detailed simulations which require more precision. 
 		\par 
-		The dynamic compressor components are is more complex, taking into account factors such as heat generated by \gls{polyCof} and inefficiencies within the process. Hence the model can be used more accurately and for more complex simulations then the general compressor model. However, it should be noted that the dynamic compressor is simplified by several assumptions, for example, a constant efficiency at varying loads. 
+		The dynamic compressor components are is more complex, taking into account factors such as heat generated by \gls{polyCof} and inefficiencies within the process. Hence, the model can be used more accurately and for more complex simulations than the general compressor model. However, it should be noted that the dynamic compressor is simplified by several assumptions, for example, a constant efficiency at varying loads. 
 		\par 	 
 		For most scenarios, the dynamic compressor model is most suitable. This component is modelled by fitting a quadratic curve through three points of operation to obtain an equation for corrected mass flow as a function of the pressure ratio. This characteristic curve of compressor  as shown in figure \ref{fig: Compressor Curve} can be accurately estimated even when only one data point is available by making approximations for the zero flow and pressure points on the curve. Once the flow characteristics of the compressors are set, the efficiency and \gls{polyCof} parameters are calibrated such that the output power and air temperature match the actual or estimated outputs of the compressor.
 		
@@ -92,7 +98,7 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 		\subsubsection{Demand/leak}
 			A flow demand represents any air flow leaving the network. This includes equipment that uses air such as drills and agitators etc. as well as inefficiencies like leaks and open pipes. Generally the air flow is dependent on pressure and the specific resistance to flow of the outlet. 
 			\par 
-			The specific resistance of the flow demand can be obtained using the inlet pressure, outlet pressure and flow. If the flow is not known, a reasonably accurate estimation can be made by calculating the expected flow from the size of the outlet. The air demand may vary throughout the day. For example, a mining section may utilise more machines during certain periods of the day. A schedule is used to replicate this in the simulation. Figure \ref{fig: Demand component} shows how a calibrated air demand or leak is integrated into the simulation.
+			The resistance of the flow demand can be obtained using the inlet pressure, outlet pressure and flow. If the flow is not known, a reasonably accurate estimation can be made by calculating the expected flow from the size of the outlet. The air demand may vary throughout the day. For example, a mining section may utilise more machines during certain periods of the day. A schedule is used to replicate this in the simulation. Figure \ref{fig: Demand component} shows how a calibrated air demand or leak is integrated into the simulation.
 			
 			\begin{figure}[h]
 				\centering
@@ -103,14 +109,14 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 		\subsubsection{Compressed air control}\label{Controllers}
 			Simulation components need to be dynamically controlled as in the actual air network. Control is typically implemented on compressors and valves throughout the network to follow certain set-points and schedules. It is important to not only include the controllers in the simulation, but to replicate the non-linearities, limitations and responsiveness related to their use. This ensures the model reacts in the same way the actual network would, improving accuracy.
 			\par 
-			On a typical mine, compressors power is controlled to ensure that the discharge pressure matches a specified set-point. This control is achieved through either \glspl{vsd} (or \glspl{vfd}) and guide-vain control. \glspl{vfd} gives a wide range of power control and can be estimated using a \gls{pi} controller as in figure \ref{fig: Controller models} where discharge pressure is used as feedback for the controller. 
+			On a typical mine, compressors power is controlled to ensure that the discharge pressure matches a specified set-point. This control is achieved through either \glspl{vsd} (or \glspl{vfd}) and guide-vain control. \glspl{vfd} provides a wide range of power control and can be estimated using a \gls{pi} controller as in figure \ref{fig: Controller models} where discharge pressure is used as feedback for the controller. 
 	\begin{figure}[h]
 		\centering
 		\fbox{\includegraphics[trim =-4cm 0 -4cm 0cm, width=\textwidth]{Images/3/Controller}}
 		\caption{Control components in \gls{stb}.}
 		\label{fig: Controller models}
 	\end{figure}
-		Guide vain control is most commonly used in mining to control compressors. This entails controlling the position of the inlet guide vain . The guide vain is opened or closed to control the compressors discharge pressure.  Manipulating the guide vain position will effect the power the compressor inputs into the system. Figure \ref{fig: Guide vain position} shows the relationship between compressor power and guide vain position. This relationship can be approximated as a linear function. A guide vain position of 40\%  maps to an output power of about 60\% of the maximum power. When more pressure is required than can be obtained with the guide vains fully opened, another compressor is needed to operate. 
+		Guide vains are most commonly used in mining to control compressors. This entails controlling the position of the inlet guide vain . The guide vain is opened or closed to control the compressors discharge pressure.  Manipulating the guide vain position will affect the power the compressor inputs into the system. Figure \ref{fig: Guide vain position} shows the relationship between  power and guide vain position. This can be approximated as a linearly where A guide vain position of 40\%  retales to an output power of about 60\% of the maximum power. When more pressure is required than can be obtained with the guide vains fully opened, another compressor is needed to operate. 
 		\begin{figure}[h]
 			\centering
 			\fbox{\input{Graphs/1/GuideVainPosition/GuideVainPosition}}
@@ -118,7 +124,7 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 			\label{fig: Guide vain position}
 		\end{figure}
 		\par
-		A guide vain controller is modelled using a \gls{pi} controller component. However the limitations of guide vain control, as represented in figure \ref{fig: Guide vain position}, must be implemented in the controller. This is done by using a minimum output that would match the minimum power reduction the guide vain achieved by closing the guide vain. For example, a \gls{pi} controller for the compressor from figure \ref{fig: Guide vain position} would have a minimum control output of approximately 60\%.
+		A guide vain controller is modelled using a \gls{pi} controller component. However, the limitations of guide vain control, as represented in figure \ref{fig: Guide vain position}, must be implemented in the controller. This is done by using a minimum output that would match the minimum power reduction the guide vain achieved by closing the guide vain. For example, a \gls{pi} controller for the compressor from figure \ref{fig: Guide vain position} would have a minimum control output of approximately 60\%.
 		\par 
 		Mines utilize control valves at underground sections to control the pressure at individual mining stations independently \cite{Heyns2014Masters}. Controlling of valve components is performed similarly as control of the compressor components. As shown in figure \ref{fig: Controller models} the outlet pressure is used as feedback for a pi controller. The controller output is mapped to the valve fraction of a pipe component.
 		\begin{figure}[h]
@@ -130,9 +136,9 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 		\subsubsection{Compressed air after-cooling}
 		The air compression process generates significant heat. Compressed air at high temperatures contains a large amount of water vapour. To prevent condensation later in the air network, improve the system capacity and protect equipment from excessive heat, after-coolers are installed to the outlet of the compressor \cite{schroeder2009energy}.
 		\par 
-		After-cooling reduces the compressed air temperature to within a margin of ambient. This cooling could have a large effect on the performance of the network. Hence including after-cooling to the simulation model should improve accuracy.
+		After-cooling reduces the compressed air temperature to within a margin of ambient. This cooling could have a large effect on the performance of the network. Hence, including after-cooling to the simulation model should improve accuracy.
 		\par 
-		To replicate this effect, a heat transfer node can be added to the outlet of the compressor component. \gls{stb} utilizes the following heat transfer parameters of the air node to solve for outlet temperature: 
+		To replicate this effect, a heat transfer node can be added to the outlet of the compressor component. \gls{stb} Utilizes the following heat transfer parameters of the air node to solve for outlet temperature: 
 		\begin{tabular}{p{1.3cm}p{13cm}}
 			$Area$ & The heat transfer area ($m^2$) \\
 			$UA$ & Heat transfer coefficient ($kW/^{\circ} C$) \\
@@ -154,19 +160,21 @@ Implementation of a simulation is split into three steps. Firstly, an investigat
 		\begin{figure}[h]
 			\centering
 			\fbox{\input{Graphs/3/CompSelection/CompSelection}}
-			\caption{An example of two simulation periods, showing a changed compressor schedule.}
+			\caption{An example of two baseline periods, showing a changed compressor schedule.}
 			\label{fig: Compressor schedule}
 		\end{figure}
 	\subsection{Summary}
-	\textit{Unfinnished}
+	\textit{Unfinished}
 \section{Implementation of simulation method}
 	\subsection{Preamble}
-		Once a simulation has been developed and verified, the implementation of interventions and scenarios follows. In this section, the approach of implementation the simulation methodology, and analysis of simulation interventions  will be discussed.
+		Once a simulation has been developed and verified, the implementation of interventions and scenarios follows. In this section, the approach of implementation the simulation methodology, and analysis of interventions will be discussed.
 	\subsection{Analyses of data}
-		- Baseline vs Optimised comparison \\
-		\textit{Unfinnished}
+		- Baseline vs Optimised analysis \\
+		- identification of further improvements\\
+		\textit{Unfinished}
 	\subsection{Quantifying operational improvements}
 		- Estimating cost savings \\
-		\textit{Unfinnished}
+		- Reporting feedback to the mine\\
+		\textit{Unfinished}
 	\subsection{Summary}
 \section{Conclusion}
