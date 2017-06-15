@@ -71,6 +71,7 @@ set y2label '$\% error$'
 set y2range [0:50]
 set y2tics 5 nomirror
 set size 1.3,0.8
+set datafile separator ","
 plot 'Pressure.csv' using 1:2 title "Baseline pressure" with lines ls 1, \
      'Pressure.csv' using 1:3 title "Simulated pressure" with lines ls 4, \
 	 'Pressure.csv' using 1:4 title "Error" with boxes ls 3 axes x1y2, 
