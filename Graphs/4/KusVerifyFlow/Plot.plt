@@ -64,14 +64,14 @@ set format x '%H:%M'
 set xrange ["0:00":"24:00"]
 set xlabel 'Time of Day'
 set ylabel "flow $(kg/s)$";
-set yrange [0:50]
+set yrange [30:50]
 set ytics 10 nomirror
 
 set y2label '$\% error$'
-set y2range [0:50]
-set y2tics 5 nomirror
-set size 1.3,0.8
+set y2range [0:25]
+set y2tics 10 nomirror
+set size 1.3,0.55
 set datafile separator ","
 plot 'flow.csv' using 1:2 title "Baseline flow" with lines ls 1, \
      'flow.csv' using 1:3 title "Simulated flow" with lines ls 4, \
-	 'flow.csv' using 1:($4/0.42) title "Error" with boxes ls 3 axes x1y2, 
+	 'flow.csv' using 1:($4) title "Error" with boxes ls 3 axes x1y2, 

@@ -64,13 +64,13 @@ set format x '%H:%M'
 set xrange ["0:00":"24:00"]
 set xlabel 'Time of Day'
 set ylabel "Power $(MW)$";
-set yrange [0:15]
+set yrange [8:15]
 set ytics 1 nomirror
 
 set y2label '$\% error$'
-set y2range [0:50]
-set y2tics 5 nomirror
-set size 1.3,0.8
+set y2range [0:25]
+set y2tics 10 nomirror
+set size 1.3,0.55
 set datafile separator ","
 plot 'Power.csv' using 1:2 title "Baseline power" with lines ls 1, \
      'Power.csv' using 1:3 title "Simulated power" with lines ls 4, \

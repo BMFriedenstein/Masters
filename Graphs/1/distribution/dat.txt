@@ -1,8 +1,8 @@
-0 CA 21
-1 mp 19
-2 p 18
-3 v 14
-4 o 10
-5 pp 8
-6 h 6
-7 o 4
+1 "\\tiny{\\shortstack{Compressed \\\\ air}}" 21
+2 "\\tiny{\\shortstack{Mining \\\\ processes}}" 19
+3 "\\tiny{\\shortstack{Pumping}}" 18
+4 "\\tiny{\\shortstack{Ventilation \\\\ and cooling}}" 14
+5 "\\tiny{\\shortstack{Buildings \\\\ and hostels}}" 10
+6 "\\tiny{\\shortstack{Processing \\\\ plant}}" 8
+7 "\\tiny{\\shortstack{Hoisting}}" 6
+8 "\\tiny{\\shortstack{Other}}" 4

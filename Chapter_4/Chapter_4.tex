@@ -9,15 +9,14 @@
 \section{Introduction}
 \section{Case study: Mine A \color{blue}(Kusasalethu)}
 	\subsection{Preamble}
+	\section{System investigation}
 	
-	\subsection{Verification of baseline simulation}
-	\begin{figure}[h]
-		\centering
-		\fbox{\input{Graphs/4/KusVerifyFlow/KusVerifyFlow}}
-		\caption{Verifying flow.}
-		\label{fig: Verification flow kusasalethu}
-	\end{figure}
-
+	\subsection{Model development}
+	
+	\subsubsection{Verification of baseline simulation}
+	Verification of the model was done firstly by comparing the simulation outputs to actual measured values. To simplify the model, the actual measured pressure is temporarily used as set points for the compressors. This ensured that the pressure in the network is identical to that of the actual measured system as shown in figure \ref{fig: Verification Pressure kusasalethu}.
+	\par 
+	
 	\begin{figure}[h]
 		\centering
 		\fbox{\input{Graphs/4/KusVerPressure/KusVerPressure}}
@@ -25,13 +24,22 @@
 		\label{fig: Verification Pressure kusasalethu}
 	\end{figure}
 
+ 	With the pressure is set, the power and air flow outputs for components throughout the model were compared with their relative actual values. Figure \ref{fig: Verification Power kusasalethu} and figure \ref{fig: Verification flow kusasalethu} shows the comparison of the total power and flow of the system. The average error for these parameters was $1.08 \%$ and $1.80 \%$ respectively. This is regarded as acceptable error margin. 
+ 
+	\begin{figure}[h]
+		\centering
+		\fbox{\input{Graphs/4/KusVerifyFlow/KusVerifyFlow}}
+		\caption{Verifying flow.}
+		\label{fig: Verification flow kusasalethu}
+	\end{figure}
 	\begin{figure}[h]
 		\centering
 		\fbox{\input{Graphs/4/KusVerPower/KusVerPower}}
 		\caption{Verifying Power}
 		\label{fig: Verification Power kusasalethu}
 	\end{figure}
-
+	Once all the power and flow parameters were regarded as correctly calibrated, the systems response to the actual pressure set-points was checked.
+	
 	\subsection{Scenario 1. Refuge bay simulation}
 	Tested scenario where all excessive leaking valves are removed.
 	Refuge bays savings 1MW E.E.
@@ -44,8 +52,11 @@
 	\end{figure}		
 	
 	
-	\subsubsection{Validation of results}
+	
+	
 	\subsection{Scenario 2. Closing off levels/stopes}
+	
+	\subsection{Validation of results}
 	\subsection{Summary}
 \section{Case study: Mine B \color{blue}(Beatrix 123)}
 	\subsection{Preamble}
