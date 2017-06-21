@@ -9,11 +9,29 @@
 \section{Introduction}
 \section{Case study: Mine A \color{blue}(Kusasalethu)}
 	\subsection{Preamble}
-	A mine five compressors supply compressed air to various surface and underground operations. This section will discuss results of various scenarios implementing using the simulation methodology discussed in Chapter 3.
+	 This section will discuss the implementation of the simulation on a second case study. Further, the result of various simulated scenarios will be discussed. Finally validation of the the simulated scenarios using actual measurable tests will be discussed.
 	\subsection{System investigation}
+	The methodology was implemented on a large South African gold mine. The mine utilises five compressors supply compressed air to various surface and underground operations. An investigation was performed to gather the data and information required to build a simulation model of the network.
+	\par 
+	A air distribution layout was obtained, as shown in Figure \ref{fig: KUS Air layout}. The layout indicates available meters and instrumentation as well as typical airflow splits that can be used to calibrate the model. Power, pressure, flow  and guide vain control data for the compressors as well as data from flow and pressure meters along the network was gathered from the \gls{scada}.
+	\begin{figure}[h!]
+		\centering
+		\fbox{\includegraphics[trim =-100cm 0 -100cm 0cm,width=\textwidth]{Images/4/KUS_Basline2}}
+		\caption{Basic air layout.}
+		\label{fig: KUS Air layout}
+	\end{figure}
+\par 
+		
+	\A further investigation was performed on the significant mining levels to map the locations and distribution of mining cross-section, refuge bays, leaks and other compressed air users on each level. An example of a resultant schematic from such an underground investigation is shown in Figure \ref{fig: KUS Underground level layout}
 	
+	\begin{figure}[h!]
+		\centering
+		\fbox{\includegraphics[trim =-100cm 0 -100cm 0cm,width=\textwidth]{Images/4/KUS_Basline2}}
+		\caption{Basic air layout.}
+		\label{fig: KUS Underground level layout}
+	\end{figure}	
 	\subsection{Model development}
-		\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
 		\fbox{\includegraphics[trim =-20cm 0 -20cm 0cm,width=\textwidth]{Images/4/KUS_Basline2}}
 		\caption{Simulation layout for the refuge bay scenario.}
@@ -21,7 +39,7 @@
 	\end{figure}		
 	
 	\subsubsection{Verification of baseline simulation}
-	Verification of the model was done firstly by comparing the simulation outputs to actual measured values. To simplify the model, the actual measured pressure is temporarily used as set points for the compressors. This ensured that the pressure in the network is identical to that of the actual measured system as shown in figure \ref{fig: Verification Pressure kusasalethu}.
+	Verification of the model was done firstly by comparing the simulation outputs to actual measured values. To simplify the model, the actual measured pressure is temporarily used as set points for the compressors. This ensured that the pressure in the network is identical to that of the actual measured system as shown in Figure \ref{fig: Verification Pressure kusasalethu}.
 	\par 
 	
 	\begin{figure}[h]
@@ -31,7 +49,7 @@
 		\label{fig: Verification Pressure kusasalethu}
 	\end{figure}
 
- 	With the pressure is set, the power and air flow outputs for components throughout the model were compared with their relative actual values. Figure \ref{fig: Verification Power kusasalethu} and figure \ref{fig: Verification flow kusasalethu} shows the comparison of the total power and flow of the system. The average error for these parameters was $1.08 \%$ and $1.80 \%$ respectively. This is regarded as acceptable error margin. 
+ 	With the pressure is set, the power and air flow outputs for components throughout the model were compared with their relative actual values. Figure \ref{fig: Verification Power kusasalethu} and Figure \ref{fig: Verification flow kusasalethu} shows the comparison of the total power and flow of the system. The average error for these parameters was $1.08 \%$ and $1.80 \%$ respectively. This is regarded as acceptable error margin. 
  
 	\begin{figure}[h]
 		\centering
@@ -45,11 +63,11 @@
 		\caption{Verifying Power}
 		\label{fig: Verification Power kusasalethu}
 	\end{figure}
-	Once all the power and flow parameters were calibrated with minimal error, the systems response to the actual pressure set-points was checked. The simulation inputs were updated with pressure setpoint profile. The compressor output pressure was then compared to the actual measured outlet, this is shown in figure \ref{fig: Verification Pressure kusasalethu Setpoint}.
+	Once all the power and flow parameters were calibrated with minimal error, the systems response to the actual pressure set-points was checked. The simulation inputs were updated with pressure setpoint profile. The compressor output pressure was then compared to the actual measured outlet, this is shown in Figure \ref{fig: Verification Pressure kusasalethu Setpoint}.
 	
 	\begin{figure}[h]
 		\centering
-		\fbox{\input{Graphs/4/KusVerPressure/KusVerPressure}}
+		\fbox{\input{Graphs/4/KusVerPressure2/KusVerPressure2}}
 		\caption{Verifying Pressure}
 		\label{fig: Verification Pressure kusasalethu Setpoint}
 	\end{figure}
