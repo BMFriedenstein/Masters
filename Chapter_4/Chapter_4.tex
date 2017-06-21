@@ -9,9 +9,16 @@
 \section{Introduction}
 \section{Case study: Mine A \color{blue}(Kusasalethu)}
 	\subsection{Preamble}
-	\section{System investigation}
+	A mine five compressors supply compressed air to various surface and underground operations. This section will discuss results of various scenarios implementing using the simulation methodology discussed in Chapter 3.
+	\subsection{System investigation}
 	
 	\subsection{Model development}
+		\begin{figure}[h]
+		\centering
+		\fbox{\includegraphics[trim =-35cm 0 -35cm 0cm,width=\textwidth]{Images/4/KUS_Basline2}}
+		\caption{Simulation layout for the refuge bay scenario.}
+		\label{fig: KUS Baseline}
+	\end{figure}		
 	
 	\subsubsection{Verification of baseline simulation}
 	Verification of the model was done firstly by comparing the simulation outputs to actual measured values. To simplify the model, the actual measured pressure is temporarily used as set points for the compressors. This ensured that the pressure in the network is identical to that of the actual measured system as shown in figure \ref{fig: Verification Pressure kusasalethu}.
@@ -38,7 +45,14 @@
 		\caption{Verifying Power}
 		\label{fig: Verification Power kusasalethu}
 	\end{figure}
-	Once all the power and flow parameters were regarded as correctly calibrated, the systems response to the actual pressure set-points was checked.
+	Once all the power and flow parameters were calibrated with minimal error, the systems response to the actual pressure set-points was checked. The simulation inputs were updated with pressure setpoint profile. The compressor output pressure was then compared to the actual measured outlet, this is shown in figure \ref{fig: Verification Pressure kusasalethu Setpoint}.
+	
+	\begin{figure}[h]
+		\centering
+		\fbox{\input{Graphs/4/KusVerPressure/KusVerPressure}}
+		\caption{Verifying Pressure}
+		\label{fig: Verification Pressure kusasalethu Setpoint}
+	\end{figure}
 	
 	\subsection{Scenario 1. Refuge bay simulation}
 	Tested scenario where all excessive leaking valves are removed.
@@ -46,7 +60,7 @@
 	
 	\begin{figure}[h]
 		\centering
-		\fbox{\includegraphics[trim =-30cm 0 -20cm 0cm, width=\textwidth]{Images/A/RefBaySim}}
+		\fbox{\includegraphics[trim =-35cm 0 -35cm 0cm,width=\textwidth]{Images/A/RefBaySim}}
 		\caption{Simulation layout for the refuge bay scenario.}
 		\label{fig: Refuge bay layout}
 	\end{figure}		
