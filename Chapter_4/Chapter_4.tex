@@ -7,7 +7,16 @@
 \enquote*{\textit{Quote.}} - Somebody\\
 \newpage
 \section{Introduction}
-\section{Case study: Mine A \color{blue}(Kusasalethu)}
+
+\section{Case study: MineA \color{blue}(Beatrix 123)}
+	\subsection{Preamble}
+This section will discuss the implementation of the simulation on a second case study. Further, the result of various simulated scenarios will be discussed. Finally validation of the the simulated scenarios using actual measurable tests will be discussed.
+\subsection{System investigation}
+\subsection{Scenario 1. Compressor set points}
+\subsection{Scenario 2. Control valves set points}
+\subsection{Summary}
+
+\section{Case study: Mine B \color{blue}(Kusasalethu)}
 	\subsection{Preamble}
 	 This section will discuss the implementation of the simulation on a second case study. Further, the result of various simulated scenarios will be discussed. Finally validation of the the simulated scenarios using actual measurable tests will be discussed.
 	\subsection{System investigation}
@@ -49,7 +58,7 @@
 		\label{fig: Verification Pressure kusasalethu}
 	\end{figure}
 
- 	With the pressure is set, the power and air flow outputs for components throughout the model were compared with their relative actual values. Figure \ref{fig: Verification Power kusasalethu} and Figure \ref{fig: Verification flow kusasalethu} shows the comparison of the total power and flow of the system. The average error for these parameters was $1.08 \%$ and $1.80 \%$ respectively. This is regarded as acceptable error margin. 
+ 	With the pressure set, the power and air flow outputs for components throughout the model were compared with their relative actual values. Figure \ref{fig: Verification Power kusasalethu} and Figure \ref{fig: Verification flow kusasalethu} shows the comparison of the total power and flow of the system. The average error for these parameters was $1.08 \%$ and $1.80 \%$ respectively. This is regarded as acceptable error margin. 
  
 	\begin{figure}[h]
 		\centering
@@ -63,7 +72,7 @@
 		\caption{Verifying Power}
 		\label{fig: Verification Power kusasalethu}
 	\end{figure}
-	Once all the power and flow parameters were calibrated with minimal error, the systems response to the actual pressure set-points was checked. The simulation inputs were updated with pressure setpoint profile. The compressor output pressure was then compared to the actual measured outlet, this is shown in Figure \ref{fig: Verification Pressure kusasalethu Setpoint}.
+	Once all the power and flow parameters were calibrated with minimal error, the compressors response to the actual pressure set-points was checked. The simulation inputs were updated with the pressure set-point profile. The compressor output pressure was then compared to the actual measured outlet, this is shown in Figure \ref{fig: Verification Pressure kusasalethu Setpoint}. The actual \gls{sp} profile is shown in green. It was noted the during peak air usage periods pressure dropped well below the desired set-point, as the compressors struggled to keep up with the air demand. This effected was reproduced in the simulation.
 	
 	\begin{figure}[h]
 		\centering
@@ -90,17 +99,15 @@
 	
 	\subsection{Validation of results}
 	\subsection{Summary}
-\section{Case study: Mine B \color{blue}(Beatrix 123)}
-	\subsection{Preamble}
-	\subsection{Scenario 1. Compressor set points}
-	\subsection{Scenario 2. Control valves set points}
-	\subsection{Summary}
+	
 \section{Periodic simulation analysis}
 	\subsection{Preamble}
-	 Updating the inputs of a simulation periodically could be used to identify significant operational changes or when if the model parameters have drifted to a point where the model requires recalibration. This section will detail the results of an analysis into periodic simulation.
-	 \subsection{Method of analysis}
-	 
-	 \subsection{Results}
+	Updating the inputs of a simulation periodically could be used to verify simulation model accuracy. Additionally, periodic simulation could be used to identify significant operational changes or if the model parameters have drifted to a point where the model requires recalibration. This section will detail the results of an analysis into periodic simulation.
+	\subsection{Method of analysis}
+	
+	\subsection{Results}
 	\subsection{Summary}
 \section{Potential benefit for SA mines}
+	\subsection{Preamble}
+	\subsection{Summary}
 \section{Conclusion}

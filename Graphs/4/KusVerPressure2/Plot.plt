@@ -74,4 +74,5 @@ set size 1.3,0.55
 set datafile separator ","
 plot 'Pressure.csv' using 1:2 title "Baseline press." with lines ls 1, \
      'Pressure.csv' using 1:3 title "Simulated press." with lines ls 4, \
+	 'Pressure.csv' using 1:5 title "\\gls{sp}" with lines ls 2, \
 	 'Pressure.csv' using 1:4 title "Error" with boxes ls 3 axes x1y2, 
