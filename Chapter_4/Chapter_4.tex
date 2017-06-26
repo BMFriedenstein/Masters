@@ -85,7 +85,12 @@ This section will discuss the implementation of the simulation on a second case 
 	Tested scenario where all excessive leaking valves are removed.
 	Refuge bays savings 1MW E.E.
 	
-	
+	\begin{figure}[h]
+		\centering
+		\fbox{\includegraphics[trim =-35cm 0 -35cm 0cm,width=\textwidth]{Images/A/RefBaySim}}
+		\caption{Simulation layout for the refuge bay scenario.}
+		\label{fig: Refuge bay layout}
+	\end{figure}		
 	
 	
 	
@@ -97,24 +102,38 @@ This section will discuss the implementation of the simulation on a second case 
 	
 \section{Periodic simulation analysis}
 	\subsection{Preamble}
-<<<<<<< HEAD
-	 Updating the inputs of a simulation periodically could be used to identify significant operational changes or when if the model parameters have drifted to a point where the model requires recalibration. This section will detail the results of an analysis into periodic simulation.
-	
-	 
-	 \section{Results}
-	 \begin{figure}[h]
-	 	\centering
-	 	\fbox{\input{Graphs/4/Periodic1/Periodic1}}
-	 	\caption{Verifying Pressure}
-	 	\label{fig: Periodic simulation}
-	 \end{figure}	
-	 \subsection{Results}
-=======
-	Updating the inputs of a simulation periodically could be used to verify simulation model accuracy. Additionally, periodic simulation could be used to identify significant operational changes or if the model parameters have drifted to a point where the model requires recalibration. This section will detail the results of an analysis into periodic simulation.
-	\subsection{Method of analysis}
-	
+	Updating the inputs of a simulation periodically could be used to verify simulation model accuracy. Simulation outputs remaining precise for subsequent days would indicate that the model is correctly calibrated. Additionally, periodic simulation could be used to identify significant operational changes that occur within the actual system. This would cause the simulation outputs to differ from the actual measured parameters. 
+	\par 
+	Periodic simulation was implemented using the process shown in Figure \ref{fig: PeriodicProcess}. Simulation input data is collected for the simulation period, this data includes only inputs that vary day to day such as schedules, ambient air conditions and  measured flows. Once the input values are collected, they are then imported into the compressed air model. The simulation performed and the output data is exported. An analysis is then performed to compare the simulated period with the actual opertion of the system. This process is then repeated periodically.
+		\begin{figure}[h]
+		\centering
+		\fbox{\includegraphics[trim =-5cm 0 -5cm 0cm,width=\textwidth]{Graphs/4/PeriodicProcess/PeriodicProcess}}
+		\caption{The periodic simulation process that was followed in this analysis.}
+		\label{fig: PeriodicProcess}
+	\end{figure}	
+	     \subsection{Results}
+	     Daily periodic simulation was implemented between 2016/11/01 and 2016/11/30. For each period, the simulated total flow, shaft delivery pressure and total power consumption were compared to the actual operation. The results of this analysis are shown in Figure \ref{fig: Periodic simulation}.
+	     \par 
+	     
+	\begin{figure}[h]
+		\centering
+		\fbox{\input{Graphs/4/Periodic1/Periodic1}}
+		\caption{The flow, pressure and power error percentages for daily periodic simulations over a month.}
+		\label{fig: Periodic simulation}
+	\end{figure}    
+	\begin{figure}[h]
+		\centering
+		\fbox{\input{Graphs/4/PeriodicRange/PeriodicRange}}
+		\caption{.}
+		\label{fig: Periodic data reliabuility}
+	\end{figure}    
+	\begin{figure}[h]
+		\centering
+		\fbox{\input{Graphs/4/Periodic2/Periodic2}}
+		\caption{Corrected periodic.}
+		\label{fig: Corrected Periodic simulation}
+	\end{figure}    
 	\subsection{Results}
->>>>>>> 2a363d660d2b91d5e5495740950d1d4701830746
 	\subsection{Summary}
 \section{Potential benefit for SA mines}
 	\subsection{Preamble}

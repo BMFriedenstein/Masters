@@ -53,6 +53,10 @@
 \setlist[itemize]{noitemsep, topsep=-20pt}
 \setlength{\glsdescwidth}{0.7\textwidth}
 \setlength{\glspagelistwidth}{0.3\linewidth}
+\usepackage{tocloft}
+\setlength{\cftbeforesecskip}{0pt}
+\setlength{\cftbeforechapskip}{5pt}
+
 
 %Page headers
 \usepackage{fancyhdr}
@@ -147,7 +151,7 @@
 	\end{tabular}
 \clearpage
 
-\begin{spacing}{1.2} 
+
 \tableofcontents
 
 \clearpage
@@ -160,13 +164,12 @@
 	\printglossary[title=Nomenclature]
 	\newpage
 	
-	%\printglossaries
-	
+	%\printglossaries	
 	\addcontentsline{toc}{chapter}{List of figures}
 	\listoffigures
 	\addcontentsline{toc}{chapter}{List of tables}
 	\listoftables
-\end{spacing}	
+
 %Chapters
 \input{Chapter_1/Chapter_1}
 \input{Chapter_2/Chapter_2}
