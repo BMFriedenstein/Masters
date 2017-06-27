@@ -1,7 +1,7 @@
 reset
 set terminal wxt  enhanced font 'Verdana,10' persist
 set terminal epslatex color colortext
-set output 'KusVerPressure2.tex'
+set output 'Periodic1.tex'
 my_line_width = "1"
 my_axis_width = "1.5"
 my_ps = "1.2"
@@ -52,24 +52,24 @@ set style line 15 linecolor rgbcolor red_100 lt 1 lw 1.2 pt 7 pi -1 ps 1.5
 set style line 16 linecolor rgbcolor "#cacaca" lt 1 lw 1.2 pt 7 pi -1 ps 1.5
 set style line 17 linecolor rgbcolor "#224499" lt 1 lw 1.2 pt 7 pi -1 ps 1.5
 
-set border 31 lw @my_axis_width lc rgb text_color
-set key out horiz bot center
-set grid lc rgb grid_color
 
 set border 31 lw @my_axis_width lc rgb text_color
 set key out horiz bot center
 set grid lc rgb grid_color
-set timefmt '%d/%m/%Y'
+set timefmt '%Y/%m/%d'
 set xdata time
-set format x '%d/%m/%Y'
-set xrange ["1/11/2016":"30/11/2016"]
+set mxtics 6
+set xtics 518400 
+set format x '%Y/%m/%d' 
+set xrange ["2016/11/1":"2016/11/30"]
 set xlabel 'Date of simulation'
-set ylabel "Error \%";
-set yrange [0:25]
-set ytics 5 nomirror
-
-set size 1.3,0.55
+set ylabel "Accuracy (\\%)";
+set yrange [80:100]
+set ytics 5 
+set mytics 10
+unset autoscale
+set size 1.3,0.7
 set datafile separator ","
-plot 'Results.csv' using 1:2 title "Flow" with lp ls 1, \
-     'Results.csv' using 1:3 title "Pressure" with lp ls 4, \
-	 'Results.csv' using 1:4 title "Power" with lp lt 7, 
+plot 'Results.csv' using 1:(100-$2) title "Flow" with lp ls 1, \
+     'Results.csv' using 1:(100-$3) title "Pressure" with lp ls 4, \
+	 'Results.csv' using 1:(100-$4) title "Power" with lp lt 7, 

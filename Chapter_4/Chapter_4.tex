@@ -84,15 +84,15 @@ This section will discuss the implementation of the simulation on a second case 
 	
 	\subsection{Validation of results}
 	\subsection{Summary}
-	
+\newpage
 \section{Periodic simulation analysis}
 	\subsection{Preamble}
 	Updating the inputs of a simulation periodically could be used to verify simulation model accuracy. Simulation outputs remaining precise for subsequent days would indicate that the model is correctly calibrated. Additionally, periodic simulation could be used to identify significant operational changes that occur within the actual system. This would cause the simulation outputs to differ from the actual measured parameters. 
 	\par 
-	Periodic simulation was implemented using the process shown in Figure \ref{fig: PeriodicProcess}. Simulation input data is collected for the simulation period, this data includes only inputs that vary day to day such as schedules, ambient air conditions and  measured flows. Once the input values are collected, they are then imported into the compressed air model. The simulation performed and the output data is exported. An analysis is then performed to compare the simulated period with the actual opertion of the system. This process is then repeated periodically.
+	Periodic simulation was implemented using the process shown in Figure \ref{fig: PeriodicProcess}. Simulation input data is collected for the simulation period, this data includes only inputs that vary day to day such as schedules, ambient air conditions and  measured flows. Once the input values are collected, they are then imported into the compressed air model. The simulation performed and the output data is exported. An analysis is then performed to compare the simulated period with the actual operation of the system. This process is then repeated periodically.
 		\begin{figure}[h]
 		\centering
-		\fbox{\includegraphics[trim =-5cm 0 -5cm 0cm,width=\textwidth]{Graphs/4/PeriodicProcess/PeriodicProcess}}
+		\fbox{\includegraphics[trim =-1cm 0 -1cm 0cm,width=\textwidth]{Graphs/4/PeriodicProcess/PeriodicProcess}}
 		\caption{The periodic simulation process that was followed in this analysis.}
 		\label{fig: PeriodicProcess}
 	\end{figure}	
@@ -105,12 +105,15 @@ This section will discuss the implementation of the simulation on a second case 
 		\fbox{\input{Graphs/4/Periodic1/Periodic1}}
 		\caption{The flow, pressure and power error percentages for daily periodic simulations over a month.}
 		\label{fig: Periodic simulation}
-	\end{figure}    
+	\end{figure}   
+The accuracy of the flow and pressure parameters of the model remained precise for the duration of the periodic simulation. However From the 2016/11/07, the accuracy of the simulated power dropped by between 10 and 15 percent. The daily average power of the system up to the point was approximately 12.5 MW, a 15\% simulation error therefore relates to 1.9 MW. This suggests a major shift in operation of the system.
+\par 
+A deeper analysis was to try ascertain the source of the operational change. From analysis it was noticed that the simulated power for compressor 1  no longer reflected the actual measurements. A look at the actual power measurement for compressor 1 showed a sharp decline in power starting from the 2016/11/07. At the same time the efficiency, or amount of power required per kg/s of air, of the system increased significantly from the same date. This is shown in Figure \ref{fig: MeasurementAccuracy.}. The results that there was either a major change on compressor 1 that increased the efficiency or their was a malfunction with the power meter.
 	\begin{figure}[h]
 		\centering
 		\fbox{\input{Graphs/4/PeriodicRange/PeriodicRange}}
-		\caption{.}
-		\label{fig: Periodic data reliabuility}
+		\caption{Supply efficiency and Compressor 1's average power output over the time of the periodic analysis.}
+		\label{fig: MeasurementAccuracy.}
 	\end{figure}    
 	\begin{figure}[h]
 		\centering
@@ -118,7 +121,7 @@ This section will discuss the implementation of the simulation on a second case 
 		\caption{Corrected periodic.}
 		\label{fig: Corrected Periodic simulation}
 	\end{figure}    
-	\subsection{Results}
+	\subsection{Validation}
 	\subsection{Summary}
 \section{Potential benefit for SA mines}
 	\subsection{Preamble}
