@@ -1,7 +1,7 @@
 reset
 set terminal wxt  enhanced font 'Verdana,10' persist
-set terminal epslatex color colortext
-set output 'Periodic2.tex'
+#set terminal epslatex color colortext
+#set output 'Periodic2.tex'
 my_line_width = "1"
 my_axis_width = "1.5"
 my_ps = "1.2"
@@ -59,16 +59,18 @@ set grid lc rgb grid_color
 set border 31 lw @my_axis_width lc rgb text_color
 set key out horiz bot center
 set grid lc rgb grid_color
-set timefmt '%d/%m/%Y'
+set timefmt '%Y/%m/%d'
 set xdata time
-set format x '%d/%m/%Y'
-set xrange ["1/11/2016":"30/11/2016"]
+set mxtics 10
+set xtics 864000 offset 0
+set format x '%Y/%m/%d'
+set xrange ["2016/11/01":"2016/11/30"]
 set xlabel 'Date of simulation'
 set ylabel "Error \%";
 set yrange [0:25]
 set ytics 5 nomirror
 
-set size 1.3,0.55
+set size 1,1
 set datafile separator ","
 plot 'Results.csv' using 1:2 title "Flow" with lp ls 1, \
      'Results.csv' using 1:3 title "Pressure" with lp ls 4, \
