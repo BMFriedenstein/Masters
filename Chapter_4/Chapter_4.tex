@@ -25,7 +25,7 @@ This section will discuss the implementation of the simulation on a second case 
 	A air distribution layout was obtained, as shown in Figure \ref{fig: KUS Air layout}. The layout indicates available meters and instrumentation as well as typical airflow splits that can be used to calibrate the model. Power, pressure, flow  and guide vain control data for the compressors as well as data from flow and pressure meters along the network was gathered from the \gls{scada}.
 	\begin{figure}[h!]
 		\centering
-		\fbox{\includegraphics[trim =-1cm 0 -1cm 0cm,width=\textwidth]{Graphs/4/KUSLayout1/KUSLayout1.pdf}}
+		\fbox{\includegraphics[trim =0cm 0.6cm 0cm 0.6cm,width=\textwidth]{Graphs/4/KUSLayout1/KUSLayout1.pdf}}
 		\caption{Basic layout of the compressed air network.}
 		\label{fig: KUS Air layout}
 	\end{figure}
@@ -92,7 +92,7 @@ This section will discuss the implementation of the simulation on a second case 
 	Periodic simulation was implemented using the process shown in Figure \ref{fig: PeriodicProcess}. Simulation input data is collected for the simulation period, this data includes only inputs that vary day to day such as schedules, ambient air conditions and  measured flows. Once the input values are collected, they are then imported into the compressed air model. The simulation performed and the output data is exported. An analysis is then performed to compare the simulated period with the actual operation of the system. This process is then repeated periodically.
 		\begin{figure}[h]
 		\centering
-		\fbox{\includegraphics[trim =-1cm 0 -1cm 0cm,width=\textwidth]{Graphs/4/PeriodicProcess/PeriodicProcess}}
+		\fbox{\includegraphics[trim =0cm 0.5cm 0cm 1cm,width=\textwidth]{Graphs/4/PeriodicProcess/PeriodicProcess.pdf}}
 		\caption{The periodic simulation process that was followed in this analysis.}
 		\label{fig: PeriodicProcess}
 	\end{figure}	
