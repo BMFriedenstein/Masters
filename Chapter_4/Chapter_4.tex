@@ -21,7 +21,7 @@ This section will discuss the implementation of the simulation on a second case 
 \subsection{Scenario 1. Compressor set points}
 \subsection{Scenario 2. Control valves set points}
 \subsection{Summary}
-
+\newpage
 \section{Case study: Mine B \color{blue}(Kusasalethu)}
 	\subsection{Preamble}
 	 This section will discuss the implementation of the simulation on a second case study. Further, the result of various simulated scenarios will be discussed. Finally validation of the the simulated scenarios using actual measurable tests will be discussed.
@@ -44,7 +44,7 @@ This section will discuss the implementation of the simulation on a second case 
 	
 	\begin{figure}[h!]
 		\centering
-		\fbox{\includegraphics[trim =0cm 0cm 0cm 0cm,width=\textwidth]{Graphs/4/LevelLayout/105L2.pdf}}
+		\fbox{\includegraphics[trim =10cm 20cm 10cm 40cm, clip=true, width=\textwidth]{Graphs/4/LevelLayout/105L.pdf}}
 		\caption{Underground level layout.}
 		\label{fig: KUS Underground level layout}
 	\end{figure}	
@@ -53,7 +53,7 @@ This section will discuss the implementation of the simulation on a second case 
 	Using the data obtained from the investigation of the system, a  simulation model was developed in software. The modelling methodology described in Chapter 3 was then utilised to develop a model for the system. The entire model is shown in Appendix \ref{ASchematics} Figure \ref{fig: KUS Baseline model}. The model parameters were then calibrated to match the actual data from the mine.
 	
 	\subsubsection{Verification of baseline simulation}
-	Verification of the model was done firstly by comparing the simulation outputs to actual measured values. To simplify the model, the actual measured pressure is temporarily used as set points for the compressors. This ensured that the pressure in the network is identical to that of the actual measured system as shown in Figure \ref{fig: Verification Pressure kusasalethu}.
+	Verification of the model was performed firstly by comparing the simulation outputs to actual measured values. To simplify the model, the actual measured pressure is temporarily used as set points for the compressors. This ensured that the pressure in the network is identical to that of the actual measured system as shown in Figure \ref{fig: Verification Pressure kusasalethu}.
 	\par 
 	
 	\begin{figure}[h]
@@ -86,17 +86,37 @@ This section will discuss the implementation of the simulation on a second case 
 	\par 
 	It was noted the during peak air usage periods, between 07:00 and 13:00, that the outlet pressure dropped well below the desired set-point. This was because the compressors struggled to keep up with the air demand during those periods, resulting in a pressure difference as much as 50 kpa from the desired set-point. This was reproduced in the simulation with high accuracy.
 	\subsection{Scenario 1. Refuge bay simulation}
-	From  investigations that were conducted on the compressed system, refuge bays leaks were identified as a significant inefficiency that can be reduced. Early tests on a single mining level indicated that closing refuge bay leaks would lead to a reduction of "$100m^3/hr$" per refuge bay. This measurement was conservative as not all of the refuge bays on the level could be closed for the test.
+	From investigations that were conducted on the mines compressed system, unnecessary refuge bay leaks was identified as a significant inefficiency that can be reduced. Early tests on a single mining level indicated that a reduction refuge bay leaks, by closing the valves would lead to a air saving of $0.05$ $kg/s$ per refuge bay at typical operational pressures. This measurement was conservative as not all of the refuge bays on the level could be closed for the test.
 	\par 
-	Further test, integrating all refuge bays in mine for a longer period would not be possible without buy in from the mine's management. To gain this buy-in, the potential financial and operational benefits would need to first be quantified. A simulation simulation model was hence developed to determine this.
+	Further tests, integrating more refuge bays for a longer period would not be possible without buy in from the mine's management. To gain this buy-in, the potential financial and operational benefits of refuge bay leakage interventions would first need to be quantified. A simulation model was hence developed to accurately estimate the savings for any interventions.
 	\par
-	Refuge bay components were added to the baseline modelled discussed previously. The component was modelled as a leak using the measurements from the tests. Using the per-level layouts obtained from the investigation the location and number of refuge bay components ere identified. The full simulation model is shown in Figure \ref{fig: Refuge bay layout} in Appendix \ref{ASchematics}.
+	Refuge bay components were added to the baseline modelled discussed previously. Using the test results, refuge bay leaks were added to the simulation model. \gls{scada} data was used to verify the new baseline simulation model with an accuracy of 98\%. Using the per-level layouts obtained from the investigation the location and number of refuge bay components were identified. The full simulation model is shown in Figure \ref{fig: Refuge bay layout} in Appendix \ref{ASchematics}.
+	\par 
+	
+	\begin{figure}[h]
+		\centering
+		\fbox{\input{Graphs/4/KUSResults/RefugePower/RefugePower}}
+		\caption{The Baseline system power compared to the system power when refuge bay leaks are reduce.}
+		\label{fig: RefugeBay Power.}
+	\end{figure}   
+
+	\begin{figure}[h]
+		\centering
+		\fbox{\input{Graphs/4/KUSResults/RefugePressure/RefugePressure}}
+		\caption{The Baseline system pressure compared to the system pressure when refuge bay leaks are reduce.}
+		\label{fig: RefugeBay Pressures.}
+	\end{figure}  
 	Tested scenario where all excessive leaking valves are removed.
 	Refuge bays savings 1MW E.E.
 	
 	\subsection{Scenario 2. Closing off levels/stopes}
+	The effect of in-stope control during peak times was simulated for 105L. The level was modelled to include all major leaks, refuge bays and drilling sections that were manually identified. For comparison, station isolation and the combination of in-stope control and station isolation were simulated. 
+	
 	
 	\subsection{Validation of results}
+	
+	- awaiting results on manual tests
+	
 	\subsection{Summary}
 \newpage
 \section{Periodic simulation analysis}
@@ -137,8 +157,8 @@ A deeper analysis was to try ascertain the source of the operational change. Fro
 	\end{figure}    
 	\subsection{Validation}
 	\subsection{Summary}
+\newpage
 \section{Potential benefit for SA mines}
 
-	\subsection{Preamble}
-	\subsection{Summary}
+	Using  
 \section{Conclusion}
