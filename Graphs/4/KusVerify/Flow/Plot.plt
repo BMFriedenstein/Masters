@@ -1,7 +1,7 @@
 reset
 set terminal wxt  enhanced font 'Verdana,10' persist
 set terminal epslatex color colortext
-set output 'KusVerifyFlow.tex'
+set output 'Flow.tex'
 my_line_width = "1"
 my_axis_width = "1.5"
 my_ps = "1.2"
@@ -74,4 +74,4 @@ set size 1.3,0.55
 set datafile separator ","
 plot 'flow.csv' using 1:2 title "Baseline flow" with lines ls 1, \
      'flow.csv' using 1:3 title "Simulated flow" with lines ls 4, \
-	 'flow.csv' using 1:($4) title "Error" with boxes ls 3 axes x1y2, 
+	 'flow.csv' using 1:($4) title "Error" with impulses ls 3 axes x1y2, 

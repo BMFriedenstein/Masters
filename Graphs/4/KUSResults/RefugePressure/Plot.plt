@@ -2,7 +2,7 @@ reset
 set terminal wxt  enhanced font 'Verdana,10' persist
 set terminal epslatex color colortext
 set output 'RefugePressure.tex'
-my_line_width = "1"
+my_line_width = "1.3
 my_axis_width = "1.5"
 my_ps = "1.2"
 
@@ -70,4 +70,4 @@ set ytics 20 nomirror
 set size 1.3,0.75
 set datafile separator ","
 plot 'Pressure.csv' using 1:2 title "Baseline" with lines ls 1, \
-     'Pressure.csv' using 1:3 title "Intervention" with lines ls 4
+     'Pressure.csv' using 1:3 title "Intervention" with lines ls 4, \
