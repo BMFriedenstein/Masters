@@ -121,15 +121,15 @@ This section will discuss the implementation of the simulation on a second case 
 \newpage
 \section{Periodic simulation analysis}
 	\subsection{Preamble}
-	Updating the inputs of a simulation periodically could be used to verify simulation model accuracy. Simulation outputs remaining precise for subsequent days would indicate that the model is correctly calibrated. Additionally, periodic simulation could be used to identify significant operational changes that occur within the actual system. This would cause the simulation outputs to differ from the actual measured parameters. 
+	Updating the inputs of a simulation periodically could be used to verify simulation model accuracy. If the precision of simulation outputs remains for subsequent days, this would indicate that the model is correctly calibrated. Additionally, this process could be used to identify significant operational changes that occur within the system. This would cause the simulation outputs to differ from the actual measured parameters. 
 	\par 
-	Periodic simulation was implemented using the process shown in Figure \ref{fig: PeriodicProcess}. Simulation input data is collected for the simulation period, this data includes only inputs that vary day to day such as schedules, ambient air conditions and  measured flows. Once the input values are collected, they are then imported into the compressed air model. The simulation performed and the output data is exported. An analysis is then performed to compare the simulated period with the actual operation of the system. This process is then repeated periodically.
+	A Periodic simulation the method shown in Figure \ref{fig: PeriodicProcess} was developed for this analysis. Simulation input data is collected periodically for each simulation interval, this data includes only inputs that vary day to day such as schedules, air conditions and  measured flows. Once the input values are collected, they are then imported into the compressed air model. The simulation performed and the output data is exported for analysis. The  simulated data is then compared with the actual operation of the system and major discrepancies are identified. This process is repeated periodically.
 		\begin{figure}[h]
 		\centering
 		\fbox{\includegraphics[trim =0cm 0.5cm 0cm 1cm,width=\textwidth]{Graphs/4/PeriodicProcess/PeriodicProcess.pdf}}
 		\caption{The periodic simulation process that was followed in this analysis.}
 		\label{fig: PeriodicProcess}
-	\end{figure}	
+		\end{figure}	
 	     \subsection{Results}
 	     Daily periodic simulation was implemented between 2016/11/01 and 2016/11/30. For each period, the simulated total flow, shaft delivery pressure and total power consumption were compared to the actual operation. The results of this analysis are shown in Figure \ref{fig: Periodic simulation}.
 	     \par 
@@ -142,20 +142,23 @@ This section will discuss the implementation of the simulation on a second case 
 	\end{figure}   
 The accuracy of the flow and pressure parameters of the model remained precise for the duration of the periodic simulation. However From the 2016/11/07, the accuracy of the simulated power dropped by between 10 and 15 percent. The daily average power of the system up to the point was approximately 12.5 MW, a 15\% simulation error therefore relates to 1.9 MW. This suggests a major shift in operation of the system.
 \par 
-A deeper analysis was to try ascertain the source of the operational change. From analysis it was noticed that the simulated power for compressor 1  no longer reflected the actual measurements. A look at the actual power measurement for compressor 1 showed a sharp decline in power starting from the 2016/11/07. At the same time the efficiency, or amount of power required per kg/s of air, of the system increased significantly from the same date. This is shown in Figure \ref{fig: MeasurementAccuracy.}. The results that there was either a major change on compressor 1 that increased the efficiency or their was a malfunction with the power meter.
+A deeper analysis was performed to try ascertain the source of the operational change. From the analysis it was identified that the simulated power for compressor 1 no longer reflected the actual power measurement from the system. A look at the actual power measurement for compressor 1 showed a sharp decline in power starting from the 2016/11/07. At the same time the efficiency, or amount of power required per kg/s of air, for the system increased significantly. This is shown in Figure \ref{fig: MeasurementAccuracy.} the average daily power for compressor 1, shown in blue, and the air mass flow per Watt, shown in yellow, shift dramatically from the same. 
 	\begin{figure}[h]
 		\centering
 		\fbox{\input{Graphs/4/PeriodicRange/PeriodicRange}}
 		\caption{Supply efficiency and Compressor 1's average power output over the time of the periodic analysis.}
 		\label{fig: MeasurementAccuracy.}
-	\end{figure}    
+	\end{figure} 
+   The results seem to show that there was a major change in the operation compressor 1 that effected the efficiency of the system. A more likely explanation is that there is a malfunction with the power meter. This explains the apparent increase in efficiency over the same period as a lower power is measure then is actually being utilised. In this scenario the simulated power measurement can retrospectively be used as a more accurate metric for the energy consumption of the system.  
+   \subsection{Validation}
+   To validate that the change identified using periodic simulation was caused by the power meter, data from the substation was compared to the combined individual compressors meters. This comparison is shown in Figure \ref{fig: Corrected Periodic simulation}. The comparison shows that the substation power measurement strays from the compressors at the same time that compressor 1 average daily power drops.
 	\begin{figure}[h]
 		\centering
-		\fbox{\input{Graphs/4/Periodic2/Periodic2}}
-		\caption{Corrected periodic.}
+		\fbox{\input{Graphs/4/PeriodicValidation/PeriodicValidation}}
+		\caption{Comparison using alternative power source.}
 		\label{fig: Corrected Periodic simulation}
 	\end{figure}    
-	\subsection{Validation}
+	
 	\subsection{Summary}
 \newpage
 \section{Potential benefit for SA mines}
