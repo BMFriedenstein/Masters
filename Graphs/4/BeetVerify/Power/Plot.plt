@@ -2,7 +2,7 @@ reset
 set terminal wxt  enhanced font 'Verdana,10' persist
 set terminal epslatex color colortext
 set output 'Power.tex'
-my_line_width = "1"
+my_line_width = "1.3"
 my_axis_width = "1.5"
 my_ps = "1.2"
 
@@ -64,7 +64,7 @@ set format x '%H:%M'
 set xrange ["0:00":"24:00"]
 set xlabel 'Time of Day'
 set ylabel "Power $(MW)$";
-set yrange [0:6]
+set yrange [0:8]
 set ytics 1 nomirror
 
 set y2label '$\% error$'

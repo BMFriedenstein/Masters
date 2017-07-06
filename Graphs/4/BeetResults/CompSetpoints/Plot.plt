@@ -1,7 +1,7 @@
 reset
 set terminal wxt  enhanced font 'Verdana,10' persist
 set terminal epslatex color colortext
-set output 'Pressure.tex'
+set output 'CompSetpoints.tex'
 my_line_width = "1.3"
 my_axis_width = "1.5"
 my_ps = "1.2"
@@ -50,7 +50,7 @@ set style line 14 linecolor rgbcolor green_100 linewidth @my_line_width pt 13
 set style line 15 linecolor rgbcolor red_100 linewidth @my_line_width pt 11
 set style line 16 linecolor rgbcolor "#cacaca" linewidth @my_line_width pt 7
 set style line 17 linecolor rgbcolor "#224499" linewidth @my_line_width pt 2
-
+set style line 18 linecolor rgbcolor blue_000 linewidth 0.8 pt 2
 set border 31 lw @my_axis_width lc rgb text_color
 set key out horiz bot center
 set grid lc rgb grid_color
@@ -63,15 +63,12 @@ set xdata time
 set format x '%H:%M'
 set xrange ["0:00":"24:00"]
 set xlabel 'Time of Day'
-set ylabel "Pressure $(kPa)$";
-set yrange [300:600]
-set ytics 50 nomirror
+set ylabel "Power $(MW)$";
+set yrange [0:6]
+set ytics 2 nomirror
 
-set y2label '$\% error$'
-set y2range [0:25]
-set y2tics 10 nomirror
-set size 1.3,0.55
+set size 1.3,0.75
 set datafile separator ","
-plot 'Pressure.csv' using 1:2 title "Baseline press." with lines ls 1, \
-     'Pressure.csv' using 1:3 title "Simulated press." with lines ls 4, \
-	 'Pressure.csv' using 1:4 title "Error" with impulses ls 3 axes x1y2, 
+plot 'Power.csv' using 1:2 title "Baseline" with lines ls 1, \
+     'Power.csv' using 1:3 title "Intervention" with lines ls 4,\
+	 'Power.csv' using 1:4 title "Power saving" with impulses ls 18, 

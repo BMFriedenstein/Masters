@@ -2,7 +2,7 @@ reset
 set terminal wxt  enhanced font 'Verdana,10' persist
 set terminal epslatex color colortext
 set output 'Flow.tex'
-my_line_width = "1"
+my_line_width = "1.3"
 my_axis_width = "1.5"
 my_ps = "1.2"
 
@@ -63,7 +63,7 @@ set xdata time
 set format x '%H:%M'
 set xrange ["0:00":"24:00"]
 set xlabel 'Time of Day'
-set ylabel "flow $(kg/s)$";
+set ylabel "Flow $(kg/s)$";
 set yrange [0:15]
 set ytics 5 nomirror
 
