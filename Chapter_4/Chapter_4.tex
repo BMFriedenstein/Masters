@@ -83,14 +83,14 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 		\caption{Basic layout of the compressed air network.}
 		\label{fig: KUS Air layout}
 	\end{figure}
- To understand the operation of the system, schedules and setpoints as well as critical limits such as minimum and maximum pressures were obtained from various personal and from the \gls{scada}. Important data parameters such as Powers, pressures, flows, etc. for the system was gathered from the \gls{scada} and other data sources. This data will be used to develop and calibrate the simulation model
+ To understand the operation of the system, schedules and set-points as well as critical limits such as minimum and maximum pressures were obtained from various personal and from the \gls{scada}. Important data parameters such as Powers, pressures, flows, etc. for the system was gathered from the \gls{scada} and other data sources. This data will be used to develop and calibrate the simulation model
 \par 
 		
 	An in-depth investigation was performed on the significant mining levels to map the locations of mining cross-sections, refuge bays, major leaks and other compressed air consumers on each level as well as measure the usages. An example of a resultant schematic from the underground investigation is shown in Figure \ref{fig: KUS Underground level layout}
 	
 	\begin{figure}[h!]
 		\centering
-		\fbox{\includegraphics[trim =10cm 20cm 10cm 40cm, clip=true, width=\textwidth]{Graphs/4/LevelLayout/105L.pdf}}
+		\fbox{\includegraphics[trim =9cm 12cm 9cm 15cm,angle=90, height=\textheight]{Graphs/4/LevelLayout/105L.pdf}}
 		\caption{Underground level layout.}
 		\label{fig: KUS Underground level layout}
 	\end{figure}	
@@ -99,7 +99,7 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 	Using the data obtained from the investigation of the system, a  simulation model was developed in software. The modelling methodology described in Chapter 3 was then utilised to develop a model for the system. The entire model is shown in Appendix \ref{ASchematics} Figure \ref{fig: KUS Baseline model}. The model parameters were then calibrated to match the actual data from the mine.
 	
 	\subsubsection{Verification of baseline simulation}
-	Verification of the model was performed firstly by comparing the simulation outputs to actual measured values. To simplify the model, the actual measured pressure is temporarily used as set points for the compressors. This ensured that the pressure in the network is identical to that of the actual measured system as shown in Figure \ref{fig: Verification Pressure kusasalethu}.
+	Using the verification methodology, the simulation model was performed by comparing the simulation outputs to actual measured values. To simplify the model, the actual measured pressure is temporarily used as set points for the compressors. This ensured that the pressure in the network is identical to that of the actual measured system as shown in Figure \ref{fig: Verification Pressure kusasalethu}.
 	
 	\par 
 	
@@ -122,7 +122,7 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 		\label{fig: Verification Power kusasalethu}
 	\end{figure}
 
-	Once all the power and flow parameters were checked calibrated with minimal error, the systems response to the pressure set-points was checked. The compressor models were replaced with the pressure set-point profile instead of the measured outlet pressure profile. The simulated outlet pressure was then compared to the actual measured outlet, this is shown in Figure \ref{fig: Verification Pressure kusasalethu Setpoint}.
+	Once all the power and flow parameters were checked calibrated with minimal error, the system's response to the pressure set-points was checked. The compressor models were replaced with the pressure set-point profile instead of the measured outlet pressure profile. The simulated outlet pressure was then compared to the actual measured outlet, this is shown in Figure \ref{fig: Verification Pressure kusasalethu Setpoint}.
 
 	\begin{figure}[h]
 		\centering
@@ -135,7 +135,7 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 	\subsection{Scenario 1. Refuge bay optimisation}
 	From investigations that were conducted on the mines compressed system, unnecessary refuge bay leaks was identified as a significant inefficiency that can be reduced. Early tests on a single mining level indicated that a reduction refuge bay leaks, by closing the valves would lead to a air saving of $0.05$ $kg/s$ per refuge bay at typical operational pressures. This measurement was conservative as not all of the refuge bays on the level could be closed for the test.
 	\par 
-	Further tests, integrating more refuge bays for a longer period would not be possible without buy in from the mine's management. To gain this buy-in, the potential financial and operational benefits of refuge bay leakage interventions would first need to be quantified. A simulation model was hence developed to accurately estimate the savings for any interventions.
+	Tests, integrating more refuge bays for a longer period would not be possible without buy in from the mine's management. To gain this buy-in, the potential financial and operational benefits of refuge bay leakage interventions would first need to be quantified. A simulation model was hence developed to accurately estimate the savings for any interventions.
 	\par
 	Refuge bay components were added to the baseline modelled discussed previously. Using the test results, refuge bay leaks were added to the simulation model. \gls{scada} data was used to verify the new baseline simulation model with an accuracy of 98\%. Using the per-level layouts obtained from the investigation the location and number of refuge bay components were identified. The full simulation model is shown in Figure \ref{fig: Refuge bay layout} in Appendix \ref{ASchematics}.
 	\par 
@@ -143,7 +143,7 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 	\begin{figure}[h]
 		\centering
 		\fbox{\input{Graphs/4/KUSResults/RefugePower/RefugePower}}
-		\caption{The Baseline system power compared to the system power when refuge bay leaks are reduce.}
+		\caption{The Baseline system power compared to the system power when refuge bay leaks are reduced.}
 		\label{fig: RefugeBay Power.}
 	\end{figure}   
 
@@ -177,13 +177,7 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 	\subsection{Preamble}
 	Updating the inputs of a simulation periodically could be used to verify simulation model accuracy. If the precision of simulation outputs remains for subsequent days, this would indicate that the model is correctly calibrated. Additionally, this process could be used to identify significant operational changes that occur within the system. This would cause the simulation outputs to differ from the actual measured parameters. 
 	\par 
-	A Periodic simulation the method shown in Figure \ref{fig: PeriodicProcess} was developed for this analysis. Simulation input data is collected periodically for each simulation interval, this data includes only inputs that vary day to day such as schedules, air conditions and  measured flows. Once the input values are collected, they are then imported into the compressed air model. The simulation performed and the output data is exported for analysis. The  simulated data is then compared with the actual operation of the system and major discrepancies are identified. This process is repeated periodically.
-		\begin{figure}[h]
-		\centering
-		\fbox{\includegraphics[trim =0cm 0.5cm 0cm 1cm,width=\textwidth]{Graphs/4/PeriodicProcess/PeriodicProcess.pdf}}
-		\caption{The periodic simulation process that was followed in this analysis.}
-		\label{fig: PeriodicProcess}
-		\end{figure}	
+
 	     \subsection{Results}
 	     Daily periodic simulation was implemented between 2016/11/01 and 2016/11/30. For each period, the simulated total flow, shaft delivery pressure and total power consumption were compared to the actual operation. The results of this analysis are shown in Figure \ref{fig: Periodic simulation}.
 	     \par 
@@ -194,7 +188,7 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 		\caption{The flow, pressure and power error percentages for daily periodic simulations over a month.}
 		\label{fig: Periodic simulation}
 	\end{figure}   
-The accuracy of the flow and pressure parameters of the model remained precise for the duration of the periodic simulation. However From the 2016/11/07, the accuracy of the simulated power dropped by between 10 and 15 percent. The daily average power of the system up to the point was approximately 12.5 MW, a 15\% simulation error therefore relates to 1.9 MW. This suggests a major shift in operation of the system.
+The accuracy of the flow and pressure parameters of the model remained precise for the duration of the periodic simulation. However, From the 2016/11/07, the accuracy of the simulated power dropped by between 10 and 15 percent. The daily average power of the system up to the point was approximately 12.5 MW, a 15\% simulation error therefore relates to 1.9 MW. This suggests a major shift in operation of the system.
 \par 
 A deeper analysis was performed to try ascertain the source of the operational change. From the analysis it was identified that the simulated power for compressor 1 no longer reflected the actual power measurement from the system. A look at the actual power measurement for compressor 1 showed a sharp decline in power starting from the 2016/11/07. At the same time the efficiency, or amount of power required per kg/s of air, for the system increased significantly. This is shown in Figure \ref{fig: MeasurementAccuracy.} the average daily power for compressor 1, shown in blue, and the air mass flow per Watt, shown in yellow, shift dramatically from the same. 
 	\begin{figure}[h]

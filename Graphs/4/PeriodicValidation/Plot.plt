@@ -2,7 +2,7 @@ reset
 set terminal wxt  enhanced font 'Verdana,10' persist
 set terminal epslatex color colortext
 set output 'PeriodicValidation.tex'
-my_line_width = "1"
+my_line_width = "2"
 my_axis_width = "1.5"
 my_ps = "1.2"
 
@@ -34,51 +34,29 @@ grid_color = "#d5e0c9"
 text_color = "#000000"
 
 
-set style line 1 lc rgbcolor blue_025 lt 1 lw 4 pt 7 pi -1 ps 0.5
-set style line 2 linecolor rgbcolor green_025 lt 1 lw 2 pt 7 pi -1 ps 0.5
-set style line 3 linecolor rgbcolor red_025 lt 1 lw 2 pt 7 pi -1 ps 0.5
-set style line 4 linecolor rgbcolor brown_025 lt 1 lw 4 pt 7 pi -1 ps 0.5
-set style line 5 linecolor rgbcolor blue_050 lt 1 lw 2 pt 7 pi -1 ps 0.5
-set style line 6 linecolor rgbcolor green_050 lt 1 lw 2 pt 7 pi -1 ps 0.5
-set style line 7 linecolor rgbcolor red_050 lt 1 lw 2 pt 7 pi -1 ps 0.5
-set style line 8 linecolor rgbcolor brown_050 lt 1 lw 2 pt 7 pi -1 ps 0.5
-set style line 9 linecolor rgbcolor blue_075 lt 1 lw 2 pt 7 pi -1 ps 0.5
-set style line 10 linecolor rgbcolor green_075 lt 1 lw 2 pt 7 pi -1 ps 0.5
-set style line 11 linecolor rgbcolor red_075 lt 1 lw 2 pt 7 pi -1 ps 0.5
-set style line 12 linecolor rgbcolor brown_075 lt 1 lw 1.2 pt 7 pi -1 ps 0.5
-set style line 13 linecolor rgbcolor blue_100 lt 1 lw 1.2 pt 7 pi -1 ps 0.5
-set style line 14 linecolor rgbcolor green_100 lt 1 lw 1.2 pt 7 pi -1 ps 0.5
-set style line 15 linecolor rgbcolor red_100 lt 1 lw 1.2 pt 7 pi -1 ps 0.5
-set style line 16 linecolor rgbcolor "#cacaca" lt 1 lw 1.2 pt 7 pi -1 ps 1.5
-set style line 17 linecolor rgbcolor "#224499" lt 1 lw 1.2 pt 7 pi -1 ps 1.5
-
-
-
-
+set style line 1 lc rgbcolor blue_025 lt 1 lw 4 pt 7 pi -1 ps 1
+set style line 4 lc rgbcolor brown_025 lt 1 lw 4 pt 7 pi -1 ps 1
 
 set border 31 lw @my_axis_width lc rgb text_color
 set key out horiz bot center
 set grid lc rgb grid_color
-set timefmt '%Y/%m/%d'
+set timefmt '%d/%m/%Y'
 set xdata time
-set format x '%Y/%m/%d'
-set xrange ["2016/11/01":"2016/11/30"]
+set format x '%d/%m/%Y'
+set xrange ["01/11/2016":"30/11/2016"]
 
 set xlabel 'Date'
 set ylabel "Power (kW)";
-set yrange [0:14000]
-set ytics 3000 nomirror
+set yrange [7:14]
+set ytics 2 nomirror
 set xtics 432000
-set mxtics 30
+set mxtics 1
 
 set border 31 lw @my_axis_width lc rgb text_color
 set key out horiz bot center
 set grid lc rgb grid_color
-set size 1.3,0.75
+set size 1.3,0.85
 set datafile separator ","
 
-
-
-plot 'Results.csv' using 1:3 title "Compressor power" with lp ls 1, \
-     'Results.csv' using 1:4 title "Secondary data source" with lp ls 4 , \
-	 'Results.csv' using 1:2 title "Compressor 1 power" with lp ls 12 , \
+plot 'Results.csv' using 1:3 title "Compressor power measrement" with lp ls 1, \
+     'Results.csv' using 1:4 title "Independant measurement" with lp ls 4 , \

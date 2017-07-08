@@ -17,7 +17,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	\label{fig: Methodology}
 \end{figure}
 \newpage
-\section{System investigation method}
+\section{Investigate the system}
 	\subsection{Preamble}
 		Developing a detailed simulation model of a compressed air network requires thorough comprehension of the inner workings of the system. This section will discuss the investigations needed to obtain the required understanding.
 	\subsection{Acquiring data} % 
@@ -48,7 +48,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	
 	\subsection{Summary}
 \newpage	
-\section{Model development and verification}
+\section{Develop and verify a simulation model}
 	\subsection{Preamble}
 	Compressed air networks are comprised of components such as compressors, valves, pipes, etc. This section will discuss the development, calibration and verification of component models that make up a compressed air simulation. 
 	\subsection{Compressed air component models}
@@ -154,6 +154,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	\subsection{Verification of simulation model}
 		- Steps to validate  the model accuracy - Compare parameters to actuals\\
 		- First principles     - Comparison to other models
+		
 	\subsection{Simulation inputs}
 		The inputs of a simulation are any parameters that do not remain static, or follow the same profile in day to day operation of the system. Examples of such parameters in a compressed air simulation are:
 		\begin{itemize}
@@ -170,16 +171,28 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			\caption{An example of two baseline periods, showing a changed compressor schedule.}
 			\label{fig: Compressor schedule}
 		\end{figure}
+	\subsection{Periodic simulation}	
+		Period simulation refers to the repetition of simulations over subsequent periods to determine the sequential accuracy of the model.  This is important to verify the model is valid in general and not just a single period.  This simulation will also indicate where operation changes have occurred as the simulation accuracy will be reduced.
+		\par 
+		The following process is followed to implement periodic simulation: Simulation input data is collected periodically for each simulation interval, this data includes only inputs that vary day to day such as schedules, air conditions and  measured flows. Once the input values are collected, they are then imported into the compressed air model. The simulation performed and the output data is exported for analysis. The  simulated data is then compared with the actual operation of the system and major discrepancies are identified. This process is triggered periodically.
+		\begin{figure}[h]
+			\centering
+			\fbox{\includegraphics[trim =0cm 0.5cm 0cm 1cm,width=\textwidth]{Graphs/4/PeriodicProcess/PeriodicProcess.pdf}}
+			\caption{The periodic simulation process that was followed in this analysis.}
+			\label{fig: PeriodicProcess}
+		\end{figure}
+	
 	\subsection{Summary}
 	\textit{Unfinished}
 \newpage
-\section{Implementation of simulation method}
+\section{Implement of simulation method}
 	\subsection{Preamble}
 		Once a simulation has been developed and verified, the implementation of interventions and scenarios follows. In this section, the approach of implementation the simulation methodology, and analysis of interventions will be discussed.
 	\subsection{Analyses of data}
 		- Baseline vs Optimised analysis \\
 		- identification of further improvements\\
 		\textit{Unfinished}
+	
 	\subsection{Quantifying operational improvements}
 		- Estimating cost savings \\
 		- Reporting feedback to the mine\\
