@@ -2,7 +2,7 @@ reset
 set terminal wxt  enhanced font 'Verdana,10' persist
 set terminal epslatex color colortext
 set output 'Flow.tex'
-my_line_width = "1.3"
+my_line_width = "3"
 my_axis_width = "1.5"
 my_ps = "1.2"
 
@@ -70,7 +70,7 @@ set ytics 5 nomirror
 set y2label '$\% error$'
 set y2range [0:25]
 set y2tics 10 nomirror
-set size 1.3,0.55
+set size 1.30,0.8
 set datafile separator ","
 plot 'flow.csv' using 1:2 title "Baseline flow" with lines ls 1, \
      'flow.csv' using 1:3 title "Simulated flow" with lines ls 4, \
