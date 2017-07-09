@@ -2,7 +2,7 @@ reset
 set terminal wxt  enhanced font 'Verdana,10' persist
 set terminal epslatex color colortext
 set output 'Pressure2.tex'
-my_line_width = "1"
+my_line_width = "3"
 my_axis_width = "1.5"
 my_ps = "1.2"
 

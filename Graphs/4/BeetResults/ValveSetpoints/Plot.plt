@@ -1,8 +1,8 @@
 reset
 set terminal wxt  enhanced font 'Verdana,10' persist
 set terminal epslatex color colortext
-set output 'RefugePressure.tex'
-my_line_width = "3
+set output 'ValveSetpoints.tex'
+my_line_width = "3"
 my_axis_width = "1.5"
 my_ps = "1.2"
 
@@ -50,7 +50,7 @@ set style line 14 linecolor rgbcolor green_100 linewidth @my_line_width pt 13
 set style line 15 linecolor rgbcolor red_100 linewidth @my_line_width pt 11
 set style line 16 linecolor rgbcolor "#cacaca" linewidth @my_line_width pt 7
 set style line 17 linecolor rgbcolor "#224499" linewidth @my_line_width pt 2
-
+set style line 18 linecolor rgbcolor green_000 linewidth 1.5 pt 2
 set border 31 lw @my_axis_width lc rgb text_color
 set key out horiz bot center
 set grid lc rgb grid_color
@@ -63,11 +63,16 @@ set xdata time
 set format x '%H:%M'
 set xrange ["0:00":"24:00"]
 set xlabel 'Time of Day'
-set ylabel "Pressure $(kPa)$";
-set yrange [350:450]
-set ytics 20 nomirror
+set ylabel "Power $(MW)$";
+set yrange [0:6]
+set ytics 2 nomirror
+
+set y2label 'Power Saving $(MW)$'
+set y2range [0:2]
+set y2tics 0.5 nomirror
 
 set size 1.3,0.75
 set datafile separator ","
-plot 'Pressure.csv' using 1:2 title "Baseline" with lines ls 1, \
-     'Pressure.csv' using 1:3 title "Intervention" with lines ls 4, \
+plot 'Power.csv' using 1:2 title "Baseline" with lines ls 1, \
+     'Power.csv' using 1:3 title "Intervention" with lines ls 4,\
+	 'Power.csv' using 1:4 title "Power saving" with impulses ls 18 axes x1y2, 

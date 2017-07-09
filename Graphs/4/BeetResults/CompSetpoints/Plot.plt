@@ -50,7 +50,7 @@ set style line 14 linecolor rgbcolor green_100 linewidth @my_line_width pt 13
 set style line 15 linecolor rgbcolor red_100 linewidth @my_line_width pt 11
 set style line 16 linecolor rgbcolor "#cacaca" linewidth @my_line_width pt 7
 set style line 17 linecolor rgbcolor "#224499" linewidth @my_line_width pt 2
-set style line 18 linecolor rgbcolor blue_000 linewidth 0.8 pt 2
+set style line 18 linecolor rgbcolor green_000 linewidth 1.5 pt 2
 set border 31 lw @my_axis_width lc rgb text_color
 set key out horiz bot center
 set grid lc rgb grid_color
@@ -67,7 +67,7 @@ set ylabel "Power $(MW)$";
 set yrange [0:6]
 set ytics 2 nomirror
 
-set y2label 'Power Saving (MW)$'
+set y2label 'Power Saving $(MW)$'
 set y2range [0:2]
 set y2tics 0.5 nomirror
 

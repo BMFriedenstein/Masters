@@ -24,6 +24,13 @@ An air distribution layout was developed for the system, the simplified diagram 
 
 
 Seven compresses are available in the system. Five large compressors (VK32s) rated at 4 $MW$ each and two smaller compressors (VK10) with a power rating of 2.1 $MW$ each. The system is typically supplied using combination of 2 VK32 compressors and 2 VK 10 compressors. The rest of the compressors are used as standby. Compressors are shut off or switched on  to match the demand in the system.  
+\begin{figure}[h!]
+	\centering
+	\fbox{\input{Graphs/4/BeetBaseline/Power/Power}}
+	\caption{Average power profile}
+	\label{fig: Beatrix power baseline}
+\end{figure}
+
 \par
 Air is supplied to the sections in three mining shafts as well as a gold processing plant. The gold plant requires constant high pressure throughout the day. It is possible to control the supply pressure of the gold plant independently from the rest of the network. However the mine prefers to operate the network with a constant pressure setpoint. A more detailed air distribution layout including location of flow meters is shown in "Appendix A". 
 \subsection{Model development}
@@ -62,11 +69,17 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 
 \begin{figure}[h!]
 	\centering
-	\fbox{\input{Graphs/4/BeetResults/CompSetpoints/CompSetpoints}}
+	\fbox{\input{Graphs/4/BeetResults/ValveSetpoints/ValveSetpoints}}
 	\caption{Power savings}
 	\label{fig: Control Valve Results Beatrix}
 \end{figure}
 \subsection{Validation of results}
+\begin{figure}[h!]
+	\centering
+	\fbox{\input{Graphs/4/BeetValidate/BeetValidate}}
+	\caption{Actual power savings achieved on the system}
+	\label{fig: Actual permormance beet}
+\end{figure}
 \subsection{Summary}
 \newpage
 \section{Case study B }
@@ -88,12 +101,12 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 		
 	An in-depth investigation was performed on the significant mining levels to map the locations of mining cross-sections, refuge bays, major leaks and other compressed air consumers on each level as well as measure the usages. An example of a resultant schematic from the underground investigation is shown in Figure \ref{fig: KUS Underground level layout}
 	
-	\begin{figure}[h!]
-		\centering
-		\fbox{\includegraphics[trim =9cm 12cm 9cm 15cm,angle=90, height=\textheight]{Graphs/4/LevelLayout/105L.pdf}}
-		\caption{Underground level layout.}
-		\label{fig: KUS Underground level layout}
-	\end{figure}	
+%	\begin{figure}[h]
+%		\centering
+%		\fbox{\includegraphics[trim =9cm 12cm 9cm 15cm,angle=90, height=\textheight]{Graphs/4/LevelLayout/105L.pdf}}
+%		\caption{Underground level layout.}
+%		\label{fig: KUS Underground level layout}
+%	\end{figure}	
 	\subsection{Model development}
 	
 	Using the data obtained from the investigation of the system, a  simulation model was developed in software. The modelling methodology described in Chapter 3 was then utilised to develop a model for the system. The entire model is shown in Appendix \ref{ASchematics} Figure \ref{fig: KUS Baseline model}. The model parameters were then calibrated to match the actual data from the mine.
