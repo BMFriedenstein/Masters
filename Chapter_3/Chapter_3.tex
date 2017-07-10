@@ -51,18 +51,34 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 \section{Develop and verify a simulation model}
 	\subsection{Preamble}
 	Compressed air networks are comprised of components such as compressors, valves, pipes, etc. This section will discuss the development, calibration and verification of component models that make up a compressed air simulation. 
+	\subsection{Select the system boundaries and simulation parameters}
+	The simulation boundaries determine the detail that the system is modelled. For a simple compressed air model, the boundaries can be set around the compressor house. This model would then only include the compressor components, inlet and outlet airflows. Alternatively a more complex model can be developed by choosing boundaries to include more aspects of the system such as mining levels, processing plants etc.. 
+	\par 
+	The boundaries should be chosen based on the input data available, required accuracy n and available time and resources. A more detailed model will lead to more accurate simulation, however it may take more time and resources to obtain the data required. Figure \ref{} shows an example of different boundary selection for the same system.
+	\par
+	The period and step size selected for the simulation is just as important. The period of the simulation should be determined to ensure a scenario is fully tested. Most commonly, a 24 hour period is chosen as daily parameters are normally very similar. The simulation step size should be selected with the resolution of the available data in mind. Smaller step size selection can lead to a more accurate simulation model. 
 	\subsection{Model compressed air network component}
 		\subsubsection{Air pipes}
 		Pressure losses occur over compressed air networks due to friction in the pipe, these losses should be taken into account in the simulation for large piping sections. A pipe model is used to account for these losses which are defined by the \textit{Darcy-Weisbach equation}\footnote{ B. Glenn, \enquote*{The Darcy–Weisbach Equation,}[Online] \url{https://bae.okstate.edu/faculty-sites/Darcy/DarcyWeisbach/Darcy-WeisbachEq.htm}, [Accessed 20-05-2017]}:
 		$$\Delta P = \frac{f  L \rho V^2}{2 D}$$
 		Where the pressure difference $\Delta P $ is a function of:\\
-		\begin{tabular}{p{1.3cm}p{13cm}}
-		$f$ & Friction coefficient  \\
-		$L$ & Pipe length ($m$) \\
-		$D$ & Pipe diameter ($m$) \\
-		$\rho$ & Air density ($kg/m^3$)\\	
-		$V$ & Average velocity ($m/s$) \\
-		\end{tabular} \\
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{ll}
+				\hline
+				Parameter & Definition\\
+				\hline
+				$f$ & Friction coefficient  \\
+				$L$ & Pipe length ($m$) \\
+				$D$ & Pipe diameter ($m$) \\
+				$\rho$ & Air density ($kg/m^3$)\\	
+				$V$ & Average velocity ($m/s$) \\	
+				\hline
+			\end{tabular} 
+		\caption{\textit{Darcy-Weisbach equation} parameters.}
+		\label{table: Darcy-Weisbach}
+		\end{table}
+		
 		The pipe component can be used as a valve by controlling the open fraction between 0 and 1. Modelling the valve flow characteristics is discussed in \ref{Controllers} \textit{Controllers}.
 		\subsubsection{Ambient conditions}
 		Ambient air condition underground and on surface change the characteristics of the air, effecting the operation of the system. Figure \ref{fig: Ambient} shows the average summer air conditions. If no data is available for the specific simulation period, the conditions can be estimated by scaling this profile. 

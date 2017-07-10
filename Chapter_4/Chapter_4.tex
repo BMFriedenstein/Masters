@@ -18,7 +18,7 @@ An air distribution layout was developed for the system, the simplified diagram 
 \begin{figure}[h!]
 	\centering
 	\fbox{\includegraphics[trim =0cm 0.6cm 0cm 0.6cm,width=\textwidth]{Graphs/4/BeatLayout1/BeatLayout1.pdf}}
-	\caption{Simplified air distribution of the air network.}
+	\caption{Simplified process flow chart of the air network.}
 	\label{fig: Beatrix Air layout}
 \end{figure}
 
@@ -26,7 +26,7 @@ An air distribution layout was developed for the system, the simplified diagram 
 Seven compresses are available in the system. Five large compressors (VK32s) rated at 4 $MW$ each and two smaller compressors (VK10) with a power rating of 2.1 $MW$ each. The system is typically supplied using combination of 2 VK32 compressors and 2 VK 10 compressors. The rest of the compressors are used as standby. Compressors are shut off or switched on  to match the demand in the system.  
 \begin{figure}[h!]
 	\centering
-	\fbox{\input{Graphs/4/BeetBaseline/Power/Power}}
+	\input{Graphs/4/BeetBaseline/Power/Power}
 	\caption{Average power profile}
 	\label{fig: Beatrix power baseline}
 \end{figure}
@@ -34,26 +34,26 @@ Seven compresses are available in the system. Five large compressors (VK32s) rat
 \par
 Air is supplied to the sections in three mining shafts as well as a gold processing plant. The gold plant requires constant high pressure throughout the day. It is possible to control the supply pressure of the gold plant independently from the rest of the network. However the mine prefers to operate the network with a constant pressure setpoint. A more detailed air distribution layout including location of flow meters is shown in "Appendix A". 
 \subsection{Model development}
-Using the data and knowledge gathered from  the investigation, a model was developed using the methodology discussed in Chapter 3.
+With the data and knowledge gathered from  the investigation, a model was developed using the methodology discussed in Chapter 3.
 \subsubsection{Verification of model}
 
 \begin{figure}[h]
 	\centering
-	\fbox{\input{Graphs/4/BeetVerify/Power/Power}}
+	\input{Graphs/4/BeetVerify/Power/Power}
 	\caption{The simulated power compared to the actual measured power}
 	\label{fig: Verification Power Beatrix}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\fbox{\input{Graphs/4/BeetVerify/Flow/Flow}}
+	\input{Graphs/4/BeetVerify/Flow/Flow}
 	\caption{The simulated flow compared to the actual measured flow}
 	\label{fig: Verification Flow Beatrix}
 \end{figure}
 
 \begin{figure}[h]
 	\centering
-	\fbox{\input{Graphs/4/BeetVerify/Pressure/Pressure}}
+	\input{Graphs/4/BeetVerify/Pressure/Pressure}
 	\caption{The simulated Pressure compared to the actual measured pressure}
 	\label{fig: Verification Pressure Beatrix}
 \end{figure}
@@ -61,7 +61,7 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 \subsection{Scenario 1. Compressor set points}
 \begin{figure}[h!]
 	\centering
-	\fbox{\input{Graphs/4/BeetResults/CompSetpoints/CompSetpoints}}
+	\input{Graphs/4/BeetResults/CompSetpoints/CompSetpoints}
 	\caption{Power savings}
 	\label{fig: CompSetpoints Results Beatrix}
 \end{figure}
@@ -69,14 +69,14 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 
 \begin{figure}[h!]
 	\centering
-	\fbox{\input{Graphs/4/BeetResults/ValveSetpoints/ValveSetpoints}}
+	\input{Graphs/4/BeetResults/ValveSetpoints/ValveSetpoints}
 	\caption{Power savings}
 	\label{fig: Control Valve Results Beatrix}
 \end{figure}
 \subsection{Validation of results}
 \begin{figure}[h!]
 	\centering
-	\fbox{\input{Graphs/4/BeetValidate/BeetValidate}}
+	\input{Graphs/4/BeetValidate/BeetValidate}
 	\caption{Actual power savings achieved on the system}
 	\label{fig: Actual permormance beet}
 \end{figure}
@@ -118,7 +118,7 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 	
 	\begin{figure}[h]
 		\centering
-		\fbox{\input{Graphs/4/KusVerify/Pressure/Pressure}}
+		\input{Graphs/4/KusVerify/Pressure/Pressure}
 		\caption{Comparing the pressure response of simulation to the actual measured pressure}
 		\label{fig: Verification Pressure kusasalethu}
 	\end{figure}
@@ -127,9 +127,9 @@ Using the data and knowledge gathered from  the investigation, a model was devel
  
 	\begin{figure}[h]
 		\centering
-		\fbox{\input{Graphs/4/KusVerify/Flow/Flow}}
+		\input{Graphs/4/KusVerify/Flow/Flow}
 		(a)\\
-		\fbox{\input{Graphs/4/KusVerify/Power/Power}}
+		\input{Graphs/4/KusVerify/Power/Power}
 		(b)\\
 		\caption{Verification of the total (a) flow and (b) power of the system using the actual pressure profile.}
 		\label{fig: Verification Power kusasalethu}
@@ -139,7 +139,7 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 
 	\begin{figure}[h]
 		\centering
-		\fbox{\input{Graphs/4/KusVerify/Pressure2/Pressure2}}
+		\input{Graphs/4/KusVerify/Pressure2/Pressure2}
 		\caption{Verifying the Pressure response of the system give the pressure set points as inputs}
 		\label{fig: Verification Pressure kusasalethu Setpoint}
 	\end{figure}
@@ -153,14 +153,14 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 	
 	\begin{figure}[h]
 		\centering
-		\fbox{\input{Graphs/4/KUSResults/RefugePower/RefugePower}}
+		\input{Graphs/4/KUSResults/RefugePower/RefugePower}
 		\caption{The Baseline system power compared to the system power when refuge bay leaks are reduced.}
 		\label{fig: RefugeBay Power.}
 	\end{figure}   
 
 	\begin{figure}[h]
 		\centering
-		\fbox{\input{Graphs/4/KUSResults/RefugePressure/RefugePressure}}
+		\input{Graphs/4/KUSResults/RefugePressure/RefugePressure}
 		\caption{The Baseline system pressure compared to the system pressure when refuge bay leaks are reduce.}
 		\label{fig: RefugeBay Pressures.}
 	\end{figure}  
@@ -193,12 +193,13 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 	A daily periodic simulation  analysis was implemented between 2016/11/01 and 2016/11/30 using the periodic simulation methodology discussed in Chapter 3. The simulation model developed for case study A was used for the analysis. The simulation receives the data inputs shown in table \ref{table: Periodic inputs/outputs}.
 	\begin{table}[h]
 		\centering
-		\begin{tabular}{|l|l}
-			\centering
-			Inputs \hspace*{4cm}    &Outputs \hspace*{4cm}    \\  \hhline{==}
+		\begin{tabular}{ll}
+			\hline
+			Inputs \hspace*{4cm}    &Outputs \hspace*{4cm}    \\  \hline
 			Ambient air conditions&Compressor power \\
 			Measured flows& Flows \\
 			Compressor schedules& Pressures \\
+			\hline
 		\end{tabular}
 		\caption{Table showing the simulation inputs and outputs.}
 		\label{table: Periodic inputs/outputs}
@@ -212,7 +213,7 @@ Using the data and knowledge gathered from  the investigation, a model was devel
      
 	\begin{figure}[h]
 		\centering
-		\fbox{\input{Graphs/4/Periodic1/Periodic1}}
+		\input{Graphs/4/Periodic1/Periodic1}
 		\caption{The flow, pressure and power error percentages for daily periodic simulations over a month.}
 		\label{fig: Periodic simulation}
 	\end{figure}   
@@ -221,7 +222,7 @@ The accuracy of the process parameters of the simulation was within 5\% for the 
 An analysis was done to try determine the source of the discrepancy. From the data it was identified that the simulated power for compressor 1 was the source of the different A look at the actual power measurement for compressor 1 show drop compared to normal operation by almost 2 MW. At the same time the power used per kg/s of air seemed to have dropped. Figure \ref{fig: MeasurementAccuracy.} shows the average daily power for compressor 1 (blue), compared to the air mass flow per Watt(yellow). 
 	\begin{figure}[h]
 		\centering
-		\fbox{\input{Graphs/4/PeriodicRange/PeriodicRange}}
+		\input{Graphs/4/PeriodicRange/PeriodicRange}
 		\caption{Supply efficiency and Compressor 1's average power output over the time of the periodic analysis.}
 		\label{fig: MeasurementAccuracy.}
 	\end{figure} 
@@ -230,7 +231,7 @@ As a 2 MW shift in power is not likely from, the results seem to show that there
 To validate that the change identified using periodic simulation was caused by the power meter, data from the substation was compared to the combined individual compressors meters. This comparison is shown in Figure \ref{fig: Corrected Periodic simulation}. The comparison shows that the substation power measurement strays from the compressors at the same time that compressor 1 average daily power drops.
 	\begin{figure}[h]
 		\centering
-		\fbox{\input{Graphs/4/PeriodicValidation/PeriodicValidation}}
+		\input{Graphs/4/PeriodicValidation/PeriodicValidation}
 		\caption{Comparison using alternative power source.}
 		\label{fig: Corrected Periodic simulation}
 	\end{figure}    

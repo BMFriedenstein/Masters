@@ -67,7 +67,9 @@ set ylabel "Pressure $(kPa)$";
 set yrange [350:450]
 set ytics 20 nomirror
 
-set size 1.3,0.75
+set size 1.3,1
 set datafile separator ","
-plot 'Pressure.csv' using 1:2 title "Baseline" with lines ls 1, \
-     'Pressure.csv' using 1:3 title "Intervention" with lines ls 4, \
+plot 'Pressure.csv' using 1:2 title "Normal operation" with lines ls 1, \
+     'Pressure.csv' using 1:3 title "Intervention scenario" with lines ls 4, \
+	 'Pressure.csv' using 1:($4==NaN ? 1/0 : ($2+$3)/2):($4)/2 with yerrorbars  lt 1 lc rgbcolor "#808080" notitle,\
+	 'Pressure.csv' using 1:($4==NaN ? 1/0 : (((420+420+420+$3)/4)+5)):($4)/2 with labels notitle ,\
