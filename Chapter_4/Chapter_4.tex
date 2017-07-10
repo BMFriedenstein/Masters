@@ -143,14 +143,12 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 		\caption{Verifying the Pressure response of the system give the pressure set points as inputs}
 		\label{fig: Verification Pressure kusasalethu Setpoint}
 	\end{figure}
-	\par 
-	It was noted the during peak air usage periods, between 07:00 and 13:00, that the outlet pressure dropped well below the desired set-point. This was because the compressors struggled to keep up with the air demand during those periods, resulting in a pressure lower than the desired set-point. This was reproduced in the simulation.
 	\subsection{Scenario 1. Refuge bay optimisation}
-	From investigations that were conducted on the mines compressed system, unnecessary refuge bay leaks was identified as a significant inefficiency that can be reduced. Early tests on a single mining level indicated that a reduction refuge bay leaks, by closing the valves would lead to a air saving of $0.05$ $kg/s$ per refuge bay at typical operational pressures. This measurement was conservative as not all of the refuge bays on the level could be closed for the test.
+	From investigations that were conducted on the mines compressed system, unnecessary refuge bay leaks were identified as a significant inefficiency that can be reduced. A test on a single mining level was performed to  measure the potential flow saving of reducing refuge bay leaks. The test showed that a reduction refuge bay leaks, by closing the valves would lead to a air saving of $0.05$ $kg/s$ per refuge bay at typical operational pressures. This measurement was conservative as not all the refuge bays on the level could be closed for the test. 
 	\par 
-	Tests, integrating more refuge bays for a longer period would not be possible without buy in from the mine's management. To gain this buy-in, the potential financial and operational benefits of refuge bay leakage interventions would first need to be quantified. A simulation model was hence developed to accurately estimate the savings for any interventions.
+	Extending these tests to include the rest of the mining sections was not practical due to the size of the mine and high resourse requirement . Therefore, the benefits bay could not accurately be determined from practical tests. Using simulation the typical operation with can be accurately compare with the intervention scenario to quantify the potential financial and operational benefits throughout a given period.
 	\par
-	Refuge bay components were added to the baseline modelled discussed previously. Using the test results, refuge bay leaks were added to the simulation model. \gls{scada} data was used to verify the new baseline simulation model with an accuracy of 98\%. Using the per-level layouts obtained from the investigation the location and number of refuge bay components were identified. The full simulation model is shown in Figure \ref{fig: Refuge bay layout} in Appendix \ref{ASchematics}.
+	The simulation model detail was selected to recreate the scenario within 2\% error. To model auto-compression, the depth of each compressed air component was included into the simulation. Using the per-level layouts obtained from the investigation the location of refuge bay components were identified. Refuge bay leak components were then added to the simulation to replicate the measured leak from each refuge bay. These leaks were modelled as flow demands using the data from the initial refuge bay tests. The overall mass flow of the system was maintained to keap the model accurate. The simulation was verified with an accuracy of 98\% using actual data from the mine. The full simulation process flow diagram is shown in Figure \ref{fig: Refuge bay layout} in Appendix \ref{Schematics}.
 	\par 
 	
 	\begin{figure}[h]
@@ -169,7 +167,9 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 	Tested scenario where all excessive leaking valves are removed.
 	Refuge bays savings 1MW E.E.
 	
-	\subsection{Scenario 2. Closing off levels/stopes}
+	\subsection{Scenario 2. Closing off levels vs. inactive work areas}
+	Due to the high prevalence of compressed air misuse, leaks and open valves, significant amounts of air is still used during periods where it is not required. Reducing pressure to areas during the times may lead to a major power and cost saving. Using simulation, tests can be done to identify the benefits of reducing pressure to inactive mining sections.
+	\par 
 	The effect of in-stope control during peak times was simulated for level 105L. The level was modelled to include all major leaks, refuge bays and drilling sections that were manually identified from the level investigations. This is shown in the simulation diagram shown in Figure For comparison, station isolation and the combination of in-stope control and station isolation were simulated. 
 	
 	\begin{figure}[h!]
@@ -186,33 +186,48 @@ Using the data and knowledge gathered from  the investigation, a model was devel
 	
 	\subsection{Summary}
 \newpage
-\section{Periodic simulation analysis}
+\section{Case study C: Periodic simulation analysis}
 	\subsection{Preamble}
 	Updating the inputs of a simulation periodically could be used to verify simulation model accuracy. If the precision of simulation outputs remains for subsequent days, this would indicate that the model is correctly calibrated. Additionally, this process could be used to identify significant operational changes that occur within the system. This would cause the simulation outputs to differ from the actual measured parameters. 
 	\par 
+	A daily periodic simulation  analysis was implemented between 2016/11/01 and 2016/11/30 using the periodic simulation methodology discussed in Chapter 3. The simulation model developed for case study A was used for the analysis. The simulation receives the data inputs shown in table \ref{table: Periodic inputs/outputs}.
+	\begin{table}[h]
+		\centering
+		\begin{tabular}{|l|l}
+			\centering
+			Inputs \hspace*{4cm}    &Outputs \hspace*{4cm}    \\  \hhline{==}
+			Ambient air conditions&Compressor power \\
+			Measured flows& Flows \\
+			Compressor schedules& Pressures \\
+		\end{tabular}
+		\caption{Table showing the simulation inputs and outputs.}
+		\label{table: Periodic inputs/outputs}
+	\end{table}
 
-	     \subsection{Results}
-	     Daily periodic simulation was implemented between 2016/11/01 and 2016/11/30. For each period, the simulated total flow, shaft delivery pressure and total power consumption were compared to the actual operation. The results of this analysis are shown in Figure \ref{fig: Periodic simulation}.
+\subsection{Results}
+
+
+ The process was triggered daily. For each period, data inputs shown in table \ref{table: Periodic inputs/outputs} were imported into the model, the simulation was then processed and the outputs are compared with the real system parameters. Figure \ref{fig: Periodic simulation} shows the average daily accuracy of the simulated total system power, flow and the shaft pressure per period.
 	     \par 
-	     
+     
 	\begin{figure}[h]
 		\centering
 		\fbox{\input{Graphs/4/Periodic1/Periodic1}}
 		\caption{The flow, pressure and power error percentages for daily periodic simulations over a month.}
 		\label{fig: Periodic simulation}
 	\end{figure}   
-The accuracy of the flow and pressure parameters of the model remained precise for the duration of the periodic simulation. However, From the 2016/11/07, the accuracy of the simulated power dropped by between 10 and 15 percent. The daily average power of the system up to the point was approximately 12.5 MW, a 15\% simulation error therefore relates to 1.9 MW. This suggests a major shift in operation of the system.
+The accuracy of the process parameters of the simulation was within 5\% for the duration of the periodic simulation. However, From the 2016/11/07, the accuracy of the simulated power dropped by between 10 and 15 percent. The daily average power of the system up to the point was approximately 12.5 MW, a 15\% simulation error therefore relates to 1.9 MW difference between simulated and actual parameters. This suggests a major shift in operation of the system.
 \par 
-A deeper analysis was performed to try ascertain the source of the operational change. From the analysis it was identified that the simulated power for compressor 1 no longer reflected the actual power measurement from the system. A look at the actual power measurement for compressor 1 showed a sharp decline in power starting from the 2016/11/07. At the same time the efficiency, or amount of power required per kg/s of air, for the system increased significantly. This is shown in Figure \ref{fig: MeasurementAccuracy.} the average daily power for compressor 1, shown in blue, and the air mass flow per Watt, shown in yellow, shift dramatically from the same. 
+An analysis was done to try determine the source of the discrepancy. From the data it was identified that the simulated power for compressor 1 was the source of the different A look at the actual power measurement for compressor 1 show drop compared to normal operation by almost 2 MW. At the same time the power used per kg/s of air seemed to have dropped. Figure \ref{fig: MeasurementAccuracy.} shows the average daily power for compressor 1 (blue), compared to the air mass flow per Watt(yellow). 
 	\begin{figure}[h]
 		\centering
 		\fbox{\input{Graphs/4/PeriodicRange/PeriodicRange}}
 		\caption{Supply efficiency and Compressor 1's average power output over the time of the periodic analysis.}
 		\label{fig: MeasurementAccuracy.}
 	\end{figure} 
-   The results seem to show that there was a major change in the operation compressor 1 that effected the efficiency of the system. A more likely explanation is that there is a malfunction with the power meter. This explains the apparent increase in efficiency over the same period as a lower power is measure then is actually being utilised. In this scenario the simulated power measurement can retrospectively be used as a more accurate metric for the energy consumption of the system.  
+As a 2 MW shift in power is not likely from, the results seem to show that there was a fault in the power metering starting from 2016/11/07. This explains the perceived increase in efficiency over the same period as a less power is measure then is actually being provided. In this situation the simulated power measurement is actually a more accurate metric for compressor 1's power over this period.  
    \subsection{Validation}
-   To validate that the change identified using periodic simulation was caused by the power meter, data from the substation was compared to the combined individual compressors meters. This comparison is shown in Figure \ref{fig: Corrected Periodic simulation}. The comparison shows that the substation power measurement strays from the compressors at the same time that compressor 1 average daily power drops.
+To validate that the change identified using periodic simulation was caused by the power meter, data from the substation was compared to the combined individual compressors meters. This comparison is shown in Figure \ref{fig: Corrected Periodic simulation}. The comparison shows that the substation power measurement strays from the compressors at the same time that compressor 1 average daily power drops.
 	\begin{figure}[h]
 		\centering
 		\fbox{\input{Graphs/4/PeriodicValidation/PeriodicValidation}}

@@ -20,17 +20,17 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 \section{Investigate the system}
 	\subsection{Preamble}
 		Developing a detailed simulation model of a compressed air network requires thorough comprehension of the inner workings of the system. This section will discuss the investigations needed to obtain the required understanding.
-	\subsection{Acquiring data} % 
+	\subsection{Acquire data} % 
 	The first step of the system investigation is to acquire the data and understanding that will be required to model compressed air system's function. This will require access to mine resources such as data storage systems, instrumentation, and communication with relevant engineers and personnel.
 	\par 
 	Comprehensive and up to date layouts illustrate a compressed air network's unique set-up, scale and location of instrumentation. More detailed layouts can provide per-level air consumption breakdowns of the network, locations of refuge bays, mining cross-sections and identified inefficiencies. This is vital to understand the operation and identify what data parameters will be required for the model. 
 	\par 
 	A baseline period that best represents the typical operation of the mine. Additionally, availability of data should be considered. The length of the baseline period is selected based on the scenarios that are to be tested, this can be changed later. For calibrating a compressed air system a 24 hours period of normal operation is usually sufficient. A longer period may be needed to verify the model.
 	Next data 
-	\subsection{Mining schedule}
+	\subsection{Investigate mining schedules}
 	A critical aspect to developing an accurate model of a mining compressed air system is apprehension of the operational philosophy of the mine. The schedule for operations such as drilling,  blasting or cleaning can have a major impact on compressed air requirements at different times of the day. By utilizing the operational schedule, simulation scenarios can be optimized for the air requirements throughout the day.	
 	
-	\subsection{Data verification}
+	\subsection{Verify data accuracy}
 	Data verification is the process where data is evaluated to ensure accuracy. It is important to verify data that is used for model development as an accurate representation of the operation of a system can only be achieved utilising data of high quality \cite{gous2016data}. The factors that influence a data-set's quality, accuracy and integrity  summarised as follows:
 	\begin{itemize}
 		\item Conversion of measurement value \cite{meijsen2015verification}
@@ -41,7 +41,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	\end{itemize} 
 	\par 
 	Therefore a data verification methodology is utilised to ensure datasets are of high quality. 
-	\subsection{Solutions to unavailable data}
+	\subsection{Resolve unavailable data}
 		Parameters that are required to develop the simulation model, such as flows, pressures, may not be actively logged by mine systems. To obtain this data it is necessary to investigate alternative sources. At points where instrumentation is absent, estimations can be made from assumptions made using instrumentation on the network or spot inspections.
 		\par 
 		Air network specifications such as piping sizes, technical layouts, major leak locations or specifications is often outdated or not recorded. Critical data should be obtained through audits and inspections of the system. If manual inspection is not possible, estimations should be made using the available data or approximation techniques discussed in literature. %\texttt{REMEMBER TO REFERENCE\\ SPECIFIC LOCATION LITERATURE}.
@@ -51,7 +51,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 \section{Develop and verify a simulation model}
 	\subsection{Preamble}
 	Compressed air networks are comprised of components such as compressors, valves, pipes, etc. This section will discuss the development, calibration and verification of component models that make up a compressed air simulation. 
-	\subsection{Compressed air component models}
+	\subsection{Model compressed air network component}
 		\subsubsection{Air pipes}
 		Pressure losses occur over compressed air networks due to friction in the pipe, these losses should be taken into account in the simulation for large piping sections. A pipe model is used to account for these losses which are defined by the \textit{Darcy-Weisbach equation}\footnote{ B. Glenn, \enquote*{The Darcy–Weisbach Equation,}[Online] \url{https://bae.okstate.edu/faculty-sites/Darcy/DarcyWeisbach/Darcy-WeisbachEq.htm}, [Accessed 20-05-2017]}:
 		$$\Delta P = \frac{f  L \rho V^2}{2 D}$$
@@ -151,11 +151,11 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			$UA$ & Heat transfer coefficient ($kW/^{\circ} C$) \\
 			$T_{amb}$ & Ambient air temperature ($^{\circ} C$) \\
 		\end{tabular} \\	
-	\subsection{Verification of simulation model}
+	\subsection{Verify simulation model}
 		- Steps to validate  the model accuracy - Compare parameters to actuals\\
 		- First principles     - Comparison to other models
 		
-	\subsection{Simulation inputs}
+	\subsection{Select simulation inputs}
 		The inputs of a simulation are any parameters that do not remain static, or follow the same profile in day to day operation of the system. Examples of such parameters in a compressed air simulation are:
 		\begin{itemize}
 			\item Simulation period
@@ -185,15 +185,15 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	\subsection{Summary}
 	\textit{Unfinished}
 \newpage
-\section{Implement of simulation method}
+\section{Implementation of simulation method}
 	\subsection{Preamble}
 		Once a simulation has been developed and verified, the implementation of interventions and scenarios follows. In this section, the approach of implementation the simulation methodology, and analysis of interventions will be discussed.
-	\subsection{Analyses of data}
+	\subsection{Analyse data}
 		- Baseline vs Optimised analysis \\
 		- identification of further improvements\\
 		\textit{Unfinished}
 	
-	\subsection{Quantifying operational improvements}
+	\subsection{Quantify operational improvements}
 		- Estimating cost savings \\
 		- Reporting feedback to the mine\\
 		\textit{Unfinished}
