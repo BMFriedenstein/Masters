@@ -159,14 +159,24 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		\subsubsection{Compressed air after-cooling}
 		The air compression process generates significant heat. Compressed air at high temperatures contains a large amount of water vapour. To prevent condensation later in the air network, improve the system capacity and protect equipment from excessive heat, after-coolers are installed to the outlet of the compressor \cite{schroeder2009energy}.
 		\par 
-		After-cooling reduces the compressed air temperature to within a margin of ambient. This cooling could have a large effect on the performance of the network. Hence, including after-cooling to the simulation model should improve accuracy.
-		\par 
-		To replicate this effect, a heat transfer node can be added to the outlet of the compressor component. \gls{stb} Utilizes the following heat transfer parameters of the air node to solve for outlet temperature: 
-		\begin{tabular}{p{1.3cm}p{13cm}}
-			$Area$ & The heat transfer area ($m^2$) \\
-			$UA$ & Heat transfer coefficient ($kW/^{\circ} C$) \\
-			$T_{amb}$ & Ambient air temperature ($^{\circ} C$) \\
-		\end{tabular} \\	
+		After-cooling reduces the compressed air temperature out of the compressors. This cooling can have an effect on the operation of the network. Hence, including after-cooling to the simulation model should improve accuracy. 
+		To replicate this effect, a heat transfer node can be added to the outlet of the compressor component. The heat transfer parameters shown in Table \ref{table: After cooling inputs} should be calibrated such that the air temperature matches after-cooled air temperature measurements. An assumption of 40 $^\circ$\gls{c} can be used if no measurements are available.
+		\par
+		\begin{table}
+			\centering
+			\begin{tabular}{lll}
+				\hline 
+				Parameter \hspace{1cm} & Definition \hspace{4cm} & Unit \\
+				\hline
+				$A$ & The heat transfer area & $m^2$ \\
+				$UA$ & Heat transfer coefficient & $kW/^{\circ} C$ \\
+				$T_{amb}$ & Ambient air temperature & $^{\circ} C$ \\
+				\hline
+			\end{tabular}
+		\caption{The input parameters for the after-cooling simulation model .}
+		\label{table: After cooling inputs}
+		\end{table}
+	Depending on the accuracy requirement, after-cooling can be excluded from the simulation. Post aftercooling, compressed air is normally still warmer then ambient conditions. Air temperatures underground can be accurately matched by including heat transfer for compressed air pipelines.
 	\subsection{Verify simulation model}
 		- Steps to validate  the model accuracy - Compare parameters to actuals\\
 		- First principles     - Comparison to other models
@@ -174,7 +184,6 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	\subsection{Select simulation inputs}
 		The inputs of a simulation are any parameters that do not remain static, or follow the same profile in day to day operation of the system. Examples of such parameters in a compressed air simulation are:
 		\begin{itemize}
-			\item Simulation period
 			\item Surface ambient conditions
 			\item Machine operation schedules
 			\item Air demands
@@ -187,6 +196,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			\caption{An example of two baseline periods, showing a changed compressor schedule.}
 			\label{fig: Compressor schedule}
 		\end{figure}
+	
 	\subsection{Periodic simulation}	
 		Period simulation refers to the repetition of simulations over subsequent periods to determine the sequential accuracy of the model.  This is important to verify the model is valid in general and not just a single period.  This simulation will also indicate where operation changes have occurred as the simulation accuracy will be reduced.
 		\par 

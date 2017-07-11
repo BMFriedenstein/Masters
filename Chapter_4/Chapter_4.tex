@@ -8,8 +8,8 @@
 \newpage
 \section{Introduction}
 This section will discuss the results of the implementing the simulation methodology on various case case study. Further, the result of various simulated scenarios will be discussed. Finally validation of the the simulated scenarios using actual measurable tests will be discussed.
-\section{Case study A}
-{\color{blue}(Beatrix 123)}
+\section{Case study A \tiny{\color{blue}(Beatrix 123)}}
+
 \subsection{System investigation}
 Case study A represents a group of three gold mining shafts and a gold processing plant in the Free state that share a compressed air network. Prior to this study, efforts were made to optimise the system through \gls{dsm} energy projects. An investigation into the system was performed to identify potential energy and operation improvements strategies that are still available.
 \par 
@@ -35,10 +35,9 @@ Air is supplied to the sections in three mining shafts as well as a gold process
 \par
  It is possible to control the air supply pressure to the gold plant independently from the rest of the network. This is performed by utilising the surface control valves and a specific configuration of compressors. The mine prefers not to operate this way.
 \subsection{Model development}
-With the data and understanding of the gathered from the investigation, a model was developed in the \gls{ptb} tool using the methodology discussed in Chapter 3. First the simulation boundary was selected to include the measured flows to each level as well as the processing plant. As data was only available in half an hour intervals, the simulation step was was set to 30 minutes.
+With the data and understanding of the gathered from the investigation, a model was developed in the \gls{ptb} tool using the methodology discussed in Chapter 3. First the simulation boundary was selected to include the measured flows to each level as well as the processing plant. As data was only available in half an hour intervals, the simulation step size was was set to 30 minutes to match the available data.
 \par
-Component models were devloped using the respect methods discussed in chapter 3. The most time was spent accurately modelling the compressors. The following assumption were  made to simplify the development the model:
-
+Component models were developed using the respective methods discussed in chapter 3. The following assumption were  made to simplify the development the model:
 \begin{itemize}
 	\item The effect of compressor after cooling was negligible
 	\item Heat transfer over the pipe length was negligible
@@ -69,7 +68,7 @@ The same check was performed for the compressor outlet pressure. Figure \ref{fig
 	\label{fig: Verification Pressure Beatrix}
 \end{figure}
 \par
-The accuracy of the model was checked in more detail to ensure that each modelled parameter matched the actual measurement with high accuracy. Table \ref{} shows the average accuracy each measured simulation output in the model.
+The accuracy of the model was checked in more detail to ensure that each modelled parameter matched the actual measurement with high accuracy. Table \ref{Table: A verification} shows the accuracy each measured simulation output in the model. 
 \subsection{Scenario 1. Compressor set points}
 \begin{figure}[h!]
 	\centering
@@ -94,12 +93,12 @@ The accuracy of the model was checked in more detail to ensure that each modelle
 \end{figure}
 \subsection{Summary}
 \newpage
-\section{Case study B }
-{\color{blue}(Kusasalethu)}
+\section{Case study B \tiny{\color{blue}(Kusasalethu)}}
+
 	\subsection{System investigation}
 	Case study B is another large South African gold mine. The mine utilises five compressors supply compressed air to various surface and underground operations. An investigation was performed to gather the data and information required to build a simulation model of the network.
 	\par 
-	A basic air distribution layout was obtained, as shown in Figure \ref{fig: KUS Air layout}.  The more detailed layout in !!Appendix *!!,  indicates available meters and instrumentation as well as typical airflow splits to various sections and levels of the mine.
+	A basic air distribution layout was obtained, as shown in Figure \ref{fig: KUS Air layout}.  The figure indicates available meters and instrumentation as well as typical airflow splits to various sections and levels of the mine.
 	\par 
 
 	\begin{figure}[h!]
@@ -213,7 +212,7 @@ The accuracy of the model was checked in more detail to ensure that each modelle
 			Compressor schedules& Pressures \\
 			\hline
 		\end{tabular}
-		\caption{Table showing the simulation inputs and outputs.}
+		\caption{Data inputs and outputs for the simulation .}
 		\label{table: Periodic inputs/outputs}
 	\end{table}
 
