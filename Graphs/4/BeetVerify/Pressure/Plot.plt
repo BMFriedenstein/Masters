@@ -73,5 +73,5 @@ set y2tics 10 nomirror
 set size 1.3,0.8
 set datafile separator ","
 plot 'Pressure.csv' using 1:2 title "Baseline press." with lines ls 1, \
-     'Pressure.csv' using 1:3 title "Simulated press." with lines ls 4, \
-	 'Pressure.csv' using 1:4 title "Error" with impulses ls 3 axes x1y2, 
+     'Pressure.csv' using 1:5 title "Simulated press." with lines ls 4, \
+	 'Pressure.csv' using 1:6 title "Error" with impulses ls 3 axes x1y2, 

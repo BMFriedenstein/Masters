@@ -18,12 +18,11 @@ An air distribution layout was developed for the system, the simplified diagram 
 \begin{figure}[h!]
 	\centering
 	\fbox{\includegraphics[trim =0cm 0.6cm 0cm 0.6cm,width=\textwidth]{Graphs/4/BeatLayout1/BeatLayout1.pdf}}
-	\caption{Simplified process flow chart of the air network.}
+	\caption{Simplified process flow chart of the compressed air network.}
 	\label{fig: Beatrix Air layout}
 \end{figure}
 
-
-Seven compresses are available in the system. Five large compressors (VK32s) rated at 4 $MW$ each and two smaller compressors (VK10) with a power rating of 2.1 $MW$ each. The system is typically supplied using combination of 2 VK32 compressors and 2 VK 10 compressors. The rest of the compressors are used as standby. Compressors are shut off or switched on  to match the demand in the system.  
+The system typically uses 5 $MW$ of power, which increases by a 1 $MW$ during the drilling shift. The average weekday power profile is shown Figure \ref{fig: Beatrix power baseline}. Seven compresses are available in the system. Five large compressors (VK32s) rated at 2.9 $MW$ each and two smaller compressors (VK10) with a power rating of 1.1 $MW$ each. The system is normally operated with a combination of two VK32 compressors and two VK 10 compressors. The other compressors serve as standby. 
 \begin{figure}[h!]
 	\centering
 	\input{Graphs/4/BeetBaseline/Power/Power}
@@ -32,11 +31,23 @@ Seven compresses are available in the system. Five large compressors (VK32s) rat
 \end{figure}
 
 \par
-Air is supplied to the sections in three mining shafts as well as a gold processing plant. The gold plant requires constant high pressure throughout the day. It is possible to control the supply pressure of the gold plant independently from the rest of the network. However the mine prefers to operate the network with a constant pressure setpoint. A more detailed air distribution layout including location of flow meters is shown in "Appendix A". 
+Air is supplied to the sections in three mining shafts as well as a gold processing plant on the surface.  The mine normally operates the compressors with a constant pressure set-point f 500 \gls{kpa}.  The set-point is  kept this high as the gold processing plant requires constant high pressure throughout the day. This makes it difficult to reduce the set-points of the compressor.
+\par
+ It is possible to control the air supply pressure to the gold plant independently from the rest of the network. This is performed by utilising the surface control valves and a specific configuration of compressors. The mine prefers not to operate this way.
 \subsection{Model development}
-With the data and knowledge gathered from  the investigation, a model was developed using the methodology discussed in Chapter 3.
-\subsubsection{Verification of model}
+With the data and understanding of the gathered from the investigation, a model was developed in the \gls{ptb} tool using the methodology discussed in Chapter 3. First the simulation boundary was selected to include the measured flows to each level as well as the processing plant. As data was only available in half an hour intervals, the simulation step was was set to 30 minutes.
+\par
+Component models were devloped using the respect methods discussed in chapter 3. The most time was spent accurately modelling the compressors. The following assumption were  made to simplify the development the model:
 
+\begin{itemize}
+	\item The effect of compressor after cooling was negligible
+	\item Heat transfer over the pipe length was negligible
+	\item Underground temperature and humidity remained constant for each level
+	\item Surface ambient air conditions followed the average summer trend
+\end{itemize} 
+The model components was calibrated so that the simulated outputs matched data from the real system.
+\subsubsection{Verification of model}
+Verification was performed to ensure that simulated output accuracy was >95\%. Figure \ref{fig: Verification Power Beatrix} and Figure \ref{fig: Verification Flow Beatrix} compare the to total simulated and actual power and flow respectively. The average accuracy was 97.34\% for system power and  97.01\% for system flow. Both these parameters were well within the target 95\% accuracy.
 \begin{figure}[h]
 	\centering
 	\input{Graphs/4/BeetVerify/Power/Power}
@@ -50,14 +61,15 @@ With the data and knowledge gathered from  the investigation, a model was develo
 	\caption{The simulated flow compared to the actual measured flow}
 	\label{fig: Verification Flow Beatrix}
 \end{figure}
-
+The same check was performed for the compressor outlet pressure. Figure \ref{fig: Verification Pressure Beatrix} compares the actual measured and simulated pressures. The accuracy of the outlet pressure was 99.1\%. The high accuracy of the simulated pressure was expected as the mine uses a constant pressure set-point for the compressors.
 \begin{figure}[h]
 	\centering
 	\input{Graphs/4/BeetVerify/Pressure/Pressure}
 	\caption{The simulated Pressure compared to the actual measured pressure}
 	\label{fig: Verification Pressure Beatrix}
 \end{figure}
-
+\par
+The accuracy of the model was checked in more detail to ensure that each modelled parameter matched the actual measurement with high accuracy. Table \ref{} shows the average accuracy each measured simulation output in the model.
 \subsection{Scenario 1. Compressor set points}
 \begin{figure}[h!]
 	\centering
@@ -89,7 +101,7 @@ With the data and knowledge gathered from  the investigation, a model was develo
 	\par 
 	A basic air distribution layout was obtained, as shown in Figure \ref{fig: KUS Air layout}.  The more detailed layout in !!Appendix *!!,  indicates available meters and instrumentation as well as typical airflow splits to various sections and levels of the mine.
 	\par 
-	
+
 	\begin{figure}[h!]
 		\centering
 		\fbox{\includegraphics[trim =0cm 0.6cm 0cm 0.6cm,width=\textwidth]{Graphs/4/KUSLayout1/KUSLayout1.pdf}}
