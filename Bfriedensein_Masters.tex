@@ -35,7 +35,8 @@
 {\filright\MakeUppercase{\chaptertitlename} \Huge\thechapter}
 {0.5ex}
 {\titlerule\filleft}
-
+\usepackage{array}
+\usepackage{calc}
 
 %Set Spacing
 \usepackage{setspace} 
@@ -168,6 +169,7 @@
 	%\printglossaries	
 	\addcontentsline{toc}{chapter}{List of figures}
 	\listoffigures
+	\newpage
 	\addcontentsline{toc}{chapter}{List of tables}
 	\listoftables
 

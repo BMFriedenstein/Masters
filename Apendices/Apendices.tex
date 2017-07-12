@@ -27,7 +27,7 @@
 
 	\begin{figure}[h]
 		\centering
-		\fbox{\includegraphics[,width=\textwidth]{Images/A/StopeSim}}
+		\fbox{\includegraphics[trim = 0.8cm 5.8cm  0.8cm 5.8cm ,clip,width=\textwidth]{Images/A/StopeSim.pdf}}
 		\caption{Mine B: Simulation model diagram for the station isolation stope control.}
 		\label{fig: Stope layout}
 	\end{figure}
@@ -87,19 +87,46 @@
 		Surface & $ 502 $ & $ 501 $ & $ 99.95 $\% \\
 		\hline 
 	\end{tabular}
-\caption{Mine A: Model verification}
+\caption{Case study A: Model verification}
 \label{Table: A verification}
 \end{table}
 
 \newpage
-\begin{table}[h]
+\begin{table}[h!]
 	\centering
-	\begin{tabular}{lllll}
+	\begin{tabular}{lccr}
 		\hline 
-		Component & Unit & Actual system & Simulation& Accuracy \\
+		Component & Actual Ave. & Simulated  Ave. & Accuracy \\ \hhline{====} 
+		\\
+		\multicolumn{4}{c}{Power ($ kW $)}
+		\\
+		Compressor 1 & $ 3406 $ & $ 3669 $ & $ 92.37 $\% \\
+		Compressor 2 & $ 3911 $ & $ 3668 $ & $ 93.92 $\% \\
+		Compressor 3 & $ 1440 $ & $ 1453 $ & $ 99.05 $\% \\
+		Compressor 4 & $  0   $ & $  0   $ & $ 100   $\% \\
+		Compressor 5 & $ 3299 $ & $ 3274 $ & $ 99.22 $\% \\
+		System       & $12057 $ & $12103 $ & $ 98.73 $\% \\
+		\\
+		\multicolumn{4}{c}{Flow ($ kg/s $)}
+		\\
+		
+		95L  & $ 1.51 $ & $ 1.42 $ & $ 93.95 $\% \\
+		98L  & $ 3.75 $ & $ 3.53 $ & $ 93.99 $\% \\
+		102L  & $ 2.97 $ & $ 2.79 $ & $ 98.72 $\% \\
+		105L  & $ 5.65 $ & $ 5.71 $ & $ 98.84 $\% \\
+		109L  & $ 3.57 $ & $ 3.37 $ & $ 94.27 $\% \\
+		113L  & $ 5.09 $ & $ 4.84 $ & $ 95.05 $\% \\
+		Gold Plant & $ 1.41 $ & $ 1.35 $ & $ 95.14 $\% \\
+		Sub-shaft total & $ 34.12 $ & $ 34.76 $ & $ 98.09 $\% \\
+		Total & $ 41.65$  & $41.43 $  & $ 98.96 $\% \\
+		\\
+		\multicolumn{4}{c}{Pressure ($ kPa $)}
+		\\
+		
+		Surface & $ 393 $ & $ 396 $ & $ 99.02 $\% \\
 		\hline 
 	\end{tabular}
-	\caption{Mine B: Model verification}
+	\caption{Case study B: Model verification}
 	\label{Table: B verification}
 \end{table}
 \end{appendices}

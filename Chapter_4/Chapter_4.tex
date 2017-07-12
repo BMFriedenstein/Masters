@@ -77,7 +77,7 @@ The accuracy of the model was checked in more detail to ensure that each modelle
 	\label{fig: CompSetpoints Results Beatrix}
 \end{figure}
 \subsection{Scenario 2. Control valves set points}
-
+\gls{pa}
 \begin{figure}[h!]
 	\centering
 	\input{Graphs/4/BeetResults/ValveSetpoints/ValveSetpoints}
@@ -87,9 +87,10 @@ The accuracy of the model was checked in more detail to ensure that each modelle
 \subsection{Comparison of scenario results}
 \begin{table}[h]
 	\centering
-	\begin{tabular}{llll}
+	\begin{tabular}{lccr}
 		\hline 
-		Scenario \hspace{2cm} & Power saving & Cost saving & Additional benefit  \\
+		Scenario \hspace{2cm} & Power saving & Cost saving \gls{pa} & Additional benefit  \\
+
 		\hline 
 	\end{tabular}
 	\caption{Comparison of the simulated scenarios}
@@ -189,35 +190,70 @@ The accuracy of the model was checked in more detail to ensure that each modelle
 	Tested scenario where all excessive leaking valves are removed.
 	Refuge bays savings 1MW E.E.
 	
-	\subsection{Scenario 2. Closing off levels vs. inactive work areas}
+	\subsection{Scenario 2. Closing off levels and inactive work areas}
 	Due to the high prevalence of compressed air misuse, leaks and open valves, significant amounts of air is still used during periods where it is not required. Reducing pressure to areas during the times may lead to a major power and cost saving. Using simulation, tests can be done to identify the benefits of reducing pressure to inactive mining sections.
 	\par 
+	\begin{figure}[h!]
+		\centering
+		\fbox{\includegraphics[trim= 0 10cm 0 80cm, clip,width=\textwidth]{Images/A/StopeSim}}
+		\caption{Underground level layout.}
+		\label{fig: KUS Simulation level layout}
+	\end{figure}	
 	The effect of in-stope control during peak times was simulated for level 105L. The level was modelled to include all major leaks, refuge bays and drilling sections that were manually identified from the level investigations. This is shown in the simulation diagram shown in Figure For comparison, station isolation and the combination of in-stope control and station isolation were simulated. 
 	
 	\begin{figure}[h!]
 		\centering
-		\fbox{\includegraphics[width=\textwidth]{Images/4/StopeSim}}
-		\caption{Underground level layout.}
-		\label{fig: KUS Simulation level layout}
-	\end{figure}	
+		\input{Graphs/4/KUSResults/StationPower/Station}
+		\caption{Comparing simulated pressure interventions at the stopes and the station of 105L.}
+		\label{fig: Station vs stope}
+	\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\input{Graphs/4/KUSResults/StationFlow/Flow}
+	\caption{Flow reduction during blasting period for 105 level}
+	\label{fig: 105 Flow savings}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\input{Graphs/4/KUSResults/General/Power}
+	\caption{Saving achieved by extending peak time station control to other mining levels}
+	\label{fig: General station optimise}
+\end{figure}
+
+	\gls{pc}  \gls{ee} 
+	\subsection{Comparison of interventions}
 	
-	\subsection{Comparison of scenario results}
 	\begin{table}[h]
 		\centering
-		\begin{tabular}{llll}
+		\begin{tabular}{p{0.45\textwidth-2\tabcolsep - 1.25\arrayrulewidth}
+				p{0.2\textwidth-2\tabcolsep - 1.25\arrayrulewidth}
+				p{0.1\textwidth-2\tabcolsep - 1.25\arrayrulewidth}
+				p{0.25\textwidth-2\tabcolsep - 1.25\arrayrulewidth}}
 			\hline 
-			Scenario \hspace{2cm} & Power saving & Cost saving & Additional benefit  \\
+			 \vspace{0.5em}Scenario  &  \vspace{0.5em}Power saving &  Cost saving (\gls{pa}) &  \vspace{0.5em}Additional benefit  \\
+			\hline
+			\multicolumn{4}{l}{\textbf{Scenario 1 results}} \\
+			Refuge bay leakage reduction & - & - & Increase in drilling pressure \\
+			 \\
+			\multicolumn{4}{l}{\textbf{Scenario 2 results}}  \\
+			105L peak time in-Stope control & $ 0.4 $ MW \gls{pc} & R$ 0.3 $M& - \\
+			105L peak time Station control & $ 0.7 $ MW \gls{pc} & R$ 2.5 $M& - \\
+			General peak time Station control & $ 2.0 $ MW \gls{pc} & R$ 2.5 $M& - \\
 			\hline 
 		\end{tabular}
 		\caption{Comparison of the simulated scenarios}
 		\label{Table: B Comparison}
 	\end{table}
+
 	\subsection{Validation of results}
 	
 	- awaiting results on manual tests
 	
 	\subsection{Summary}
 \newpage
+
 \section{Case study C: Periodic simulation analysis}
 	\subsection{Preamble}
 	Updating the inputs of a simulation periodically could be used to verify simulation model accuracy. If the precision of simulation outputs remains for subsequent days, this would indicate that the model is correctly calibrated. Additionally, this process could be used to identify significant operational changes that occur within the system. This would cause the simulation outputs to differ from the actual measured parameters. 
@@ -233,12 +269,11 @@ The accuracy of the model was checked in more detail to ensure that each modelle
 			Compressor schedules& Pressures \\
 			\hline
 		\end{tabular}
-		\caption{Data inputs and outputs for the simulation .}
+		\caption{Data inputs and outputs for the simulation}
 		\label{table: Periodic inputs/outputs}
 	\end{table}
 
 \subsection{Results}
-
 
  The process was triggered daily. For each period, data inputs shown in table \ref{table: Periodic inputs/outputs} were imported into the model, the simulation was then processed and the outputs are compared with the real system parameters. Figure \ref{fig: Periodic simulation} shows the average daily accuracy of the simulated total system power, flow and the shaft pressure per period.
 	     \par 
