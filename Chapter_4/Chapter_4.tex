@@ -7,13 +7,15 @@
 \enquote*{\textit{Quote.}} - Somebody\\
 \newpage
 \section{Introduction}
-This section will discuss the results of the implementing the simulation methodology on various case case study. Further, the result of various simulated scenarios will be discussed. Finally validation of the the simulated scenarios using actual measurable tests will be discussed.
-\section{Case study A \tiny{\color{blue}(Beatrix 123)}}
-
-\subsection{System investigation}
-Case study A represents a group of three gold mining shafts and a gold processing plant in the Free state that share a compressed air network. Prior to this study, efforts were made to optimise the system through \gls{dsm} energy projects. An investigation into the system was performed to identify potential energy and operation improvements strategies that are still available.
+This section will validate the simulation methodology through implementation on various case studies. Mining compressed air systems were chosen for case studies based on the availability of data and the their scope for energy and operational improvement. Two different mines were selected for the studies. 
 \par 
-An air distribution layout was developed for the system, the simplified diagram is shown in Figure \ref{fig: Beatrix Air layout}.From this along with information from the mine personal and system data, an understanding of the operation philosophy was obtained. 
+Three case studies were performed. In case study 1 and 2, improvements were simulated on mine A and mine B respectively. In Case study 3 periodic simulation analysis is implemented using the simulation developed for case study 2. From the results in the case studies, the potential benefits compressed air simulations for the South Africa mining industry is estimated.
+
+\section{Case study 1. Simulated improvements on mine A  \tiny{\color{blue}(Beatrix 123CM)}}
+\subsection{System investigation}
+Mine A represents a group of three gold mining shafts and a gold processing plant in the Free state. The mine shafts and gold plant share a compressed network. Prior to this study, efforts had been made to optimise the system through \gls{dsm} energy projects. However their is potential for further optimisation. An investigation was performed to gather data and understanding of the system. At the same time, potential energy and operation improvement strategies were identified.
+\par 
+An air flow distribution layout was developed for the system, a simplified layout is shown in Figure \ref{fig: Beatrix Air layout}. From this along with information from the mine personal and data, an understanding of the air network's operation was obtained. 
 \par 
 \begin{figure}[h!]
 	\centering
@@ -22,7 +24,7 @@ An air distribution layout was developed for the system, the simplified diagram 
 	\label{fig: Beatrix Air layout}
 \end{figure}
 
-The system typically uses 5 $MW$ of power, which increases by a 1 $MW$ during the drilling shift. The average weekday power profile is shown Figure \ref{fig: Beatrix power baseline}. Seven compresses are available in the system. Five large compressors (VK32s) rated at 2.9 $MW$ each and two smaller compressors (VK10) with a power rating of 1.1 $MW$ each. The system is normally operated with a combination of two VK32 compressors and two VK 10 compressors. The other compressors serve as standby. 
+The system typically uses 5 $MW$ of power,  during the drilling shift the demand increases to 6 $MW$. Figure \ref{fig: Beatrix power baseline} show the average weekday power profile between January and May 2016. Seven compresses are available in the system. Five large compressors (VK32) rated at 2.9 $MW$ each and two smaller compressors (VK10) with a power rating of 1.1 $MW$ each. No more than 4 compressors are required at any time, the other compressors are therefore on standby.
 \begin{figure}[h!]
 	\centering
 	\input{Graphs/4/BeetBaseline/Power/Power}
@@ -31,36 +33,47 @@ The system typically uses 5 $MW$ of power, which increases by a 1 $MW$ during th
 \end{figure}
 
 \par
-Air is supplied to the sections in three mining shafts as well as a gold processing plant on the surface.  The mine normally operates the compressors with a constant pressure set-point f 500 \gls{kpa}.  The set-point is  kept this high as the gold processing plant requires constant high pressure throughout the day. This makes it difficult to reduce the set-points of the compressor.
-\par
- It is possible to control the air supply pressure to the gold plant independently from the rest of the network. This is performed by utilising the surface control valves and a specific configuration of compressors. The mine prefers not to operate this way.
+Air is supplied to the sections in three mining shafts as well as a gold processing plant on the surface. The mine normally operates the compressors with a constant pressure set-point of 500 \gls{kpa}.  The set-point is kept this high as the gold processing plant requires constant high pressure throughout the day. This makes it difficult to reduce the set-points of the compressor. It is possible to control the air supply pressure to the gold plant independently from the rest of the network. This is performed by controlling the surface valves.
+
 \subsection{Model development}
-With the data and understanding of the gathered from the investigation, a model was developed in the \gls{ptb} tool using the methodology discussed in Chapter 3. First the simulation boundary was selected to include the measured flows to each level as well as the processing plant. As data was only available in half an hour intervals, the simulation step size was was set to 30 minutes to match the available data.
+With the data and understanding of the gathered from the investigation, a model was developed using the \gls{ptb} tool and the methodology discussed in Chapter 3. First, the simulation boundary was selected to include the measured flows to each level underground, as well as the surface processing plant. For highest accuracy, the simulation step size was set to 30 minutes to match the available data resolution.
 \par
-Component models were developed using the respective methods discussed in chapter 3. The following assumption were  made to simplify the development the model:
+The simulation component models were developed and calibrated using the respective methods discussed in chapter 3. The following assumption were  made to simplify the model:
 \begin{itemize}
-	\item The effect of compressor after cooling was negligible
-	\item Heat transfer over the pipe length was negligible
+	\item The effect of compressor after cooling is negligible
+	\item Heat transfer over the pipe length is negligible
 	\item Underground temperature and humidity remained constant for each level
 	\item Surface ambient air conditions followed the average summer trend
 \end{itemize} 
-The model components was calibrated so that the simulated outputs matched data from the real system.
+The model components was calibrated so that the simulated outputs matched data from the real system. The process flow diagram for the simulation is shown in Figure \ref{fig: BEET Baseline model}. The model data inputs and outputs are described in Table \ref{table: Mine A inputs/outputs}.
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ll}
+		\hline
+		Inputs \hspace*{4cm}    &Outputs \hspace*{4cm}    \\  \hline
+		Measured flows&Compressor powers \\
+		Compressor schedules& Network flows \\
+		Compressor set-points& Network pressures \\
+		Valve set-points&  \\
+		\hline
+	\end{tabular}
+	\caption{Data inputs and outputs for the Case study 1 simulation }
+	\label{table: Mine A inputs/outputs}
+\end{table}
+
 \subsubsection{Verification of model}
-Verification was performed to ensure that simulated output accuracy was >95\%. Figure \ref{fig: Verification Power Beatrix} and Figure \ref{fig: Verification Flow Beatrix} compare the to total simulated and actual power and flow respectively. The average accuracy was 97.34\% for system power and  97.01\% for system flow. Both these parameters were well within the target 95\% accuracy.
+Verification was performed to ensure that simulated output accuracy was >95\%. Figure \ref{fig: Verification Power+flow Beatrix} (a) and (b) show the to total simulated power and flow compared to the actual actual system. The average accuracy for the system's power and total flow was 97.34\%  and  97.01\% respectively . Both these parameters were well within the target 95\% accuracy.
 \begin{figure}[h]
 	\centering
 	\input{Graphs/4/BeetVerify/Power/Power}
-	\caption{The simulated power compared to the actual measured power}
-	\label{fig: Verification Power Beatrix}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
+	(a)\\
 	\input{Graphs/4/BeetVerify/Flow/Flow}
-	\caption{The simulated flow compared to the actual measured flow}
-	\label{fig: Verification Flow Beatrix}
+	(b)\\
+	\caption{The simulated flow and power compared to the actual measurement}
+	\label{fig: Verification Power+flow Beatrix}
 \end{figure}
-The same check was performed for the compressor outlet pressure. Figure \ref{fig: Verification Pressure Beatrix} compares the actual measured and simulated pressures. The accuracy of the outlet pressure was 99.1\%. The high accuracy of the simulated pressure was expected as the mine uses a constant pressure set-point for the compressors.
+The same verification was performed for the outlet pressure at the compressor. Figure \ref{fig: Verification Pressure Beatrix} compares the actual measured and simulated pressures. The accuracy of the outlet pressure was 99.1\%. This was expected simulated pressure was expected as the mine uses a constant pressure set-point for the compressors.
 \begin{figure}[h]
 	\centering
 	\input{Graphs/4/BeetVerify/Pressure/Pressure}
@@ -70,6 +83,9 @@ The same check was performed for the compressor outlet pressure. Figure \ref{fig
 \par
 The accuracy of the model was checked in more detail to ensure that each modelled parameter matched the actual measurement with high accuracy. Table \ref{Table: A verification} shows the accuracy each measured simulation output in the model. 
 \subsection{Scenario 1. Compressor set points}
+The air pressure requirements underground are lower than the required pressure at the surface gold plant for most times of the day. Reducing the pressure to underground requires independently controlling the surface pressure to the gold plant. Due to the risk of loss of production, the mine would not test the scenario on the actual system. Simulation was there for required to accurately calculate and analyse the benefits of the scenario.
+\par 
+Using the developed simulation, the compressor Set-points were updated
 \begin{figure}[h!]
 	\centering
 	\input{Graphs/4/BeetResults/CompSetpoints/CompSetpoints}
@@ -105,7 +121,7 @@ The accuracy of the model was checked in more detail to ensure that each modelle
 \end{figure}
 \subsection{Summary}
 \newpage
-\section{Case study B \tiny{\color{blue}(Kusasalethu)}}
+\section{Case study 1: Simulated improvements on mine B \tiny{\color{blue}(Kusasalethu)}}
 
 	\subsection{System investigation}
 	Case study B is another large South African gold mine. The mine utilises five compressors supply compressed air to various surface and underground operations. An investigation was performed to gather the data and information required to build a simulation model of the network.
@@ -306,6 +322,10 @@ To validate that the change identified using periodic simulation was caused by t
 	\subsection{Summary}
 \newpage
 \section{Potential benefit for SA mines}
-
-	Using  
+	\begin{figure}[h]
+		\centering
+		\fbox{\includegraphics[width=0.7\textwidth]{Images/4/Mines.pdf}}
+		\caption{Gold and platinum mines in South Africa.}
+		\label{fig: Mine map}
+	\end{figure}
 \section{Conclusion}
