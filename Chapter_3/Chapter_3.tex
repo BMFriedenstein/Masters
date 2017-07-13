@@ -51,8 +51,17 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 \section{Develop and verify a simulation model}
 	\subsection{Preamble}
 	Compressed air networks are comprised of components such as compressors, valves, pipes, etc. This section will discuss the development, calibration and verification of component models that make up a compressed air simulation. 
+	
 	\subsection{Select the system boundaries and simulation parameters}
-	The simulation boundaries determine the detail that the system is modelled. For a simple compressed air model, the boundaries can be set around the compressor house. This model would then only include the compressor components, inlet and outlet airflows. Alternatively a more complex model can be developed by choosing boundaries to include more aspects of the system such as mining levels, processing plants etc.. 
+	The simulation boundaries determine the detail that the system is modelled. For a simple compressed air model, the boundaries can be set around the compressor house. This model would then only include the compressor components, inlet and outlet airflows. Alternatively a more complex model can be developed by choosing boundaries to include more aspects of the system such as mining levels, processing plants etc.
+	
+	 \begin{figure}[h]
+	 	\centering
+	 	\fbox{\includegraphics[width=\textwidth]{Images/3/Sensitivity.pdf}}
+	 	\caption{ Model boundary selection examples.}
+	 	\label{fig: Sensitivity}
+	 \end{figure}
+ 
 	\par 
 	The boundaries should be chosen based on the input data available, required accuracy n and available time and resources. A more detailed model will lead to more accurate simulation, however it may take more time and resources to obtain the data required. Figure \ref{} shows an example of different boundary selection for the same system.
 	\par
