@@ -74,5 +74,5 @@ set y2tics 0.5 nomirror
 set size 1.3,0.75
 set datafile separator ","
 plot 'Power.csv' using 1:2 title "Baseline" with lines ls 1, \
-     'Power.csv' using 1:3 title "Intervention" with lines ls 4,\
+     'Power.csv' using 1:3 title "Scenario" with lines ls 4,\
 	 'Power.csv' using 1:4 title "Power saving" with impulses ls 18 axes x1y2, 
