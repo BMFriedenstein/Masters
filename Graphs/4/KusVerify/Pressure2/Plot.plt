@@ -70,9 +70,9 @@ set ytics 50 nomirror
 set y2label '$\% error$'
 set y2range [0:25]
 set y2tics 10 nomirror
-set size 1.3,0.55
+set size 1.3,0.75
 set datafile separator ","
-plot 'Pressure.csv' using 1:2 title "Baseline press." with lines ls 1, \
-     'Pressure.csv' using 1:3 title "Simulated press." with lines ls 4, \
-	 'Pressure.csv' using 1:5 title "\\gls{sp}" with lines ls 2, \
+plot 'Pressure.csv' using 1:2 title "Actual" with lines ls 1, \
+     'Pressure.csv' using 1:3 title "Simulation." with lines ls 4, \
+	 'Pressure.csv' using 1:5 title "Set-point" with lines ls 2, \
 	 'Pressure.csv' using 1:4 title "Error" with impulses ls 3 axes x1y2, 

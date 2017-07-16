@@ -153,6 +153,11 @@
 	\end{tabular}
 \clearpage
 
+{\tiny }\section*{Acknowledgements}
+\thispagestyle{plain}
+\vspace{0.2cm}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\clearpage
 
 \tableofcontents
 
@@ -163,14 +168,14 @@
 %List of abreviations
 	\addcontentsline{toc}{chapter}{Abbreviations and nomenclature}
 	\printglossary[type=\acronymtype]
+	\newpage
 	\printglossary[title=Nomenclature]
 	\newpage
 	
 	%\printglossaries	
-	\addcontentsline{toc}{chapter}{List of figures}
+	\addcontentsline{toc}{chapter}{List of figures and tables}
 	\listoffigures
-	\newpage
-	\addcontentsline{toc}{chapter}{List of tables}
+	\clearpage
 	\listoftables
 
 %Chapters
@@ -180,6 +185,7 @@
 \input{Chapter_4/Chapter_4}
 \input{Chapter_5/Chapter_5}
 \bibliographystyle{IEEEtran}
+\addcontentsline{toc}{chapter}{Bibliography}
 \bibliography{Bibliography}
 \input{Apendices/Apendices}
 \glsaddall
