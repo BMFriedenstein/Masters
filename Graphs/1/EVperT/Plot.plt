@@ -2,7 +2,7 @@ reset
 #set terminal wxt size 600,262 enhanced font 'Verdana,10' persist
 set terminal epslatex color colortext
 set output 'EVperT.tex'
-my_line_width = "2"
+my_line_width = "3"
 my_axis_width = "1.5"
 my_ps = "1.2"
 
@@ -56,8 +56,8 @@ set key out horiz bot center
 set grid lc rgb grid_color
 
 set xlabel 'Year'
-set ylabel 'kWh/t'
-set y2label "$m^3$/t";
+set ylabel '$kWh/t$'
+set y2label "$m^3$/t$";
 set yrange [0:40]
 set y2range [0:400]
 set ytics 5 nomirror
