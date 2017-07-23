@@ -23,7 +23,7 @@ Mine A represents a group of three gold mining shafts and a gold processing plan
 	\caption{Simplified process flow chart of the compressed air network.}
 	\label{fig: Beatrix Air layout}
 \end{figure}
-An air flow distribution layout was developed for the system, a simplified layout is shown in Figure \ref{fig: Beatrix Air layout}. From this along with information from the mine personal and data, an understanding of the air network's operation was obtained. The system typically utilises 5 $MW$ of power. During the drilling shift the demand increases to 6 $MW$. Figure \ref{fig: Beatrix power baseline} show the average weekday power profile between January and May 2016.
+An air flow distribution layout was developed for the system, a simplified layout is shown in \cref{fig: Beatrix Air layout}. From this along with information from the mine personal and data, an understanding of the air network's operation was obtained. The system typically utilises 5 $MW$ of power. During the drilling shift the demand increases to 6 $MW$. \cref{fig: Beatrix power baseline} show the average weekday power profile between January and May 2016.
 \begin{figure}[h!]
 	\centering
 	\input{Graphs/4/BeetBaseline/Power/Power}
@@ -47,7 +47,7 @@ The simulation component models were developed and calibrated using the respecti
 	\item Underground temperature and humidity remained constant for each level
 	\item Surface ambient air conditions followed normal summer trend
 \end{itemize} 
-The model components was calibrated so that the simulated outputs matched data from the real system. The process flow diagram for the simulation is shown in Figure \ref{fig: BEET Baseline model}. The model data inputs and outputs are described in Table \ref{table: Mine A inputs/outputs}.
+The model components was calibrated so that the simulated outputs matched data from the real system. The process flow diagram for the simulation is shown in \cref{fig: BEET Baseline model}. The model data inputs and outputs are described in \cref{table: Mine A inputs/outputs}.
 
 \begin{table}[h]
 	\centering
@@ -66,7 +66,7 @@ The model components was calibrated so that the simulated outputs matched data f
 
 
 \subsection{Verification of model}
-Verification was performed to ensure that simulated output accuracy was $>95$\%. Figure \ref{fig: Verification power Beatrix}, \ref{fig: Verification power Beatrix} and \ref{fig: Verification Pressure Beatrix} show the to total simulated power ,flow and outlet pressure of the compressors compared to the system. The average accuracy for the power and total flow was 97.34\%  and  97.01\% Respectively . Both these parameters were well within the target 95\% accuracy. The accuracy of the outlet pressure was 99.1\%. This was expected simulated pressure was expected as the mine uses a constant pressure set-point for the compressors.
+Verification was performed to ensure that simulated output accuracy was $>95$\%. \cref{fig: Verification power Beatrix}, \cref{fig: Verification power Beatrix} and \cref{fig: Verification Pressure Beatrix} show the to total simulated power ,flow and outlet pressure of the compressors compared to the system. The average accuracy for the power and total flow was 97.34\%  and  97.01\% Respectively . Both these parameters were well within the target 95\% accuracy. The accuracy of the outlet pressure was 99.1\%. This was expected simulated pressure was expected as the mine uses a constant pressure set-point for the compressors.
 \begin{figure}[h!]
 	\centering
 	\input{Graphs/4/BeetVerify/Power/Power}
@@ -88,14 +88,14 @@ Verification was performed to ensure that simulated output accuracy was $>95$\%.
 
 
 \par
-Accuracy of the model was checked in more detail to ensure that each modelled parameter matched the actual measurement with high accuracy. Table \ref{Table: A verification} shows the accuracy each measured simulation output in the model.
+Accuracy of the model was checked in more detail to ensure that each modelled parameter matched the actual measurement with high accuracy. \cref{Table: A verification} shows the accuracy each measured simulation output in the model.
 \clearpage 
 \subsection{Scenario 1. Compressor set points}
 The Eskom evening peak tariff time occurs during the blasting shift. During this shift, the pressure requirements underground are lower than the rest of the day. Reducing pressure in the network reduces power as less work is required from the compressors. Additionally, losses caused leaks, open valves, etc. are reduced. However, lowering the pressure set-point of the compressors requires independently controlling the air to the gold plant. 
 \par 
 Using the verified simulation model, the compressor set-points were reduced to 420  \gls{kpa}, the minimum allowed compressor set-point during the drilling shift. The compressor schedule was changed to allow independent control of the gold plant pressure. Gold plant pressure was maintained at 490 \gls{kpa}. \par 
 \par 
-The results of the simulation, shown, in Figure \ref{fig: CompSetpoints Results Beatrix}, indicated an average power reduction of 0.46 MW \gls{pc}. This energy optimisation relates to a R0.37 M \gls{pa} energy cost saving to the mine. 
+The results of the simulation, shown, in \cref{fig: CompSetpoints Results Beatrix}, indicated an average power reduction of 0.46 MW \gls{pc}. This energy optimisation relates to a R0.37 M \gls{pa} energy cost saving to the mine. 
 \begin{figure}[h!]
 	\centering
 	\input{Graphs/4/BeetResults/CompSetpoints/CompSetpoints}
@@ -115,7 +115,7 @@ Air pressure set-points were reduced to 300 kPa at  the underground control valv
 \end{figure}
 
 \subsection{Comparison of scenario results}
-Comparing the scenarios in Table \ref{Table: A Comparison} showed that Scenario 2 had a larger peak energy impact then scenario 1. Further savings could be achieved through a combination of the two scenarios as well as investigating set-point reductions during other periods of the day.
+Comparing the scenarios in \cref{Table: A Comparison} showed that Scenario 2 had a larger peak energy impact then scenario 1. Further savings could be achieved through a combination of the two scenarios as well as investigating set-point reductions during other periods of the day.
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{p{0.6\textwidth-2\tabcolsep - 1.25\arrayrulewidth}
@@ -136,7 +136,7 @@ Comparing the scenarios in Table \ref{Table: A Comparison} showed that Scenario 
 \end{table}
 
 \subsection{Validation of results}
-Scenario 2 was implemented on the actual compressed air system. An energy saving of just under 1 MW \gls{pc} was recorded when compared with the 2016 power baseline profile. These results matched the simulated scenario closely. Figure \ref{fig: Actual permormance beet} shows the practical result compared with the simulated and baseline power profiles.
+Scenario 2 was implemented on the actual compressed air system. An energy saving of just under 1 MW \gls{pc} was recorded when compared with the 2016 power baseline profile. These results matched the simulated scenario closely. \cref{fig: Actual permormance beet} shows the practical result compared with the simulated and baseline power profiles.
 \begin{figure}[h]
 	\centering
 	\input{Graphs/4/BeetValidate/BeetValidate}
@@ -161,7 +161,7 @@ A basic air distribution layout was developed for the system.  Figure  II.?? ill
  Data related to the mines scheduling as well as critical limits and set-points of the compressed air system was obtained from various mine personnel.  From this a general understanding of the operation was obtained. Important data parameters such as Power, pressures and flows of the system were gathered from the \gls{scada} as well other data measurement sources. This data will be used to develop and calibrate the simulation model
 \par 
 		
-Per-level investigations were performed on the significant mining levels to map and measure the locations and air usage for the cross-sections, refuge bays, major leaks and other compressed air consumers on each level. An example of a resultant schematic from the underground investigation is shown in Figure \ref{fig: KUS Underground level layout}.  The information gathered from the system investigations was then utilised to develop and calibrate a simulation model.
+Per-level investigations were performed on the significant mining levels to map and measure the locations and air usage for the cross-sections, refuge bays, major leaks and other compressed air consumers on each level. An example of a resultant schematic from the underground investigation is shown in \cref{fig: KUS Underground level layout}.  The information gathered from the system investigations was then utilised to develop and calibrate a simulation model.
 	
 \subsection{Model development}
 	
@@ -170,8 +170,8 @@ Using the data obtained from the investigations on the network, a simulation mod
 	\item After cooling reduced compressed air temperature from $ 60 ^o $ \gls{c} to $ 40 ^o $ \gls{c}
 	\item Underground temperature and humidity remained constant for each level
 \end{itemize}
- The boundaries of the baseline simulation were selected based on the available data for the network. The developed simulation model is shown in Figure \ref{fig: KUS Baseline model}. For maximum accuracy, the simulation step size was set to the two minutes intervals to match the resolution from the data source.
-The model components was calibrated so that the simulated outputs matched data from the real system. The process flow diagram for the simulation is shown in Figure \ref{fig: KUS Baseline model}. The model data inputs and outputs are described in Table \ref{table: Mine A inputs/outputs}.
+ The boundaries of the baseline simulation were selected based on the available data for the network. The developed simulation model is shown in \cref{fig: KUS Baseline model}. For maximum accuracy, the simulation step size was set to the two minutes intervals to match the resolution from the data source.
+The model components was calibrated so that the simulated outputs matched data from the real system. The process flow diagram for the simulation is shown in \cref{fig: KUS Baseline model}. The model data inputs and outputs are described in \cref{table: Mine A inputs/outputs}.
 
 \begin{table}[h]
 	\centering
@@ -188,7 +188,7 @@ The model components was calibrated so that the simulated outputs matched data f
 \end{table}
 	
 	\subsubsection{Verification of baseline simulation}
-	Using the verification methodology, the simulation model verified by comparing the simulation outputs to actual measured values. The compressors outlet pressure often does not match the set-point. To simplify the verification, the measured outlet pressure is temporarily used as set points for the compressors. This ensured that the pressure in the network is identical to that of the actual system as shown in Figure \ref{fig: Verification Pressure kusasalethu}.
+	Using the verification methodology, the simulation model verified by comparing the simulation outputs to actual measured values. The compressors outlet pressure often does not match the set-point. To simplify the verification, the measured outlet pressure is temporarily used as set points for the compressors. This ensured that the pressure in the network is identical to that of the actual system as shown in \cref{fig: Verification Pressure kusasalethu}.
 	\par 
 	\begin{figure}[h]
 		\centering
@@ -197,7 +197,7 @@ The model components was calibrated so that the simulated outputs matched data f
 		\label{fig: Verification Pressure kusasalethu}
 	\end{figure}
 
- 	With the simulated pressure identical to the actual, the power and air flow outputs were compared with their relative actual values. Figure \ref{fig: Verification Power kusasalethu} shows the comparison of the total power and flow of the system with the actual measure values for that same period. The accuracy for these parameters compared to the real system was $98.7 \%$ and $99.0 \%$ respectively. This was within the acceptable error. 
+ 	With the simulated pressure identical to the actual, the power and air flow outputs were compared with their relative actual values. \cref{fig: Verification Power kusasalethu} shows the comparison of the total power and flow of the system with the actual measure values for that same period. The accuracy for these parameters compared to the real system was $98.7 \%$ and $99.0 \%$ respectively. This was within the acceptable error. 
  
 	\begin{figure}[h]
 		\centering
@@ -209,7 +209,7 @@ The model components was calibrated so that the simulated outputs matched data f
 		\label{fig: Verification Power kusasalethu}
 	\end{figure}
 
-	Once the power and flow parameters were verified with acceptable error, the actual pressure set-point profile was imported to the compressor controllers. The simulated outlet pressure was then compared to the actual measured pressure and set-point, this is shown in Figure \ref{fig: Verification Pressure kusasalethu Setpoint}. The accuracy of the compressor outlet pressure was acceptable at 99.02 \%. To ensure the model accuracy, all measured flows and pressures were compared to the simulated outputs. This comparison is shown in Table \ref{Table: B verification}.
+	Once the power and flow parameters were verified with acceptable error, the actual pressure set-point profile was imported to the compressor controllers. The simulated outlet pressure was then compared to the actual measured pressure and set-point, this is shown in \cref{fig: Verification Pressure kusasalethu Setpoint}. The accuracy of the compressor outlet pressure was acceptable at 99.02 \%. To ensure the model accuracy, all measured flows and pressures were compared to the simulated outputs. This comparison is shown in \cref{Table: B verification}.
 
 	\begin{figure}[h]
 		\centering
@@ -219,13 +219,13 @@ The model components was calibrated so that the simulated outputs matched data f
 	\end{figure}
 
 	\subsection{Scenario 1. Refuge bay optimisation}
-	From investigation, unnecessary refuge bay leaks were identified as a significant inefficiency that can be reduced. A test on a single mining level was performed to  measure the potential flow saving of reducing refuge bay leaks. The test showed thatreducing refuge bay leaks, by closing the valves, would lead to an average air saving of $0.05$ $kg/s$ per refuge bay at typical operational pressures. This measurement was conservative as it was not possible to close all the refuge bays on the level for the test. 
+	From investigation, unnecessary refuge bay leaks were identified as a significant inefficiency that can be reduced. A test on a single mining level was performed to  measure the potential flow saving of reducing refuge bay leaks. The test showed that by reducing refuge bay leaks, by closing the valves, would lead to an average air saving of $0.05$ $kg/s$ per refuge bay at typical operational pressures. This measurement was conservative as it was not possible to close all the refuge bays on the level for the test. 
 	\par 
 	Due to the size of the mine, extending these tests to include the rest of the mining sections was not practical. Therefore, the benefits of an intervention on the entire mine could not accurately be determined from practical tests. Using simulation the typical operation with can be accurately compare with the intervention scenario to quantify the potential financial and operational benefits throughout a given period.
 	\par
-	The simulation model boundaries was updated to include refuge bay leaks on each level. For each refuge chamber, a air leak was added to the model by utilising per level layouts indicating locations of refuge bays. These leaks were modelled as flow demands using the data from the initial refuge bay tests. The overall mass flow of the system was maintained to ensure model accuracy. T  By adding the flow component in the actual location in the process, the pressure to each chamber is correctly modelled. The full simulation model is shown in Figure \ref{fig: Refuge bay layout}. The updated simulation model was re-checked to ensure accuracy. This model was used as a baseline to quantify saving for the scenario.
+	The simulation model boundaries was updated to include refuge bay leaks on each level. For each refuge chamber, a air leak was added to the model by utilising per level layouts indicating locations of refuge bays. These leaks were modelled as flow demands using the data from the initial refuge bay tests. The overall mass flow of the system was maintained to ensure model accuracy. T  By adding the flow component in the actual location in the process, the pressure to each chamber is correctly modelled. The full simulation model is shown in \cref{fig: Refuge bay layout}. The updated simulation model was re-checked to ensure accuracy. This model was used as a baseline to quantify saving for the scenario.
 	\par 
-	To create the optimised scenario, the refuge bay flow components were set to 0 $kg/s$. The simulation was performed and the output data compared ot the baseline. Figure \ref{fig: RefugeBay Power.} shows the baseline power compared to the optimised scenario. The comparison showed a potential 0.92 MW  improvement in \gls{ee} through optimisation of refuge bay leaks. The optimised scenario would lead to a R5.13M energy cost saving for the mine.
+	To create the optimised scenario, the refuge bay flow components were set to 0 $kg/s$. The simulation was performed and the output data compared ot the baseline. \cref{fig: RefugeBay Power.} shows the baseline power compared to the optimised scenario. The comparison showed a potential 0.92 MW  improvement in \gls{ee} through optimisation of refuge bay leaks. The optimised scenario would lead to a R5.13M energy cost saving for the mine.
 	\par
 	\begin{figure}[h]
 		\centering
@@ -233,7 +233,7 @@ The model components was calibrated so that the simulated outputs matched data f
 		\caption{The Baseline system power compared to the system power when refuge bay leaks are reduced.}
 		\label{fig: RefugeBay Power.}
 	\end{figure}   
-	An additional pressure benefit was identified during the drilling shift, shown in Figure \ref{fig: RefugeBay Pressures.}. The reduced flow lead to a pressure increase of about 15 kpa. The pressure increase could lead to an increase in drilling efficiency.
+	An additional pressure benefit was identified during the drilling shift, shown in  \cref{fig: RefugeBay Pressures.}. The reduced flow lead to a pressure increase of about 15 kpa. The pressure increase could lead to an increase in drilling efficiency.
 	\begin{figure}[h]
 		\centering
 		\input{Graphs/4/KUSResults/RefugePressure/RefugePressure}
@@ -244,14 +244,14 @@ The model components was calibrated so that the simulated outputs matched data f
 	\subsection{Scenario 2. Closing off levels and inactive work areas}
 	Due to the high prevalence of compressed air misuse, leaks and open valves, significant amounts of air is still used during periods where it is not required. Reducing pressure to areas during these times may lead to a major power and cost saving. Using simulation, tests can be done to identify the benefits of reducing pressure to inactive mining sections.
 	\par 
-	Strategies to reduce airflow during peak times was simulated for level 105L. The level was modelled to include all major leaks, refuge bays and drilling sections that were manually identified from the level investigation. This is shown in the simulation diagram shown in Figure \ref{fig: KUS Simulation level layout}. 
+	Strategies to reduce airflow during peak times was simulated for level 105L. The level was modelled to include all major leaks, refuge bays and drilling sections that were manually identified from the level investigation. This is shown in the simulation diagram shown in \cref{fig: KUS Simulation level layout}. 
 	\begin{figure}[h!]
 		\centering
 		\fbox{\includegraphics[trim= 0 30cm 0 100cm, clip,width=\textwidth]{Images/A/StopeSim}}
 		\caption{Underground level layout.}
 		\label{fig: KUS Simulation level layout}
 	\end{figure}	
-	Station control, in-stope control and a combination were simulated were all simulated for 105L. Station control means control of the pressure of at the station of the level. In-stope control is control of the is cut the airflow to the mining section during certain periods. Figure \ref{fig: 105 Flow savings} shows the effect the varios interventions have on  the flow for 105L compared to the baseline.
+	Station control, in-stope control and a combination were simulated were all simulated for 105L. Station control means control of the pressure of at the station of the level. In-stope control is control of the is cut the airflow to the mining section during certain periods. \cref{fig: 105 Flow savings} shows the effect the various interventions have on  the flow for 105L compared to the baseline.
 
 	\begin{figure}[h!]
 		\centering
@@ -259,7 +259,7 @@ The model components was calibrated so that the simulated outputs matched data f
 		\caption{Flow reduction during blasting period for 105 level}
 		\label{fig: 105 Flow savings}
 	\end{figure}
-Station control had the largest impact on the flow usage for the level. This reflects with the power reduction achieved for each intervention shown in Figure \ref{fig: Station vs stope}. The impact was 0.4 and 0.7 MW for the stope and station intervention respectively.
+Station control had the largest impact on the flow usage for the level. This reflects with the power reduction achieved for each intervention shown in \cref{fig: Station vs stope}. The impact was 0.4 and 0.7 MW for the stope and station intervention respectively.
 	
 	\begin{figure}[h!]
 		\centering
@@ -267,7 +267,7 @@ Station control had the largest impact on the flow usage for the level. This ref
 		\caption{Comparing simulated flow interventions on 105L.}
 		\label{fig: Station vs stope}
 	\end{figure}
-A simulation was done to estimate the potential savings of extending the evening station control to other levels. This was performed by updating the flow demands for levels 95- 115 to match the flow saving achieved in the 105L simulation. The savings achieved for the general station control were 2.0 MW \gls{pc}, shown in Figure \ref{fig: General station optimise}. It was calculated that this would lead to a annual energy cost saving of R2.5M.
+A simulation was done to estimate the potential savings of extending the evening station control to other levels. This was performed by updating the flow demands for levels 95- 115 to match the flow saving achieved in the 105L simulation. The savings achieved for the general station control were 2.0 MW \gls{pc}, shown in \cref{fig: General station optimise}. It was calculated that this would lead to a annual energy cost saving of R2.5M.
 \begin{figure}[h!]
 	\centering
 	\input{Graphs/4/KUSResults/General/Power}
@@ -312,7 +312,7 @@ A simulation was done to estimate the potential savings of extending the evening
 	\subsection{Preamble}
 	Updating the inputs of a simulation periodically could be used to verify simulation model accuracy. If the precision of simulation outputs remains for subsequent days, this would indicate that the model is correctly calibrated. Additionally, this process could be used to identify significant operational changes that occur within the system. This would cause the simulation outputs to differ from the actual measured parameters. 
 	\par 
-	A daily periodic simulation  analysis was implemented between 2016/11/01 and 2016/11/30 using the periodic simulation methodology discussed in Chapter 3. The simulation model developed for case study A was used for the analysis. The simulation receives the data inputs shown in table \ref{table: Periodic inputs/outputs}.
+	A daily periodic simulation  analysis was implemented between 2016/11/01 and 2016/11/30 using the periodic simulation methodology discussed in Chapter 3. The simulation model developed for case study A was used for the analysis. The simulation receives the data inputs shown in \cref{table: Periodic inputs/outputs}.
 	\begin{table}[h]
 		\centering
 		\begin{tabular}{ll}
@@ -329,7 +329,7 @@ A simulation was done to estimate the potential savings of extending the evening
 
 \subsection{Results}
 
- The process was triggered daily. For each period, data inputs shown in table \ref{table: Periodic inputs/outputs} were imported into the model, the simulation was then processed and the outputs are compared with the real system parameters. Figure \ref{fig: Periodic simulation} shows the average daily accuracy of the simulated total system power, flow and the shaft pressure per period.
+ The process was triggered daily. For each period, data inputs shown in \cref{table: Periodic inputs/outputs} were imported into the model, the simulation was then processed and the outputs are compared with the real system parameters. \cref{fig: Periodic simulation} shows the average daily accuracy of the simulated total system power, flow and the shaft pressure per period.
 	     \par 
      
 	\begin{figure}[h]
@@ -340,7 +340,7 @@ A simulation was done to estimate the potential savings of extending the evening
 	\end{figure}   
 The accuracy of the process parameters of the simulation was within 5\% for the duration of the periodic simulation. However, From the 2016/11/07, the accuracy of the simulated power dropped by between 10 and 15 percent. The daily average power of the system up to the point was approximately 12.5 MW, a 15\% simulation error therefore relates to 1.9 MW difference between simulated and actual parameters. This suggests a major shift in operation of the system.
 \par 
-An analysis was done to try determine the source of the discrepancy. From the data it was identified that the simulated power for compressor 1 was the source of the different A look at the actual power measurement for compressor 1 show drop compared to normal operation by almost 2 MW. At the same time the power used per kg/s of air seemed to have dropped. Figure \ref{fig: MeasurementAccuracy.} shows the average daily power for compressor 1 (blue), compared to the air mass flow per Watt(yellow). 
+An analysis was done to try determine the source of the discrepancy. From the data it was identified that the simulated power for compressor 1 was the source of the different A look at the actual power measurement for compressor 1 show drop compared to normal operation by almost 2 MW. At the same time the power used per kg/s of air seemed to have dropped. \cref{fig: MeasurementAccuracy.} shows the average daily power for compressor 1 (blue), compared to the air mass flow per Watt(yellow). 
 	\begin{figure}[h]
 		\centering
 		\input{Graphs/4/PeriodicRange/PeriodicRange}
@@ -349,7 +349,7 @@ An analysis was done to try determine the source of the discrepancy. From the da
 	\end{figure} 
 As a 2 MW shift in power is not likely from, the results seem to show that there was a fault in the power metering starting from 2016/11/07. This explains the perceived increase in efficiency over the same period as a less power is measure then is actually being provided. In this situation the simulated power measurement is actually a more accurate metric for compressor 1's power over this period.  
    \subsection{Validation}
-To validation of misreadings from the power meter from comparing independent power data for the substation to the combined individual compressors meters. This Figure \ref{fig: Corrected Periodic simulation} shows the measured power from the two sources. By comparing the compressor power to the independent data, it is clear that there is an error in measurement as hypothesised.
+To validation of misreadings from the power meter from comparing independent power data for the substation to the combined individual compressors meters.\cref{fig: Corrected Periodic simulation} shows the measured power from the two sources. By comparing the compressor power to the independent data, it is clear that there is an error in measurement as hypothesised.
 	\begin{figure}[h]
 		\centering
 		\input{Graphs/4/PeriodicValidation/PeriodicValidation}
@@ -360,7 +360,7 @@ To validation of misreadings from the power meter from comparing independent pow
 	\subsection{Summary}
 \clearpage
 \section{Potential benefit for SA mines}
-There are proximately 75 operational gold and \gls{pgm} mines in South Africa, as illustrated in Figure \ref{fig: Mine map} \footnote{ Chamber of Mines, [Online] \url{http://www.chamberofmines.org.za/sa-mining/gold}, [Accessed 16-06-2017]}$^,$\footnote{ Chamber of Mines, [Online] \url{http://www.chamberofmines.org.za/sa-mining/platinum}, [Accessed 16-06-2017]}. Each mine utilises compressed air for underground processes. By utilising the compressed air simulation methodology in this study, the mines could collectively achieve significant energy and cost savings for the industry. 
+There are proximately 75 operational gold and \gls{pgm} mines in South Africa, as illustrated in \cref{fig: Mine map} \footnote{ Chamber of Mines, [Online] \url{http://www.chamberofmines.org.za/sa-mining/gold}, [Accessed 16-06-2017]}$^,$\footnote{ Chamber of Mines, [Online] \url{http://www.chamberofmines.org.za/sa-mining/platinum}, [Accessed 16-06-2017]}. Each mine utilises compressed air for underground processes. By utilising the compressed air simulation methodology in this study, the mines could collectively achieve significant energy and cost savings for the industry. 
 \par 
 
 	\begin{figure}[h]
