@@ -14,28 +14,48 @@
 		Due to the size of mining compressed air networks, there is often a larger scope for improvement in air demand. Improving the  demand is achieved by optimising air flow consumers, reducing leaks, etc.
 		\par
 	 	From literature, this section will review compressed air energy interventions that have performed in industry.
+	 	
 	\subsection{Strategies to improve compressed air supply}
+	
 		\subsubsection{Optimising compressor control}
 		Compressors types and numbers can differ widely from mining compressed air systems. Compressor selection is crucial in these systems to match the correct compressors with the requirements of the system. \cite{marais2010expert}
 		- Setpoints\\
 		- schecdules
 		- Variable speed drives\\
+		
 		\subsubsection{Dynamic compressor selection}
-		\subsubsection{reconfiguring networks}
-		A number of old mining compressed air systems  have not been adequately maintained and improved. Often they cannot sufficiently supply air to meet the demand or air is provided from non optimal sources. In a study by Bredenkamp \cite{Bredenkamp2013Masters}, reconfiguring of the air network was investigated to improve these systems.
-		\par  
-		In the study, Bredenkamp investigated interconnecting the compressed air systems of two mining shafts and relocating of a compressor. This strategy lead to an average power reduction of 1.7 MW and an estimated annual energy cost saving of R8.9M at the time.
-		\par 
-		\textit{Discussion of Bredenkamp}
 		
-		
-	\subsection{Strategies to reduce/optimise compressed air consumption}
+		\subsubsection{Reconfiguring compressed air networks}
+			A number of old mining compressed air systems  have not been adequately maintained and improved. Often they cannot sufficiently supply air to meet the demand or air is provided from non optimal sources. In a study by Bredenkamp \cite{Bredenkamp2013Masters}, reconfiguring of the air network was investigated to improve these systems.
+			\par  
+			In the study, Bredenkamp investigated interconnecting the compressed air systems of two mining shafts and relocating of a compressor. This strategy lead to an average power reduction of 1.7 MW and an estimated annual energy cost saving of R8.9M at the time.
+			\par 
+			\textit{Discussion of Bredenkamp}
+			
+	\subsection{Strategies to reduce compressed air demand}
 	As illustrated in \cref{fig: Mining schedule}
 		- Reducing leaks\\
-		- Control Valves - Pascoe\\
+		- 
 		- Marais PhD\\
 		- Snyman - investigated various Compressed air demand reduction and efficiency
 		 optimisations \cite{Snyman2011Masters}.
+		 
+		 \subsubsection{Leakage detection}
+		 Air leaks are a major inefficiency in mining compressed air systems. Improving leaks is relatively easier method to  reduce air demand and improve the efficiency of the system is to remove leaks in the system \cite{van2011sustaining}. Air leaks occur as a result of open pipes, fissure and breaks. Losses depend on the size of the leak. Figure \real{} shows the expected energy lossed vs leakage area. *** Still gotta make figure ***
+		 \par
+		 
+		 A number of techniques are utilised in industry to identify cair leaks.- Pascoe [38]
+		 A simple method to reduce air demand and improve the efficiency of the system is to remove leaks in the network. n oder
+		 (Van Tonder masters)
+		 - Inspections\\
+		 - Audible sounds (by ear)\\
+		 - Ultrasonic\\
+		 - Intelligent leakage detection (instrumentaion SCADA)\\
+		 - Alternatives (pigging, soap water, Dyes load/unload test)\\
+		 -  CALDS ( Compressed air leakage document system)et al investigated increased energy savings through the use of \gls{calds} \cite{marais2009increased}.	
+		 
+		 \subsection{Underground control valves}
+		 - Pascoe
 		 
 		\subsubsection{Improving pneumatic rock drills efficiency}
 		 Pneumatic rock drills are on of the largest air consumers in a mine. Improving the efficiency or drilling can have a significant energy impact of the system. In a study by  Bester \textit{et al.} \cite{bester2013effect} looking at the effect of compressed air pressure on energy demand. Bester showed that between 2002 and 2013 compressed air and energy consumption per tonne of ore produced had steadily increased. This is illustrated  in \cref{fig: Compressed energy and air flow per ton}. 
@@ -48,33 +68,10 @@
 		 	\caption[The Compressed air energy and flow consumed per T of ore produced.]{The Compressed air energy and flow consumed per T of ore produced. Adopted from Bester \textit{et al.} \cite{bester2013effect}.}
 		 	\label{fig: Compressed energy and air flow per ton}
 		 \end{figure}
-		 From the literature, it is shown that lowering the pressure reduces the efficiency and drill rate of rock drilling, leading to higher air consumption. Interventions that fix systemic air losses or optimise supply can increase the pressure operating pressure. Increased pressure, during the drilling shift, may add more value than the energy cost savings that can be achieved at a lower pressure.
+		 From the literature, it is shown that lowering the pressure reduces the efficiency and drill rate of rock drilling, leading to higher air consumption. Interventions that reduce systemic air losses or optimise supply can increase the pressure operating pressure. Increased pressure, during the drilling shift, may add more value than the energy cost savings that can be achieved at a lower pressure.
 	\subsection{Summary}
 \clearpage
-\section{Methods to identify operational improvements}
-	\subsection{Preamble}
-		This section will discuss various methods from literature to identify improvement in compressed air systems . 
-	\subsection{Measurements}	
-		Methods to identify 
-		(Kriel Masters)
-		-Investigation\\
-		-Measurements\\
-		-Simulated impact of the proposed intervention\\
-	\subsection{Leakage detection}
-		A simple method to reduce air demand and improve the efficiency of the system is to remove leaks in the network. n oder
-		(Van Tonder masters)
-		- Inspections\\
-		- Audible sounds (by ear)\\
-		- Ultrasonic\\
-		- Intelligent leakage detection (instrumentaion SCADA)\\
-		- Alternatives (pigging, soap water, Dyes load/unload test)\\
-		-  CALDS ( Compressed air leakage document system)et al investigated increased energy savings through the use of \gls{calds} \cite{marais2009increased}.	
-	\subsection{Estimation techniques}
-		- Snyman estimated improvements using historical data.\cite{Snyman2011Masters}\\
-		- Marais estimation through simplified estimation, simulation \cite{Marais2012PhD, marais2013simplification}.
-	\subsection{Simulation}
-	\subsection{Summary}
-\clearpage	
+
 \section{Use of simulations to identify improvements in mining systems}
 	\subsection{Preamble}
 	\subsection{Simulation tools}
@@ -101,7 +98,16 @@
  		- comparisons with models
  		- comparison with actual 
  		- First principles
- 	\subsection{Shortcoming of previous studies}
- 	\label{Shortcomings of previous work}
+ 	
+	
+	\section{Use of simulation in compressed air system optimisation}
+	
+	\subsection{Estimation techniques}
+	- Snyman estimated improvements using historical data.\cite{Snyman2011Masters}\\
+	- Marais estimation through simplified estimation, simulation \cite{Marais2012PhD, marais2013simplification}.
+	\clearpage	
+	
+	\subsubsection{Shortcoming of previous studies}
+		\label{Shortcomings of previous work}
 	\subsection{Summary}
 \section{Conclusion}
