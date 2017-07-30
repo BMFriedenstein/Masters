@@ -22,7 +22,7 @@
 		Compressors types and numbers can differ widely from mining compressed air systems. Compressor selection is crucial in these systems to match the correct compressors with the requirements of the system \cite{marais2010expert}.
 		\par 
 		In a study by Booysen \textit{et al} \cite{Booysen2012Masters} on optimising compressor control, \cite{Booysen2012Masters} found that many mines control compressors using fixed target pressure points that are much higher that required. In one system, compressors were set to a target 650 \gls{kpa} to ensure pressure underground did not fall below 500 \gls{kpa}. Using high pressure set-points can lead to excessive wasteful blow-off flow when the pressure exceeds a maximum points.
-		\par 
+		\par/ 
 		Booysen \cite{booysen2009optimising} showed that through dynamic pressure setpoint control, matching the supply pressure with the demand, and optimal compressor selection, energy savings can be achieved. In a case study, an average power reduction of 1.07 MW was achieved. The lead to an estimated energy cost saving of R3M.
 		\par 
 	 	Optimising control of compressors to match the demand of the system can be complicated. \glspl{vsd} and guide vain are used to control the capacity of the system. More effective power reductions can be achieved through the use of \gls{vsd} control. Running compressors at part load reduces efficiency. From literature it shown electric motors will typical use 60-80\% of there rated power when running at $<$50\% load \cite{Saidur2010}.
@@ -93,18 +93,44 @@
 	\subsection{Preamble}
 	The value of simulation in  the mining industry has been shown through its use in \gls{dsm} initiatives. Simulation has been used to identify savings strategies for water reticulation cooling, compressed air and ventilation. This section will summarise the the work that has been done in industry. From this the successes and shortcomings of previous work will be discussed.
 	
-		\subsection{Estimation techniques}
-	- Snyman estimated improvements using historical data.\cite{Snyman2011Masters}\\
-	- Marais estimation through simplified estimation, simulation \cite{Marais2012PhD}, \cite{marais2013simplification}.
-	
+		\subsection{Estimation techniques}.
+		- Snyman estimated improvements using historical data.\cite{Snyman2011Masters}\\
+		- Marais estimation through simplified estimation, simulation \cite{Marais2012PhD},\cite{marais2013simplification}.
+		
+		\subsubsection{Benchmark modelling}
+		Cilliers \cite{Cilliers2015PHD} developed \enquote{best practice models} using the \gls{cols} benchmarking method. These models provide an energy benchmark that can be used to identify the scope for energy improvements on a system. An example of a benchmark model for a mining compressed air system is shown in \cref{eq: COLS}. The model shows that energy required is dependent on the quantity of ore mined and to a lesser extent the depth of the mine. \cite{Cilliers2015PHD} also developed benchmark models for mine cooling, water reticulation and ventilation systems. *** Visualise equation ***
+
+		\begin{figure}[h!]
+			\centering
+			\fbox{\input{Graphs/2/Benchmark/Benchmark}}
+			\caption{ }
+			\label{fig: 3D Benchmark}
+		\end{figure}
+	%%%%%%%%%%%%%%%%%%%%%%%%%% Equation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%	\begin{equation}
+	%	\label{eq: COLS}
+	%	E_{comp} = 1.51\cdot Z + 33.36\cdot T - 1930.21
+	%	\end{equation}
+	%	Where: 
+	%		\begin{table}[h!]
+	%			\centering
+	%			\begin{tabular}{ll}
+	%				$E_{comp}$ & Benchmark energy (MWhr)  \\
+	%				$T$ & Mined ore ($kT$) \\
+	%				$Z$ & Mine depth ($m$) \\
+	%			\end{tabular} 
+	%		\end{table}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\subsection{Value of simulation in mining DSM}
-	Van Niekerk \cite{van2013value},\cite{vanNiekerk2012Value} investigated the value of simulation models in mine DSM projects. Van Niekerk developed simulation models for compressed air and water reticulation systems using KYPipes's gas simulation engine. \\
-		(Van Niekerk M)\\
-		- Compressed air \\
-		- Cooling systems\\
-		- Dewatering\\
-		- Design optimisations using simulation\\
-		- De Coning -  simulations to investigate the opportunity to optimise the control strategy of a compressed air network by rescheduling the compressors.
+	Van Niekerk \cite{van2013value},\cite{vanNiekerk2012Value} investigated the value of simulation models in mine \gls{dsm} projects. Van Niekerk developed simulation models for compressed air and water reticulation systems using KYPipes's gas simulation engine. \\
+	
+	\subsubsection{Mine cooling systems}
+	Simulation has been used in studies as a tool to improve mine cooling. Holman \cite{Holman2014Masters} investigated improvements to mine cooling systems that improve performance and efficiency. In the study \cite{Holman2014Masters}  used simplified \gls{ptb}  simulation models to investigate cooling interventions.
+	\par 
+	The scenario Holman simulated showed potential  average power reduction of 136 kW  which would lead to an annual energy cost saving of R0.55M. The study could be improved by increasing accuracy of the simulation. Power difference of as high as 31\% between the simulation and actual were observed for some time periods.
+	\subsubsection{Mine de-watering systems}
+	\subsubsection{Mine compressed air systems}
+		
 	\subsection{Simulation procedures}
 		- Philip
 		- Kriel masters\\
@@ -122,22 +148,22 @@
  		\caption{Example of simulation error.\cite{Mare2016PhD}}
  		\label{fig:Philipp Diffeence verify}
  	\end{figure}
- 	\subsubsection{Comparison of previous studies}
- 	Previos studies used verified there simulations through different methods and varying degrees of precision. \\
+ 	\subsubsection{Verification in previous studies}
+ 	Previous studies used verified there simulations through different methods and varying degrees of precision. \\
  	\begin{table}[h]
  		\centering
  		\begin{tabular}{p{5cm}ccr}
  			\hline
  			Study & Year & Verification method & Accepted margin\\
  			\hhline{====}
- 			Holman & 1900 & Average \% difference & 5\% difference  \\
- 			van Niekerk & 1900 & Average \% difference & 5\% difference \\
+ 			Holman \cite{Holman2014Masters} & 2014 & Average \% difference & Not specified  \\
+ 			van Niekerk \cite{vanNiekerk2012Value} & 1900 & Average \% difference & 5\% difference \\
  			Kriel \cite{Marais2012PhD} &  1900 & Average \% difference & 5\% difference \\
- 			pascoe & 1900 & Average \% difference & 5\% difference \\	
- 			phillip Mare & 1900 & Average \% difference & 5\% difference  \\
- 			j Marius & 1900 & Average \% difference & 5\% difference\\	
+ 			pascoe \cite{Pascoe2016Masters} & 1900 & Average \% difference & 5\% difference \\	
+ 			phillip Mare \cite{Mare2016PhD} & 1900 & Average \% difference & 5\% difference  \\
+ 			j Marius \cite{Marais2012PhD} & 1900 & Average \% difference & 5\% difference\\	
  			Snyman	\cite{Snyman2011Masters} & 1900 & Average \% difference & 5\% difference\\	
- 			Yu-jie-Xu& 1900 & Average \% difference & 5\% relative error\\	
+ 			Yu-jie-Xu \cite{xu2016modeling}& 1900 & Average \% difference & 5\% relative error\\	
  			\hline
  		\end{tabular} 
  		\caption{Simulation verification methods that were implemented in previous studies.}
@@ -152,6 +178,7 @@
 		- van Tonder
 		- kriel
 		- Mare
+		- De Coning -  simulations to investigate the opportunity to optimise the control strategy of a compressed air network by rescheduling the compressors.
 	\subsection{Summary}
 	\label{Shortcomings of previous work}
 		\clearpage	
