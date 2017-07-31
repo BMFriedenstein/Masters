@@ -41,6 +41,8 @@
 
 %Set Spacing
 \usepackage{setspace} 
+\usepackage[hang]{footmisc}
+\usepackage{lipsum}
 \linespread{1.4}
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1.5em}
@@ -58,16 +60,24 @@
 \usepackage{tocloft}
 \setlength{\cftbeforesecskip}{4pt}
 \setlength{\cftbeforechapskip}{6pt}
+\setlength\footnotemargin{10pt}
 
 %Page headers
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\renewcommand{\headrulewidth}{0.7pt}
-\rhead{\leftmark}
-\cfoot{\thepage}
-\fancyhead[RO]{\fontsize{10}{12}\selectfont\nouppercase\rightmark}
-
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.3pt}
+\rhead{\nouppercase{\leftmark}}
+%\rhead{\rightmark}
+\rfoot{\thepage}
+\lfoot{\emph{ \color{black} Simulating improvements on mining compressed air systems}}
+\makeatletter
+\renewcommand\footnoterule{%
+	\kern-3\p@
+	\hrule\@width \textwidth
+	\kern2.6\p@}
+\makeatother
 %Links
 \usepackage[hidelinks]{hyperref}
 \usepackage{cleveref}
