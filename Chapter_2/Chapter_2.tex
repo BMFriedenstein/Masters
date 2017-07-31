@@ -22,16 +22,16 @@
 		Compressors types and numbers can differ widely from mining compressed air systems. Compressor selection is crucial in these systems to match the correct compressors with the requirements of the system \cite{marais2010expert}.
 		\par 
 		In a study by Booysen \textit{et al} \cite{Booysen2012Masters} on optimising compressor control, \cite{Booysen2012Masters} found that many mines control compressors using fixed target pressure points that are much higher that required. In one system, compressors were set to a target 650 \gls{kpa} to ensure pressure underground did not fall below 500 \gls{kpa}. Using high pressure set-points can lead to excessive wasteful blow-off flow when the pressure exceeds a maximum points.
-		\par/ 
+		\par
 		Booysen \cite{booysen2009optimising} showed that through dynamic pressure setpoint control, matching the supply pressure with the demand, and optimal compressor selection, energy savings can be achieved. In a case study, an average power reduction of 1.07 MW was achieved. The lead to an estimated energy cost saving of R3M.
 		\par 
 	 	Optimising control of compressors to match the demand of the system can be complicated. \glspl{vsd} and guide vain are used to control the capacity of the system. More effective power reductions can be achieved through the use of \gls{vsd} control. Running compressors at part load reduces efficiency. From literature it shown electric motors will typical use 60-80\% of there rated power when running at $<$50\% load \cite{Saidur2010}.
 		
 		%\subsubsection{Air storage}
-	%	- booysen 1.22
-		\subsubsection{Dynamic compressor selection}
-		- van Tonder PHD
-		- van heerden 
+		%- booysen 1.22
+		%\subsubsection{Dynamic compressor selection}
+		%- van Tonder PHD
+		%- van heerden 
 		
 		\subsubsection{Reconfiguring compressed air networks}
 			A number of old mining compressed air systems  have not been adequately maintained and improved. Often they cannot sufficiently supply air to meet the demand or air is provided from non optimal sources. In a study by Bredenkamp \cite{Bredenkamp2013Masters}, reconfiguring of the air network was investigated to improve these systems.
@@ -138,13 +138,46 @@
 		- Philip
 		- Kriel masters\\
 		\subsubsection{Periodic simulation}
- 	\subsection{Verification strategies}
- 	
- 	\subsubsection{Difference comparison method}
- 	\subsubsection{Relative error method}
- 	Yu-jie Xu \cite{xu2016modeling}
- 	philip phd /?
- 	
+ 	\subsection{Simulation model verification strategies}
+ 	From literature, methods of verifying simulation were analysed. Most studies utilised a comparison calculation strategy to calculate a model accuracy or error. Two calculation methods identified were \emph{Average difference method} and \emph{average percentage difference}. 
+ 		\subsubsection{Average difference method}
+ 			The average difference method looks at the sum for a simulated output for all time-steps in the period. This same is done for the actual system value. The error \% is then calculated as shown in \cref{eq: Average difference}
+ 			
+ 			\begin{equation}
+ 				\label{eq: Average difference}
+ 				Err_{\%} = \left| \dfrac{ \sum_{n}^{N}{ \left( \dfrac{A_{n}}{N} \right)}  - \sum_{n}^{N}{ \left( \dfrac{M_{n}}{N} \right) } }{ \sum_{n}^{N}{ \left( \dfrac{A_{n}}{N} \right) } } \right|
+ 			\end{equation}
+ 			Where: 
+ 				\begin{table}[h!]
+ 					\centering
+ 					\begin{tabular}{cl}
+ 						$A$ & Actual system parameter \\
+ 						$M$ & Model parameter \\
+ 						$n$ & sample \\
+ 						$N$ & Number of samples in simulation period \\
+ 					\end{tabular} 
+ 				\end{table}	
+ 		\subsubsection{Relative error method}
+ 		The relative error method follows a similar calculation as in the Average difference method. However, as shown in \cref{eq: Relative error}, the error is calculated for each sample in the period is calculated, the average of the error is then calculated.
+ 			
+ 			\begin{equation}
+ 			\label{eq: Relative error}
+ 			Err_{\%} = \dfrac{\sum_{n}^{N}{\left|\dfrac{A_{n} - M_{n}}{A_{n}}\right| }}{N}
+ 			\end{equation}
+ 			Where: 
+ 			\begin{table}[h!]
+ 				\centering
+ 				\begin{tabular}{cl}
+ 					$A$ & Actual system parameter \\
+ 					$M$ & Model parameter \\
+ 					$n$ & sample \\
+ 					$N$ & Number of samples in simulation period \\
+ 				\end{tabular} 
+ 			\end{table}	
+ 		The difference between these to strategies is best illustrate using an example.
+ 		Yu-jie Xu \cite{xu2016modeling}
+ 		philip phd \cite{Mare2016PhD}
+ 		
  	\begin{figure}[h!]
  		\centering
  		\fbox{\includegraphics[width=\textwidth]{Images/2/PhillipVerify.PNG}}
@@ -167,6 +200,7 @@
  			j Marius \cite{Marais2012PhD} & 1900 & Average \% difference & 5\% difference\\	
  			Snyman	\cite{Snyman2011Masters} & 1900 & Average \% difference & 5\% difference\\	
  			Yu-jie-Xu \cite{xu2016modeling}& 1900 & Average \% difference & 5\% relative error\\	
+ 			Peach \cite{Peach2016Masters}& 2016 & Average \% difference & 5\% relative error\\
  			\hline
  		\end{tabular} 
  		\caption{Simulation verification methods that were implemented in previous studies.}

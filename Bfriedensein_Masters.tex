@@ -60,7 +60,8 @@
 \usepackage{tocloft}
 \setlength{\cftbeforesecskip}{4pt}
 \setlength{\cftbeforechapskip}{6pt}
-\setlength\footnotemargin{10pt}
+\setlength{\footnotemargin}{10pt}
+\setlength{\footnotesep}{10pt}
 
 %Page headers
 \usepackage{fancyhdr}
@@ -73,11 +74,7 @@
 \rfoot{\thepage}
 \lfoot{\emph{ \color{black} Simulating improvements on mining compressed air systems}}
 \makeatletter
-\renewcommand\footnoterule{%
-	\kern-3\p@
-	\hrule\@width \textwidth
-	\kern2.6\p@}
-\makeatother
+
 %Links
 \usepackage[hidelinks]{hyperref}
 \usepackage{cleveref}
