@@ -174,16 +174,20 @@
  					$N$ & Number of samples in simulation period \\
  				\end{tabular} 
  			\end{table}	
- 		The difference between these to strategies is best illustrate using an example.
  		Yu-jie Xu \cite{xu2016modeling}
+ 		\par 
+ 		The difference between the two verification strategies is best illustrate using an example. Figure \cref{fig:Philipp Diffeence verify} Shows a comparison between a simulation model's output power and and the actual power of the system over a 24 hour period. In the study \cite{Mare2016PhD} used the average \% difference method utilising the average power over the entire period for the two parameters. This lead to a calculated Average Err of 1.17\%. However if the Relative error method, \cref{eq: Relative error}, is applied to the same data, the resultant error is then 15.2 \%. 
+ 		
  		philip phd \cite{Mare2016PhD}
  		
  	\begin{figure}[h!]
  		\centering
- 		\fbox{\includegraphics[width=\textwidth]{Images/2/PhillipVerify.PNG}}
- 		\caption{Example of simulation error.\cite{Mare2016PhD}}
+ 		\input{Graphs/2/Verification/Verification}
+ 		\caption[Example of simulation error calculation.]{Example of simulation error calculation. Adapted from Marè \cite{Mare2016PhD}}
  		\label{fig:Philipp Diffeence verify}
  	\end{figure}
+ 
+
  	\subsubsection{Verification in previous studies}
  	Previous studies used verified there simulations through different methods and varying degrees of precision. \\
  	\begin{table}[h]
@@ -195,11 +199,11 @@
  			Holman \cite{Holman2014Masters} & 2014 & Average \% difference & Not specified  \\
  			van Niekerk \cite{vanNiekerk2012Value} & 1900 & Average \% difference & 5\% difference \\
  			Kriel \cite{Marais2012PhD} &  1900 & Average \% difference & 5\% difference \\
- 			pascoe \cite{Pascoe2016Masters} & 1900 & Average \% difference & 5\% difference \\	
- 			phillip Mare \cite{Mare2016PhD} & 1900 & Average \% difference & 5\% difference  \\
- 			j Marius \cite{Marais2012PhD} & 1900 & Average \% difference & 5\% difference\\	
+ 			Pascoe \cite{Pascoe2016Masters} & 1900 & Average \% difference & 5\% difference \\	
+ 			Mare \cite{Mare2016PhD} & 1900 & Average \% difference & 5\% difference  \\
+ 			Marius \cite{Marais2012PhD} & 1900 & Average \% difference & 5\% difference\\	
  			Snyman	\cite{Snyman2011Masters} & 1900 & Average \% difference & 5\% difference\\	
- 			Yu-jie-Xu \cite{xu2016modeling}& 1900 & Average \% difference & 5\% relative error\\	
+ 			Yu-jie-Xu \cite{xu2016modeling}& 1900 & relative \% error & 5\%  error\\	
  			Peach \cite{Peach2016Masters}& 2016 & Average \% difference & 5\% relative error\\
  			\hline
  		\end{tabular} 
