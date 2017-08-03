@@ -1,7 +1,7 @@
 reset
 set terminal wxt size 600,262 enhanced font 'Verdana,10' persist
-#set terminal epslatex color colortext
-#set output 'Benchmark.tex'
+set terminal epslatex color colortext
+set output 'Leak2.tex'
 my_line_width = "1.5"
 my_axis_width = "1.5"
 my_ps = "1.2"
@@ -56,17 +56,17 @@ set nokey
 set grid lc rgb grid_color
 
 
-set zlabel "Flow"
-set ylabel "Pressure"
-set xlabel "Area"
+set zlabel "Flow (kg/s)"
+set ylabel "Pressure (kPa)"
+set xlabel "Area ($m^2$)"
 f(x,y) = 4*(0.61*(x)*sqrt(2*(y-100)/4))
 set grid
 set xrange [0.001:0.1]
 set xtics  0.025
 set yrange [200:800]
 set ytics  100
-set zrange [0:5]
-set ztics  2
+set zrange [0:4.5]
+set ztics  1.5
 set samples 500
 
 splot   f(x,y) title "Flow" with lines ls 1
