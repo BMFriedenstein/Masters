@@ -48,23 +48,25 @@
 		 optimisations \cite{Snyman2011Masters}.
 		 
 		 \subsubsection{Leakage detection}
-		 Air leaks are a major inefficiency in mining compressed air systems. Improving leaks is relatively easier method to  reduce air demand and improve the efficiency of the system  \cite{van2011sustaining}. Air leaks occur as a result of open pipes, fissure and breaks. Losses depend on the size of the leak. \cref{fig: Leak losses} shows the estimated power losses vs leakage area. **** \cite{van2011sustaining} ***
+		 
+		 Air leaks are a major inefficiency in mining compressed air systems. Improving leaks is relatively easier method to  reduce air demand and improve the efficiency of the system  \cite{van2011sustaining}. Air leaks occur as a result of open pipes, fissure and breaks. Losses depend on the size of the leak and pressure in the network. \cref{fig: Leak losses} shows the theoretical airflow of through a pipe orifice as a function of leakage area and pressure\footnotemark[1]. \cite{van2011sustaining} showed that the system power consumption linearly increases with the amount of air leakage. Therefore, energy savings can be achieved through either reducing pressure or detecting and fixing leaks.
 		 \begin{figure}[h]
 		 	\centering
-		 	\input{Graphs/2/Leak2/Leak2}
-		 	\caption[The leakage flow as a function of pressure and leakage area.]{ The leakage flow as a function of pressure and leakage area.}
+		 	\fbox{\hspace{2cm}\input{Graphs/2/Leak2/Leak2}\hspace{2cm}}
+		 	\caption[The leakage flow as a function of inlet pressure and leakage area]{ The leakage flow as a function of inlet pressure and leakage area\protect\footnotemark[1].}
 		 	\label{fig: Leak losses}
 		 \end{figure}
+	 \footnotetext[1]{efunda, "Orifice Flowmeter Calculator." [Online] \url{http://www.efunda.com/formulae/fluids/calc_orifice_flowmeter.cfm}, [Accessed 18 October 2016].}
 	 \par 
-		 Air is often not easily detected through visual methods. In industry, a number of techniques are employed to detect air leaks. Pascoe \cite{Pascoe2016Masters} and van Tonder \cite{vanTonder2010Masters} summarised these strategies as follows:
+		 Leaks are often not easily detected through visual methods. In industry, a number of techniques are employed to detect air leaks. Pascoe \cite{Pascoe2016Masters} and van Tonder \cite{vanTonder2010Masters} summarised these strategies as follows:
 		 \begin{itemize}
 		 	\item Audible detection (Walk and report)
 		 	\item Ultrasonic detection
 		 	\item Detection through intelligent systems
 		 	\item Pigging
-		 	\item soap water and dyes
+		 	\item Soap water and dyes
 		 \end{itemize}
-	 	 These methods can be time and resource intensive and many mines do not actively employ dedicated leakage detection repair teams. Marais \textit{et al} \cite{marais2009increased} investigated streamlining the leakage detection and repair process to increase energy savings through the use of \gls{calds}. The \gls{calds} system was developed to allow centralised mobile leakage reporting. Usage of the system resulted in increased leak detection rate with one mine reporting 24 leaks in a single month. It was noted in the study that there difficulty quantifying the actual energy savings of the leakage repairs due to other intervention occurring simultaneously.	
+	 	 These methods are time and resource intensive and many mines do not actively employ dedicated leakage detection and repair teams. Marais \textit{et al} \cite{marais2009increased} investigated streamlining the leakage detection and repair process to increase energy savings through the use of \gls{calds}. The system was developed to allow centralised mobile leakage reporting. Usage of \gls{calds} in mines resulted in an increased leak detection rate. One mine reporting 24 leaks in a single month. It was noted in the study that there difficulty quantifying the actual energy savings of the leakage repairs due to other intervention occurring simultaneously.	
 		 
 		 \subsubsection{Underground control valves optimisation}
 		 Many mines utilise automated valves at critical locations or levels in the compressed air network. These valves control the pressure, restricting airflow from that point in the air network. Restricting airflow reduces losses resultant from network inefficiencies and leaks.
@@ -103,7 +105,7 @@
 
 		\begin{figure}[h!]
 			\centering
-			\fbox{\input{Graphs/2/Benchmark/Benchmark}}
+			\fbox{\hspace{2cm}\input{Graphs/2/Benchmark/Benchmark}\hspace{2cm}}
 			\caption{ }
 			\label{fig: 3D Benchmark}
 		\end{figure}
@@ -111,16 +113,7 @@
 	%	\begin{equation}
 	%	\label{eq: COLS}
 	%	E_{comp} = 1.51\cdot Z + 33.36\cdot T - 1930.21
-	%	\end{equation}
-	%	Where: 
-	%		\begin{table}[h!]
-	%			\centering
-	%			\begin{tabular}{ll}
-	%				$E_{comp}$ & Benchmark energy (MWhr)  \\
-	%				$T$ & Mined ore ($kT$) \\
-	%				$Z$ & Mine depth ($m$) \\
-	%			\end{tabular} 
-	%		\end{table}
+	%	\end{equation}			
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\subsection{Value of simulation in mining DSM}
 	Van Niekerk \cite{van2013value},\cite{vanNiekerk2012Value} investigated the value of simulation models in mine \gls{dsm} projects. Van Niekerk developed simulation models for compressed air and water reticulation systems using KYPipes's gas simulation engine. \\
@@ -185,7 +178,7 @@
  	\end{figure}
  
 
- 	\subsubsection{Verification in previous studies}
+ 	\subsubsection{Verification in previous simulation studies}
  	Previous studies used verified there simulations through different methods and varying degrees of precision. \\
  	\begin{table}[h]
  		\centering
@@ -193,15 +186,21 @@
  			\hline
  			Study & Year & Verification method & Accepted margin\\
  			\hhline{====}
- 			Holman \cite{Holman2014Masters} & 2014 & Average \% difference & Not specified  \\
- 			van Niekerk \cite{vanNiekerk2012Value} & 1900 & Average \% difference & 5\% difference \\
- 			Kriel \cite{Marais2012PhD} &  1900 & Average \% difference & 5\% difference \\
- 			Pascoe \cite{Pascoe2016Masters} & 1900 & Average \% difference & 5\% difference \\	
- 			Mare \cite{Mare2016PhD} & 1900 & Average \% difference & 5\% difference  \\
- 			Marius \cite{Marais2012PhD} & 1900 & Average \% difference & 5\% difference\\	
- 			Snyman	\cite{Snyman2011Masters} & 1900 & Average \% difference & 5\% difference\\	
- 			Yu-jie-Xu \cite{xu2016modeling}& 1900 & relative \% error & 5\%  error\\	
- 			Peach \cite{Peach2016Masters}& 2016 & Average \% difference & 5\% relative error\\
+ 			Marais \cite{Marais2012PhD} 						& 2012 & Average \% difference & Not specified\\
+ 			Van Niekerk \cite{vanNiekerk2012Value} 				& 2012 & Average \% difference & 10\% difference \\
+ 			Holman \cite{Holman2014Masters} 					& 2014 & Average \% difference & Not specified  \\
+ 			Kriel \cite{Marais2012PhD} 							& 2014 & Average \% difference & 10\% difference \\
+ 			VanTonder \cite{vanTonder2014PhD}					& 2014 & Average \% difference & 3\% difference \\
+ 			Kurnia \textit{et al} \cite{kurnia2014simulation} 	& 2014 & Coefficient of determination ($R^2$) & $>0.95$ \\
+ 			dominic \cite{dominic2014dynamic}					& 2014 & Mean squared error & $>1.7e^
+ 			{-3}$	\\
+ 			Du Plessis \textit{et al}\cite{du2015development} 	& 2015 & Average \% difference & 7\%  \\
+ 			Pascoe \cite{Pascoe2016Masters} 					& 2016 & Average \% difference & 5\% difference \\	
+			Peach \cite{Peach2016Masters}						& 2016 & Average \% difference & Not specified\\
+ 			Mare \cite{Mare2016PhD} 							& 2016 & Average \% difference & 5\% difference  \\	
+ 			Yu-jie-Xu \cite{xu2016modeling}						& 2016 & relative \% error & 5\%  error\\
+ 			
+ 			
  			\hline
  		\end{tabular} 
  		\caption{Simulation verification methods that were implemented in previous studies.}

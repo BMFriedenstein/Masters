@@ -2,8 +2,8 @@ reset
 set terminal wxt size 600,262 enhanced font 'Verdana,10' persist
 set terminal epslatex color colortext
 set output 'Leak2.tex'
-my_line_width = "1.5"
-my_axis_width = "1.5"
+my_line_width = "2"
+my_axis_width = "2"
 my_ps = "1.2"
 
 red_000 = "#F9B7B0"
@@ -30,7 +30,7 @@ brown_050 = "#E69F17"
 brown_075 = "#8F743F"
 brown_100 = "#6D4903"
 
-grid_color = "#d5e0c9"
+grid_color = "#42495b"
 text_color = "#000000"
 
 set style line 1 linecolor rgbcolor blue_025 linewidth @my_line_width pt 7 pi -10000
@@ -65,8 +65,9 @@ set xrange [0.001:0.1]
 set xtics  0.025
 set yrange [200:800]
 set ytics  100
-set zrange [0:4.5]
+set zrange [0:5]
 set ztics  1.5
 set samples 500
+
 
 splot   f(x,y) title "Flow" with lines ls 1
