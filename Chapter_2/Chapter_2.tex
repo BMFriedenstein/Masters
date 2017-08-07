@@ -142,7 +142,7 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 		 
 		
 		\subsubsection{Benchmark modelling}
-		Cilliers \cite{Cilliers2015PHD} developed \enquote{best practice models} using the \gls{cols} benchmarking method. These models provide an energy benchmark that can be used to identify the scope for energy improvements on a system. An example of a benchmark model for a mining compressed air system is shown in \cref{eq: COLS}. The model shows that energy required is dependent on the quantity of ore mined aswell as the the depth of the mine. \cite{Cilliers2015PHD} also developed benchmark models for mine cooling, water reticulation and ventilation systems.
+		YEha  \cite{Cilliers2015PHD} developed \enquote{best practice models} using the \gls{cols} benchmarking method. These models provide an energy benchmark that can be used to identify the scope for energy improvements on a system. An example of a benchmark model for a mining compressed air system is shown in \cref{eq: COLS}. The model shows that energy required is dependent on the quantity of ore mined and the depth of the mine. \cite{Cilliers2015PHD} also developed benchmark models for mine cooling, water reticulation and ventilation systems.
 
 		\begin{figure}[h!]
 			\centering
@@ -172,44 +172,57 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 		- Kriel masters\\
 		\subsubsection{Periodic simulation}
  	\subsection{Simulation model verification strategies}
- 	From literature, methods of verifying simulation were analysed. Most studies utilised a comparison calculation strategy to calculate a model accuracy or error. Two calculation methods identified were \emph{Average difference method} and \emph{average percentage difference}. 
- 		\subsubsection{Average difference method}
- 			The average difference method looks at the sum for a simulated output for all time-steps in the period. This same is done for the actual system value. The error \% is then calculated as shown in \cref{eq: Average difference}
+ 	From literature, methods of verifying simulation were analysed. Most studies utilised a comparison calculation strategy to calculate a model accuracy or error. %Two calculation methods identified were \emph{Average difference method} and \emph{average percentage difference}. 
+ 		\subsubsection{Mean residual difference method}
+ 			The average difference method looks at the average for the data points in the actual and simulated time series.  The error \% is then calculated with \cref{eq: Average difference}. The error is then calculated as a percentage by dividing the error by the Actual values, \cref{eq: Average difference}.
  			
  			\begin{equation}
- 				\label{eq: Average difference}
- 				Err_{\%} = \left| \dfrac{ \sum_{n}^{N}{ \left( \dfrac{A_{n}}{N} \right)}  - \sum_{n}^{N}{ \left( \dfrac{M_{n}}{N} \right) } }{ \sum_{n}^{N}{ \left( \dfrac{A_{n}}{N} \right) } } \right|
+ 			\label{eq: AMean absolute}
+ 			\tilde{R} = \left| \dfrac{1}{N} \sum_{n=1}^{N}{ \left( A_{n} - S_{n}\right)}  \right|
  			\end{equation}
- 			Where: 
+ To get	an error percentage, the equation is rewritten:	
+ 			\begin{equation}
+ 				\label{eq: Average difference}
+ 				Err_{\%} = \left| \dfrac{1}{N} \sum_{n=1}^{N}{ \left(\dfrac{ A_{n} - S_{n}}{A_n}\right)}  \right|
+ 			\end{equation}
+ 			Where: \par 
  				\begin{table}[h!]
  					\centering
  					\begin{tabular}{cl}
- 						$A$ & Actual system parameter \\
- 						$M$ & Model parameter \\
+ 						$A$ & Actual system time series \\
+ 						$S$ & Simulation time series \\
  						$n$ & sample \\
  						$N$ & Number of samples in simulation period \\
  					\end{tabular} 
  				\end{table}	
- 		\subsubsection{Relative error method}
- 		The relative error method follows a similar calculation as in the Average difference method. However, as shown in \cref{eq: Relative error}, the error is calculated for each sample in the period is calculated, the average of the error is then calculated.
+ 			A major disadvantage of this method is the the errors for individual points are cancelled out. The result therefore can not lead to conclusive deductions.\cite{sarin2010comparing} This strategy is not recommended if used alone to verify data.
  			
+ 			
+ 		\subsubsection{Mean absolute error method}
+ 		The relative error method follows a similar calculation as in the Average difference method. However, as shown in \cref{eq: Relative error}, the error is calculated individually for each point in the series. The average of the individually errors is the resultant error, \cref{eq: Relative error 2}. To obtain the error percentage, each error is divided by the Actual value at that time step as in \cref{eq: Relative error}.
+ 		\begin{equation}
+ 		\label{eq: Relative error 2}
+ 		MAE = \dfrac{1}{N}\sum_{n=1}^{N}{\left|A_{n} - S_{n}\right| }
+ 		\end{equation}
+ 			To get	an error percentage, the equation is rewritten:	
  			\begin{equation}
  			\label{eq: Relative error}
- 			Err_{\%} = \dfrac{\sum_{n}^{N}{\left|\dfrac{A_{n} - M_{n}}{A_{n}}\right| }}{N}
+ 			Err_{\%} = \dfrac{1}{N}\sum_{n=1}^{N}{\left|\dfrac{A_{n} - S_{n}}{A_{n}}\right| }
  			\end{equation}
- 			Where: 
+ 			Where: \par
  			\begin{table}[h!]
  				\centering
  				\begin{tabular}{cl}
- 					$A$ & Actual system parameter \\
- 					$M$ & Model parameter \\
+ 					$A$ & Actual system time series  \\
+ 					$M$ & Simulation  time series  \\
  					$n$ & sample \\
  					$N$ & Number of samples in simulation period \\
  				\end{tabular} 
  			\end{table}	
  		Yu-jie Xu \cite{xu2016modeling}
  		\par 
- 		The difference between the two verification strategies is best shown using an example. Figure \cref{fig:Philipp Difference verify} Shows a comparison between a simulation model's output power and the actual power of the system over a 24 hour period. In a study by \cite{Mare2016PhD}, the average \% difference method, \cref{eq: Average difference}, was used to calculate the accuracy of a simulation model. The average of the two power profiles were similar, leading to a calculated error of 1.17\%. However, the Relative error method, \cref{eq: Relative error}, applied to the same data the results in a error of 15.2\%. 
+ 		\subsubsection{Comparing verification methods}
+ 		The difference between the verification strategies is best shown using an example. Figure \cref{fig:Philipp Difference verify} Shows a comparison between a simulation model's output power and the actual power of the system over a 24 hour period. In a study by \cite{Mare2016PhD}, the average \% difference method, \cref{eq: Average difference}, was used to calculate the accuracy of a simulation model. The average of the two power profiles were similar, leading to a calculated error of 1.17\%. However, the Relative error method, \cref{eq: Relative error}, applied to the same data the results in a error of 15.2\%. 
  		
  	\begin{figure}[h!]
  		\centering
@@ -218,7 +231,10 @@ A \gls{scada} system is used to monitor and control processes throughout the min
  		\label{fig:Philipp Difference verify}
  	\end{figure}
  
-
+\subsubsection{Coefficient of correlation and cross correlation}
+stuff about correlation blah blah \par more stuff \\
+\subsubsection{Mean squared error}
+stuff about correlation blah blah \par more stuff \\
  	\subsubsection{Verification in previous simulation studies}
  	Previous studies used verified there simulations through different methods and varying degrees of precision. \\
  	\begin{table}[h]
@@ -227,20 +243,19 @@ A \gls{scada} system is used to monitor and control processes throughout the min
  			\hline
  			Study & Year & Verification method & Accepted margin\\
  			\hhline{====}
- 			Marais \cite{Marais2012PhD} 						& 2012 & Average \% difference & Not specified\\
- 			Van Niekerk \cite{vanNiekerk2012Value} 				& 2012 & Average \% difference & 10\% difference \\
- 			Bredenkamp \cite{Bredenkamp2013Masters} 			& 2013 & Average \% difference & 10\% difference \\
- 			Holman \cite{Holman2014Masters} 					& 2014 & Average \% difference & Not specified  \\
- 			Kriel \cite{Marais2012PhD} 							& 2014 & Average \% difference & 10\% difference \\
- 			VanTonder \cite{vanTonder2014PhD}					& 2014 & Average \% difference & 3\% difference \\
+ 			Marais \cite{Marais2012PhD} 						& 2012 & Mean residual \% difference  & Not specified\\
+ 			Van Niekerk \cite{vanNiekerk2012Value} 				& 2012 &  Mean residual \% difference & 10\% difference \\
+ 			Bredenkamp \cite{Bredenkamp2013Masters} 			& 2013 & Mean residual \% difference & 10\% difference \\
+ 			Holman \cite{Holman2014Masters} 					& 2014 & Mean residual \% difference & Not specified  \\
+ 			Kriel \cite{Marais2012PhD} 							& 2014 &  Mean residual \% difference & 10\% difference \\
+ 			VanTonder \cite{vanTonder2014PhD}					& 2014 &  Mean residual \% difference & 3\% difference \\
  			Kurnia \textit{et al} \cite{kurnia2014simulation} 	& 2014 & Coefficient of determination ($R^2$) & $>0.95$ \\
- 			dominic \cite{dominic2014dynamic}					& 2014 & Mean squared error & $>1.7e^
- 			{-3}$	\\
- 			Du Plessis \textit{et al}\cite{du2015development} 	& 2015 & Average \% difference & 7\%  \\
- 			Pascoe \cite{Pascoe2016Masters} 					& 2016 & Average \% difference & 5\% difference \\	
-			Peach \cite{Peach2016Masters}						& 2016 & Average \% difference & Not specified\\
- 			Mare \cite{Mare2016PhD} 							& 2016 & Average \% difference & 5\% difference  \\	
- 			Yu-jie-Xu \cite{xu2016modeling}						& 2016 & Relative \% error & 5\%  error\\
+ 			dominic \cite{dominic2014dynamic}					& 2014 & Mean squared error & $>1.7e^{-3}$	\\
+ 			Du Plessis \textit{et al}\cite{du2015development} 	& 2015 &  Mean residual \% difference & 7\%  \\
+ 			Pascoe \cite{Pascoe2016Masters} 					& 2016 &  Mean residual \% difference & 5\% difference \\	
+			Peach \cite{Peach2016Masters}						& 2016 &  Mean residual \% difference & Not specified\\
+ 			Mare \cite{Mare2016PhD} 							& 2016 &  Mean residual \% difference & 5\% difference  \\	
+ 			Yu-jie-Xu \cite{xu2016modeling}						& 2016 & Mean absolute \% error & 5\%  error\\
  			\hline
  		\end{tabular} 
  		\caption{Simulation verification methods that were implemented in previous studies.}
