@@ -174,16 +174,16 @@ A \gls{scada} system is used to monitor and control processes throughout the min
  	\subsection{Simulation model verification strategies}
  	From literature, methods of verifying simulation were analysed. Most studies utilised a comparison calculation strategy to calculate a model accuracy or error. %Two calculation methods identified were \emph{Average difference method} and \emph{average percentage difference}. 
  		\subsubsection{Mean residual difference method}
- 			The average difference method looks at the average for the data points in the actual and simulated time series.  The error \% is then calculated with \cref{eq: Average difference}. The error is then calculated as a percentage by dividing the error by the Actual values, \cref{eq: Average difference}.
+ 			The average difference method looks at the average for the data points in the actual and simulated time series.  The error is then calculated with \cref{eq: AMean absolute}. The simulation percentage error in relation to the actual series is then calculated by dividing the error by the Actual datapoints, \cref{eq: Average difference}.
  			
  			\begin{equation}
  			\label{eq: AMean absolute}
- 			\tilde{R} = \left| \dfrac{1}{N} \sum_{n=1}^{N}{ \left( A_{n} - S_{n}\right)}  \right|
+ 			\bar{R} = \left| \dfrac{1}{N} \sum_{n=1}^{N}{ \left( A_{n} - S_{n}\right)}  \right|
  			\end{equation}
  To get	an error percentage, the equation is rewritten:	
  			\begin{equation}
  				\label{eq: Average difference}
- 				Err_{\%} = \left| \dfrac{1}{N} \sum_{n=1}^{N}{ \left(\dfrac{ A_{n} - S_{n}}{A_n}\right)}  \right|
+ 				Err_{\%} = \left| \dfrac{1}{N} \sum_{n=1}^{N}{ \left(\dfrac{ A_{n} - S_{n}}{A_n}\right)}  \right| \times 100 \%
  			\end{equation}
  			Where: \par 
  				\begin{table}[h!]
@@ -191,38 +191,84 @@ A \gls{scada} system is used to monitor and control processes throughout the min
  					\begin{tabular}{cl}
  						$A$ & Actual system time series \\
  						$S$ & Simulation time series \\
- 						$n$ & sample \\
- 						$N$ & Number of samples in simulation period \\
+ 						$n$ & Data point \\
+ 						$N$ & Number of Data point in simulation period \\
  					\end{tabular} 
  				\end{table}	
- 			A major disadvantage of this method is the the errors for individual points are cancelled out. The result therefore can not lead to conclusive deductions.\cite{sarin2010comparing} This strategy is not recommended if used alone to verify data.
+ 			A major disadvantage of this method is that the positive and negative errors for individual points can cancelled out. This leads to a smaller resultant error than would be expected. The result therefore can not lead to any conclusive statements regarding the accuracy of the model \cite{sarin2010comparing}.  This strategy is not recommended if used alone to verify the simulation precision.
  			
  			
  		\subsubsection{Mean absolute error method}
- 		The relative error method follows a similar calculation as in the Average difference method. However, as shown in \cref{eq: Relative error}, the error is calculated individually for each point in the series. The average of the individually errors is the resultant error, \cref{eq: Relative error 2}. To obtain the error percentage, each error is divided by the Actual value at that time step as in \cref{eq: Relative error}.
+ 		The \gls{mae} verification method follows a similar calculation as in the Average difference method. However, as shown in \cref{eq: Relative error}, the error is calculated individually for each point in the series. The average of the individually errors is the resultant error, \cref{eq: Relative error 2}. To obtain the error percentage, each error is divided by the Actual value at that time step as in \cref{eq: Relative error}.
+ 		\par
  		\begin{equation}
  		\label{eq: Relative error 2}
  		MAE = \dfrac{1}{N}\sum_{n=1}^{N}{\left|A_{n} - S_{n}\right| }
  		\end{equation}
+ 		
  			To get	an error percentage, the equation is rewritten:	
  			\begin{equation}
  			\label{eq: Relative error}
- 			Err_{\%} = \dfrac{1}{N}\sum_{n=1}^{N}{\left|\dfrac{A_{n} - S_{n}}{A_{n}}\right| }
+ 			Err_{\%} = \dfrac{1}{N}\sum_{n=1}^{N}{\left|\dfrac{A_{n} - S_{n}}{A_{n}}\right| }\times 100 \%
  			\end{equation}
  			Where: \par
  			\begin{table}[h!]
  				\centering
  				\begin{tabular}{cl}
- 					$A$ & Actual system time series  \\
- 					$M$ & Simulation  time series  \\
- 					$n$ & sample \\
- 					$N$ & Number of samples in simulation period \\
+ 					$A$ & Actual system time series \\
+ 					$S$ & Simulation time series \\
+ 					$n$ & Data point \\
+ 					$N$ & Number of Data point in simulation period \\
  				\end{tabular} 
  			\end{table}	
  		Yu-jie Xu \cite{xu2016modeling}
  		\par 
+ 		\subsubsection{Coefficient of determination}
+ 		The Coefficient of correlation is the measure of how accurately a data series ($ x $) can be represented in a linear relationship with Data series $ y $(), i.e. $ y = mx+c$. The value for the coefficient ranges between $ -1 $ and $ 1 $ where a value of 1 indicates a perfect linear relationship between the series and a -1 represents a perfect negative linear relationship. A value of 0 indicate that there is no relationship between the data series. The correlation coefficient can be calculated using equation \cref{eq: Correlation coefficient}.\cite{sarin2010comparing}
+ 		
+ 		\begin{equation}
+ 		\label{eq: Correlation coefficient}
+ 		r = \dfrac{\sum_{n=1}^{N}(A_n - \bar{A})(S_n - \bar{S})}{\sqrt{\sum_{n=1}^{N}(A_n - \bar{A})^2 \cdot \sum_{n=1}^{N}(M_n - \bar{A})^2}}
+ 		\end{equation}
+ 		\par
+ 		Where \par
+ 		\begin{table}[h!]
+ 			\centering
+ 			\begin{tabular}{cl}
+ 				$A$ & Actual system time series \\
+ 				$S$ & Simulation time series \\
+ 				$n$ & Data point \\
+ 				$N$ & Number of Data point in simulation period \\
+ 			\end{tabular} 
+ 		\end{table}	
+ 		The coefficient of determination or R-Square value can be calculated by squaring the correlation coefficient (r). 
+ 		\par 
+ 			Kurnia \textit{et al} \cite{kurnia2014simulation} 
+ 		\subsubsection{Mean squared error}
+ 		The \gls{mse} or \gls{rmse}.
+ 			\begin{equation}
+ 				\label{eq: rmse}
+ 				MSE = \dfrac{1}{N}\sum_{n=1}^{N}{(A_{n} - S_{n})^2}
+ 			\end{equation}
+ 			\par A mean square percentage error can be calculated:
+ 			\begin{equation}
+ 			\label{eq: rmse percent}
+ 			MSE = \dfrac{1}{N}\sum_{n=1}^{N}{ \left( \dfrac{ (A_{n} - S_{n})^2 }{A_n} \right) } \times 100 \%
+ 			\end{equation}
+ 			Where: \par
+ 			\begin{table}[h!]
+ 				\centering
+ 				\begin{tabular}{cl}
+ 					$A$ & Actual system time series \\
+ 					$S$ & Simulation time series \\
+ 					$n$ & Data point \\
+ 					$N$ & Number of Data point in simulation period \\
+ 			\end{tabular} 
+ 			\end{table}
+ 		\par
+ 		dominic \cite{dominic2014dynamic}	
  		\subsubsection{Comparing verification methods}
- 		The difference between the verification strategies is best shown using an example. Figure \cref{fig:Philipp Difference verify} Shows a comparison between a simulation model's output power and the actual power of the system over a 24 hour period. In a study by \cite{Mare2016PhD}, the average \% difference method, \cref{eq: Average difference}, was used to calculate the accuracy of a simulation model. The average of the two power profiles were similar, leading to a calculated error of 1.17\%. However, the Relative error method, \cref{eq: Relative error}, applied to the same data the results in a error of 15.2\%. 
+ 		The difference between the verification strategies is best shown using an example. Figure \cref{fig:Philipp Difference verify} Shows a comparison between a simulation model's output power and the actual power of the system over a 24 hour period. In a study by \cite{Mare2016PhD}, the mean residual percentage difference, \cref{eq: Average difference}, was used to calculate the accuracy of a simulation model. The average of the two power profiles were similar, leading to a calculated error of 1.17\%. Using the Relative error method, \cref{eq: Relative error}, applied to the same data the results in a error of 15.2\%. 
  		
  	\begin{figure}[h!]
  		\centering
@@ -230,11 +276,9 @@ A \gls{scada} system is used to monitor and control processes throughout the min
  		\caption[Example of simulation error calculation.]{Example of simulation error calculation. Adapted from Marè \cite{Mare2016PhD}}
  		\label{fig:Philipp Difference verify}
  	\end{figure}
- 
-\subsubsection{Coefficient of correlation and cross correlation}
-stuff about correlation blah blah \par more stuff \\
-\subsubsection{Mean squared error}
-stuff about correlation blah blah \par more stuff \\
+ 	\par 
+ 	\cite{willmott2005advantages} discussed the Advantages of the mean absolute error \gls{mae} over the \gls{rmse} in assessing average model performance.
+
  	\subsubsection{Verification in previous simulation studies}
  	Previous studies used verified there simulations through different methods and varying degrees of precision. \\
  	\begin{table}[h]
@@ -250,7 +294,7 @@ stuff about correlation blah blah \par more stuff \\
  			Kriel \cite{Marais2012PhD} 							& 2014 &  Mean residual \% difference & 10\% difference \\
  			VanTonder \cite{vanTonder2014PhD}					& 2014 &  Mean residual \% difference & 3\% difference \\
  			Kurnia \textit{et al} \cite{kurnia2014simulation} 	& 2014 & Coefficient of determination ($R^2$) & $>0.95$ \\
- 			dominic \cite{dominic2014dynamic}					& 2014 & Mean squared error & $>1.7e^{-3}$	\\
+ 			Dominic \cite{dominic2014dynamic}					& 2014 & Mean squared error & $>1.7e^{-3}$	\\
  			Du Plessis \textit{et al}\cite{du2015development} 	& 2015 &  Mean residual \% difference & 7\%  \\
  			Pascoe \cite{Pascoe2016Masters} 					& 2016 &  Mean residual \% difference & 5\% difference \\	
 			Peach \cite{Peach2016Masters}						& 2016 &  Mean residual \% difference & Not specified\\
