@@ -1,5 +1,6 @@
 %Chapter 2
 \chapter{Overview of simulation and compressed air applications}
+\label{Chap2}
 \thispagestyle{empty}
 \vspace{38em}
 \hrulefill
@@ -8,7 +9,11 @@
 \clearpage
 \section{Introduction}
 \section{Background on mining compressed air networks}
+\subsection{Preamble}
+Compressed air is used extensively in a mine in surface and underground operations. In this section, background on compressed air systems is provided through discussion of component that make up the system. 
+\subsection{Compressor air network components}
 \subsubsection{Compressors}
+ ***  compress process inefficient ** 
 \subsubsection{Pneumatic rock drills}
 Drilling is mainly performed in the production areas or stopes of a mine. Drill machines are used to drill holes into the rock face. Once the holes have been drilled, explosives are then installed to break up the rock \cite{van2008development}.
 \par
@@ -27,9 +32,9 @@ Airflow in the refuge bays can be controlled with a manual valve within the cham
 Processing plants are constructed near gold and mines. They are used when extracting metal from the ore that is obtained from the mining operation. These plants use compressed air for various systems, processes and equipment. 
 \par 
 To save costs, processing plants often share compressed air network with mine \cite{Marais2012PhD}. The plants use relatively low amounts of air compared to mines, however plant processes have pressure requirements that differ from the rest of the air network. If the plant is not isolated from the mine air network, compressed air optimizations on the mine can be complicated. 
-\subsubsection{Other compressed air uses}
+\subsubsection{Other compressed air users}
 Due to the availability underground, compressed air is utilised for a number of other applications. These usages include, pneumatic loaders or rock shovels, pneumatic cylinders, dam sediment agitation, cooling and ventilation and many other applications. This vast variety of of applications also leads to misuse of compressed air this leads to inefficient operation.
-\subsubsection{Operation schedule}
+\subsection{Operation schedule}
 On a typical mine, various operations will take place at different times of the day. Depending on the activity taking place, many mines will control the pressure to meet the requirements \cite{Kriel2014Masters},\cite{Marais2012PhD}. \cref{fig: Mining schedule} shows the schedule and pressure requirement on a typical deep level mine.\par 
 As shown in the figure, the pressure requirement changes depending on the activity taking place. The drilling shift typically has the highest pressure requirement whilst blasting shift requires the lowest. Schedules and operation philosophies can differ between mines. Different operational schedules require alternative pressure requirement profiles.
 \begin{figure}[h]
@@ -38,7 +43,7 @@ As shown in the figure, the pressure requirement changes depending on the activi
 	\caption[A typical operation schedule of a deep level mine.]{The typical operation schedule of a deep level mine \cite{Kriel2014Masters}.}
 	\label{fig: Mining schedule}
 \end{figure}
-	\subsection{Instrumentation and measurements}
+\subsection{Instrumentation and measurements}
 For large industrial systems, thorough instrumentation is necessary in order to monitor performance and equipment condition throughout the system. In a mining compressed air network, instrumentation is installed to monitor flows, pressures, temperatures ,etc. Electrical instrumentation is also installed for sensing currents, power factors, voltages and power. On control valves, input/output pressures, flows and valve position are usually measured with instrumentation.	
 \par
 A \gls{scada} system is used to monitor and control processes throughout the mine from a control room. The \gls{scada} centralises instrumentation data from \glspl{plc} throughout the mine. The \gls{scada} can also be used to control machines and instrumentation by sending control signals to the relevant \gls{plc}.  Communication to the underground \glspl{plc} is achieved using a substantial fibre optic network.\cite{schroeder2009energy}
@@ -134,7 +139,7 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 		Estimation of energy savings has been used in literature to obtain the potential energy impact that can be achieved for a system. Before new tools allowed for quick development of simplified simulation models, estimation techniques were frequently used to determine the feasibility of energy interventions on mining systems. The problem with an estimation approach is that they typically rely on simplified models with high resultant error.
 		\par 
 		- Snyman estimated improvements using historical data.\cite{Snyman2011Masters}\\
-		- Marais estimation through simplified estimation, simulation \cite{Marais2012PhD},\cite{marais2013simplification}.
+		 
 		
 		\subsubsection{Benchmark modelling}
 		Cilliers \cite{Cilliers2015PHD} developed \enquote{best practice models} using the \gls{cols} benchmarking method. These models provide an energy benchmark that can be used to identify the scope for energy improvements on a system. An example of a benchmark model for a mining compressed air system is shown in \cref{eq: COLS}. The model shows that energy required is dependent on the quantity of ore mined aswell as the the depth of the mine. \cite{Cilliers2015PHD} also developed benchmark models for mine cooling, water reticulation and ventilation systems.
@@ -224,6 +229,7 @@ A \gls{scada} system is used to monitor and control processes throughout the min
  			\hhline{====}
  			Marais \cite{Marais2012PhD} 						& 2012 & Average \% difference & Not specified\\
  			Van Niekerk \cite{vanNiekerk2012Value} 				& 2012 & Average \% difference & 10\% difference \\
+ 			Bredenkamp \cite{Bredenkamp2013Masters} 			& 2013 & Average \% difference & 10\% difference \\
  			Holman \cite{Holman2014Masters} 					& 2014 & Average \% difference & Not specified  \\
  			Kriel \cite{Marais2012PhD} 							& 2014 & Average \% difference & 10\% difference \\
  			VanTonder \cite{vanTonder2014PhD}					& 2014 & Average \% difference & 3\% difference \\
@@ -234,24 +240,81 @@ A \gls{scada} system is used to monitor and control processes throughout the min
  			Pascoe \cite{Pascoe2016Masters} 					& 2016 & Average \% difference & 5\% difference \\	
 			Peach \cite{Peach2016Masters}						& 2016 & Average \% difference & Not specified\\
  			Mare \cite{Mare2016PhD} 							& 2016 & Average \% difference & 5\% difference  \\	
- 			Yu-jie-Xu \cite{xu2016modeling}						& 2016 & relative \% error & 5\%  error\\
- 			
- 			
+ 			Yu-jie-Xu \cite{xu2016modeling}						& 2016 & Relative \% error & 5\%  error\\
  			\hline
  		\end{tabular} 
  		\caption{Simulation verification methods that were implemented in previous studies.}
  		\label{table: Verification studies}
  	\end{table}
 \clearpage	
-\section{Use of simulation in compressed air system optimisation}
-	
+\section{Use of simulation in mining compressed air optimisation}
+\subsection{Preamble}
+This section will discuss simulation usage in literature to optimise mining compressed air systems.
+\subsection{Compressed air simulation models} \label{simplfiedModels}
+\subsubsection{Simplified vessel  model}
+Before new tools allowed model development for complex mining compressed air simulation models, Marais \cite{Marais2012PhD},\cite{marais2013simplification} created a simplified model to estimate and quantify the performance of potential interventions.  \cite{Marais2012PhD} simplified a mining compressed air system, comparing the network to a compressed air source and a vessel with many leaks. This is illustrated in \cref{fig:Marais vessel model}.
+\begin{figure}[h!]
+	\centering
+	\fbox{\includegraphics[width=\textwidth]{Images/2/marais/Vessel}}
+	\caption[Simplified compressed air netowrk model.]{Simplified compressed air network model. Adapted from Marais \cite{Marais2012PhD}.}
+	\label{fig:Marais vessel model}
+\end{figure}
+\par 
+A simplified calculation method was developed to quickly estimate the expected energy savings impact on the system. From this, energy saving estimations rules were developed as shown in \cref{table: Rules of thumb}.  
+\par 
+The accuracy of this approach is not very high as the specifics of the network are not taken into account. The simplified approach cannot be used for more complex scenarios for example compressor relocation. The study also does not estimate other potential benefits of an intervention such as pressure delivery improvements.
+\par 
+\begin{table}[h]
+	\centering
+	\begin{tabular}{p{0.4\textwidth}p{0.05\textwidth}p{0.5\textwidth}}
+		\hline
+		Intervention && Estimation rule\\
+		\hhline{===} 
+		Reducing compressor deliver pressure & & $x \%$ pressure reduction  $\propto$ (1.6 to 1.8)$\cdot x\%$ power reduction \newline \\
+		Reduce control valve pressure &  &$x \%$ pressure reduction $\propto$  $p\cdot x\%$ power reduction. \newline \newline Where p is the valves percentage flow contribution to the system \newline \\
+		Reduction of flow && $x \%$ flow reduction  $\propto x \%$ power reduction \newline\\
+		\hline
+	\end{tabular} 
+	\caption[Summary of energy saving estimation rules]{Summary of energy saving estimation rules\cite{Marais2012PhD}.}
+	\label{table: Rules of thumb}
+\end{table}
 
-	\subsubsection{Simulations on compressed air systems}
-	
-		- Pascoe \\
+\subsubsection{Simplified system  model}
+Kriel \cite{Kriel2014Masters} used simulation to estimate project performance on compressed air. The KYPipe software tool was utilised to develop simulation model for compressed air systems. \cite{Kriel2014Masters} simplified the system for the simulation such that a single compressor and a flow to each level represented the system. The model is shown graphically in \cref{fig:kriel  model}
+\begin{figure}[h!]
+	\centering
+	\fbox{\includegraphics[trim =  -2.5cm 0.5cm -2.5cm 0.5cm ,width=\textwidth]{Images/2/kriel/model}}
+	\caption[Simplified system model.]{Simplified system model. Adapted from Kriel \cite{Kriel2014Masters}.}
+	\label{fig:kriel  model}
+\end{figure}
+\par 
+Simulation was performed to quantify the savings from underground network interventions. The interventions were deigned to reduce flow to the network. The simulated results varied between 10 and 25\% from the actual performance of the interventions. The simulation procedure in this study could be improved using a more precise model verification method.
+\par 
+
+\subsubsection{Compressor relocation}
+Bredenkamp \cite{Bredenkamp2013Masters} developed a simulation model to test compressor relocation scenarios. The model, as visualised in \cref{fig: bredenkamp  model}
+\begin{figure}[h!]
+	\centering
+	\fbox{\includegraphics[trim =  -1.2cm 0.5cm -1.2cm 1cm ,width=\textwidth]{Images/2/bredenkamp/model}}
+	\caption[Compressor relocation simulation model.]{Compressor relocation simulation model. Adapted from bredenkamp \cite{Bredenkamp2013Masters}.}
+	\label{fig: bredenkamp  model}
+\end{figure} 
+\\
+\subsubsection{Compressed air ring}
+- Pascoe \\
+\begin{figure}[h!]
+	\centering
+	\fbox{\includegraphics[trim =  -1.5cm 0.5cm -1.5cm 0.5cm ,width=\textwidth]{Images/2/pascoe/model}}
+	\caption[Simplified compressed air ring model.]{Simplified compressed air ring model. Adapted from Kriel \cite{Pascoe2016Masters}.}
+	\label{fig:kriel  model}
+\end{figure}
+
+- Bredenkamp
+\\
+-Mare et al 
+
+		
 		- van Tonder\\
-		- kriel\\
-		- Mare\\
 		- De Coning \\-  simulations to investigate the opportunity to optimise the control strategy of a compressed air network by rescheduling the compressors.\\
 	\subsection{Summary}
 	\label{Shortcomings of previous work}
