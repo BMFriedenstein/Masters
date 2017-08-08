@@ -245,15 +245,12 @@ A \gls{scada} system is used to monitor and control processes throughout the min
  		\par 
  			Kurnia \textit{et al} \cite{kurnia2014simulation} 
  		\subsubsection{Mean squared error}
- 		The \gls{mse} or \gls{rmse}.
+ 		
+ 		In statistics, the \gls{mse} or \gls{rmse} is the average of the square of the error between the actual and estimated value. The value is always positive. A smaller value relates to a more accurate model.\footnote{University of Kentucky Department of Mathematics, "Estimators, Mean Square Error, and
+ 			Consistency" [Online] \url{http://www.ms.uky.edu/~mai/sta321/mse.pdf}, [Accessed 3 March 2017].}
  			\begin{equation}
  				\label{eq: rmse}
  				MSE = \dfrac{1}{N}\sum_{n=1}^{N}{(A_{n} - S_{n})^2}
- 			\end{equation}
- 			\par A mean square percentage error can be calculated:
- 			\begin{equation}
- 			\label{eq: rmse percent}
- 			MSE = \dfrac{1}{N}\sum_{n=1}^{N}{ \left( \dfrac{ (A_{n} - S_{n})^2 }{A_n} \right) } \times 100 \%
  			\end{equation}
  			Where: \par
  			\begin{table}[h!]
@@ -293,7 +290,7 @@ A \gls{scada} system is used to monitor and control processes throughout the min
  			Holman \cite{Holman2014Masters} 					& 2014 & Mean residual \% difference & Not specified  \\
  			Kriel \cite{Marais2012PhD} 							& 2014 &  Mean residual \% difference & 10\% difference \\
  			VanTonder \cite{vanTonder2014PhD}					& 2014 &  Mean residual \% difference & 3\% difference \\
- 			Kurnia \textit{et al} \cite{kurnia2014simulation} 	& 2014 & Coefficient of determination ($R^2$) & $>0.95$ \\
+ 			Kurnia \textit{et al} \cite{kurnia2014simulation} 	& 2014 & Coefficient of determination& $r^2>0.95$ \\
  			Dominic \cite{dominic2014dynamic}					& 2014 & Mean squared error & $>1.7e^{-3}$	\\
  			Du Plessis \textit{et al}\cite{du2015development} 	& 2015 &  Mean residual \% difference & 7\%  \\
  			Pascoe \cite{Pascoe2016Masters} 					& 2016 &  Mean residual \% difference & 5\% difference \\	
