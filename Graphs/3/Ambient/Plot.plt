@@ -1,8 +1,8 @@
 reset
 #set terminal wxt 
 set terminal epslatex color colortext
-set output 'EVperT.tex'
-my_line_width = "2"
+set output 'Ambient.tex'
+my_line_width = "3"
 my_axis_width = "1.5"
 my_ps = "1.2"
 
@@ -33,10 +33,10 @@ brown_100 = "#6D4903"
 grid_color = "#d5e0c9"
 text_color = "#000000"
 
-set style line 1 linecolor rgbcolor blue_025 linewidth @my_line_width pt 7
+set style line 1 linecolor rgbcolor blue_075 linewidth @my_line_width pt 7
 set style line 2 linecolor rgbcolor green_025 linewidth @my_line_width pt 5
 set style line 3 linecolor rgbcolor red_025 linewidth @my_line_width pt 9
-set style line 4 linecolor rgbcolor brown_025 linewidth @my_line_width pt 13
+set style line 4 linecolor rgbcolor brown_075 linewidth @my_line_width pt 13
 set style line 5 linecolor rgbcolor blue_050 linewidth @my_line_width pt 11
 set style line 6 linecolor rgbcolor green_050 linewidth @my_line_width pt 7
 set style line 7 linecolor rgbcolor red_050 linewidth @my_line_width pt 5
