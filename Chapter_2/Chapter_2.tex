@@ -13,7 +13,8 @@
 Compressed air is used extensively in a mine in surface and underground operations. In this section, background on compressed air systems is provided through discussion of component that make up the system. 
 \subsection{Compressor air network components}
 \subsubsection{Compressors}
- ***  compress process inefficient ** 
+Compressed air in mining is most commonly supplied by a centrifugal-type dynamic compressor \cite{Fouche2016Masters},\cite{Booysen2012Masters}. Compression in these machines is achieved as a result of the centrifugal force from the high speed rotation of impellers in air. Impeller rotation powered by a large electric motor. A higher pressure ratio is obtained through multi-stage impeller designs \cite{Fouche2016Masters}. The compression process is inefficient. Only about 5\% to 10\% of the input energy of the process is converted into energy that is used \cite{yang2009air}.
+
 \subsubsection{Pneumatic rock drills}
 Drilling is mainly performed in the production areas or stopes of a mine. Drill machines are used to drill holes into the rock face. Once the holes have been drilled, explosives are then installed to break up the rock \cite{van2008development}.
 \par
@@ -171,7 +172,7 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 		- Philip
 		- Kriel masters\\
 		\subsubsection{Periodic simulation}
- 	\subsection{Simulation model verification strategies}
+ 	\subsection{Simulation model verification strategies}\label{VerificationLit}
  	Due to lack of instrumentation, measurement inaccuracies and other non-ideal aspects of mining systems. It is impossible for a simulation model to match the actual system's performance perfectly. From literature, methods of verifying simulation precision were investigated. The verification techniques identified from literature were Mean residual difference, \gls{mae}, coefficient of determination or correlation and \gls{mse}.%Most studies utilised a comparison calculation strategy to calculate a model accuracy or error. %Two calculation methods identified were \emph{Average difference method} and \emph{average percentage difference}. 
  		\subsubsection{Mean residual difference method}
  			The average difference method looks at the average for the data points in the actual and simulated time series.  The error is then calculated with \cref{eq: AMean absolute}. The simulation percentage error in relation to the actual series is then calculated by dividing the error by the Actual datapoints, \cref{eq: Average difference}.
@@ -222,10 +223,7 @@ To get a relative error percentage, the equation is rewritten:
  					$n$ & Data point \\
  					$N$ & Number of Data point in simulation period \\
  				\end{tabular} 
- 			\end{table}	
- 		
- 		\par 
- 		 **** Need to find example in literature ***
+ 			\end{table} 
  		\subsubsection{Coefficient of determination}
  		The Coefficient of correlation is the measure of how accurately a data series ($ x $) can be represented in a linear relationship with Data series ($ y $), i.e. $ y = mx+c$. The value for the coefficient ranges between $ -1 $ and $ 1 $ where a value of 1 indicates a perfect linear relationship between the series and a value of -1 represents a perfect negative linear relationship. A value of 0 indicate that there is no relationship between the data series. The correlation coefficient can be calculated using equation \cref{eq: Correlation coefficient}.\cite{sarin2010comparing}
  		
@@ -297,8 +295,8 @@ To get a relative error percentage, the equation is rewritten:
  	\par 
  	Willmott, \cite{willmott2005advantages} studied the Advantages of the use of mean absolute error \gls{mae} over the \gls{rmse} method in assessing model accuracy. In the study,\cite{willmott2005advantages} concluded that the \gls{mse} measure is a function of \gls{mae} and therefore does not describe average error alone. From the analysis \gls{mae} was described as the most natural and unambiguous measure of average error magnitude.
 
- 	\subsubsection{Verification in previous simulation studies}
- 	Previous studies used verified there simulations through different methods and varying degrees of precision. \\
+ 	\subsubsection{Verification usage in previous simulation studies}
+ 	Previous studies verified there simulations through different methods and varying degrees of precision. \\
  	\begin{table}[h]
  		\centering
  		\begin{tabular}{p{5cm}ccr}
@@ -326,7 +324,7 @@ To get a relative error percentage, the equation is rewritten:
 \clearpage	
 \section{Use of simulation in mining compressed air optimisation}
 \subsection{Preamble}
-This section will discuss simulation usage in literature to optimise mining compressed air systems.
+This section will discuss literature where simulation was used to optimise mining compressed air systems.
 \subsection{Compressed air simulation models} \label{simplfiedModels}
 \subsubsection{Simplified vessel  model}
 Before new tools allowed model development for complex mining compressed air simulation models, Marais \cite{Marais2012PhD},\cite{marais2013simplification} created a simplified model to estimate and quantify the performance of potential interventions.  \cite{Marais2012PhD} simplified the mining compressed air system, comparing the network to an air source and a vessel with many leaks. This is illustrated in \cref{fig:Marais vessel model}.
@@ -367,7 +365,6 @@ Kriel \cite{Kriel2014Masters} used simulation to estimate project performance on
 \par 
 Simulation was performed to quantify the savings from underground network interventions. The interventions were deigned to reduce flow to the network. The simulated results varied between 10 and 25\% from the actual performance of the interventions. The simulation procedure in this study could be improved using a more precise model verification method.
 \par 
-
 \subsubsection{Compressor relocation}
 Bredenkamp \cite{Bredenkamp2013Masters} developed a simulation model to test compressor relocation scenarios. The model, as visualised in \cref{fig: bredenkamp  model}
 \begin{figure}[h!]

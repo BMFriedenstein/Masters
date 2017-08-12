@@ -186,9 +186,11 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		\label{table: After cooling inputs}
 		\end{table}
 	Depending on the accuracy requirement, after-cooling can be excluded from the simulation. Post after-cooling, compressed air is normally still warmer then ambient conditions. Air temperatures underground can be accurately matched by including heat transfer for compressed air pipelines.
-	\subsection{Verify simulation model}
-		- Steps to validate  the model accuracy - Compare parameters to actuals\\
-		- First principles     - Comparison to other models
+	\subsection{Verify the simulation model}
+	From the review of literature in \cref{VerificationLit}, it was determined that \gls{mae} and the coefficient of determination were the most effective methods of measuring model accuracy. Therefore in this study both measures are utilised in the model verification. To obtain these measures, the major simulation outputs (Total system power, flow and pressure) are compared to actual data from the system. R-sqaured and \gls{mae} is obtained by applying the relative methodologies discussed in \cref{VerificationLit}.
+	
+	\par 
+	For this study, the selected verification constraints were selected as : $$r^2 > 0.9$$ and$$ Err_{\%} < 5\% $$ If these constraints are met for the power, flow and pressure of the system,the model is considered accurate. As an extra measure relative error of the output for the minor model components should be $ > 85\%$ of the actual data. 
 		
 	\subsection{Select simulation inputs}
 		The inputs of a simulation are any parameters that do not remain static, or follow the same profile in day to day operation of the system. Examples of such parameters in a compressed air simulation are:
