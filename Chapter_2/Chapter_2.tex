@@ -178,8 +178,10 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 	\subsection{Simulation procedures}
 		- Philip
 		- Kriel masters\\
-	\subsubsection{Periodic simulation}
-	
+	\subsubsection{Periodic/repeated simulation}
+	The concept of periodic or repeated simulation procedure the execution a simulation multiple times or on a recurring schedule whilst altering various input parameters. \cite{Snyman2011Masters} used repeated estimation to determine an upper and lower bound for the expected result. Another example from industry is real time simulation or estimation systems.
+	\par 
+	Van Heerden \textit{et al.}, \cite{van2014developing} developed a dynamic control system for a mine compressed air network. The controller utilised repeated simulation to estimate unmeasured and future parameters of the network. This was used to optimise the compressor control.
  	\subsection{Simulation model verification strategies}\label{VerificationLit}
  	Due to lack of instrumentation, measurement inaccuracies and other non-ideal aspects of mining systems. It is impossible for a simulation model to match the actual system's performance perfectly. From literature, methods of verifying simulation precision were investigated. The verification techniques identified from literature were Mean residual difference, \gls{mae}, coefficient of determination or correlation and \gls{mse}.%Most studies utilised a comparison calculation strategy to calculate a model accuracy or error. %Two calculation methods identified were \emph{Average difference method} and \emph{average percentage difference}. 
  		\subsubsection{Mean residual difference method}
