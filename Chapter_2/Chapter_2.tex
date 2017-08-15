@@ -13,7 +13,15 @@
 Compressed air is used extensively in a mine in surface and underground operations. This section provides background regarding mining compressed air through discussion of the components that make up a compressed air system. 
 \subsection{Compressor air network components}
 \subsubsection{Compressors}
-Compressed air in mining is most commonly supplied by a centrifugal-type dynamic compressor \cite{Fouche2016Masters},\cite{Booysen2012Masters}.  These machines achieve compression as a result of the centrifugal force from the high-speed rotation of impellers in the air. Impeller rotation powered by a large electric motor. multi-stage impeller compressor designs are used to obtain higher pressure ratios \cite{Fouche2016Masters}. The compression process is inefficient. Only about 5\% to 10\% of the input energy of the process is converted into energy that is used \cite{yang2009air}.
+ \footnotetext[1]{Abc oil refining, "How centrifugal compressors operate" [Online] \url{http://abcoilrefining.blogspot.co.za/2012/03/how-centrifugal-compressors-operate.html}, [Accessed 15 August 2017].}
+
+Compressed air in mining is most commonly supplied by a centrifugal-type dynamic compressor \cite{Fouche2016Masters},\cite{Booysen2012Masters}.  These machines achieve compression as a result of the centrifugal force from the high-speed rotation of impellers in the air. Impeller rotation powered by a large electric motor. Multi-stage impeller compressor designs, as shown in \cref{fig: Compressor diagram}\footnotemark[1], are used to obtain higher pressure ratios \cite{Fouche2016Masters}. The compression process is inefficient. Only about 5\% to 10\% of the input energy of the process is converted into energy that is used \cite{yang2009air}. 
+\begin{figure}[h]
+	\centering
+	\fbox{\hspace{3cm}\input{Images/2/Compressor/compressor}\hspace{2.5cm}}
+	\caption[A scematic of a multistage centrifugal compressor.]{A schematic of a multi-stage centrifugal compressor\protect \footnotemark[1].}
+	\label{fig: Compressor diagram}
+\end{figure}
 
 \subsubsection{Pneumatic rock drills}
 Drilling is mainly performed in the production areas or stopes of a mine. Drill machines are used to drill holes into the rock face. Once the holes have been drilled, explosives are then installed to break up the rock \cite{van2008development}.
@@ -324,10 +332,10 @@ To get a relative error percentage, the equation is rewritten:
 \clearpage	
 \section{Use of simulation in mining compressed air optimisation}
 \subsection{Preamble}
-This section will discuss literature where simulation was used to optimise mining compressed air systems.
+This section will discuss simulation usage from  literature to optimise mining compressed air systems.
 \subsection{Compressed air simulation models} \label{simplfiedModels}
-\subsubsection{Simplified vessel  model}
-Before new tools allowed model development for complex mining compressed air simulation models, Marais \cite{Marais2012PhD},\cite{marais2013simplification} created a simplified model to estimate and quantify the performance of potential interventions.  \cite{Marais2012PhD} simplified the mining compressed air system, comparing the network to an air source and a vessel with many leaks. This is illustrated in \cref{fig:Marais vessel model}.
+\subsubsection{Simplified "vessel"  model}
+Before new software tools allowed for the development of detailed mining compressed air simulation models, Marais \cite{Marais2012PhD},\cite{marais2013simplification} created a simplified compressed air model to estimate and quantify the performance of potential energy interventions.  \cite{Marais2012PhD} simplified the mining compressed air system, comparing the network to an air source and a vessel with many leaks. This is illustrated in \cref{fig:Marais vessel model}.
 \begin{figure}[h!]
 	\centering
 	\fbox{\includegraphics[width=\textwidth]{Images/2/marais/Vessel}}
@@ -335,9 +343,9 @@ Before new tools allowed model development for complex mining compressed air sim
 	\label{fig:Marais vessel model}
 \end{figure}
 \par 
-A simplified calculation methodology was developed to quickly estimate the expected energy savings impact on the system. From this, energy saving estimations rules were developed as shown in \cref{table: Rules of thumb}.  
+A simplified calculation methodology was developed to quickly estimate the expected energy savings impact on the system. From this, energy saving estimations rules were developed as listed in \cref{table: Rules of thumb}.  
 \par 
-The accuracy of this approach is not very high as the specifics of the network are not taken into account. The simplified approach cannot be used for more complex scenarios for example compressor relocation. The study also does not estimate other potential benefits of an intervention such as pressure delivery improvements.
+Their is not a high degree of precision in this approach as specific details of the air network are not taken into account. The simplified approach cannot be used used to estimate more complex scenarios. The method also does not estimate other potential benefits of an interventions such as pressure delivery improvements.
 \par 
 \begin{table}[h]
 	\centering
@@ -354,8 +362,8 @@ The accuracy of this approach is not very high as the specifics of the network a
 	\label{table: Rules of thumb}
 \end{table}
 
-\subsubsection{Simplified system  model}
-Kriel \cite{Kriel2014Masters} used simulation to estimate project performance on compressed air. The KYPipe software tool was utilised to develop simulation model for compressed air systems. \cite{Kriel2014Masters} simplified the system for the simulation such that a single compressor and a flow to each level represented the system. The model is shown graphically in \cref{fig:kriel  model}
+\subsubsection{Simplified air network model}
+Kriel \cite{Kriel2014Masters} used simulation to estimate the performance of energy projects on mining compressed air. The KYPipe GAS software tool was utilised to develop simulation models for the systems. \cite{Kriel2014Masters} simplified the air networks for the simulations to a single compressor representing the supply processes and an outlet flow to each underground level in the network. The model is shown graphically in \cref{fig:kriel  model}
 \begin{figure}[h!]
 	\centering
 	\fbox{\includegraphics[trim =  -2.5cm 0.5cm -2.5cm 0.5cm ,width=\textwidth]{Images/2/kriel/model}}
@@ -363,10 +371,10 @@ Kriel \cite{Kriel2014Masters} used simulation to estimate project performance on
 	\label{fig:kriel  model}
 \end{figure}
 \par 
-Simulation was performed to quantify the savings from underground network interventions. The interventions were deigned to reduce flow to the network. The simulated results varied between 10 and 25\% from the actual performance of the interventions. The simulation procedure in this study could be improved using a more precise model verification method.
+Simulation was performed to quantify the savings from underground network interventions. The interventions were deigned to reduce flow to the network. The estimated savings from the simulations varied between 10 and 25\% compared to the actual performance of the interventions. Like the vessel model discussed previously, the simplified air network model can not be used to estimate the energy savings potential of more complex scenarios. The simulation procedure in this study could be improved by using a more detailed model and more a precise verification method. This would lead to savings predictions with higher accuracy. 
 \par 
 \subsubsection{Compressor relocation}
-Bredenkamp \cite{Bredenkamp2013Masters} developed a simulation model to test compressor relocation scenarios. The model, as visualised in \cref{fig: bredenkamp  model}
+Simulating compressor relocation requires compressed air supply details details that were neglected for simplicity in the other simulation models discussed in this section. Bredenkamp \cite{Bredenkamp2013Masters} developed a simulation model to test compressor relocation scenarios. The model, as visualised in \cref{fig: bredenkamp  model}, simplifies the air demand to an outlet flow per shaft. The model takes into account the location, supply capacity of each compressor, as well as the surface pipe distances.
 \begin{figure}[h!]
 	\centering
 	\fbox{\includegraphics[trim =  -1.2cm 0.5cm -1.2cm 1cm ,width=\textwidth]{Images/2/bredenkamp/model}}
