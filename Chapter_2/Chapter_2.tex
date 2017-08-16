@@ -15,7 +15,9 @@ Compressed air is used extensively in a mine in surface and underground operatio
 \subsubsection{Compressors}
  \footnotetext[1]{Abc oil refining, "How centrifugal compressors operate" [Online] \url{http://abcoilrefining.blogspot.co.za/2012/03/how-centrifugal-compressors-operate.html}, [Accessed 15 August 2017].}
 
-Compressed air in mining is most commonly supplied by a centrifugal-type dynamic compressor \cite{Fouche2016Masters},\cite{Booysen2012Masters}.  These machines achieve compression as a result of the centrifugal force from the high-speed rotation of impellers in the air. Impeller rotation powered by a large electric motor. Multi-stage impeller compressor designs, as shown in \cref{fig: Compressor diagram}\footnotemark[1], are used to obtain higher pressure ratios \cite{Fouche2016Masters}. The compression process is inefficient. Only about 5\% to 10\% of the input energy of the process is converted into energy that is used \cite{yang2009air}. 
+Compressed air in mining is most commonly supplied by a centrifugal-type dynamic compressor \cite{Fouche2016Masters},\cite{Booysen2012Masters}.  These machines achieve compression as a result of the centrifugal force from the high-speed rotation of impellers in the air. The rotating impeller is  powered by a electric motor.
+\par 
+ Multi-stage impeller compressor designs, as shown in \cref{fig: Compressor diagram}\footnotemark[1], are used to obtain higher pressure ratios \cite{Fouche2016Masters}. The compression process is inefficient. Only about 5\% to 10\% of the input energy of the process is converted into energy that is used \cite{yang2009air}. 
 \begin{figure}[h]
 	\centering
 	\fbox{\hspace{3cm}\input{Images/2/Compressor/compressor}\hspace{2.5cm}}
@@ -73,11 +75,11 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 		\subsubsection{Optimising compressor control}
 		Compressors types and numbers can differ widely from mining compressed air systems. Compressor selection is crucial in these systems to match the correct compressors with the requirements of the system \cite{marais2010expert}.
 		\par 
-		In a study by Booysen \textit{et al.} \cite{Booysen2012Masters} on optimising compressor control, \cite{Booysen2012Masters} found that many mines control compressors using fixed target pressure points that are much higher than required. In one system, compressor controllers were set to target 650 \glssymbol{kpa} to ensure pressure underground did not fall below 500 \glssymbol{kpa}. Use of high set-points can lead to excessive wasteful blow-off air flow when the pressure exceeds maximum points.
+		In a study by Booysen \cite{Booysen2012Masters} on optimising compressor control, \cite{Booysen2012Masters} found that many mines control compressors using fixed target pressure points that are much higher than required. In one system, compressor controllers were set to target 650 \glssymbol{kpa} to ensure pressure underground did not fall below 500 \glssymbol{kpa}. Use of high set-points can lead to excessive wasteful blow-off air flow when the pressure exceeds maximum points.
 		\par
-		Booysen \cite{booysen2009optimising} showed through dynamic pressure setpoint control (matching the supply pressure with the demand) and optimal compressor selection, energy savings can be achieved. In a case study, an average power reduction of 1.07 MW was achieved. The lead to an estimated energy cost saving of R3M.
+		Booysen \cite{booysen2009optimising} showed through dynamic pressure set-point control (matching the supply pressure with the demand) and optimal compressor selection, energy savings can be achieved. In a case study, an average power reduction of 1.07 MW was achieved. The lead to an estimated energy cost saving of R3M.
 		\par 
-	 	Optimising control of compressors to match the demand of the system can be complicated. \glspl{vsd} and guide-vain are used to control the capacity of the system. More effective power reductions can be achieved through the use of \gls{vsd} control. Running compressors at part load reduces efficiency. From literature it shown electric motors will typical use 60-80\% of there rated power when running at $<$50\% load \cite{Saidur2010}.
+	 	Optimising control of compressors to match the demand of the system can be complicated. \glspl{vsd} and guide-vain are used to control the capacity of the system. More effective power reductions can be achieved through the use of \gls{vsd} control. Running compressors at part load reduces efficiency. From literature it shown electric motors will typical use 60-80\% of there rated power when running at less than 50\% load \cite{Saidur2010}.
 		
 		%\subsubsection{Air storage}
 		%- booysen 1.22
@@ -108,7 +110,7 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 		 \end{figure}
 	 \footnotetext[1]{efunda, "Orifice Flowmeter Calculator." [Online] \url{http://www.efunda.com/formulae/fluids/calc_orifice_flowmeter.cfm}, [Accessed 18 October 2016].}
 	 \par 
-		 Leaks are often not easily detected through visual methods. In industry, a number of techniques are employed to detect air leaks. Pascoe \cite{Pascoe2016Masters} and van Tonder \cite{vanTonder2010Masters} summarised these strategies as follows:
+		 Leaks are often not easily detected through visual methods. In industry, a number of techniques are employed to detect air leaks. Pascoe \cite{Pascoe2016Masters} and van Tonder \cite{vanTonder2010Masters} summarised these techniques as follows:
 		 \begin{itemize}
 		 	\item Audible detection (Walk and report)
 		 	\item Ultrasonic detection
@@ -127,7 +129,8 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 		\subsubsection{Improving pneumatic rock drill efficiency}
 		 Pneumatic rock drills are on of the largest air consumers in a mine. However Pneumatic drilling systems convert energy very inefficiently. Replacing pneumatic drills with more efficient alternatives such as hydraulic or pneumatic drills would lead to large energy savings \cite{Pascoe2016Masters}.  Alternatively improving the efficiency of pneumatic drilling can have a significant energy impact on the system, without the cost and safety concerns of alternative drilling technologies.
 		 \par 
-		  In a study by  Bester \textit{et al.} \cite{bester2013effect} looking at the effect of compressed air pressure on energy demand. Bester showed that between 2002 and 2013 compressed air and energy consumption per tonne of ore produced had steadily increased. This is illustrated  in \cref{fig: Compressed energy and air flow per ton}. 
+		 In a study by  Bester \textit{et al.} \cite{bester2013effect} looking at the effect of compressed air pressure on energy demand. Bester showed that between 2002 and 2013 compressed air and energy consumption per tonne of ore produced had steadily increased. This is illustrated  in \cref{fig: Compressed energy and air flow per ton}. 
+		  \par
 		 The increase of air consumption per \gls{t} was a result of reduced air pressure at the mining areas. This caused a drop in the drilling rate, leading to higher air consumption. Pressure measurements as low as 300 \gls{kpa} were recorded in these areas. Before 2002 the drilling pressure at the mining section (stopes), was maintained above 500 \gls{kpa} at most mines. 
 		 \par 
 		 \begin{figure}[h]
@@ -165,7 +168,7 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 	%	\end{equation}			
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\subsection{Value of simulation in mining DSM}
-	Van Niekerk \cite{van2013value},\cite{vanNiekerk2012Value} investigated the value of simulation models in mine \gls{dsm} projects. Van Niekerk developed simulation models for compressed air and water reticulation systems using KYPipes's gas simulation engine. \\
+	Van Niekerk \cite{van2013value},\cite{vanNiekerk2012Value} investigated the value of simulation models in mine \gls{dsm} projects. \cite{van2013value},\cite{vanNiekerk2012Value}  developed simulation models for compressed air and water reticulation systems using KYPipes's gas simulation engine. \\
 	
 	\subsubsection{Mine cooling systems}
 	Simulation has been used in studies as a tool to improve mine cooling. Holman \cite{Holman2014Masters} investigated improvements to mine cooling systems that improve performance and efficiency. In the study \cite{Holman2014Masters}  used simplified \gls{ptb}  simulation models to investigate cooling interventions.
@@ -175,7 +178,8 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 	
 %	\subsubsection{Mine compressed air systems}
 		
-	\subsection{Simulation procedures}
+	\subsection{Simulation procedure}
+	A structured simulation procedure is required to achieve the objectives of the study. From examples of simulation usage on mining systems from literature,the following simulation procedure was identified.
 		- Philip
 		- Kriel masters\\
 	\subsubsection{Periodic/repeated simulation}
@@ -185,7 +189,7 @@ A \gls{scada} system is used to monitor and control processes throughout the min
  	\subsection{Simulation model verification strategies}\label{VerificationLit}
  	Due to lack of instrumentation, measurement inaccuracies and other non-ideal aspects of mining systems. It is impossible for a simulation model to match the actual system's performance perfectly. From literature, methods of verifying simulation precision were investigated. The verification techniques identified from literature were Mean residual difference, \gls{mae}, coefficient of determination or correlation and \gls{mse}.%Most studies utilised a comparison calculation strategy to calculate a model accuracy or error. %Two calculation methods identified were \emph{Average difference method} and \emph{average percentage difference}. 
  		\subsubsection{Mean residual difference method}
- 			The average difference method looks at the average for the data points in the actual and simulated time series.  The error is then calculated with \cref{eq: AMean absolute}. The simulation percentage error in relation to the actual series is then calculated by dividing the error by the Actual datapoints, \cref{eq: Average difference}.
+ 			The average difference method looks at the average for the data points in the actual and simulated time series.  The error is then calculated with \cref{eq: AMean absolute}. The simulation percentage error in relation to the actual series is then calculated by dividing the error by the Actual data-points, \cref{eq: Average difference}.
  			
  			\begin{equation}
  			\label{eq: AMean absolute}
@@ -206,10 +210,10 @@ To get a relative error percentage, the equation is rewritten:
  						$N$ & Number of Data point in simulation period \\
  					\end{tabular} 
  				\end{table}	
- 			A major disadvantage of this method is that for transient simulation, the positive and negative errors for individual points can cancel out. This leads to a smaller resultant error than would be expected. The resultant error measurement therefore can not lead to any conclusive statements regarding the accuracy of the model \cite{sarin2010comparing}.  This strategy is not recommended if used alone to verify transient simulation precision. 
+ 			A major disadvantage of this method is that for transient simulation, the positive and negative errors for individual points can cancel out. This leads to a smaller resultant error than would be expected. The resultant error therefore can not lead to any conclusive statements regarding the accuracy of the model \cite{sarin2010comparing}.  This strategy is not recommended if used alone to verify transient simulation precision. 
  			\par 
  						
- 			Yu-jie Xu \textit{et al} \cite{xu2016modeling} developed a simulation model for an absorption chiller. In the study \cite{xu2016modeling} utilised  residual difference to measure the relative steady state error of the absorber model. The accepted margin of accuracy in the study was a relative steady state error of 5 \%. 
+ 			Yu-jie Xu \textit{et al.} \cite{xu2016modeling} developed a simulation model for an absorption chiller. In the study \cite{xu2016modeling} utilised  residual difference to measure the relative steady state error of the absorber model. The accepted margin of accuracy in the study was a relative steady state error of 5 \%. 
  			
  		\subsubsection{Mean absolute error method}
  		The \gls{mae} verification method follows a similar calculation as in the Average residual difference method. However, as shown in \cref{eq: Relative error}, the error is calculated individually for each point in the series. The average of the individually errors is the resultant error, \cref{eq: Relative error 2}. To obtain the relative error percentage, each error is divided by the Actual value at that time step as in \cref{eq: Relative error}.
@@ -335,7 +339,7 @@ To get a relative error percentage, the equation is rewritten:
 \section{Use of simulation in mining compressed air optimisation}
 \subsection{Preamble}
 This section will discuss simulation usage from  literature to optimise mining compressed air systems.
-\subsection{Compressed air simulation models} \label{simplfiedModels}
+\subsection{Simplified compressed air simulation models} \label{simplfiedModels}
 \subsubsection{Simplified "vessel"  model}
 Before new software tools allowed for the development of detailed mining compressed air simulation models, Marais \cite{Marais2012PhD},\cite{marais2013simplification} created a simplified compressed air model to estimate and quantify the performance of potential energy interventions.  \cite{Marais2012PhD} simplified the mining compressed air system, comparing the network to an air source and a vessel with many leaks. This is illustrated in \cref{fig:Marais vessel model}.
 \begin{figure}[h!]
@@ -374,9 +378,10 @@ Kriel \cite{Kriel2014Masters} used simulation to estimate the performance of ene
 \end{figure}
 \par 
 Simulation was performed to quantify the savings from underground network interventions. The interventions were deigned to reduce flow to the network. The estimated savings from the simulations varied between 10 and 25\% compared to the actual performance of the interventions. Like the vessel model discussed previously, the simplified air network model can not be used to estimate the energy savings potential of more complex scenarios. The simulation procedure in this study could be improved by using a more detailed model and more a precise verification method. This would lead to savings predictions with higher accuracy. 
-\par 
+
+\subsection{Complex compressed air simulation models} \label{simplfiedModels}
 \subsubsection{Compressor relocation}
-Simulating compressor relocation requires compressed air supply details details that were neglected for simplicity in the other simulation models discussed in this section. Bredenkamp \cite{Bredenkamp2013Masters} developed a simulation model to test compressor relocation scenarios. The model, as visualised in \cref{fig: bredenkamp  model}, simplifies the air demand to an outlet flow per shaft. The model takes into account the location, supply capacity of each compressor, as well as the surface pipe distances.
+Simulating compressor relocation requires  air supply details details that were neglected for simplicity in the other simulation models discussed in this section. Bredenkamp \cite{Bredenkamp2013Masters} developed a simulation model to test compressor relocation scenarios. The model, as visualised in \cref{fig: bredenkamp  model}, simplifies the air demand to an outlet flow per shaft. The model takes into account the location, supply capacity of each compressor, as well as the surface pipe distances.
 \begin{figure}[h!]
 	\centering
 	\fbox{\includegraphics[trim =  -1.2cm 0.5cm -1.2cm 1cm ,width=\textwidth]{Images/2/bredenkamp/model}}
@@ -393,10 +398,15 @@ Simulating compressor relocation requires compressed air supply details details 
 	\label{fig:kriel  model}
 \end{figure}
 
-- Bredenkamp
-\\
--Mare et al 
+\subsubsection{Complex compressed air system}
 
+-Mare et al 
+\begin{figure}[h!]
+	\centering
+	\fbox{\includegraphics[trim =  -1.5cm 0.5cm -1.5cm 0.5cm ,width=\textwidth]{Images/2/mare/model}}
+	\caption[Simulation model for a complex air network.]{Simulation model for a complex air network. Adapted from Mare \cite{}.}
+	\label{fig:Mare model}
+\end{figure}
 		
 		- van Tonder\\
 		- De Coning \\-  simulations to investigate the opportunity to optimise the control strategy of a compressed air network by rescheduling the compressors.\\

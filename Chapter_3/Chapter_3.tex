@@ -68,7 +68,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	The period and step size selected for the simulation is just as important. The period of the simulation should be determined to ensure a scenario is fully tested. Most commonly, a 24 hour period is chosen as daily parameters are normally very similar. The simulation step size should be selected with the resolution of the available data in mind. Smaller step size selection can lead to a more accurate simulation model. 
 	\subsection{Model compressed air network component}
 		\subsubsection{Air pipes}
-		Pressure losses occur over compressed air networks due to friction in the pipe, these losses should be taken into account in the simulation for large piping sections. A pipe model is used to account for these losses which are defined by the \textit{Darcy-Weisbach equation}\footnote{ B. Glenn, \enquote*{The Darcy–Weisbach Equation,}[Online] \url{https://bae.okstate.edu/faculty-sites/Darcy/DarcyWeisbach/Darcy-WeisbachEq.htm}, [Accessed 20-05-2017]}:
+		Pressure losses occur over compressed air networks due to friction in the pipe, these losses should be taken into account in the simulation for large piping sections. A pipe model is used to account for these losses which are defined by the \textit{Darcy-Weissman equation}\footnote{ B. Glenn, \enquote*{The Darcy–Weisbach Equation,}[Online] \url{https://bae.okstate.edu/faculty-sites/Darcy/DarcyWeisbach/Darcy-WeisbachEq.htm}, [Accessed 20-05-2017]}:
 		$$\Delta P = \frac{f  L \rho V^2}{2 D}$$
 		Where the pressure difference $\Delta P $ is a function of:\\
 		\begin{table}[h]
@@ -134,7 +134,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			
 			\begin{figure}[h]
 				\centering
-				\fbox{\includegraphics[trim =-12cm 0.5cm -12cm 0.5cmcm, width=\textwidth]{Images/3/AirDemand}}
+				\fbox{\includegraphics[trim =-12cm 0.5cm -12cm 0.5cm, width=\textwidth]{Images/3/AirDemand}}
 				\caption{Implementing flow demands and leaks into the simulation.} 
 				\label{fig: Demand component}
 			\end{figure}
@@ -145,7 +145,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	\begin{figure}[h]
 		\centering
 		\fbox{\includegraphics[trim =-4cm 0 -4cm 0cm, width=\textwidth]{Images/3/Controller}}
-		\caption{Control components in \gls{ptb}.}
+		\caption[Control components in Process toolbox]{Control components in \gls{ptb}.}
 		\label{fig: Controller models}
 	\end{figure}
 		Guide vains are most commonly used in mining to control compressors. This entails controlling the position of the inlet guide vain . The guide vain is opened or closed to control the compressors discharge pressure.  Manipulating the guide vain position will affect the power the compressor inputs into the system. \cref{fig: Guide vain position} shows the relationship between  power and guide vain position. This can be modelled as a linear function where a guide vain position of 40\% relates to an output power of about 60\% of the maximum power. When more pressure is required than can be obtained with the guide vains fully opened, another compressor is needed to operate. 
@@ -187,7 +187,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		\end{table}
 	Depending on the accuracy requirement, after-cooling can be excluded from the simulation. Post after-cooling, compressed air is normally still warmer then ambient conditions. Air temperatures underground can be accurately matched by including heat transfer for compressed air pipelines.
 	\subsection{Verify the simulation model}
-	From the review of literature in \cref{VerificationLit}, it was determined that \gls{mae} and the coefficient of determination were the most effective methods of measuring model accuracy. Therefore in this study both measures are utilised in the model verification. To obtain these measures, the major simulation outputs (Total system power, flow and pressure) are compared to actual data from the system. R-sqaured and \gls{mae} is obtained by applying the relative methodologies discussed in \cref{VerificationLit}.
+	From the review of literature in \cref{VerificationLit}, it was determined that \gls{mae} and the coefficient of determination were the most effective methods of measuring model accuracy. Therefore, in this study both measures are utilised in the model verification. To obtain these measures, the major simulation outputs (Total system power, flow and pressure) are compared to actual data from the system. R-sqaured and \gls{mae} is obtained by applying the relative methodologies discussed in \cref{VerificationLit}.
 	
 	\par 
 	For this study, the selected verification constraints were selected as : $$r^2 > 0.9$$ and$$ Err_{\%} < 5\% $$ If these constraints are met for the power, flow and pressure of the system,the model is considered accurate. As an extra measure relative error of the output for the minor model components should be $ > 85\%$ of the actual data. 
