@@ -64,4 +64,5 @@ set yrange [0:6]
 set ytics 1 nomirror
 set size 1.3,0.6
 set datafile separator ","
+unset key
 plot 'Pressure.csv' using 1:($2/1000) title "Average Power profile" with lines ls 1, \
