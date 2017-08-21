@@ -142,10 +142,11 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 	\subsection{Summary}
 \section{Use of simulations to identify improvements in mining systems}
 	\subsection{Preamble}
-	The value of simulation in  the mining industry has been shown through its use in \gls{dsm} initiatives. Simulation has been used to identify savings strategies for water reticulation cooling, compressed air and ventilation. This section will summarise the the work that has been done in industry. From this the successes and shortcomings of previous work will be discussed.
+	The value of simulation in  the mining industry has been shown through its use in \gls{dsm} initiatives. Simulation has been used to identify savings strategies for water reticulation cooling, compressed air and ventilation.
+	\par The purpose of this section is to summarise and discuss the work that has already been done in with regard to estimation and simulation of complex mining systems. 
 	
-		\subsection{Estimating techniques used for energy savings on mining systems }
-		Estimation of energy savings has been used in literature to obtain the potential energy impact that can be achieved for a system. Before new tools allowed for quick development of simplified simulation models, estimation techniques were frequently used to determine the feasibility of energy interventions on mining systems. The problem with an estimation approach is that they typically rely on simplified system model that lead to high prediction error.
+	\subsection{Estimating techniques used for energy savings on mining systems }
+	Estimation of energy savings has been used in literature to obtain the potential energy impact that can be achieved for a system. Before new tools allowed for quick development of simplified simulation models, estimation techniques were frequently used to determine the feasibility of energy interventions on mining systems. The problem with an estimation approach is that they typically rely on simplified system model that lead to high prediction error.
 		\par 
 		Snyman, \cite{Snyman2011Masters} used mathematical estimation techniques to determine the expected power savings from initiatives on mining compressed air systems.  Due to uncertainty in the estimations, \cite{Snyman2011Masters} predicted results were provided as a range between conservative and best-case estimates. The actual achieved energy impact would fall between these estimations.
 		 	
@@ -331,10 +332,14 @@ To get a relative error percentage, the equation is rewritten:
  		\caption{Simulation verification methods that were implemented in previous studies.}
  		\label{table: Verification studies}
  	\end{table}
+ 
+ 	\subsection{Comparison of available simulation tools}
+ philip phd \cite{Mare2016PhD}\\
+ Peach \cite{Peach2016Masters}
  	\subsection{Summary}
 \section{Use of simulation in mining compressed air optimisation}
 \subsection{Preamble}
-This section will discuss simulation usage from  literature to optimise mining compressed air systems.
+This section will focus on discussion of literature regarding simulation usage in optimising mining compressed air systems. Shortcomings identified from literature that can be improved upon in this study will be addressed.
 \subsection{Simplified compressed air simulation models} \label{simplfiedModels}
 \subsubsection{Simplified "vessel"  model}
 Before new software tools allowed for the development of detailed mining compressed air simulation models, Marais \cite{Marais2012PhD},\cite{marais2013simplification} created a simplified compressed air model to estimate and quantify the performance of potential energy interventions.  \cite{Marais2012PhD} simplified the mining compressed air system, comparing the network to an air source and a vessel with many leaks. This is illustrated in \cref{fig:Marais vessel model}.
@@ -346,8 +351,6 @@ Before new software tools allowed for the development of detailed mining compres
 \end{figure}
 \par 
 A simplified calculation methodology was developed to quickly estimate the expected energy savings impact on the system. From this, energy saving estimations rules were developed as listed in \cref{table: Rules of thumb}.  
-\par 
-Their is not a high degree of precision in this approach as specific details of the air network are not taken into account. The simplified approach cannot be used used to estimate more complex scenarios. The method also does not estimate other potential benefits of an interventions such as pressure delivery improvements.
 \par 
 \begin{table}[h]
 	\centering
@@ -363,12 +366,13 @@ Their is not a high degree of precision in this approach as specific details of 
 	\caption[Summary of energy saving estimation rules]{Summary of energy saving estimation rules\cite{Marais2012PhD}.}
 	\label{table: Rules of thumb}
 \end{table}
+There is not a high degree of precision in this approach as specific details of the air network are not taken into account. The simplified approach cannot be used used to estimate more complex scenarios. The method also does not estimate other potential benefits of an interventions such as pressure delivery improvements.
 
 \subsubsection{Simplified air network model}
 Kriel \cite{Kriel2014Masters} used simulation to estimate the performance of energy projects on mining compressed air. The KYPipe GAS software tool was utilised to develop simulation models for the systems. \cite{Kriel2014Masters} simplified the air networks for the simulations to a single compressor representing the supply processes and an outlet flow to each underground level in the network. The model is shown graphically in \cref{fig:kriel  model}
 \begin{figure}[h!]
 	\centering
-	\fbox{\includegraphics[trim =  -2.5cm 0.5cm -2.5cm 0.5cm ,width=\textwidth]{Images/2/kriel/model}}
+	\fbox{\includegraphics[trim =  -2cm 0.5cm -2cm 0.5cm ,width=\textwidth]{Images/2/kriel/model}}
 	\caption[Simplified system model.]{Simplified system model. Adapted from Kriel \cite{Kriel2014Masters}.}
 	\label{fig:kriel  model}
 \end{figure}
@@ -377,35 +381,42 @@ Simulation was performed to quantify the savings from underground network interv
 
 \subsection{Complex compressed air simulation models} \label{simplfiedModels}
 \subsubsection{Compressor relocation}
-Simulating compressor relocation requires  air supply details details that were neglected for simplicity in the other simulation models discussed in this section. Bredenkamp \cite{Bredenkamp2013Masters} developed a simulation model to test compressor relocation scenarios. The model, as visualised in \cref{fig: bredenkamp  model}, simplifies the air demand to an outlet flow per shaft. The model takes into account the location, supply capacity of each compressor, as well as the surface pipe distances.
+Simulating compressor relocation requires air supply details that were neglected in the simplified simulation models discussed in this section. Therefore Bredenkamp, \cite{Bredenkamp2013Masters} developed a simulation model to test compressor relocation scenarios. 
+\par
+The model takes into account the location, supply capacity of each compressor, as well as the surface pipe distances. The model, as visualised in \cref{fig: bredenkamp  model}, simplifies the air demand to an outlet flow per shaft.
+\par
 \begin{figure}[h!]
 	\centering
-	\fbox{\includegraphics[trim =  -1.2cm 0.5cm -1.2cm 1cm ,width=\textwidth]{Images/2/bredenkamp/model}}
-	\caption[Compressor relocation simulation model.]{Compressor relocation simulation model. Adapted from bredenkamp \cite{Bredenkamp2013Masters}.}
+	\fbox{\includegraphics[trim =  -0.5cm 1cm -0.5cm 0cm ,width=\textwidth]{Images/2/bredenkamp/model}}
+	\caption[Compressor relocation simulation model.]{Compressor relocation simulation model. Adapted from Bredenkamp \cite{Bredenkamp2013Masters}.}
 	\label{fig: bredenkamp  model}
 \end{figure} 
-\\
+\cite{Bredenkamp2013Masters} utilised the residual difference to calibrate and verify the model parameters. Simulation precision and estimation confidence could therefore be improved through use of the other verification methods discussed in \cref{VerificationLit}.
+\par 
+Increasing the complexity of the demand components would provide more detailed results, showing more specific effects that result from the simulated scenarios.  Additionally more complex scenarios could be simulated with potentially greater savings
+
 \subsubsection{Compressed air ring}
-- Pascoe \\
+Pascoe,\cite{Pascoe2016Masters} developed a simulation model for a compressed air ring. The purpose of the simulation was to identify the benefits of reducing pressure during the blasting shift period though valve control.\par 
+ The model required complex supply side detail including modelling of individual compressor, locations of compressors and pipe lengths and control valves. The demand aspect of the system was simplified to a single flow per shaft, decline or processing plant. A schematic of the simulation model is shown in \cref{fig:Pascoe  model}.
+ \par
 \begin{figure}[h!]
 	\centering
-	\fbox{\includegraphics[trim =  -1.5cm 0.5cm -1.5cm 0.5cm ,width=\textwidth]{Images/2/pascoe/model}}
-	\caption[Simplified compressed air ring model.]{Simplified compressed air ring model. Adapted from Kriel \cite{Pascoe2016Masters}.}
-	\label{fig:kriel  model}
+	\fbox{\includegraphics[trim =  -0.5cm 0.5cm -0.5cm 0.5cm ,width=\textwidth]{Images/2/pascoe/model}}
+	\caption[Simplified compressed air ring model.]{Simplified compressed air ring model. Adapted from Pascoe \cite{Pascoe2016Masters}.}
+	\label{fig:Pascoe  model}
 \end{figure}
+As was the case with Bredenkamp \cite{Bredenkamp2013Masters}, \cite{Pascoe2016Masters} utilised the residual difference to calibrate and verify the model parameters.The precision could therefore also be improved through the use of the other verification methods discussed in \cref{VerificationLit}. Increasing the complexity of the demand components could also be beneficial.
 
-\subsubsection{Complex compressed air system}
-
--Mare et al 
+\subsubsection{Mine complex}
+Mare \textit{et al.}, \cite{Mare2017Evaluating} developed a compressed air simulation for a mining complex. In the study \cite{Mare2017Evaluating} simulated and prioritised several scenarios with the goal of reducing energy and other operational costs for a gold mine.
 \begin{figure}[h!]
 	\centering
-	\fbox{\includegraphics[trim =  -1.5cm 0.5cm -1.5cm 0.5cm ,width=\textwidth]{Images/2/mare/model}}
-	\caption[Simulation model for a complex air network.]{Simulation model for a complex air network. Adapted from Mare \cite{}.}
+	\fbox{\includegraphics[trim =  -0.5cm 0.5cm -0.5cm 0.5cm ,width=\textwidth]{Images/2/mare/model}}
+	\caption[Simulation model for a complex air network.]{Simulation model for a complex air network. Adapted from Mare \cite{Mare2017Evaluating}.}
 	\label{fig:Mare model}
-\end{figure}
-		
-		- van Tonder\\
-		- De Coning \\-  simulations to investigate the opportunity to optimise the control strategy of a compressed air network by rescheduling the compressors.\\
+\end{figure}		
+%- van Tonder\\
+%- De Coning \\
 	\subsection{Summary}
 	\label{Shortcomings of previous work}
 \section{Conclusion}
