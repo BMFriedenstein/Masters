@@ -55,15 +55,17 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	
 	 \begin{figure}[h]
 	 	\centering
-	 	\fbox{\includegraphics[width=\textwidth]{Images/3/Sensitivity2.pdf}}
-	 	\caption{ Model boundary selection examples.}
+	 	\fbox{\hspace{0.125\textwidth}\includegraphics[width=0.75\textwidth]{Images/3/Detail.pdf}\hspace{0.125\textwidth}}
+	 	\caption{ Selecting boundaries for the simulation model.}
 	 	\label{fig: Sensitivity}
 	 \end{figure}
  
 	\par 
 	The boundaries should be chosen based on the input data available, required accuracy n and available time and resources. A more detailed model will lead to more accurate simulation, however it may take more time and resources to obtain the data required. Figure \cref{fig: Sensitivity} shows an example of different boundary selection for the same system.
 	\par
-	The period and step size selected for the simulation is just as important. The period of the simulation should be determined to ensure a scenario is fully tested. Most commonly, a 24 hour period is chosen as daily parameters are normally very similar. The simulation step size should be selected with the resolution of the available data in mind. Smaller step size selection can lead to a more accurate simulation model. 
+	period and data step sizes of the simulation is just as important. The period or duration of the simulation should be determined to ensure that the effects of a scenario are fully tested. Most commonly, previous studies have simulated a "typical" 24 hour period of operation. Most mining compressed air systems follow daily trends and patterns. Therefore, there is no need to simulate a longer period as day to day results would be very similar. A longer simulation may be required in cases where the system operation varies from day to day. 
+	\par 
+	The simulation step size indicates the data resolution. A lower step size will result in a more accurate simulation of the system, however the processing and data analysis is effected. In this study, the smallest available step size is selected to ensure that the the simulated results achieve the desired precision. Higher step sizes (30+ min.) complicates control models as precisely replicating quick changes such as opening/closing valves or compressors stopping or staring etc. becomes more difficult.
 	\subsection{Model compressed air network components}
 		\subsubsection{Air pipes}
 		Pressure losses occur over compressed air networks due to friction in the pipe, these losses should be taken into account in the simulation for large piping sections. A pipe model is used to account for these losses which are defined by the \textit{Darcy-Weissman equation}\footnote{ B. Glenn, \enquote*{The Darcy–Weisbach Equation,}[Online] \url{https://bae.okstate.edu/faculty-sites/Darcy/DarcyWeisbach/Darcy-WeisbachEq.htm}, [Accessed 20-05-2017]}:
@@ -223,7 +225,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		\par
 		The simulation is then executed and this process is repeated for each of the scenarios. For each scenario, the desired output parameters must be exported for further analysis.
 
-	\subsection{Quantify and prioritise operational improvements}
+	\subsection{Quantify operational benefit}
 		With the data for each of the simulated scenarios exported, the relative improvement compared to the baseline should now be quantified. This is performed by comparing the baseline and optimised data series as shown visually in \cref{fig: Savings Power.}.
 		\begin{figure}[h]
 			\centering
@@ -233,15 +235,21 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		\end{figure}  
 	 
 		\par 
-		For power data, the expected annual energy cost saving can be calculated using the tariff structure provided used by the Eskom. The Tariff structure is shown in \cref{.}**** Energy cost structure. **** .
-		\\
-		**** Energy cost structure. **** 
-		\\
+		For power data, the expected annual energy cost saving can be calculated using  average weekday energy saving and the tariff structure provided by Eskom. The energy supplier's weekday \gls{tou} tariffs for both the high demand (Jun - Aug) and low demand (Sep - May) seasons are shown in \cref{fig: Tariff}.
+
+		\begin{figure}[h]
+			\centering
+			\input{Graphs/3/tariff/tariff}
+			\caption[Eskom's weekday TOU tariff structure.]{Eskom's weekday \gls{tou} tariff structure.}
+			\label{fig: Tariff}
+		\end{figure}
+		
 		Estimating the cost benefit for improvements in pressure delivery is more difficult to quantify. Instead, the average pressure benefit should for a period should be provided in kPa. For example, \enquote{The simulation indicated an $x$ MW saving with an additional pressure improvement of $y$ kPa during the drilling shift.}.
-		\par
-		Prioritise interventions
+
 		\subsection{Report results to the mine}
-		- Reporting feedback to the mine
+		Once the benefits for each simulated scenario has been calculated and quantified, the interventions should be prioritised in the order of greatest benefit for the mine. The implementation costs and pay back periods of the interventions can also be considered in this process.
+		\par
+		The results and recommendations should be submitted to responsible mine personal in the form of a report. At this point the process of implementation becomes the mines responsibility. The mine may require further validation of the results through practical testing.
 
 	\subsection{Summary}
 \section{Conclusion}
