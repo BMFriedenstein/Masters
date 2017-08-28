@@ -33,7 +33,7 @@ Compressed air is used to power pneumatic rock drills within a mine. Pneumatic r
 Refuge bays are installed underground in deep level mines to provide safety to miners in the event of an emergency. Due safety regulations, most mines will utilise compressed air to deliver chilled air to the chamber \cite{brake1999criteria}. \cref{fig: Refuge Bay} shows an example of a compressed air inlet at an underground refuge bay. A muffler is installed to the end of the inlet air pipe to reduce noise.
 \begin{figure}[h]
 	\centering
-	\fbox{\includegraphics[width=\textwidth]{Images/1/refugebay.jpg}}
+	\fbox{\includegraphics[width=\textwidth]{Images/1/refugebaysmall}}
 	\caption{An example of compressed air inlet in an underground refuge bay chamber of a mine.}
 	\label{fig: Refuge Bay}
 \end{figure}
@@ -58,7 +58,7 @@ As shown in \cref{fig: Mining schedule}, the pressure requirement changes depend
 For large industrial systems, thorough instrumentation is necessary to monitor performance and equipment condition throughout the system. In a mining compressed air network, instrumentation is installed to monitor flows, pressures, temperatures, etc. Electrical instrumentation is also installed for sensing currents, power factors, voltages and power. On control valves, input/output pressures, flows and valve position are usually measured with instrumentation.	
 \par
 A \gls{scada} system is used to monitor and control processes throughout the mine from a control room. The \gls{scada} centralises instrumentation data from \glspl{plc} throughout the mine. The \gls{scada} can also be used to control machines and instrumentation by sending control signals to the relevant \gls{plc}.  Communication to the underground \glspl{plc} is achieved using a substantial fibre optic network\cite{schroeder2009energy}.
-\subsection{Summary}
+\subsection{Summary}-
 \section{Review of compressed air energy interventions in industry}
 	\subsection{Preamble}
 		Compressed air improvement can be obtained through intervention in either the supply or demand processes of a compressed air system \cite{Kriel2014Masters}. Improvements in supply is achieved by increasing the efficiency of compressed air supply. Examples of these types of intervention include \gls{dcs}, compressor relocation, repairs and maintenance, etc. 
@@ -76,7 +76,7 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 		\par 
 		In a study by Booysen \cite{Booysen2012Masters} found that many mines control compressors using fixed target pressure points that are much higher than required. In one system, compressor controllers were set to target 650 \glssymbol{kpa} to ensure pressure underground did not fall below 500 \glssymbol{kpa}. Use of high set-points can lead to excessive wasteful blow-off air flow when the pressure exceeds maximum points.
 		\par
-		 \cite{booysen2009optimising} showed through dynamic pressure set-point control (matching the supply pressure with the demand) and optimal compressor selection, energy savings can be achieved. In a case study, an average power reduction of 1.07 MW was achieved. The lead to an estimated energy cost saving of R3M.
+		 \cite{booysen2009optimising} showed through dynamic pressure set-point control\footnote{Matching the supplied pressure with the specific required air demand.} and optimal compressor selection, energy savings can be achieved. In a case study, an average power reduction of 1.07 MW was achieved. The lead to an estimated energy cost saving of R3M.
 		\par 
 	 	Optimising control of compressors to match the demand of the system can be complicated. \glspl{vsd} and guide-vain are used to control the capacity of the system. More effective power reductions can be achieved through the use of \gls{vsd} control. Running compressors at part load reduces efficiency. From literature, it has been shown electric motors will typical use 60-80\% of there rated power when running at less than 50\% load \cite{Saidur2010}.
 		
@@ -113,9 +113,9 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 		 \begin{itemize}
 		 	\item Audible detection (Walk and report)
 		 	\item Ultrasonic detection
-		 	\item Detection through intelligent systems
-		 	\item Pigging
-		 	\item Soap water and dyes
+		 	\item Intelligent systems\footnote{Leakage detection by using strategically placed measurement equipment and smart computer systems.}
+		 	\item "Pigging"\footnote{The use of a device, "pig", within the pipe to perform inspections.}
+		 	\item Soap water/visible dyes 
 		 \end{itemize}
 	 	 These methods are time and resource intensive and many mines do not actively employ dedicated leakage detection and repair teams. Marais \textit{et al} \cite{marais2009increased} investigated streamlining the leakage detection and repair process to increase energy savings through the use of \gls{calds}. The system was developed to allow centralised mobile leakage reporting. Usage of \gls{calds} in mines resulted in an increased leak detection rate. One mine reporting 24 leaks in a single month. It was noted in the study that there difficulty quantifying the actual energy savings of the leakage repairs due to other intervention occurring simultaneously.	
 		 
@@ -140,6 +140,7 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 		 \end{figure}
 		 From literature, it is shown that lowering the pressure reduces the efficiency and drill rate of rock drilling, leading to higher air consumption. Interventions that reduce systemic air losses or optimise supply can increase the pressure operating pressure. Increased pressure, during the drilling shift, may add more value than the energy cost savings that can be achieved at a lower pressure.
 	\subsection{Summary}
+	-
 \section{Use of simulations to identify improvements in mining systems}
 	\subsection{Preamble}
 	The value of simulation in  the mining industry has been shown through its use in \gls{dsm} initiatives. Simulation has been used to identify savings strategies for water reticulation cooling, compressed air and ventilation.
@@ -177,7 +178,7 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 %	\subsubsection{Mine compressed air systems}
 		
 	\subsection{Simulation procedure}
-	A structured simulation procedure is required to achieve the objectives of the study. 
+	A structured simulation procedure is required to achieve the objectives of the study. From literature
 		- Philip
 		- Kriel masters\\
 	\subsubsection{Periodic/repeated simulation}
@@ -187,7 +188,7 @@ A \gls{scada} system is used to monitor and control processes throughout the min
  	\subsection{Simulation model verification strategies}\label{VerificationLit}
  	Due to lack of instrumentation, measurement inaccuracies and other non-ideal aspects of mining systems. It is impossible for a simulation model to match the actual system's performance perfectly. From literature, methods of verifying simulation precision were investigated. The verification techniques identified from literature were Mean residual difference, \gls{mae}, coefficient of determination or correlation and \gls{mse}.%Most studies utilised a comparison calculation strategy to calculate a model accuracy or error. %Two calculation methods identified were \emph{Average difference method} and \emph{average percentage difference}. 
  		\subsubsection{Mean residual difference method}
- 			The average difference method looks at the average for the data points in the actual and simulated time series.  The error is then calculated with \cref{eq: AMean absolute}. The simulation percentage error in relation to the actual series is then calculated by dividing the error by the Actual data-points, \cref{eq: Average difference}.
+ 			The average difference method looks at the average for the data points in the actual and simulated time series.  Relative error is then calculated with \cref{eq: AMean absolute}. The simulation percentage error in relation to the actual series is then calculated by dividing the error by the Actual data-points, \cref{eq: Average difference}.
  			
  			\begin{equation}
  			\label{eq: AMean absolute}
@@ -208,10 +209,10 @@ To get a relative error percentage, the equation is rewritten:
  						$N$ & Number of Data point in simulation period \\
  					\end{tabular} 
  				\end{table}	
- 			A major disadvantage of this method is that for transient simulation, the positive and negative errors for individual points can cancel out. This leads to a smaller resultant error than would be expected. The resultant error therefore can not lead to any conclusive statements regarding the accuracy of the model \cite{sarin2010comparing}.  This strategy is not recommended if used alone to verify transient simulation precision. 
+ 			A major disadvantage of this method is that for transient simulation, the positive and negative errors for individual points can cancel out. This leads to a smaller resultant error than would be expected. The resultant error therefore can not lead to any conclusive statements regarding the accuracy of the model \cite{sarin2010comparing}.  This strategy is not recommended if used alone to verify transient simulations. 
  			\par 
  						
- 			Yu-jie Xu \textit{et al.} \cite{xu2016modeling} developed a simulation model for an absorption chiller. In the study \cite{xu2016modeling} utilised  residual difference to measure the relative steady state error of the absorber model. The accepted margin of accuracy in the study was a relative steady state error of 5 \%. 
+ 			Yu-jie Xu \textit{et al.} \cite{xu2016modeling} developed a steady state simulation of an absorption chiller. In the study \cite{xu2016modeling} utilised  residual difference to measure the relative steady state error of the absorber model. The accepted margin of accuracy in the study was a relative steady state error of 5\%. 
  			
  		\subsubsection{Mean absolute error method}
  		The \gls{mae} verification method follows a similar calculation as in the Average residual difference method. However, as shown in \cref{eq: Relative error}, the error is calculated individually for each point in the series. The average of the individually errors is the resultant error, \cref{eq: Relative error 2}. To obtain the relative error percentage, each error is divided by the Actual value at that time step as in \cref{eq: Relative error}.
@@ -334,17 +335,21 @@ To get a relative error percentage, the equation is rewritten:
  	\end{table}
  
  	\subsection{Available simulation tools}
- 	A software tool is required to create and execute the compressed air simulations. In literature variety software tools have been used to simulate industrial systems. A suitable software system for this study must be capable of accurate modelling of complex compressed air networks and the execution of transient simulation.
+ 	A software tool is required to create and execute the compressed air simulations. In literature variety software tools have been used to simulate industrial systems. A suitable software system for this study must be capable of producing accurate models of complex compressed air network and the execution of transient simulation with dynamic data and control inputs. 
+ 	\par 
+ 	The development of system models should also not be excessively time-consuming. The software tool should also be able to handle missing data inputs and information that in common in mining systems.  These were shortfalls of simulation tools noted by van Tonder \cite{vanTonder2014PhD} and Marais \cite{Mare2016PhD}.
 	\par
- 	  From literature the following tools were identified that meet the criteria for this study: 
+ 	  The following simulation tools that may meet the criteria were identified : 
  	\begin{itemize}
  		\item \gls{ptb}
  		\item Flownex
 		\item KYPipe GAS
 		\item AirSim
+		\item REMS
  	\end{itemize}
+ Of these tools, \gls{ptb} was identified as the most suitable software system for this study. %\Gls{ptb}
  %Mare \cite{Mare2016PhD} and Peach \cite{Peach2016Masters} investigated simulation software packages for mining systems; Identifying the strengths and limitations of each. 
- 	\subsection{Summary}
+ 	\subsection{Summary}-
 \section{Use of simulation in mining compressed air optimisation}
 \subsection{Preamble}
 This section will focus on discussion of literature regarding simulation usage in optimising mining compressed air systems. Shortcomings identified from literature that can be improved upon in this study will be addressed.
@@ -425,6 +430,6 @@ Mare \textit{et al.} \cite{Mare2017Evaluating} developed a compressed air simula
 \end{figure}		
 %- van Tonder\\
 %- De Coning \\
-	\subsection{Summary}
+	\subsection{Summary}-
 	\label{Shortcomings of previous work}
-\section{Conclusion}
+\section{Conclusion}-
