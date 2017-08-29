@@ -50,8 +50,8 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	\subsection{Preamble}
 	Compressed air networks are comprised of components such as compressors, valves, pipes, etc. This section will discuss the development, calibration and verification of component models that make up a compressed air simulation. 
 	
-	\subsection{Select the system boundaries and simulation parameters}
-	The simulation boundaries determine the detail that the system is modelled. For a simple compressed air model, the boundaries can be set around the compressor house. This model would then only include the compressor components, inlet and outlet airflows. Alternatively a more complex model can be developed by choosing boundaries to include more aspects of the system such as mining levels, processing plants etc.
+	\subsection{Select the process boundaries and simulation parameters}
+	The simulation boundaries determine the detail that the system process is modelled. For a simple compressed air model, the boundaries can be set around the compressor house. This model would then only include the compressor components, inlet and outlet airflows. Alternatively a more complex model can be developed by choosing boundaries to include more aspects of the process such as mining levels, gold plants etc.
 	
 	 \begin{figure}[h]
 	 	\centering
@@ -61,11 +61,20 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	 \end{figure}
  
 	\par 
-	The boundaries should be chosen based on the input data available, required accuracy n and available time and resources. A more detailed model will lead to more accurate simulation, however it may take more time and resources to obtain the data required. Figure \cref{fig: Sensitivity} shows an example of different boundary selection for the same system.
+	The boundaries should be chosen based on the input data available, accuracy targets and available time and resources. A more detailed model will lead to more accurate simulation, however it may take more time and resources to obtain the data required to calibrate the model. Figure \cref{fig: Sensitivity} shows an example of different boundary selection for the same system.
 	\par
 	period and data step sizes of the simulation is just as important. The period or duration of the simulation should be determined to ensure that the effects of a scenario are fully tested. Most commonly, previous studies have simulated a "typical" 24 hour period of operation. Most mining compressed air systems follow daily trends and patterns. Therefore, there is no need to simulate a longer period as day to day results would be very similar. A longer simulation may be required in cases where the system operation varies from day to day. 
 	\par 
-	The simulation step size indicates the data resolution. A lower step size will result in a more accurate simulation of the system, however the processing and data analysis is effected. In this study, the smallest available step size is selected to ensure that the the simulated results achieve the desired precision. Higher step sizes (30+ min.) complicates control models as precisely replicating quick changes such as opening/closing valves or compressors stopping or staring etc. becomes more difficult.
+	The simulation step size indicates the data resolution. A lower step size will result in a more accurate simulation of the system, however the processing and data analysis is effected. In this study, the smallest available step size\footnote{The minimum step size is determined from the logging interval of the input data instrumentation. For example if all input data is logged at 10 minute intervals, the minimum step size would also be 10 minutes.} is selected to ensure that the simulated results achieve the desired precision. Higher step sizes (30+ min.) complicates control models as replicating quick changes such as opening/closing valves or compressors stopping or staring etc. precisely becomes more difficult.
+	\par
+	Higher time-step resolution allows for more precise tuning of controllers and dynamic components. If input data is not available in the desired resolution, the data can be interpolated using the appropriate method. An example of the application of linear interpolation to increase the time-step resolution is shown in \cref{fig: Inter}. However, estimating the \enquote{in-between} time-step value incorrectly may adversely affect the simulation accuracy.
+	
+	\begin{figure}[h]
+		\centering
+		\fbox{\input{Graphs/3/inter/inter}}
+		\caption{Interpolating input data to increase time-step resolution.}
+		\label{fig: Inter}
+	\end{figure}
 	\subsection{Model compressed air network components}
 		\subsubsection{Air pipes}
 		Pressure losses occur over compressed air networks due to friction in the pipe, these losses should be taken into account in the simulation for large piping sections. A pipe model is used to account for these losses which are defined by the \textit{Darcy-Weissman equation}\footnote{ B. Glenn, \enquote*{The Darcy–Weisbach Equation,}[Online] \url{https://bae.okstate.edu/faculty-sites/Darcy/DarcyWeisbach/Darcy-WeisbachEq.htm}, [Accessed 20-05-2017]}:
@@ -153,7 +162,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			\label{fig: Guide vain position}
 		\end{figure}
 		\par
-		A guide vain controller is modelled using a \gls{pi} controller component. However, the limitations of guide vain control, as represented in \cref{fig: Guide vain position}, must be implemented in the controller. This is done by using a minimum output that would match the minimum power reduction the guide vain achieved by closing the guide vain. For example, a \gls{pi} controller for the compressor from \cref{fig: Guide vain position} would have a minimum control output of approximately 60\%.
+		A guide vain controller is modelled using a \gls{pi} controller. However, the non linear limitations of guide vain control, as represented in \cref{fig: Guide vain position}, must be implemented in the controller. This is done by using a minimum control output limit that matches the minimum power reduction  achieved by closing the guide vain to its minimum position. For example, a \gls{pi} controller for the compressor from \cref{fig: Guide vain position} would have a minimum control output of approximately 60\%.
 		\par 
 		Mines utilize control valves at underground sections to control the pressure at individual mining stations independently \cite{Heyns2014Masters}. Controlling of valve components is performed similarly as control of the compressor components. As shown in \cref{fig: Controller models} the outlet pressure is used as feedback for a pi controller. The controller output is mapped to the valve fraction of a pipe component.
 		\begin{figure}[h]

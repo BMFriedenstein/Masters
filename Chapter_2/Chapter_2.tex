@@ -58,7 +58,8 @@ As shown in \cref{fig: Mining schedule}, the pressure requirement changes depend
 For large industrial systems, thorough instrumentation is necessary to monitor performance and equipment condition throughout the system. In a mining compressed air network, instrumentation is installed to monitor flows, pressures, temperatures, etc. Electrical instrumentation is also installed for sensing currents, power factors, voltages and power. On control valves, input/output pressures, flows and valve position are usually measured with instrumentation.	
 \par
 A \gls{scada} system is used to monitor and control processes throughout the mine from a control room. The \gls{scada} centralises instrumentation data from \glspl{plc} throughout the mine. The \gls{scada} can also be used to control machines and instrumentation by sending control signals to the relevant \gls{plc}.  Communication to the underground \glspl{plc} is achieved using a substantial fibre optic network\cite{schroeder2009energy}.
-\subsection{Summary}-
+\subsection{Summary}
+-
 \section{Review of compressed air energy interventions in industry}
 	\subsection{Preamble}
 		Compressed air improvement can be obtained through intervention in either the supply or demand processes of a compressed air system \cite{Kriel2014Masters}. Improvements in supply is achieved by increasing the efficiency of compressed air supply. Examples of these types of intervention include \gls{dcs}, compressor relocation, repairs and maintenance, etc. 
@@ -94,20 +95,17 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 			%*** \textit{Discussion of Bredenkamp} shortcomings and successes ***
 			
 	\subsection{Strategies to reduce compressed air demand}
-	As illustrated in \cref{fig: Mining schedule}
-		- Reducing leaks\\
-		- \cite{Marais2012PhD}\\
-		- \cite{Snyman2011Masters} - investigated various Compressed air demand reduction and efficiency optimisations .
-		 
+	Reducing the airflow demand is achieved by reducing air unnecessary airflow such as leaks, optimising the operating pressure to match the demand\footnotemark[2] and by improving the efficiency of air usage or replacing equipment with non-pneumatic alternatives \cite{Snyman2011Masters}.
+		 \footnotetext[2]{This is achieved by identifying the minimum required operating pressure for all times of the day as illustrated in \cref{fig: Mining schedule}}
 		 \subsubsection{Leakage detection}	 
 		 Air leaks are a major inefficiency in mining compressed air systems. Improving leaks is relatively easier method to  reduce air demand and improve the efficiency of the system \cite{van2011sustaining}. Air leaks occur as a result of open pipes, fissure and breaks. Losses depend on the size of the leak and pressure in the network. \cref{fig: Leak losses} shows the theoretical airflow of through a pipe orifice as a function of leakage area and pressure\footnotemark[1]. \cite{van2011sustaining} showed that the system power consumption linearly increases with the amount of air leakage. Therefore, energy savings can be achieved through either reducing pressure or detecting and fixing leaks.
 		 \begin{figure}[h]
 		 	\centering
 		 	\fbox{\hspace{2cm}\input{Graphs/2/Leak2/Leak2}\hspace{2cm}}
-		 	\caption[The leakage flow as a function of inlet pressure and leakage area]{ The leakage flow as a function of inlet pressure and leakage area\protect\footnotemark[1].}
+		 	\caption[The leakage flow as a function of inlet pressure and leakage area]{ The leakage flow as a function of inlet pressure and leakage area\protect\footnotemark[3].}
 		 	\label{fig: Leak losses}
 		 \end{figure}
-	 \footnotetext[1]{efunda, "Orifice Flowmeter Calculator." [Online] \url{http://www.efunda.com/formulae/fluids/calc_orifice_flowmeter.cfm}, [Accessed 18 October 2016].}
+	 \footnotetext[3]{efunda, "Orifice Flowmeter Calculator." [Online] \url{http://www.efunda.com/formulae/fluids/calc_orifice_flowmeter.cfm}, [Accessed 18 October 2016].}
 	 \par 
 		 Leaks are often not easily detected through visual methods. In industry, a number of techniques are employed to detect air leaks. Pascoe \cite{Pascoe2016Masters} and van Tonder \cite{vanTonder2010Masters} summarised these techniques as follows:
 		 \begin{itemize}
@@ -143,21 +141,21 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 	-
 \section{Use of simulations to identify improvements in mining systems}
 	\subsection{Preamble}
-	The value of simulation in  the mining industry has been shown through its use in \gls{dsm} initiatives. Simulation has been used to identify savings strategies for water reticulation cooling, compressed air and ventilation.
-	\par The purpose of this section is to summarise and discuss the work that has already been done in with regard to estimation and simulation of complex mining systems. 
+	The value of simulation in the mining industry has been largely shown through its usage in \gls{dsm} initiatives. Simulation and estimation techniques have been widely applied to identify and pre-emptively quantify the effect of energy interventions strategies for water reticulation cooling, compressed air and ventilation systems.
+	\par
+	 The purpose of this section is to summarise and discuss the work that has been done in with regard to estimation and simulation of mining systems. This section will also discuss simulation development procedures and verification methodologies from literature.
 	
-	\subsection{Estimating techniques used for energy savings on mining systems }
-	Estimation of energy savings has been used in literature to obtain the potential energy impact that can be achieved for a system. Before new tools allowed for quick development of simplified simulation models, estimation techniques were frequently used to determine the feasibility of energy interventions on mining systems. The problem with an estimation approach is that they typically rely on simplified system model that lead to high prediction error.
+	\subsection{Estimating energy savings on mining systems }
+	Estimation has been a vital tool in literature to obtain the potential energy impact that can be achieved from interventions on a mining system. Before new tools allowed for quick development of simplified simulation models, estimation techniques were frequently used to determine the feasibility of energy interventions. The shortcomings of the estimation approach is that they typically rely on simplified system models that lead to high prediction error, limit the complexity of scenarios and input/output variables.
 		\par 
-		Snyman \cite{Snyman2011Masters} used mathematical estimation techniques to determine the expected power savings from initiatives on mining compressed air systems.  Due to uncertainty in the estimations, \cite{Snyman2011Masters} predicted results were provided as a range between conservative and best-case estimates. The actual achieved energy impact would fall between these estimations.
+	Snyman \cite{Snyman2011Masters} used mathematical estimation to determine the expected power savings from initiatives on mining compressed air systems.  Due to uncertainty in the estimations, \cite{Snyman2011Masters} predicted results were provided as a range between conservative and best-case estimates. The actual achieved energy impact would fall between these estimations. Snymans model only estimated the average energy impact and could not provide a resultant power profile or other output variables such as pressure.
 		 	
 		\subsubsection{Benchmark modelling}
-		 Cilliers \cite{Cilliers2015PHD} developed \enquote{best practice models} using the \gls{cols} benchmarking method. These models provide an energy benchmark that can be used to identify the scope for energy improvements on a system. An example of a benchmark model for a mining compressed air system is shown in \cref{eq: COLS}. The model shows that energy required is dependent on the quantity of ore mined and the depth of the mine. \cite{Cilliers2015PHD} also developed benchmark models for mine cooling, water reticulation and ventilation systems.
-
+		 Cilliers \cite{Cilliers2015PHD} developed \enquote{best practice models} using the \gls{cols} benchmarking method. These models provide an energy benchmark that can be used to identify the scope for energy improvement on mining systems. An example of a benchmark model for a mining compressed air system is shown in \cref{eq: COLS}. The model can be used to estimate optimal energy required as a function of the quantity of ore mined(T) and the depth of the mine (Z). \cite{Cilliers2015PHD} also developed benchmark models for mine cooling, water reticulation and ventilation systems.
 		\begin{figure}[h!]
 			\centering
 			\fbox{\hspace{2cm}\input{Graphs/2/Benchmark/Benchmark}\hspace{2cm}}
-			\caption{ }
+			\caption[Energy benchmark model for a mining compressed air system]{Energy benchmark model for a mining compressed air system, adapted from Cilliers \cite{Cilliers2015PHD}}
 			\label{fig: 3D Benchmark}
 		\end{figure}
 	%%%%%%%%%%%%%%%%%%%%%%%%%% Equation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -173,14 +171,11 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 	Simulation has been used in studies as a tool to improve mine cooling. Holman \cite{Holman2014Masters} investigated improvements to mine cooling systems that improve performance and efficiency. In the study \cite{Holman2014Masters} used simplified \gls{ptb}  simulation models to investigate cooling interventions.
 	\par 
 	The scenario Holman simulated showed potential  average power reduction of 136 kW  which would lead to an annual energy cost saving of R0.55M. The study could be improved by increasing accuracy of the simulation. Power difference of as high as 31\% between the simulation and actual were observed for some time periods.
-%	\subsubsection{Mine de-watering systems}
-	
-%	\subsubsection{Mine compressed air systems}
-		
+%	\subsubsection{Mine de-watering systems}	
+%	\subsubsection{Mine compressed air systems}		
 	\subsection{Simulation procedure}
 	A structured simulation procedure is required to achieve the objectives of the study. From literature
 		- Philip
-		- Kriel masters\\
 	\subsubsection{Periodic/repeated simulation}
 	The concept of periodic or repeated simulation procedure the execution a simulation multiple times or on a recurring schedule whilst altering various input parameters. \cite{Snyman2011Masters} used repeated estimation to determine an upper and lower bound for the expected result. Another example from industry is real time simulation or estimation systems.
 	\par 
@@ -337,7 +332,7 @@ To get a relative error percentage, the equation is rewritten:
  	\subsection{Available simulation tools}
  	A software tool is required to create and execute the compressed air simulations. In literature variety software tools have been used to simulate industrial systems. A suitable software system for this study must be capable of producing accurate models of complex compressed air network and the execution of transient simulation with dynamic data and control inputs. 
  	\par 
- 	The development of system models should also not be excessively time-consuming. The software tool should also be able to handle missing data inputs and information that in common in mining systems.  These were shortfalls of simulation tools noted by van Tonder \cite{vanTonder2014PhD} and Marais \cite{Mare2016PhD}.
+ 	The development of system models should also not be excessively time-consuming. The software tools should also be able to handle missing data inputs and information that in common in mining systems.  These were shortfalls of simulation tools noted by van Tonder \cite{vanTonder2014PhD} and Marais \cite{Mare2016PhD}.
 	\par
  	  The following simulation tools that may meet the criteria were identified : 
  	\begin{itemize}
@@ -347,7 +342,9 @@ To get a relative error percentage, the equation is rewritten:
 		\item AirSim
 		\item REMS
  	\end{itemize}
- Of these tools, \gls{ptb} was identified as the most suitable software system for this study. %\Gls{ptb}
+ Of these tools, \gls{ptb} was identified as the most suitable software system for this study. Whilst it may be possible to use other packages, \gls{ptb} was developed specifically for simulation of mining systems. This allows simpler and speedier development of system components as many components such as compressor mathematical models have already been pre-built \cite{Mare2016PhD}. 
+ 
+ %\Gls{ptb}
  %Mare \cite{Mare2016PhD} and Peach \cite{Peach2016Masters} investigated simulation software packages for mining systems; Identifying the strengths and limitations of each. 
  	\subsection{Summary}-
 \section{Use of simulation in mining compressed air optimisation}
@@ -372,14 +369,14 @@ A simplified calculation methodology was developed to quickly estimate the expec
 		Intervention && Estimation rule\\
 		\hhline{===} 
 		Reducing compressor deliver pressure & & $x \%$ pressure reduction  $\propto$ (1.6 to 1.8)$\cdot x\%$ power reduction \newline \\
-		Reduce control valve pressure &  &$x \%$ pressure reduction $\propto$  $p\cdot x\%$ power reduction. \newline \newline Where p is the valves percentage flow contribution to the system \newline \\
+		Reduce control valve pressure &  &$x \%$ pressure reduction $\propto$  $p\cdot x\%$ power reduction. \newline \newline Where p is the valves' relative flow contribution to the system \newline \\
 		Reduction of flow && $x \%$ flow reduction  $\propto x \%$ power reduction \newline\\
 		\hline
 	\end{tabular} 
 	\caption[Summary of energy saving estimation rules]{Summary of energy saving estimation rules\cite{Marais2012PhD}.}
 	\label{table: Rules of thumb}
 \end{table}
-There is not a high degree of precision in this approach as specific details of the air network are not taken into account. The simplified approach cannot be used used to estimate more complex scenarios. The method also does not estimate other potential benefits of an interventions such as pressure delivery improvements.
+There is not a high degree of precision in this approach as specific details of the air network are not taken into account. The simplified approach cannot be used to estimate more complex scenarios. The method also does not estimate other potential benefits of interventions such as pressure delivery improvements.
 
 \subsubsection{Simplified air network model}
 Kriel \cite{Kriel2014Masters} used simulation to estimate the performance of energy projects on mining compressed air. The KYPipe GAS software tool was utilised to develop simulation models for the systems. \cite{Kriel2014Masters} simplified the air networks for the simulations to a single compressor representing the supply processes and an outlet flow to each underground level in the network. The model is shown graphically in \cref{fig:kriel  model}
@@ -390,7 +387,7 @@ Kriel \cite{Kriel2014Masters} used simulation to estimate the performance of ene
 	\label{fig:kriel  model}
 \end{figure}
 \par 
-Simulation was performed to quantify the savings from underground network interventions. The interventions were deigned to reduce flow to the network. The estimated savings from the simulations varied between 10 and 25\% compared to the actual performance of the interventions. Like the vessel model discussed previously, the simplified air network model can not be used to estimate the energy savings potential of more complex scenarios. The simulation procedure in this study could be improved by using a more detailed model and more a precise verification method. This would lead to savings predictions with higher accuracy. 
+Simulation was performed to quantify the savings from underground network interventions. The interventions were deigned to reduce flow to the network. The estimated savings from the simulations varied between 10 and 25\% compared to the actual performance of the interventions. Like the vessel model discussed previously, the simplified air network model can not be used to estimate the energy savings potential of more complex scenarios. The simulation procedure in this study could be improved by using a more detailed model and a more precise verification method. This would lead to savings predictions with higher accuracy. 
 
 \subsection{Complex compressed air simulation models} \label{simplfiedModels}
 \subsubsection{Compressor relocation}
