@@ -158,7 +158,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		Mines utilize control valves at underground sections to control the pressure at individual mining stations independently \cite{Heyns2014Masters}. Controlling of valve components is performed similarly as control of the compressor components. As shown in \cref{fig: Controller models} the outlet pressure is used as feedback for a pi controller. The controller output is mapped to the valve fraction of a pipe component.
 		\begin{figure}[h]
 			\centering
-			\fbox{\includegraphics[trim =-2cm 0 -2cm 0cm, width=\textwidth]{Images/3/Valve.jpg}}
+			\fbox{\includegraphics[trim =-1.5cm 0 -1.5cm 0cm, width=\textwidth]{Images/3/Valve.jpg}}
 			\caption[An example of a compressed air control valve.]{An example of a compressed air control valve\cite{van2015implementation}.} 
 			\label{fig: Control}
 		\end{figure}
@@ -235,12 +235,14 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		\end{figure}  
 	 
 		\par 
+		\footnotetext[1]{Eskom, "2017/18 Tariffs and charges" [Online] \url{http://www.eskom.co.za/CustomerCare/TariffsAndCharges/Pages/Tariffs_And_Charges.aspx}, [Accessed 28 June 2017].}
+		
 		For power data, the expected annual energy cost saving can be calculated using  average weekday energy saving and the tariff structure provided by Eskom. The energy supplier's weekday \gls{tou} tariffs for both the high demand (Jun - Aug) and low demand (Sep - May) seasons are shown in \cref{fig: Tariff}.
 
 		\begin{figure}[h]
 			\centering
 			\input{Graphs/3/tariff/tariff}
-			\caption[Eskom's weekday TOU tariff structure.]{Eskom's weekday \gls{tou} tariff structure.}
+			\caption[Eskom's weekday TOU tariff structure.]{Eskom's weekday \gls{tou} tariff structure.\protect \footnotemark[1]}
 			\label{fig: Tariff}
 		\end{figure}
 		
