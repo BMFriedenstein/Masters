@@ -65,5 +65,5 @@ set yrange [0:300]
 
 set size 1.3,0.8
 set datafile separator ","
-plot 'tariff.csv' using 1:2 title "High demand season [Jun - Aug]" with lines ls 1, \
-     'tariff.csv' using 1:3 title "Low demand season [Sep - May]" with lines ls 4 
+plot 'tariff.csv' using 1:2 title "High demand season " with lines ls 1, \
+     'tariff.csv' using 1:3 title "Low demand season" with lines ls 4 

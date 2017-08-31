@@ -165,14 +165,15 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 	%	\end{equation}			
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\subsection{Value of simulation in mining DSM}
-	Van Niekerk \cite{van2013value},\cite{vanNiekerk2012Value} investigated the value of simulation models in mine \gls{dsm} projects. \cite{van2013value},\cite{vanNiekerk2012Value} developed simulation models for compressed air and water reticulation systems using KYPipes's gas simulation engine. \\
-	
+	Van Niekerk \cite{van2013value},\cite{vanNiekerk2012Value} investigated the value of simulation models in mine \gls{dsm} projects. \cite{van2013value},\cite{vanNiekerk2012Value} developed simulation models for compressed air and water reticulation systems using KYPipes's gas simulation engine. 
 	\subsubsection{Mine cooling systems}
 	Simulation has been used in studies as a tool to improve mine cooling. Holman \cite{Holman2014Masters} investigated improvements to mine cooling systems that improve performance and efficiency. In the study \cite{Holman2014Masters} used simplified \gls{ptb}  simulation models to investigate cooling interventions.
 	\par 
 	The scenario Holman simulated showed potential  average power reduction of 136 kW  which would lead to an annual energy cost saving of R0.55M. The study could be improved by increasing accuracy of the simulation. Power difference of as high as 31\% between the simulation and actual were observed for some time periods.
-%	\subsubsection{Mine de-watering systems}	
-%	\subsubsection{Mine compressed air systems}		
+	\subsubsection{Mine de-watering systems}	
+	
+	\subsubsection{Mine compressed air systems}		
+	Simulation has added great value for mining compressed air \gls{dsm}. A detailed literature discussion of compressed air simulation applications is discussed in Section  \ref{CompressorSimulation Literature}.
 	\subsection{Simulation procedure}
 	A structured simulation procedure is required to achieve the objectives of the study. From literature
 		- Philip
@@ -348,6 +349,7 @@ To get a relative error percentage, the equation is rewritten:
  %Mare \cite{Mare2016PhD} and Peach \cite{Peach2016Masters} investigated simulation software packages for mining systems; Identifying the strengths and limitations of each. 
  	\subsection{Summary}-
 \section{Use of simulation in mining compressed air optimisation}
+\label{CompressorSimulation Literature}
 \subsection{Preamble}
 This section will focus on discussion of literature regarding simulation usage in optimising mining compressed air systems. Shortcomings identified from literature that can be improved upon in this study will be addressed.
 \subsection{Simplified compressed air simulation models} \label{simplfiedModels}
@@ -418,15 +420,23 @@ Pascoe \cite{Pascoe2016Masters} developed a simulation model for a compressed ai
 As was the case with Bredenkamp \cite{Bredenkamp2013Masters}, \cite{Pascoe2016Masters} utilised the residual difference to calibrate and verify the model parameters.The precision could therefore also be improved through the use of the other verification methods discussed in \cref{VerificationLit}. Increasing the complexity of the demand components could also be beneficial.
 
 \subsubsection{Mine complex}
-Mare \textit{et al.} \cite{Mare2017Evaluating} developed a compressed air simulation for a mining complex. In the study \cite{Mare2017Evaluating} simulated and prioritised several scenarios with the goal of reducing energy and other operational costs for a gold mine.
-\begin{figure}[h!]
-	\centering
-	\fbox{\includegraphics[trim =  -0.5cm 0.5cm -0.5cm 0.5cm ,width=\textwidth]{Images/2/mare/model}}
-	\caption[Simulation model for a complex air network.]{Simulation model for a complex air network. Adapted from Mare \cite{Mare2017Evaluating}.}
-	\label{fig:Mare model}
-\end{figure}		
+Maré \textit{et al.} \cite{Mare2017Evaluating} developed a compressed air simulation for a mining complex. In the study \cite{Mare2017Evaluating} simulated and prioritised several scenarios with the goal of reducing energy and other operational costs. 
+\par
+  Maré accurately modelled the individual compressors at each shaft in the mining complex. The detailed flow consumption at individual mining levels was found to be inaccurate. \cite{Mare2017Evaluating} therefore selected the process boundary for the model to include only the air flow consumption at the shaft. A process schematic for the simulation mode is shown in \cref{fig:Mare model}.
+  
+  \begin{figure}[h!]
+  	\centering
+  	\fbox{\includegraphics[trim =  -0.5cm 0.5cm -0.5cm 0.5cm ,width=\textwidth]{Images/2/mare/model}}
+  	\caption[Simulation model for a complex air network.]{Simulation model for a complex air network. Adapted from Maré \textit{et al.} \cite{Mare2017Evaluating}.}
+  	\label{fig:Mare model}
+  \end{figure}
+\par 
+Using the model, 8 scenarios were simulated. The combined results showed that there was a potential energy saving of R1.5M as well as an additional pressure improvement of 51 kPa. The infrastructure and resource costs were estimated in order to prioritise the interventions for the greatest financial benefit to the mines.	
+\par
+	\cite{Mare2017Evaluating} used residual difference to calibrate and verify the accuracy of the transient simulations. Therefore The actual estimation error is therefore greater then what is shown in the study. Through on site inspections and strategic measurements, the detail of the simulation model could be improved this could allow for more accurate simulations and more simulation scenarios.
 %- van Tonder\\
 %- De Coning \\
-	\subsection{Summary}-
+	\subsection{Summary}
+	-
 	\label{Shortcomings of previous work}
 \section{Conclusion}-
