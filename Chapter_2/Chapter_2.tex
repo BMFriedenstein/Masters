@@ -148,7 +148,7 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 	\subsection{Estimating energy savings on mining systems }
 	Estimation has been a vital tool in literature to obtain the potential energy impact that can be achieved from interventions on a mining system. Before new tools allowed for quick development of simplified simulation models, estimation techniques were frequently used to determine the feasibility of energy interventions. The shortcomings of the estimation approach is that they typically rely on simplified system models that lead to high prediction error, limit the complexity of scenarios and input/output variables.
 		\par 
-	Snyman \cite{Snyman2011Masters} used mathematical estimation to determine the expected power savings from initiatives on mining compressed air systems.  Due to uncertainty in the estimations, \cite{Snyman2011Masters} predicted results were provided as a range between conservative and best-case estimates. The actual achieved energy impact would fall between these estimations. Snymans model only estimated the average energy impact and could not provide a resultant power profile or other output variables such as pressure.
+	Snyman \cite{Snyman2011Masters} used mathematical estimation to determine the expected power savings from initiatives on mining compressed air systems.  Due to uncertainty in the estimations, \cite{Snyman2011Masters} predicted results were provided as a range between conservative and best-case estimates. The actual achieved energy impact would fall between these estimations. Snyman's model only estimated the average energy impact and could not provide a resultant power profile or other output variables such as pressure.
 		 	
 		\subsubsection{Benchmark modelling}
 		 Cilliers \cite{Cilliers2015PHD} developed \enquote{best practice models} using the \gls{cols} benchmarking method. These models provide an energy benchmark that can be used to identify the scope for energy improvement on mining systems. An example of a benchmark model for a mining compressed air system is shown in \cref{eq: COLS}. The model can be used to estimate optimal energy required as a function of the quantity of ore mined(T) and the depth of the mine (Z). \cite{Cilliers2015PHD} also developed benchmark models for mine cooling, water reticulation and ventilation systems.
@@ -170,13 +170,18 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 	Simulation has been used in studies as a tool to improve mine cooling. Holman \cite{Holman2014Masters} investigated improvements to mine cooling systems that improve performance and efficiency. In the study \cite{Holman2014Masters} used simplified \gls{ptb}  simulation models to investigate cooling interventions.
 	\par 
 	The scenario Holman simulated showed potential  average power reduction of 136 kW  which would lead to an annual energy cost saving of R0.55M. The study could be improved by increasing accuracy of the simulation. Power difference of as high as 31\% between the simulation and actual were observed for some time periods.
-	\subsubsection{Mine de-watering systems}	
+	%\subsubsection{Mine de-watering systems}	
 	
 	\subsubsection{Mine compressed air systems}		
 	Simulation has added great value for mining compressed air \gls{dsm}. A detailed literature discussion of compressed air simulation applications is discussed in Section  \ref{CompressorSimulation Literature}.
 	\subsection{Simulation procedure}
-	A structured simulation procedure is required to achieve the objectives of the study. From literature
-		- Philip
+	A structured simulation procedure is required to achieve the objectives of the study.  Previous studies from literature have focussed on how simulation software tools work rather the simulation procedure that was followed \cite{Mare2016PhD}.
+	\par
+	Bouwer \cite{bouwer2004designing} developed a software tool that he used to investigate large thermal and and energy. Bouwer used the following procedure to implement simulations:
+	\begin{itemize}
+		\item \gls{ptb}
+	\end{itemize}
+	
 	\subsubsection{Periodic/repeated simulation}
 	The concept of periodic or repeated simulation procedure the execution a simulation multiple times or on a recurring schedule whilst altering various input parameters. \cite{Snyman2011Masters} used repeated estimation to determine an upper and lower bound for the expected result. Another example from industry is real time simulation or estimation systems.
 	\par 
@@ -311,6 +316,7 @@ To get a relative error percentage, the equation is rewritten:
  			\hline
  			Study & Year & Verification method & Accepted margin\\
  			\hhline{====}
+ 			Bouwer	\cite{bouwer2004designing}					& 2004 & Mean residual \% difference & $Err_{\%} <10\%$ \\
  			Marais \cite{Marais2012PhD} 						& 2012 & Mean residual \% difference  & Not specified\\
  			Van Niekerk \cite{vanNiekerk2012Value} 				& 2012 &  Mean residual \% difference &  $Err_{\%} <10\%$  \\
  			Bredenkamp \cite{Bredenkamp2013Masters} 			& 2013 & Mean residual \% difference &  $Err_{\%} <10\%$  \\
