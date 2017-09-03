@@ -8,9 +8,14 @@
 \enquote*{\textit{If I have seen further, it is by standing on the shoulders of giants.}} - Isaac Newton\\
 \clearpage
 \section{Introduction}
+ This chapter will firstly provide relevant background on the operation and subcomponents of compressed air networks. A review of literature regarding compressed air energy interventions will then be performed. This review will summarise previous work to improve to improve the supply and demand efficiency of mining compressed air networks.
+\par
+The use of simulation in mining systems will then be reviewed. This section will summarise the usage of mathematical estimation and simulations tools in the mining industry. From the literature available simulation tools as well as simulation and verification procedures will be discussed.
+\par
+Finally simulation usage in compressed air systems will be discussed. The section will summarise the work, as well as the successes and shortfalls, that has already been performed with regard to simulation of large compressed air networks.
 \section{Background on mining compressed air networks}
 \subsection{Preamble}
-Compressed air is used extensively in a mine in surface and underground operations. This section provides background regarding mining compressed air through discussion of the components that make up a compressed air system. 
+Compressed air is used extensively in a mine in surface and underground operations. This section provides background regarding mining compressed air networks. The section firstly discusses the components that make up a mining compressed air system. The typical operation of the system is then examined. Finally the instrumentation that is typically installed in compresssed air networks is discussed
 \subsection{Compressor air network components}
 \subsubsection{Compressors}
  \footnotetext[1]{Abc oil refining, "How centrifugal compressors operate" [Online] \url{http://abcoilrefining.blogspot.co.za/2012/03/how-centrifugal-compressors-operate.html}, [Accessed 15 August 2017].}
@@ -20,7 +25,7 @@ Compressed air in mining is most commonly supplied by a centrifugal-type dynamic
  Multi-stage impeller compressor designs, as shown in \cref{fig: Compressor diagram}\footnotemark[1], are used to obtain higher pressure ratios \cite{Fouche2016Masters}. The compression process is inefficient. Only about 5\% to 10\% of the input energy of the process is converted into energy that is used \cite{yang2009air}. 
 \begin{figure}[h]
 	\centering
-	\fbox{\hspace{3cm}\input{Images/2/Compressor/compressor}\hspace{2.5cm}}
+	\fbox{\hspace{3.5cm}\input{Images/2/Compressor/compressor}\hspace{3cm}}
 	\caption[A scematic of a multistage centrifugal compressor.]{A schematic of a multi-stage centrifugal compressor\protect \footnotemark[1].}
 	\label{fig: Compressor diagram}
 \end{figure}
@@ -54,12 +59,13 @@ As shown in \cref{fig: Mining schedule}, the pressure requirement changes depend
 	\caption[A typical operation schedule of a deep level mine.]{The typical operation schedule of a deep level mine \cite{Kriel2014Masters}.}
 	\label{fig: Mining schedule}
 \end{figure}
-\subsection{Instrumentation and measurements}
-For large industrial systems, thorough instrumentation is necessary to monitor performance and equipment condition throughout the system. In a mining compressed air network, instrumentation is installed to monitor flows, pressures, temperatures, etc. Electrical instrumentation is also installed for sensing currents, power factors, voltages and power. On control valves, input/output pressures, flows and valve position are usually measured with instrumentation.	
+\subsection{Instrumentation}
+For large industrial systems, thorough instrumentation is necessary to monitor performance and equipment conditions throughout the system. In a mining compressed air network, instrumentation is installed to monitor flows, pressures, temperatures and other process parameters. Electrical instrumentation is also installed for sensing currents, power factors, voltages and power. Parameters that are often measured include valves input/output pressures and flows, valve and guide vain positions and air condition metrics are usually measured with instrumentation.	
 \par
-A \gls{scada} system is used to monitor and control processes throughout the mine from a control room. The \gls{scada} centralises instrumentation data from \glspl{plc} throughout the mine. The \gls{scada} can also be used to control machines and instrumentation by sending control signals to the relevant \gls{plc}.  Communication to the underground \glspl{plc} is achieved using a substantial fibre optic network\cite{schroeder2009energy}.
+A \gls{scada} system is used to monitor and control processes throughout the mine. The instrumentation and \gls{scada} are connected on a communication network.
+This communication between the underground \glspl{plc} and surface \gls{scada} is achieved using a substantial fibre optic network\cite{schroeder2009energy}. The \gls{scada} centralises instrumentation data from \glspl{plc} and instrumentation in  the mine. The \gls{scada} is also used to control machines and control instrumentation by transmitting control signals over the network.  
 \subsection{Summary}
--
+In this section various sub-components of compressed air networks were discussed. These sub-components included compressors, processing plants as well as underground air users. The daily  process scheduling and the effect on compressed air requirements were then discussed. Finally the typical instrumentation found in a mining compressed air system was summarised.
 \section{Review of compressed air energy interventions in industry}
 	\subsection{Preamble}
 		Compressed air improvement can be obtained through intervention in either the supply or demand processes of a compressed air system \cite{Kriel2014Masters}. Improvements in supply is achieved by increasing the efficiency of compressed air supply. Examples of these types of intervention include \gls{dcs}, compressor relocation, repairs and maintenance, etc. 
@@ -80,13 +86,11 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 		 \cite{booysen2009optimising} showed through dynamic pressure set-point control\footnote{Matching the supplied pressure with the specific required air demand.} and optimal compressor selection, energy savings can be achieved. In a case study, an average power reduction of 1.07 MW was achieved. The lead to an estimated energy cost saving of R3M.
 		\par 
 	 	Optimising control of compressors to match the demand of the system can be complicated. \glspl{vsd} and guide-vain are used to control the capacity of the system. More effective power reductions can be achieved through the use of \gls{vsd} control. Running compressors at part load reduces efficiency. From literature, it has been shown electric motors will typical use 60-80\% of there rated power when running at less than 50\% load \cite{Saidur2010}.
-		
 		%\subsubsection{Air storage}
 		%- booysen 1.22
 		%\subsubsection{Dynamic compressor selection}
 		%- van Tonder PHD
 		%- van heerden 
-		
 		\subsubsection{Reconfiguring compressed air networks}
 			A number of old mining compressed air systems  have not been adequately maintained and improved. Often they cannot sufficiently supply air to meet the demand or air is provided from non optimal sources. In a study by Bredenkamp \cite{Bredenkamp2013Masters}, reconfiguring of the air network was investigated to improve these systems.
 			\par  
@@ -138,12 +142,14 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 		 \end{figure}
 		 From literature, it is shown that lowering the pressure reduces the efficiency and drill rate of rock drilling, leading to higher air consumption. Interventions that reduce systemic air losses or optimise supply can increase the pressure operating pressure. Increased pressure, during the drilling shift, may add more value than the energy cost savings that can be achieved at a lower pressure.
 	\subsection{Summary}
-	-
+	This section reviewed previous studies that had achieved energy improvements in compressed air. The literature was divided into studies that focussed on improving the supply of compressed air and those that optimised the compressed air demand.
+	\par
+	Compressed air supply interventions included optimising compressor control and reconfiguring compressor networks. On the demand side, studies that investigated reducing leaks, optimising underground valve control and improving rock drill efficiency were discussed.
 \section{Use of simulations to identify improvements in mining systems}
 	\subsection{Preamble}
-	The value of simulation in the mining industry has been largely shown through its usage in \gls{dsm} initiatives. Simulation and estimation techniques have been widely applied to identify and pre-emptively quantify the effect of energy interventions strategies for water reticulation cooling, compressed air and ventilation systems.
+	The value of simulation in the mining industry has been largely shown through its usage in \gls{dsm} initiatives. Simulation and estimation procedures have been widely applied to identify and pre-emptively quantify the effect of energy interventions strategies for water reticulation cooling, compressed air and ventilation systems.
 	\par
-	 The purpose of this section is to summarise and discuss the work that has been done in with regard to estimation and simulation of mining systems. This section will also discuss simulation development procedures and verification methodologies from literature.
+	 The purpose of this section is to summarise and discuss the work that has been done in with regard to estimation and simulation of mining systems. This section will also discuss simulation development procedures and verification methodologies that have been applied in literature.
 	
 	\subsection{Estimating energy savings on mining systems }
 	Estimation has been a vital tool in literature to obtain the potential energy impact that can be achieved from interventions on a mining system. Before new tools allowed for quick development of simplified simulation models, estimation techniques were frequently used to determine the feasibility of energy interventions. The shortcomings of the estimation approach is that they typically rely on simplified system models that lead to high prediction error, limit the complexity of scenarios and input/output variables.
@@ -166,26 +172,57 @@ A \gls{scada} system is used to monitor and control processes throughout the min
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\subsection{Value of simulation in mining DSM}
 	Van Niekerk \cite{van2013value},\cite{vanNiekerk2012Value} investigated the value of simulation models in mine \gls{dsm} projects. \cite{van2013value},\cite{vanNiekerk2012Value} developed simulation models for compressed air and water reticulation systems using KYPipes's gas simulation engine. 
-	\subsubsection{Mine cooling systems}
+	\par
+	%\subsubsection{Mine cooling systems}
 	Simulation has been used in studies as a tool to improve mine cooling. Holman \cite{Holman2014Masters} investigated improvements to mine cooling systems that improve performance and efficiency. In the study \cite{Holman2014Masters} used simplified \gls{ptb}  simulation models to investigate cooling interventions.
 	\par 
 	The scenario Holman simulated showed potential  average power reduction of 136 kW  which would lead to an annual energy cost saving of R0.55M. The study could be improved by increasing accuracy of the simulation. Power difference of as high as 31\% between the simulation and actual were observed for some time periods.
+	\par
 	%\subsubsection{Mine de-watering systems}	
-	
-	\subsubsection{Mine compressed air systems}		
+	%\subsubsection{Mine compressed air systems}		
 	Simulation has added great value for mining compressed air \gls{dsm}. A detailed literature discussion of compressed air simulation applications is discussed in Section  \ref{CompressorSimulation Literature}.
 	\subsection{Simulation procedure}
 	A structured simulation procedure is required to achieve the objectives of the study.  Previous studies from literature have focussed on how simulation software tools work rather the simulation procedure that was followed \cite{Mare2016PhD}.
 	\par
 	Bouwer \cite{bouwer2004designing} developed a software tool that he used to investigate large thermal and and energy. Bouwer used the following procedure to implement simulations:
-	\begin{itemize}
-		\item \gls{ptb}
-	\end{itemize}
-	
+	\begin{enumerate}
+		\item Create a detailed schematic of the system
+		\item Obtain data from installed instrumentation
+		\item Perform manual measurements where necessary
+		\item Gather data for a typical operational period
+		\item Convert data into useful formats
+		\item Set-up the simulation model
+		\item Calibrate the model until simulated outputs match measured data
+	\end{enumerate}
+	Bouwer's simulation procedure provides a good guideline for mining system simulation. The procedure could be simplified by merging steps. For example step 1 to 4 could be merged into 1 step \enquote{Gather system data and information}.
 	\subsubsection{Periodic/repeated simulation}
 	The concept of periodic or repeated simulation procedure the execution a simulation multiple times or on a recurring schedule whilst altering various input parameters. \cite{Snyman2011Masters} used repeated estimation to determine an upper and lower bound for the expected result. Another example from industry is real time simulation or estimation systems.
 	\par 
-	Van Heerden \textit{et al.} \cite{van2014developing} developed a dynamic control system for a mine compressed air network. The controller utilised repeated simulation to estimate unmeasured and future parameters of the network. This was used to optimise the compressor control.
+	 Van Heerden \textit{et al.} \cite{van2014developing} developed a dynamic control system for a mine compressed air network. The controller utilised repeated simulation to estimate unmeasured and future parameters of the network. This was used to optimise the compressor control.
+	 \par
+	Hollander and Lui \cite{Hollander2008Estimation} used repeated simulations to estimate travel time distributions for traffic networks. \cite{Hollander2008Estimation} developed the following methodology for the repeated simulations:
+	\begin{enumerate}
+		\item Gather input parameters
+		\item Run simulations
+		\item Read simulation outputs
+		\item Repeat for desired iterations
+	\end{enumerate}
+\subsection{Available simulation tools}
+A software tool is required to create and execute the compressed air simulations. In literature variety software tools have been used to simulate industrial systems. A suitable software system for this study must be capable of producing accurate models of complex compressed air network. The system should be able solve for transient compressed air simulation scenarios with dynamic data and control inputs. 
+\par 
+The development of system models should also not be excessively time-consuming. The software tools should also be able to handle missing data inputs and information that in common in mining systems.  These were shortfalls of simulation tools noted by van Tonder \cite{vanTonder2014PhD} and Marais \cite{Mare2016PhD}.
+\par
+The following simulation tools that may meet the criteria were identified : 
+\begin{itemize}
+	\item \gls{ptb}
+	\item Flownex
+	\item KYPipe GAS
+	\item AirSim
+	\item REMS
+\end{itemize}
+Of these tools, \gls{ptb} was identified as the most suitable software system for this study. Whilst it may be possible to use other packages, \gls{ptb} was developed specifically for simulation of mining systems. This allows simpler and speedier development of system components as many components such as compressor mathematical models have already been pre-built \cite{Mare2016PhD}. 
+%\Gls{ptb}
+%Mare \cite{Mare2016PhD} and Peach \cite{Peach2016Masters} investigated simulation software packages for mining systems; Identifying the strengths and limitations of each. 
  	\subsection{Simulation model verification strategies}\label{VerificationLit}
  	Due to lack of instrumentation, measurement inaccuracies and other non-ideal aspects of mining systems. It is impossible for a simulation model to match the actual system's performance perfectly. From literature, methods of verifying simulation precision were investigated. The verification techniques identified from literature were Mean residual difference, \gls{mae}, coefficient of determination or correlation and \gls{mse}.%Most studies utilised a comparison calculation strategy to calculate a model accuracy or error. %Two calculation methods identified were \emph{Average difference method} and \emph{average percentage difference}. 
  		\subsubsection{Mean residual difference method}
@@ -276,7 +313,19 @@ To get a relative error percentage, the equation is rewritten:
  					$n$ & Data point \\
  					$N$ & Number of Data point in simulation period \\
  			\end{tabular} 
- 			\end{table}	
+ 			\end{table}			
+ 		\subsubsection{Other methods}
+ 		A number of additional methods or variations of the methods discussed are available to verify transient simulations. As an example, \cite{arndt2007integrated} looked at the percentage of relative errors under a certain limits as well as a maximum relative error. The method is an improvement compared to residual  difference in ensuring transient simulation accuracy however the results are difficult to interpret.
+ 		\par
+ 		Sarin \textit{et al} \cite{sarin2010comparing} compared many methods. Some methods that have not been discussed in this study include:
+ 		\begin{itemize}
+ 			\item Vector Norms.
+ 			\item Sprague and Geers Metric \cite{Geers1984Objective},\cite{Sprague2004Spectral}
+ 			\item Russells error Measure \cite{Russell1},\cite{Russell2}
+ 			\item Normalized Integral Square Error
+ 			\item Dynamic Time Warping (DTW).
+ 		\end{itemize}
+ 		The calculations in the above methods are relatively complex. However, they provide additional metrics such as Phase, magnitude and slope errors. These metrics could add value in verifying simulations.
  		\subsubsection{Comparing verification methods}
  		The difference between the strategies is best shown using an example. Figure \cref{fig:Philipp Difference verify} shows the output and actual power of a simulation of a mining system for a 24 hour duration. In the study \cite{Mare2016PhD} used mean residual difference, \cref{eq: Average difference}, to determine the accuracy of a simulation model.
  		\par 
@@ -316,8 +365,8 @@ To get a relative error percentage, the equation is rewritten:
  			\hline
  			Study & Year & Verification method & Accepted margin\\
  			\hhline{====}
- 			Arndt	\cite{arndt2007integrated}					& 2000 & Mean residual \% difference & $Err_{\%} <10\%$ \\
- 			Bouwer	\cite{bouwer2004designing}					& 2004 & Mean residual \% difference & $Err_{\%} <10\%$ \\
+ 			\shortstack{Arndt \cite{arndt2007integrated}\vspace{1em}}					& \shortstack{2000\vspace{1em}} & \shortstack{Mean and maximum\\ absolute \% error\vspace{0.5em}}  &\shortstack{ \% of time where \\ $Err_{\%} <10\%$ and\\ $Err_{\%} <5\%$ }\\
+ 			Bouwer \cite{bouwer2004designing}						& 2004 &Mean residual \% difference  & $Err_{\%} <10\%$ \\
  			Marais \cite{Marais2012PhD} 						& 2012 & Mean residual \% difference  & Not specified\\
  			Van Niekerk \cite{vanNiekerk2012Value} 				& 2012 &  Mean residual \% difference &  $Err_{\%} <10\%$  \\
  			Bredenkamp \cite{Bredenkamp2013Masters} 			& 2013 & Mean residual \% difference &  $Err_{\%} <10\%$  \\
@@ -326,7 +375,7 @@ To get a relative error percentage, the equation is rewritten:
  			VanTonder \cite{vanTonder2014PhD}					& 2014 &  Mean residual \% difference &  $Err_{\%} <3\%$  \\
  		\shortstack{Kurnia \textit{et al} \cite{kurnia2014simulation},\cite{kurnia2014dust} \vspace{0.25em}}	& \shortstack{2014\vspace{0.5em}} & \shortstack{Coefficient of determination \\Mean absolute error} & \shortstack{$r^2>0.95$ \\ $Err_{\%} <30\% $} \\ 
  			Dominic \cite{dominic2014dynamic}					& 2014 & Mean squared error & $<1.7e^{-3}$	\\
- 			Du Plessis \textit{et al}\cite{du2015development} 	& 2015 &  Mean residual \% difference &  $Err_{\%} <7\%$  \\
+ 			Du Plessis \textit{et al.}\cite{du2015development} 	& 2015 &  Mean residual \% difference &  $Err_{\%} <7\%$  \\
  			Pascoe \cite{Pascoe2016Masters} 					& 2016 &  Mean residual \% difference &  $Err_{\%} <5\%$  \\	
 			Peach \cite{Peach2016Masters}						& 2016 &  Mean residual \% difference & Not specified\\
  			Mare \cite{Mare2016PhD} 							& 2016 &  Mean residual \% difference &  $Err_{\%} <5\%$   \\	
@@ -336,25 +385,11 @@ To get a relative error percentage, the equation is rewritten:
  		\caption{Simulation verification methods that were implemented in previous studies.}
  		\label{table: Verification studies}
  	\end{table}
- 
- 	\subsection{Available simulation tools}
- 	A software tool is required to create and execute the compressed air simulations. In literature variety software tools have been used to simulate industrial systems. A suitable software system for this study must be capable of producing accurate models of complex compressed air network and the execution of transient simulation with dynamic data and control inputs. 
+ 	\subsection{Summary}
+ 	In this section the usage of simulation and estimation techniques to identify improvements in in mining industry was reviewed. Estimation and benchmark procedures in literature were first discussed. A review of simulation usage in mining DSM for water, compressed air and cooling systems was then discussed. 
  	\par 
- 	The development of system models should also not be excessively time-consuming. The software tools should also be able to handle missing data inputs and information that in common in mining systems.  These were shortfalls of simulation tools noted by van Tonder \cite{vanTonder2014PhD} and Marais \cite{Mare2016PhD}.
-	\par
- 	  The following simulation tools that may meet the criteria were identified : 
- 	\begin{itemize}
- 		\item \gls{ptb}
- 		\item Flownex
-		\item KYPipe GAS
-		\item AirSim
-		\item REMS
- 	\end{itemize}
- Of these tools, \gls{ptb} was identified as the most suitable software system for this study. Whilst it may be possible to use other packages, \gls{ptb} was developed specifically for simulation of mining systems. This allows simpler and speedier development of system components as many components such as compressor mathematical models have already been pre-built \cite{Mare2016PhD}. 
- 
- %\Gls{ptb}
- %Mare \cite{Mare2016PhD} and Peach \cite{Peach2016Masters} investigated simulation software packages for mining systems; Identifying the strengths and limitations of each. 
- 	\subsection{Summary}-
+ 	Simulation procedures in literature were discussed. Various simulation software tools used in industry were than compared. Finally an analysis and comparison of verification procedures was performed.
+ 	
 \section{Use of simulation in mining compressed air optimisation}
 \label{CompressorSimulation Literature}
 \subsection{Preamble}
@@ -385,7 +420,7 @@ A simplified calculation methodology was developed to quickly estimate the expec
 	\caption[Summary of energy saving estimation rules]{Summary of energy saving estimation rules\cite{Marais2012PhD}.}
 	\label{table: Rules of thumb}
 \end{table}
-There is not a high degree of precision in this approach as specific details of the air network are not taken into account. The simplified approach cannot be used to estimate more complex scenarios. The method also does not estimate other potential benefits of interventions such as pressure delivery improvements.
+There is not a high degree of precision in this approach as specific details regarding the air network are not taken into account. The simplified approach cannot be used to estimate more complex scenarios. The method also does not estimate other potential benefits of interventions such as pressure delivery improvements.
 
 \subsubsection{Simplified air network model}
 Kriel \cite{Kriel2014Masters} used simulation to estimate the performance of energy projects on mining compressed air. The KYPipe GAS software tool was utilised to develop simulation models for the systems. \cite{Kriel2014Masters} simplified the air networks for the simulations to a single compressor representing the supply processes and an outlet flow to each underground level in the network. The model is shown graphically in \cref{fig:kriel  model}
@@ -443,7 +478,22 @@ Using the model, 8 scenarios were simulated. The combined results showed that th
 	\cite{Mare2017Evaluating} used residual difference to calibrate and verify the accuracy of the transient simulations. Therefore The actual estimation error is therefore greater then what is shown in the study. Through on site inspections and strategic measurements, the detail of the simulation model could be improved this could allow for more accurate simulations and more simulation scenarios.
 %- van Tonder\\
 %- De Coning \\
-	\subsection{Summary}
-	-
-	\label{Shortcomings of previous work}
-\section{Conclusion}-
+	\subsection{Summary}\label{Shortcomings of previous work}
+	Previous work in compressed air simulation was summarised and discussed in this section. Simplified and complex simulation models were discussed separately. Some of the shortcomings for simplified simulations was that they only provided generalised power saving results for the simulation.
+	\par 
+	The complex simulation models focussed on the details required for the scenarios that were simulated. Other aspects of the models were simplified as much as possible. This resulted in accurate, detailed results compared to the simplified models. However adding further complexity and detail could increase the the accuracy and allow for more simulation scenarios.
+\section{Conclusion}
+In Chapter 2, a comprehensive study of relevant literature was performed. the aim of the literature study was to :
+\begin{itemize}
+	\item Provide background on mining compressed air networks
+	\item Review compressed air energy interventions in industry
+	\item Review the usage of simulation in the mining industry industry
+	\item Review the usage of simulation in the mining compressed air
+\end{itemize}
+Compressed air background was provided. This included background regarding various compressed air sub-components, the operational schedules and the effect on compressed air requirements  and finally the typical instrumentation found in a mining compressed air system.
+\par
+A review of previously achieved energy improvements in compressed air was the performed. The literature were divided into studies that focussed on improving the supply of compressed air and those that optimised the compressed air demand.
+\par
+The usage of simulation and estimation in mining industry was then reviewed. Estimation and benchmark procedures in literature were first discussed. this was followed by a review of simulation usage in mining DSM. Simulation procedures from literature were then discussed. Various simulation software tools used in industry were compared. Finally an analysis and comparison of verification procedures was performed.
+\par 
+	Finally, the usage of compressed air simulation was reviews. This included a discussion of simplified and complex simulation models. The shortcomings and success of previos studies were discussed.
