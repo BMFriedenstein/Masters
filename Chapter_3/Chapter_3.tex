@@ -46,6 +46,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		Air network specifications such as piping sizes, technical layouts, major leak locations or specifications is often outdated or not recorded. Critical data should be obtained through audits and inspections of the system. If manual inspection is not possible, estimations should be made using the available data or approximation techniques discussed in literature. %\texttt{REMEMBER TO REFERENCE\\ SPECIFIC LOCATION LITERATURE}.
 	
 	\subsection{Summary}	
+	This section discussed the procedure to investigate a compressed air system. This includes acquiring data and information regarding the specific compressed air network, process to evaluate authenticate data accuracy as well as procedures to deal with situations where no data is available.
 \section{Develop and verify a simulation model}
 	\subsection{Preamble}
 	Compressed air networks are comprised of components such as compressors, valves, pipes, etc. This section will discuss the development, calibration and verification of component models that make up a compressed air simulation. 
@@ -79,7 +80,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		\subsubsection{Air pipes}
 		Pressure losses occur over compressed air networks due to friction in the pipe, these losses should be taken into account in the simulation for large piping sections. A pipe model is used to account for these losses which are defined by the \textit{Darcy-Weissman equation}\footnote{ B. Glenn, \enquote*{The Darcy–Weisbach Equation,}[Online] \url{https://bae.okstate.edu/faculty-sites/Darcy/DarcyWeisbach/Darcy-WeisbachEq.htm}, [Accessed 20-05-2017]}:
 		$$\Delta P = \frac{f  L \rho V^2}{2 D}$$
-		Where the pressure difference $\Delta P $ is a function of:\\
+		Where the pressure difference $\Delta P $ is a function of:
 		\begin{table}[h]
 			\centering
 			\begin{tabular}{ll}
@@ -125,7 +126,6 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			\caption{Estimating the characteristic curve of a compressor by fitting a quadratic function to points of operation.}
 			\label{fig: Compressor Curve}
 		\end{figure}
-		\par
 		Once the models are accurately calibrated, the compressor component is integrated to the air network in the arrangement shown in \cref{fig: Compressor models}. The Compressor is connected to the inlet air source via an inlet pipe and air node and to the rest of the network via an air node and outlet pipe. This is is to allow the inlet and outlet parameters and conditions to be be monitored and controlled.
 		\begin{figure}[h]
 			\centering
@@ -154,14 +154,13 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		\caption[Control components in Process toolbox]{Control components in \gls{ptb}.}
 		\label{fig: Controller models}
 	\end{figure}
-		Guide vains are most commonly used in mining to control compressors. This entails controlling the position of the inlet guide vain . The guide vain is opened or closed to control the compressors discharge pressure.  Manipulating the guide vain position will affect the power the compressor inputs into the system. \cref{fig: Guide vain position} shows the relationship between  power and guide vain position. This can be modelled as a linear function where a guide vain position of 40\% relates to an output power of about 60\% of the maximum power. When more pressure is required than can be obtained with the guide vains fully opened, another compressor is needed to operate. 
+		Guide vains are most commonly used in mining to control compressors. This entails controlling the position of the inlet guide vain . The guide vain is opened or closed to control the compressors discharge pressure.  Manipulating the guide vain position will affect the power the compressor inputs into the system. \cref{fig: Guide vain position} shows the relationship between  power and guide vain position. This can be estimated as a linear function where a guide vain position of 40\% relates to an output power of about 60\% of the maximum power. When more pressure is required than can be obtained with the guide vains fully opened, another compressor is needed to operate. 
 		\begin{figure}[h]
 			\centering
 			\fbox{\input{Graphs/1/GuideVainPosition/GuideVainPosition}}
 			\caption{Modelling the compressor control from a guide vain}
 			\label{fig: Guide vain position}
 		\end{figure}
-		\par
 		A guide vain controller is modelled using a \gls{pi} controller. However, the non linear limitations of guide vain control, as represented in \cref{fig: Guide vain position}, must be implemented in the controller. This is done by using a minimum control output limit that matches the minimum power reduction  achieved by closing the guide vain to its minimum position. For example, a \gls{pi} controller for the compressor from \cref{fig: Guide vain position} would have a minimum control output of approximately 60\%.
 		\par 
 		Mines utilize control valves at underground sections to control the pressure at individual mining stations independently \cite{Heyns2014Masters}. Controlling of valve components is performed similarly as control of the compressor components. As shown in \cref{fig: Controller models} the outlet pressure is used as feedback for a pi controller. The controller output is mapped to the valve fraction of a pipe component.
@@ -176,7 +175,6 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		\par 
 		After-cooling reduces the compressed air temperature out of the compressors. This cooling can have an effect on the operation of the network. Hence, including after-cooling to the simulation model should improve accuracy. 
 		To replicate this effect, a heat transfer node can be added to the outlet of the compressor component. The heat transfer parameters shown in \cref{table: After cooling inputs} should be calibrated such that the air temperature matches after-cooled air temperature measurements. An assumption of 40 $^\circ$\gls{c} can be used if no measurements are available.
-		\par
 		\begin{table}
 			\centering
 			\begin{tabular}{lll}
@@ -195,7 +193,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	\subsection{Verify the simulation model}
 	From the review of literature in \cref{VerificationLit}, it was determined that \gls{mae} and the coefficient of determination were the most effective methods of measuring model accuracy. Therefore, in this study both measures are utilised in the model verification. To obtain these measures, the major simulation outputs (Total system power, flow and pressure) are compared to actual data from the system. R-sqaured and \gls{mae} is obtained by applying the relative methodologies discussed in \cref{VerificationLit}.	
 	\par 
-	For this study, the selected verification constraints were selected as : $$r^2 > 0.9$$ and$$ Err_{\%} < 5\% $$ If these constraints are met for the power, flow and pressure of the system,the model is considered accurate. As an extra measure relative error of the output for the minor model components should be $ > 85\%$ of the actual data. 
+	For this study, the selected verification constraints were selected as : \\ {$r^2 > 0.9 $ and $ Err_{\%} < 5\% $}\\ If these constraints are met for the power, flow and pressure of the system,the model is considered accurate. As an extra measure relative error of the output for the minor model components should be $ > 85\%$ of the actual data. 
 		
 	\subsection{Select simulation inputs}
 		The inputs of a simulation are any parameters that do not remain static, or follow the same profile in day to day operation of the system. Examples of such parameters in a compressed air simulation are:
@@ -205,14 +203,14 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			\item Air demands
 			\item Operational changes
 		\end{itemize} 
-		Changing the simulation baseline period for a calibrated simulation should only require the updating of the input parameters. \cref{fig: Compressor schedule} shows an example of a changing compressor schedule where an input parameter would need to be updated in the simulation.
+	Changing the simulation baseline period for a calibrated simulation should only require the updating of the input parameters. \cref{fig: Compressor schedule} shows an example of a changing compressor schedule where an input parameter would need to be updated in the simulation.	
+			\clearpage
 		\begin{figure}[h]
 			\centering
 			\fbox{\input{Graphs/3/CompSelection/CompSelection}}
 			\caption{An example of two baseline periods, showing a changed compressor schedule.}
 			\label{fig: Compressor schedule}
 		\end{figure}
-	
 	\subsection{Periodic simulation}	
 		Period simulation refers to the repetition of simulations over subsequent periods to determine the sequential accuracy of the model.  This is important to verify the model is valid in general and not just a single period.  This simulation will also indicate where operation changes have occurred as the simulation accuracy will be reduced.
 		\par 
@@ -224,8 +222,8 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			\label{fig: PeriodicProcess}
 		\end{figure}
 	
-	\subsection{Summary}
-	\textit{Unfinished}
+	\subsection{Summary}	
+The simulation model development and verification procedure was discussed in this section. The selection of the model boundaries and simulation parameters were first discussed. This was followed by the modelling procedures for compressed air subcomponents. The verification procedure and constraints were then discussed with reference to the analysis performed in \cref{VerificationLit}. The simulation input selection procedure was then discussed. Finally a procedure for repeated/periodic simulation was provided.
 \section{Implement the simulation}
 	\subsection{Preamble}
 		Once a simulation has been developed and verified, the implementation of interventions and scenarios follows. In this section, the approach of implementation the simulation methodology, and analysis of interventions will be discussed.
@@ -242,10 +240,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			\caption{An example of a baseline vs. optimised power comparison.}
 			\label{fig: Savings Power.}
 		\end{figure}  
-	 
-		\par 
 		\footnotetext[1]{Eskom, "2017/18 Tariffs and charges" [Online] \url{http://www.eskom.co.za/CustomerCare/TariffsAndCharges/Pages/Tariffs_And_Charges.aspx}, [Accessed 28 June 2017].}
-		
 		For power data, the expected annual energy cost saving can be calculated using  average weekday energy saving and the tariff structure provided by Eskom. The energy supplier's weekday \gls{tou} tariffs for both the high demand (Jun - Aug) and low demand (Sep - May) seasons are shown in \cref{fig: Tariff}.
 
 		\begin{figure}[h]
@@ -263,4 +258,16 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		The results and recommendations should be submitted to responsible mine personal in the form of a report. At this point the process of implementation becomes the mines responsibility. The mine may require further validation of the results through practical testing.
 
 	\subsection{Summary}
+	This section discussed the of implantation of the simulation procedure. Implementation involves execution of the simulation scenarios, followed by the numerical calculation and quantification of energy cost savings and other benefits. Finally the procedure to report findings to the mine is given.
 \section{Conclusion}
+The aim of chapter 3 was to provide a methodology to develop compressed air simulations. The method was broke into three steps:
+\begin{enumerate}
+	\item Investigate the system
+	\item Develop and verify a simulation model
+	\item Execute the simulated scenarios and quantify the benefits
+\end{enumerate}
+This investigation step involved obtaining and verifying data and information regarding the compressed air network. Processes to resolve scenarios where data can not be obtained were also provided.
+\par 
+In the next step, a simulation model development and verification procedure was provided. This included the selection of model and simulation parameter, the development of sub-component models as well as a verification procedure  A methodology for repeated/periodic simulation was also provided.
+\par 
+The final step involved the execution of the simulation followed by the methods to calculate, quantify and report potential benefits of the simulated scenarios. 
