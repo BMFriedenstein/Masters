@@ -9,7 +9,7 @@
 \section{Introduction}
 This chapter details the implementation methodology of simulations to optimize mining compressed air systems. The methodology discussed in this chapter will utilize insights from previous studies. Improving on shortcomings discussed in \cref{Shortcomings of previous work}.
 \par 
-Implementation of a simulation is divided into three steps as shown in the flow diagram, \cref{fig: Methodology}. Firstly, an investigation on the specific air network to is performed. The data acquired from this investigation is then utilized to develop and verify a simulation model. In the final step, scenarios are tested using simulations and the results are quantified and prioritised. After the process has been reviewed, a simulation  report is then produced and passed to the mine.
+Implementation of a simulation is divided into three steps as shown in the flow diagram, \cref{fig: Methodology}. Firstly, an investigation on the specific air network to is performed. The data acquired from this investigation is then utilized to develop and verify a simulation model. In the final step, scenarios are tested using simulations and the results are quantified and prioritised. After the process has been reviewed, a simulation report is then produced and passed to the mine.
 \begin{figure}[h]
 	\centering
 	\fbox{\includegraphics[trim=0.5cm 0.8cm 0.5cm 0.5cm,width=\textwidth]{Graphs/3/Methodology/Methodology.pdf}}
@@ -27,10 +27,10 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	A baseline period that best represents the typical operation of the mine. Additionally, availability of data should be considered. The length of the baseline period is selected based on the scenarios that are to be tested, this can be changed later. For calibrating a compressed air system a 24 hours period of normal operation is usually sufficient. A longer period may be needed to verify the model.
 	Next data 
 	\subsection{Investigate mining schedules}
-	A critical aspect to developing an accurate model of a mining compressed air system is apprehension of the operational philosophy of the mine. The schedule for operations such as drilling,  blasting or cleaning can have a major impact on compressed air requirements at different times of the day. By utilizing the operational schedule, simulation scenarios can be optimized for the air requirements throughout the day.	
+	A critical aspect to developing an accurate model of a mining compressed air system is apprehension of the operational philosophy of the mine. The schedule for operations such as drilling, blasting or cleaning can have a major impact on compressed air requirements at different times of the day. By utilizing the operational schedule, simulation scenarios can be optimized for the air requirements throughout the day.	
 	
 	\subsection{Verify data accuracy}
-	Data verification is the process where data is evaluated to ensure accuracy. It is important to verify data that is used for model development as an accurate representation of the operation of a system can only be achieved utilising data of high quality \cite{gous2016data}. The factors that influence a data-set's quality, accuracy and integrity  summarised as follows:
+	Data verification is the process where data is evaluated to ensure accuracy. It is important to verify data that is used for model development as an accurate representation of the operation of a system can only be achieved utilising data of high quality \cite{gous2016data}. The factors that influence a data-set's quality, accuracy and integrity summarised as follows:
 	\begin{itemize}
 		\item Conversion of measurement value \cite{meijsen2015verification}
 		\item Storage and collection of the system \cite{vanNiekerk2016quantification},\cite{Jansevan2016structuring}
@@ -39,7 +39,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		\item Data abnormalities \cite{gous2016data}
 	\end{itemize} 
 	\par 
-	Therefore a data verification methodology is utilised to ensure datasets are of high quality. 
+	Therefore, a data verification methodology is utilised to ensure datasets are of high quality. 
 	\subsection{Resolve unavailable data}
 		Parameters that are required to develop the simulation model, such as flows, pressures, may not be actively logged by mine systems. To obtain this data it is necessary to investigate alternative sources. At points where instrumentation is absent, estimations can be made from assumptions made using instrumentation on the network or spot inspections.
 		\par 
@@ -79,7 +79,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	\subsection{Model compressed air network components}
 		\subsubsection{Air pipes}
 		Pressure losses occur over compressed air networks due to friction in the pipe, these losses should be taken into account in the simulation for large piping sections. A pipe model is used to account for these losses which are defined by the \textit{Darcy-Weissman equation}\footnote{ B. Glenn, \enquote*{The Darcy–Weisbach Equation,}[Online] \url{https://bae.okstate.edu/faculty-sites/Darcy/DarcyWeisbach/Darcy-WeisbachEq.htm}, [Accessed 20-05-2017]}:
-		$$\Delta P = \frac{f  L \rho V^2}{2 D}$$
+		$$\Delta P = \frac{f L \rho V^2}{2 D}$$
 		Where the pressure difference $\Delta P $ is a function of:
 		\begin{table}[h]
 			\centering
@@ -87,7 +87,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 				\hline
 				Parameter & Definition\\
 				\hline
-				$f$ & Friction coefficient  \\
+				$f$ & Friction coefficient \\
 				$L$ & Pipe length ($m$) \\
 				$D$ & Pipe diameter ($m$) \\
 				$\rho$ & Air density ($kg/m^3$)\\	
@@ -107,19 +107,19 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			\caption{Average summer ambient air conditions at a South African gold mine.}
 			\label{fig: Ambient}
 		\end{figure}
-		The assumption is made that underground conditions remain constant at each mining level. Pressure and temperature increases with depth as a result of auto compression and rock face temperature. Therefore the conditions can be estimated using only the depth at each level.   
+		The assumption is made that underground conditions remain constant at each mining level. Pressure and temperature increases with depth as a result of auto compression and rock face temperature. Therefore, the conditions can be estimated using only the depth at each level. 
 		\subsubsection{Compressors}
 		Three compressor models were investigated, each with varying complexity. The models are:
 		\begin{itemize}
 			\item Air compressor
 			\item Dynamic compressor 
 			\item Positive displacement compressor
-		\end{itemize}  
+		\end{itemize} 
 		The air compressor is a general, simplified model. It requires minimal user inputs by making several assumptions. This is useful when parameters for a compressor are not available. Or when doing a quick preliminary simulation. However, it is not ideal for detailed simulations which require more precision. 
 		\par 
 		The dynamic compressor components are is more complex, taking into account factors such as heat generated by \gls{polyCof} and inefficiencies within the process. Hence, the model can be used more accurately and for more complex simulations than the general compressor model. However, it should be noted that the dynamic compressor is simplified by several assumptions, for example, a constant efficiency at varying loads. 
 		\par 	 
-		For most scenarios, the dynamic compressor model is most suitable. This component is modelled by fitting a quadratic curve through three points of operation to obtain an equation for corrected mass flow as a function of the pressure ratio. This characteristic curve of compressor  as shown in \cref{fig: Compressor Curve} can be accurately estimated even when only one data point is available by making approximations for the zero flow and pressure points on the curve. Once the flow characteristics of the compressors are set, the efficiency and \gls{polyCof} parameters are calibrated such that the output power and air temperature match the actual or estimated outputs of the compressor.
+		For most scenarios, the dynamic compressor model is most suitable. This component is modelled by fitting a quadratic curve through three points of operation to obtain an equation for corrected mass flow as a function of the pressure ratio. This characteristic curve of compressor as shown in \cref{fig: Compressor Curve} can be accurately estimated even when only one data point is available by making approximations for the zero flow and pressure points on the curve. Once the flow characteristics of the compressors are set, the efficiency and \gls{polyCof} parameters are calibrated such that the output power and air temperature match the actual or estimated outputs of the compressor.
 		\begin{figure}[h]
 			\centering
 			\fbox{\input{Graphs/3/AproxCurve/AproxCurve}}
@@ -154,14 +154,14 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		\caption[Control components in Process toolbox]{Control components in \gls{ptb}.}
 		\label{fig: Controller models}
 	\end{figure}
-		Guide vains are most commonly used in mining to control compressors. This entails controlling the position of the inlet guide vain . The guide vain is opened or closed to control the compressors discharge pressure.  Manipulating the guide vain position will affect the power the compressor inputs into the system. \cref{fig: Guide vain position} shows the relationship between  power and guide vain position. This can be estimated as a linear function where a guide vain position of 40\% relates to an output power of about 60\% of the maximum power. When more pressure is required than can be obtained with the guide vains fully opened, another compressor is needed to operate. 
+		Guide vains are most commonly used in mining to control compressors. This entails controlling the position of the inlet guide vain . The guide vain is opened or closed to control the compressors discharge pressure. Manipulating the guide vain position will affect the power the compressor inputs into the system. \cref{fig: Guide vain position} shows the relationship between power and guide vain position. This can be estimated as a linear function where a guide vain position of 40\% relates to an output power of about 60\% of the maximum power. When more pressure is required than can be obtained with the guide vains fully opened, another compressor is needed to operate. 
 		\begin{figure}[h]
 			\centering
 			\fbox{\input{Graphs/1/GuideVainPosition/GuideVainPosition}}
 			\caption{Modelling the compressor control from a guide vain}
 			\label{fig: Guide vain position}
 		\end{figure}
-		A guide vain controller is modelled using a \gls{pi} controller. However, the non linear limitations of guide vain control, as represented in \cref{fig: Guide vain position}, must be implemented in the controller. This is done by using a minimum control output limit that matches the minimum power reduction  achieved by closing the guide vain to its minimum position. For example, a \gls{pi} controller for the compressor from \cref{fig: Guide vain position} would have a minimum control output of approximately 60\%.
+		A guide vain controller is modelled using a \gls{pi} controller. However, the non linear limitations of guide vain control, as represented in \cref{fig: Guide vain position}, must be implemented in the controller. This is done by using a minimum control output limit that matches the minimum power reduction achieved by closing the guide vain to its minimum position. For example, a \gls{pi} controller for the compressor from \cref{fig: Guide vain position} would have a minimum control output of approximately 60\%.
 		\par 
 		Mines utilize control valves at underground sections to control the pressure at individual mining stations independently \cite{Heyns2014Masters}. Controlling of valve components is performed similarly as control of the compressor components. As shown in \cref{fig: Controller models} the outlet pressure is used as feedback for a pi controller. The controller output is mapped to the valve fraction of a pipe component.
 		\begin{figure}[h]
@@ -212,9 +212,9 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			\label{fig: Compressor schedule}
 		\end{figure}
 	\subsection{Periodic simulation}	
-		Period simulation refers to the repetition of simulations over subsequent periods to determine the sequential accuracy of the model.  This is important to verify the model is valid in general and not just a single period.  This simulation will also indicate where operation changes have occurred as the simulation accuracy will be reduced.
+		Period simulation refers to the repetition of simulations over subsequent periods to determine the sequential accuracy of the model. This is important to verify the model is valid in general and not just a single period. This simulation will also indicate where operation changes have occurred as the simulation accuracy will be reduced.
 		\par 
-		The following process is followed to implement periodic simulation: Simulation input data is collected periodically for each simulation interval, this data includes only inputs that vary day to day such as schedules, air conditions and  measured flows. Once the input values are collected, they are then imported into the compressed air model. The simulation performed and the output data is exported for analysis. The  simulated data is then compared with the actual operation of the system and major discrepancies are identified. This process is triggered periodically.
+		The following process is followed to implement periodic simulation: Simulation input data is collected periodically for each simulation interval, this data includes only inputs that vary day to day such as schedules, air conditions and measured flows. Once the input values are collected, they are then imported into the compressed air model. The simulation performed and the output data is exported for analysis. The simulated data is then compared with the actual operation of the system and major discrepancies are identified. This process is triggered periodically.
 		\begin{figure}[h]
 			\centering
 			\fbox{\includegraphics[trim =1.0cm 3.9cm 0.76cm 1cm,width=\textwidth]{Graphs/4/PeriodicProcess/PeriodicProcess.pdf}}
@@ -239,9 +239,9 @@ The simulation model development and verification procedure was discussed in thi
 			\input{Graphs/3/savings/savings}
 			\caption{An example of a baseline vs. optimised power comparison.}
 			\label{fig: Savings Power.}
-		\end{figure}  
+		\end{figure} 
 		\footnotetext[1]{Eskom, "2017/18 Tariffs and charges" [Online] \url{http://www.eskom.co.za/CustomerCare/TariffsAndCharges/Pages/Tariffs_And_Charges.aspx}, [Accessed 28 June 2017].}
-		For power data, the expected annual energy cost saving can be calculated using  average weekday energy saving and the tariff structure provided by Eskom. The energy supplier's weekday \gls{tou} tariffs for both the high demand (Jun - Aug) and low demand (Sep - May) seasons are shown in \cref{fig: Tariff}.
+		For power data, the expected annual energy cost saving can be calculated using average weekday energy saving and the tariff structure provided by Eskom. The energy supplier's weekday \gls{tou} tariffs for both the high demand (Jun - Aug) and low demand (Sep - May) seasons are shown in \cref{fig: Tariff}.
 
 		\begin{figure}[h]
 			\centering
@@ -268,6 +268,6 @@ The aim of chapter 3 was to provide a methodology to develop compressed air simu
 \end{enumerate}
 This investigation step involved obtaining and verifying data and information regarding the compressed air network. Processes to resolve scenarios where data can not be obtained were also provided.
 \par 
-In the next step, a simulation model development and verification procedure was provided. This included the selection of model and simulation parameter, the development of sub-component models as well as a verification procedure  A methodology for repeated/periodic simulation was also provided.
+In the next step, a simulation model development and verification procedure was provided. This included the selection of model and simulation parameter, the development of sub-component models as well as a verification procedure A methodology for repeated/periodic simulation was also provided.
 \par 
 The final step involved the execution of the simulation followed by the methods to calculate, quantify and report potential benefits of the simulated scenarios. 
