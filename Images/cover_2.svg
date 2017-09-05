@@ -15,7 +15,7 @@
    height="1122.5601"
    viewBox="0 0 794.23999 1122.5601"
    sodipodi:docname="cover_2.svg"
-   inkscape:version="0.92.1 r15371">
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
   <metadata
      id="metadata8">
     <rdf:RDF>
@@ -24,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -44,9 +44,9 @@
      id="namedview4"
      showgrid="false"
      inkscape:snap-smooth-nodes="true"
-     inkscape:zoom="0.45254834"
-     inkscape:cx="321.444"
-     inkscape:cy="678.32205"
+     inkscape:zoom="3.6203867"
+     inkscape:cx="609.49552"
+     inkscape:cy="114.76605"
      inkscape:window-x="-8"
      inkscape:window-y="135"
      inkscape:window-maximized="1"
@@ -92,9 +92,9 @@
        y="1078.277"
        style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.66666698px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';baseline-shift:baseline">I<tspan
    style="font-size:16px"
-   id="tspan4539">t all starts here</tspan>  <tspan
+   id="tspan4539">t all starts here</tspan><tspan
    style="font-size:6.66666683px;baseline-shift:super"
-   id="tspan4529">TM</tspan> </tspan></text>
+   id="tspan4529">TM</tspan></tspan></text>
   <flowRoot
      xml:space="preserve"
      id="flowRoot4545"
@@ -107,11 +107,11 @@
          x="589"
          y="1014.5601" /></flowRegion><flowPara
        id="flowPara4551"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.33333365px;font-family:Calibri;-inkscape-font-specification:Calibri;line-height:0px">NORTH-WEST UNIVERSITY       </flowPara><flowPara
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.33333397px;line-height:0px;font-family:Calibri;-inkscape-font-specification:Calibri">NORTH-WEST UNIVERSITY       </flowPara><flowPara
        id="flowPara4553"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.33333365px;font-family:Calibri;-inkscape-font-specification:Calibri;line-height:0px">YUNIBESITI YA BOKONE-BOPHIRIMA</flowPara><flowPara
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.33333397px;line-height:0px;font-family:Calibri;-inkscape-font-specification:Calibri">YUNIBESITI YA BOKONE-BOPHIRIMA</flowPara><flowPara
        id="flowPara4555"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.33333365px;font-family:Calibri;-inkscape-font-specification:Calibri;line-height:0px">NOORWES-UNIVERITEIT</flowPara></flowRoot>  <flowRoot
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.33333397px;line-height:0px;font-family:Calibri;-inkscape-font-specification:Calibri">NOORDWES-UNIVERSITEIT</flowPara></flowRoot>  <flowRoot
      xml:space="preserve"
      id="flowRoot4563"
      style="font-style:normal;font-weight:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
