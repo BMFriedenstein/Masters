@@ -24,7 +24,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,16 +39,16 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1600"
-     inkscape:window-height="837"
+     inkscape:window-width="1680"
+     inkscape:window-height="987"
      id="namedview4"
      showgrid="false"
      inkscape:snap-smooth-nodes="true"
-     inkscape:zoom="3.6203867"
-     inkscape:cx="609.49552"
-     inkscape:cy="114.76605"
-     inkscape:window-x="-8"
-     inkscape:window-y="135"
+     inkscape:zoom="0.32"
+     inkscape:cx="238.31163"
+     inkscape:cy="226.65751"
+     inkscape:window-x="1592"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
   <path
@@ -90,32 +90,38 @@
        id="tspan4514"
        x="45.825905"
        y="1078.277"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.66666698px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';baseline-shift:baseline">I<tspan
-   style="font-size:16px"
-   id="tspan4539">t all starts here</tspan><tspan
-   style="font-size:6.66666683px;baseline-shift:super"
-   id="tspan4529">TM</tspan></tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.66666698px;font-family:Calibri;-inkscape-font-specification:'Calibri Bold';baseline-shift:baseline"><tspan
+         style="letter-spacing:0.08px"
+         id="tspan870">I</tspan><tspan
+         style="font-size:16px"
+         id="tspan4539"><tspan
+   style="letter-spacing:0.08px"
+   id="tspan872">t all starts here</tspan> </tspan><tspan
+         style="font-size:6.66666698px;baseline-shift:super"
+         id="tspan4529">TM</tspan></tspan></text>
   <flowRoot
      xml:space="preserve"
      id="flowRoot4545"
-     style="font-style:normal;font-weight:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     transform="translate(5.5,17.5)"><flowRegion
-       id="flowRegion4547"><rect
+     style="font-style:normal;font-weight:normal;font-size:10.66666698px;line-height:1;font-family:sans-serif;letter-spacing:0.08px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     transform="translate(5.5,21.40625)"><flowRegion
+       id="flowRegion4547"
+       style="line-height:1;letter-spacing:0.08px"><rect
          id="rect4549"
          width="174.5"
          height="43.999939"
          x="589"
-         y="1014.5601" /></flowRegion><flowPara
+         y="1014.5601"
+         style="line-height:1;letter-spacing:0.08px" /></flowRegion><flowPara
        id="flowPara4551"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.33333397px;line-height:0px;font-family:Calibri;-inkscape-font-specification:Calibri">NORTH-WEST UNIVERSITY       </flowPara><flowPara
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';letter-spacing:0.08px">NORTH-WEST UNIVERSITY       </flowPara><flowPara
        id="flowPara4553"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.33333397px;line-height:0px;font-family:Calibri;-inkscape-font-specification:Calibri">YUNIBESITI YA BOKONE-BOPHIRIMA</flowPara><flowPara
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';letter-spacing:0.08px">YUNIBESITI YA BOKONE-BOPHIRIMA</flowPara><flowPara
        id="flowPara4555"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.33333397px;line-height:0px;font-family:Calibri;-inkscape-font-specification:Calibri">NOORDWES-UNIVERSITEIT</flowPara></flowRoot>  <flowRoot
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';letter-spacing:0.08px">NOORDWES-UNIVERSITEIT</flowPara></flowRoot>  <flowRoot
      xml:space="preserve"
      id="flowRoot4563"
      style="font-style:normal;font-weight:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-     transform="translate(-7.5,20)"><flowRegion
+     transform="translate(-14.140625,21.171875)"><flowRegion
        id="flowRegion4565"><rect
          id="rect4567"
          width="22"
@@ -141,4 +147,14 @@
      y="-2.1816685"
      rx="1.0237"
      ry="1.25818" />
-</svg>
+  <flowRoot
+     xml:space="preserve"
+     id="flowRoot862"
+     style="fill:black;fill-opacity:1;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:10.66666667px;line-height:1.25;letter-spacing:0px;word-spacing:0px"><flowRegion
+       id="flowRegion864"><rect
+         id="rect866"
+         width="53.803883"
+         height="20.524103"
+         x="561.59998"
+         y="1078.5577" /></flowRegion><flowPara
+       id="flowPara868"></flowPara></flowRoot></svg>
