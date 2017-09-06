@@ -9,13 +9,13 @@
 \newpage
 
 \section{Preamble}
-This chapter firstly discusses background regarding deep level mining in South Africa. Next, the need to reduce costs of operation in the mining sector is examined. From this a focus in reducing energy consumption of compressed air systems is developed. Next, background on compressed air operation and energy interventions are discussed. Simulations and their value in industry is discussed leading to a problem statement and objectives of the study. Finally, an overview for the dissertation is provided.
+This chapter firstly discusses background regarding deep level mining in South Africa. Next, the need to reduce costs of operation in the mining sector is examined. From this, a focus on reducing the energy consumption of compressed air systems is developed. Next, background on compressed air operation and energy interventions are discussed. Simulations and their value in the industry are discussed leading to a problem statement and objectives of the study. Finally, an overview for the dissertation is provided.
 \section{Background on deep level mining}
 	\subsection{Mining profitability}
 	\footnotetext[1]{inflation.eu, "Historic inflation South Africa." [Online] \url{http://www.inflation.eu/inflation-rates/south-africa/historic-inflation/cpi-inflation-south-africa.aspx}, [Accessed 25 March 2017].}
 	 	Various technical, economic, social and operational challenges are posing a risk to the profitability of the South African mining sector. One of the challenges the sector faces is a rise in the cost of operation \cite{neingo2016trends}.
 	 	\par
-		A considerable factor that is contributing to the rise of operational costs in South African gold mines has been the increase in electricity costs. As shown in \cref{fig: Eskom tariffs}, the general cost of electricity has increased at a rate greater than inflation since 2008 \cite{Eskom2013Tariffs}.
+		A considerable factor that is contributing to the increase in operational costs in South African gold mines has been the rise of electricity costs. As shown in \cref{fig: Eskom tariffs}, the general cost of electricity has increased at a rate greater than inflation since 2008 \cite{Eskom2013Tariffs}.
 		\begin{figure}[h]
 			\centering
 			\fbox{\input{Graphs/1/Eskom/Eskom}}
@@ -27,17 +27,17 @@ This chapter firstly discusses background regarding deep level mining in South A
 	\subsection{Process of a deep level mine}
 	South Africa's mines are some of the deepest in the world Some mine shafts are reaching depths deeper than $4000m$ below the surface \cite{vosloo2012case}. The process of extracting ore at this depth is dependent on the essential services, mainly cooling and ventilation, pumping, compressed air and hoisting, as shown in \cref{fig: Mining Layout}.
 	\par 
-	 Cooling and ventilation system are required to maintain a safe working temperature underground. Pumping is critical to remove service and fissure water, preventing flooding. Compressed air is needed to safely power underground drills and machines. Finally, hoisting systems are used to bring the ore to the surface and to transport mine workers in the mine. 
+	 Cooling and ventilation systems are required to maintain a safe working temperature underground. Pumping is critical to remove service and fissure water, preventing flooding. Compressed air is needed to power underground drills and machines safely. Finally, hoisting systems are used to bring the ore to the surface and to transport  workers in the mine. 
 		\begin{figure}[h!]
 			\centering
 			\fbox{\includegraphics[width=\textwidth]{Graphs/1/Layout/Layout.pdf}}
-			\caption{A layout showing the mining processes.}
+			\caption{A schematic showing the mining processes.}
 			\label{fig: Mining Layout}
 		\end{figure}
 		\subsubsection{Energy usage of mining services}
-			The mining industry uses extensive amounts of energy. In South Africa, the industry utilizes approximately 15\% of the national electricity supplier's yearly output, of which, gold and platinum mines use 80\%.\cite{Eskom2010Energy}
+			The mining industry uses extensive amounts of energy. In South Africa, the industry utilises approximately 15\% of the national electricity supplier's yearly output, of which, gold and platinum mines use 80\%.\cite{Eskom2010Energy}
 			\par
-			 \cref{fig: Energy Split} shows the division of energy within the mining industry. The chart shows that compressed air systems utilizes the most energy within a mining industry. It is reasoned that energy can be most effectively reduced through the implementation of energy interventions on compressed air systems.
+			 \cref{fig: Energy Split} illustrates the division of energy within the mining industry. The chart indicates that compressed air systems utilise the most energy within mine. Therefore, energy can be most effectively reduced through the implementation of energy interventions on compressed air systems.
 			\begin{figure}[h]
 				\centering
 				\fbox{\input{Graphs/1/distribution/distribution}}
@@ -47,58 +47,64 @@ This chapter firstly discusses background regarding deep level mining in South A
 \section{Compressed air systems in mining}
 	\subsection{Compressed air in operation}\label{key}
 		Largely due to their reliability, versatilely and ease of use, the South African mining industry has installed extensive compressed air networks. These systems can have compressors with capacities of up to 15 Megawatt ($MW$)\cite{Marais2012PhD}.
-		However, the supply of compressed air is a highly energy demanding and costly process \cite{padachi2009energy}. The energy used for compressed air production contributes to between 9\% and 20\% of the total mining energy consumption	\cite{Eskom2010Energy}, \cite{du2011development}. 
+		However, the supply of compressed air is a high energy demanding and costly process \cite{padachi2009energy}. The energy used for compressed air production contributes to between 9\% and 20\% of the total mining energy consumption	\cite{Eskom2010Energy}, \cite{du2011development}. 
 		\par
-		Large compressed air systems are likely inefficient. Internationally, the expected energy savings potential of a large compressed air network is 15\% \cite{neale2009compressed}. Marais \cite{marais2013simplification} showed that energy saving interventions can lead to energy and cost savings of up to 30\% and 40\%. 
+		Large compressed air systems are likely inefficient. Internationally, the expected energy savings potential of a large compressed air network is 15\% \cite{neale2009compressed}. Marais \cite{marais2013simplification} showed that energy efficiency interventions could lead to energy and cost savings of up to 30\% and 40\%. 
 	 
 	\subsection{Characteristic inefficiencies of compressed air systems}
-		Compressed air distribution networks in the mining industry consist of multiple compressors and working areas up to eight kilometres away from the source \cite{Marais2012PhD}. Due to their size and complexity, these systems are prone to large energy losses.
+		Compressed air distribution networks in the mining industry consist of multiple compressors and working areas up to eight kilometres away from the source \cite{Marais2012PhD}. Due to their size and complexity, these systems are prone to significant energy losses.
 		\par 
 		Compressed air leakage accounts for as much as 35\% of the energy losses of a compressed air network \cite{Lawrence2004Improving}. Other systemic losses include, faulty valves, pipe diameter fluctuations, obstructed air compressor intake filters and inefficient compressors. 	
 	
-		Leakage and inefficiency detection strategies are not often pursued in the South African mining industry \cite{vanTonder2010Masters}. Many mines do however perform leak inspections either internally or by a outside company. In these inspections, an ultrasonic detector is used to locate the leak. Alternatively, some mines employ the \enquote{walk and listen} method to identify leaks from the audible sound that it produces \cite{vanTonder2010Masters}. Once the inspection is completed, the findings, including the locations and estimated costs of all identified leaks, are reported.
+		Leakage and inefficiency detection strategies are not often pursued in the South African mining industry \cite{vanTonder2010Masters}. Many mines do however perform leak inspections either internally or by an outside company. In these inspections, an ultrasonic detector is used to locate the leak. Alternatively, some mines employ the \enquote{walk and listen} method to identify leaks from the audible sound that it produces \cite{vanTonder2010Masters}. Once the inspection is completed, the findings, including the locations and estimated costs of all identified leaks, are reported.
 		
 	\subsection{Compressed air savings interventions}
 		Energy interventions to reduce energy on compressed air systems designed using the following strategies \cite{Snyman2011Masters}:
 		\begin{itemize}
-			\item Reduce leaks.
-			\item Reduce demand.
-			\item Reduce unauthorised usage.
-			\item Increase supply efficiency.
-			\item Optimise supply.
+			\item Reduce leaks
+			\item Reduce demand
+			\item Reduce unauthorised air usage
+			\item Increase supply efficiency
+			\item Optimise supply
 		\end{itemize}
-	 Often a combination of energy strategies will lead to the most savings \cite{Marais2012PhD}. In \cref{Chap2}, Successfully compressed air interventions on mining systems we be discussed from literature.
+	 Often a combination of energy strategies will lead to the most savings \cite{Marais2012PhD}. In \cref{Chap2}, Successfully compressed air interventions on mining systems will be discussed from literature.
 	 \par 
-	 Once a energy saving measure has been identified, it is most often necessary to make estimations to determine the potential costs and benefits of the intervention. This has usually been performed using first principle calculations, simplified mathematical models and practical tests if possible. However, new tools have enabled quick, accurate compressed air model development. Through simulations, accurate estimations can be obtained quickly, with no risk and at comparatively low resource requirement.
+	 Once an energy saving measure has been identified, it is most often necessary to make estimations to determine the potential costs and benefits of the intervention. The estimations have typically been performed using first principle calculations, simplified mathematical models and practical tests if possible. However, new tools have enabled quick, accurate compressed air model development. Through simulations, accurate estimations can be obtained quickly, with no risk and at comparatively low resource requirement.
 \section{Use of simulation in industry }
 	\subsection{Background in industrial simulation}
 	
-		Continuous improvements in computing hardware has led to major advancement in software technology. Consequently, the use of computational simulation has become an increasingly valuable tool for many industries.\cite{kocsis2003integration} \par 
-		In \textit{ Handbook of simulation: principles, methodology, advances, applications, and practice}, the advantages of the use of simulation in industry are discussed as follows \cite{banks1998handbook}: %%% Chapter 1 of book
+		Continuous improvements in computing hardware have led to major advancement in software technology. Consequently, the use of computational simulation has become an increasingly valuable tool for many industries.\cite{kocsis2003integration} \par 
+		In \textit{ Handbook of Simulation: Principles, methodology, advances, applications, and practice}, the advantages of the use of simulation in the industry are discussed as follows \cite{banks1998handbook}: %%% Chapter 1 of book
 		\begin{itemize}
-			\item The ability to test new policies, operating procedures and methods without causing a disruption to the actual system.
+			\item The ability to test new policies, operating procedures and methods without disrupting the actual system.
 			\item The means to identify problems in complex systems by gathering insight in the interactions within the system.
 			\item The facility to compress or expand time to investigate phenomena thoroughly.
 			\item The capability to determine the limits and constraints within a system.
-			\item The potential to build consensus with regard to proposed designs or modifications.
+			\item The potential to build consensus about proposed designs or modifications.
 		\end{itemize}
 
 	\subsection{Simulation usage in compressed air optimisation}
-		Simulation has been used to test and identify energy and operational improvements in mining compressed air systems. In the past producing complex models for mining systems was not feasible as simulation software required difficult to obtain data inputs \cite{marais2013simplification}. This lead to simplified models that cannot provide accurate results and limited the types of scenarios that can be simulated. 
+		Simulation has been used to test and identify energy and operational improvements in mining compressed air systems. In the past producing complex models for mining systems was not feasible as simulation software required difficult to obtain data inputs \cite{marais2013simplification}. 
 		\par 
-		However, the use of planned manual measurements, estimations and new software technologies can overcome this challenge \cite{Bredenkamp2015Challeges}, \cite{Mare2017Evaluating}. This would allow for the development of more detailed and accurate mining compressed air simulations.
+		Due to the lack of data inputs, previous studies have typically had to develop simplified system models. The models cannot provide results with a high amount of accuracy and limited the types of scenarios that can be simulated. 
+		\par 
+		However, the use of planned manual measurements, estimations and new software technologies can overcome this challenge \cite{Bredenkamp2015Challeges}, \cite{Mare2017Evaluating}. Using a structured procedure may allow for the development of more detailed and accurate mining compressed air simulations.
+		
+		%A standard procedure for developing and verifying simulation has also not been developed.
 
 \section{Problem statement and objectives}
 	\subsection{Problem statement}
- 		Rising costs and falling ore grades are driving the mining industry to reduce operational costs. The industry can save significant energy cost through interventions in compressed air systems. However, manual testing of these interventions are risky and cumbersome.
+ 		Rising costs and falling ore grades are driving the mining industry to reduce operational costs. The industry can save significant energy cost through interventions in compressed air systems. However, manual testing of these interventions is risky and cumbersome.
  		\par
- 		Computer modelling and simulation of compressed air systems can be used to quantify and priorities operational interventions with minimal risk. However, simulations have not been utilised to their full potential in compressed air systems. With new tools and more detailed simulation models, the energy and operation efficiency of mining compressed air systems can be improved, leading to significant energy and cost savings as well as other potential improvements for a mines operation.
-	\subsection{Research objectives}
-		The main objective of this dissertation is to obtain energy savings through the identification of operational improvements in mining compressed air systems. A simulation process to will be developed to achieve this goal.
+ 		Computer modelling and simulation of compressed air systems can be used to quantify and prioritise operational interventions with minimal risk. However, simulations have not been used to their full potential in compressed air systems. With new tools and more detailed simulation models, the energy and operation efficiency of mining compressed air systems can be improved, leading to significant energy and cost savings as well as other potential improvements for a mine's operation.
+ 		\par 
+ 		Therefore, a need exists for a structured approach to develop and implement compressed air system simulations to improve the energy and operational efficiency.
+ 			\subsection{Research objectives}
+		The main aim of this dissertation is to obtain energy savings through the identification of operational improvements in mining compressed air systems. A simulation process to will be developed to achieve this goal.
 \section{Dissertation overview}
-	\paragraph{Chapter 1} \hspace{0.4cm} - \hspace{0.05cm} This chapter serves as an introduction for the dissertation. The chapter provides the relevant background in mining, compressed air and simulation to establish the problem statement. The objectives of the study are then outlined.
-	\paragraph{Chapter 2} \hspace{0.4cm} - \hspace{0.05cm} Chapter 2 provides a review of literature and necessary background relevant to the study. The chapter firstly provides background on mining compressed air networks. A review of of compressed air energy interventions is then performed. This is followed by a review of simulation in industry and finally a review of simulation usgae in mining compressed air systems.
-	\paragraph{Chapter 3} \hspace{0.4cm} - \hspace{0.05cm} Chapter 3 provides a simulation methodology. The methodology outlines the processes used to investigate a compressed air system, develop and calibrate simulation models and finally to implement simulations and obtain results.
-	\paragraph{Chapter 4} \hspace{0.4cm} - \hspace{0.05cm} Chapter 4 provides validation of the methodology through case study results. Results of three case studies are provided. Finally the impact of large scale implementation of the simulation methodology is discussed.
+	\paragraph{Chapter 1} \hspace{0.4cm} - \hspace{0.05cm} This chapter serves as an introduction to the dissertation. The chapter provides the relevant background in mining, compressed air and simulation to establish the problem statement. The objectives of the study are then outlined.
+	\paragraph{Chapter 2} \hspace{0.4cm} - \hspace{0.05cm} Chapter 2 provides a review of the literature and necessary background relevant to the study. The chapter firstly provides background on mining compressed air networks. A review of compressed air energy interventions is then performed. A review of simulation usage in the mining industry then follows. Finally, a review of simulation usage in mining compressed air systems.
+	\paragraph{Chapter 3} \hspace{0.4cm} - \hspace{0.05cm} Chapter 3 provides a simulation methodology. The method outlines the processes used to investigate a compressed air system, develop and calibrate simulation models and finally to implement simulations and obtain results.
+	\paragraph{Chapter 4} \hspace{0.4cm} - \hspace{0.05cm} Chapter 4 provides validation of the methodology through case study results. Results of three case studies are provided. Finally, the impact of large scale implementation of the simulation methodology is discussed.
 	\paragraph{Chapter 5} \hspace{0.4cm} - \hspace{0.05cm} Chapter 4 concludes the dissertation. The chapter also provides recommendations for further studies regarding compressed air simulation.
 	%\texttt{Describe (in approximately one sentence each) the contents of \\each of the dissertation chapters. No results here.}
