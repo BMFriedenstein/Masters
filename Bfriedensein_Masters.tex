@@ -1,4 +1,4 @@
-\documentclass[12pt, english, oneside, open=any,draft=false ]{report}%draft
+\documentclass[12pt, english, oneside, open=any,draft=true ]{report}%draft
 %---------------------------------------
 %Language, text and grammer
 \usepackage[utf8]{inputenc}
@@ -87,7 +87,8 @@
 
 %Title page
 \usepackage[pages=some]{background}
-\backgroundsetup{
+\backgroundsetup
+{
 	scale=1,
 	opacity=1,
 	angle=0,
@@ -106,7 +107,7 @@
 
 \usepackage[ protrusion=true, expansion=true, final, babel ]{microtype}
 %disable Ligatures (for word ocr conversion)
-\DisableLigatures{encoding = *, family = * }
+%\DisableLigatures{encoding = *, family = * }
 
  
  % Colors
@@ -181,7 +182,8 @@
 
 \clearpage
 
-
+\renewcommand{\arraystretch}{1.2}
+\linespread{1}
 %List of symbals
 %List of abreviations
 	\addcontentsline{toc}{chapter}{Abbreviations and nomenclature}
@@ -189,7 +191,9 @@
 	\newpage
 	\printglossary[title=Nomenclature]
 	\newpage
-	
+\renewcommand{\arraystretch}{1.4}
+\linespread{1.4}
+
 	%\printglossaries	
 	\addcontentsline{toc}{chapter}{List of figures and tables}
 	\listoffigures

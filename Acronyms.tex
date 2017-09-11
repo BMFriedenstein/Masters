@@ -3,17 +3,19 @@
 
 \newglossarystyle{formel_altlong4colheader}{%
 	\setglossarystyle{altlong4colheader}%
-	% 
-	\renewcommand*{\glossaryheader}{}%
+	\renewenvironment{theglossary}%
+	{\begin{longtable}{p{4cm}p{9cm}p{1cm}c}}%
+		{\end{longtable}}%
+	\renewcommand*{\glossaryheader}{\tabularnewline}%
 	\renewcommand{\glossentry}[2]{% 
-		\glstarget{##1}{\glossentryname{##1}}% 
-		& \glossentrydesc{##1}% 
-		& \glossentrysymbol{##1}% 
+		\glstarget{##1}{\glossentryname{##1}} & \glossentrydesc{##1} & &\glossentrysymbol{##1}% 
 		\tabularnewline % end of row
 	}%
 }
-\setlength{\glsdescwidth}{3in}
+
+\setlength{\glsdescwidth}{2in}
 \setglossarystyle{formel_altlong4colheader}
+
 \newacronym{calds}{CALDS}{Compressed Air Leakage Documentation System}
 \newacronym{dsm}{DSM}{Demand Side Management}
 \newacronym{dcs}{DCS}{Dynamic Compressor Selection}
@@ -43,36 +45,36 @@
 	symbol = $kPa$
 }
 \newglossaryentry{polyCof}{
-	name = polytropic\\ coefficient, 
-	description =  The thermodynamic coeificient used when describing the heat transfer due to compression or expansion,
+	name = polytropic coefficient, 
+	description =  The thermodynamic coeificient used when describing the heat transfer due to compression or expansion.,
 	symbol = ---
 }
 
 \newglossaryentry{w}{
 	name = Watt,
-	description =  The SI measure of power,
+	description =  The SI measure of power.,
 	symbol = $W$
 } 
 
 \newglossaryentry{t}{
 	name = Tonne,
-	description =  The non-SI measure for 1000 kilograms,
+	description =  The non-SI measure for 1000 kilograms.,
 	symbol = $T$
 }
 
 \newglossaryentry{c}{
 	name = Celcius,
-	description =  The SI measure for tempature,
+	description =  The SI measure for tempature.,
 	symbol = $C$
 }
 \newglossaryentry{stopes}{
 	name = Stopes,
-	description = mining area,
+	description = Underground mining area.,
 	symbol = ---
 }
 \newglossaryentry{r}{
 	name = Correlation coefficient,
-	description = The statistical measure of linear relationship between two variables,
+	description = The statistical measure of linear relationship between two variables.,
 	symbol = r
 }
 
