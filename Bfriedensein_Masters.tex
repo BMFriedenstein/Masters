@@ -1,4 +1,4 @@
-\documentclass[12pt, english, oneside, open=any,draft ]{report}%draft
+\documentclass[12pt, english, oneside, open=any,draft=false ]{report}%draft
 %---------------------------------------
 %Language, text and grammer
 \usepackage[utf8]{inputenc}
@@ -25,9 +25,7 @@
 	bottom=25mm,
 }
 
-%disable Ligatures (for word ocr conversion)
-%\usepackage{microtype}
-%\DisableLigatures{encoding = *, family = * }
+
 
 %%Chapter formatting 
 \usepackage{titlesec}
@@ -105,6 +103,16 @@
 \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 \usepackage[titletoc]{appendix}
 
+
+\usepackage[ protrusion=true, expansion=true, final, babel ]{microtype}
+%disable Ligatures (for word ocr conversion)
+\DisableLigatures{encoding = *, family = * }
+
+ 
+ % Colors
+ \definecolor{MasterBlue}{rgb}{0.18,0.45,0.71}
+
+
 \begin{document}
 \pagenumbering{roman}	
 % Title page
@@ -115,18 +123,18 @@
 			\textbf{\singlespacing\huge{Simulating improvements on mining compressed air systems}\\
 			}\par
 			\vspace{3cm}
-			\LARGE{B.M. Friedenstein \\28354516}\\
+			\LARGE{ \textbf{BM Friedenstein \\28354516} }
 		\end{center}
 	
 	\vspace{2cm}
 	
 \begin{flushleft}
-	{\singlespacing\centering \large Dissertation submitted in fulfilment of the requirements for the degree {\color{blue} \textit{Magister}} in {\color{blue}Electrical and Electronic Engineering} at the Potchefstroom Campus of the North-West University\\
+	{\singlespacing\centering \Large Dissertation submitted in fulfilment of the requirements for the \\ degree {\color{MasterBlue} \textit{Master of Engineering}} in {\color{MasterBlue}Electrical and Electronic \\ Engineering} at the Potchefstroom Campus of the North-West\\ University\\
 	}
 	\vspace{2cm}
 	{\large \setlength{\parindent}{0.5cm} Supervisor: Dr Johann van Rensburg \\
 	\vspace{1cm}
-	\large{\monthyeardate\today}\\		
+	\large{Examination October 2017}\\		
 	}
 \end{flushleft}
 \end{titlepage}
