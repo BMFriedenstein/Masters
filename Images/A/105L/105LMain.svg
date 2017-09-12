@@ -722,9 +722,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="540.97486"
-     inkscape:cy="251.86424"
+     inkscape:zoom="0.7"
+     inkscape:cx="164.42946"
+     inkscape:cy="558.22223"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -741,7 +741,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -7197,10 +7197,12 @@
     </g>
     <g
        id="g4059"
-       transform="matrix(0.35277777,0,0,-0.35277777,-35.328455,312.08645)">
+       transform="matrix(0.35277777,0,0,-0.35277777,-35.328455,312.08645)"
+       style="">
       <g
          id="g4061"
-         clip-path="url(#clipPath4065)">
+         clip-path="url(#clipPath4065)"
+         style="">
         <path
            d="m 858.43,765.71 h 16.76 v 16.76 h -16.76 z"
            style="fill:url(#linearGradient4071);fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -7259,22 +7261,22 @@
        id="path4093"
        inkscape:connector-curvature="0" />
     <path
-       d="m 178.90406,126.09697 -6.87922,-11.54055 -6.88787,11.54055 z"
-       style="fill:#e62b17;fill-opacity:1;stroke:#404040;stroke-width:0.24223517;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       d="m 224.35961,105.04577 -2.02502,-4.13849 -2.02756,4.13849 z"
+       style="fill:#e62b17;fill-opacity:1;stroke:#404040;stroke-width:0.07870259;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        id="path4129"
        inkscape:connector-curvature="0" />
     <path
-       d="M 165.35271,119.97426 150.67009,105.69381"
+       d="M 219.32861,99.575197 204.64599,85.294744"
        style="fill:none;stroke:#000000;stroke-width:0.52916664;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        id="path4131"
        inkscape:connector-curvature="0" />
     <path
-       d="m 166.08648,118.71132 2.06375,3.98286 -4.0393,-1.95086 z"
+       d="m 220.06238,98.312254 2.06375,3.982866 -4.0393,-1.95086 z"
        style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.35277778"
        id="path4133"
        inkscape:connector-curvature="0" />
     <path
-       d="m 118.27099,269.69315 h 30.90015 v -10.50008 h -30.90015 z"
+       d="M 120.81005,270.22769 H 151.7102 V 259.72761 H 120.81005 Z"
        style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
        id="path4137"
        inkscape:connector-curvature="0" />
@@ -7290,62 +7292,64 @@
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888889px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        x="74.366821"
        y="66.718002"
        id="text7443"><tspan
          sodipodi:role="line"
          x="74.366821"
          y="70.633011"
-         style="stroke-width:0.26458332"
+         style="stroke-width:0.26458332;font-size:4.93888889px;"
          id="tspan7445" /></text>
     <rect
-       style="fill:none;fill-opacity:0;stroke:#e62b17;stroke-width:0.41882434;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:none;fill-opacity:0;stroke:#e62b17;stroke-width:0.36673328;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect7449"
        width="51.971725"
-       height="23.470997"
-       x="127.47247"
-       y="81.989571" />
+       height="17.995686"
+       x="152.67427"
+       y="67.299057" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="131.48846"
-       y="91.23922"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="156.40016"
+       y="74.896988"
        id="text7477"><tspan
          sodipodi:role="line"
          id="tspan7475"
-         x="131.48846"
-         y="91.23922"
+         x="156.40016"
+         y="74.896988"
          style="font-size:4.93888903px;stroke-width:0.26458332">Refuge Bay 232 </tspan><tspan
          sodipodi:role="line"
-         x="131.48846"
-         y="97.412834"
-         style="stroke-width:0.26458332"
+         x="156.40016"
+         y="81.070602"
+         style="font-size:4.93888903px;stroke-width:0.26458332"
          id="tspan7479"><tspan
-   style="font-size:4.93888903px"
-   id="tspan7481">Valve non-functional</tspan>         </tspan></text>
+           style="font-size:4.93888903px"
+           id="tspan7481">Valve non-functional</tspan></tspan></text>
     <flowRoot
        xml:space="preserve"
        id="flowRoot7533"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       transform="matrix(0.26458333,0,0,0.26458333,68.486408,12.805334)"><flowRegion
-         id="flowRegion7535"><rect
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,71.028104,12.300914)"><flowRegion
+         id="flowRegion7535"
+         style="font-size:18.66666603px"><rect
            id="rect7537"
            width="110.12032"
            height="23.977947"
            x="207.96187"
-           y="943.90613" /></flowRegion><flowPara
+           y="943.90613"
+           style="font-size:18.66666603px" /></flowRegion><flowPara
          id="flowPara7539">105L East</flowPara></flowRoot>    <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333311px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="6.7471533"
-       y="244.59158"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93888903px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="6.1114945"
+       y="245.02849"
        id="text7551"><tspan
          sodipodi:role="line"
          id="tspan7549"
-         x="6.7471533"
-         y="244.59158"
-         style="stroke-width:0.26458332">105L West</tspan></text>
+         x="6.1114945"
+         y="245.02849"
+         style="font-size:4.93888903px;stroke-width:0.26458332">105L West</tspan></text>
     <rect
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:0"
        id="rect8841"
@@ -7363,23 +7367,67 @@
        d="m 74.872267,244.53656 c -0.04183,0.0779 -0.116345,0.22073 -0.203843,0.27906 -0.0093,0.006 -0.02553,-0.008 -0.03341,0 -0.01762,0.0176 -0.01961,0.0461 -0.03341,0.0668 -0.0087,0.0131 -0.02635,0.0193 -0.03341,0.0334 -0.005,0.01 0.0079,0.0255 0,0.0334 -0.0079,0.008 -0.02344,-0.005 -0.03341,0 -0.01408,0.007 -0.02228,0.0223 -0.03341,0.0334 -0.01114,0.0111 -0.02635,0.0193 -0.03341,0.0334 -0.005,0.01 0.0079,0.0255 0,0.0334 -0.0079,0.008 -0.02344,-0.005 -0.03341,0 -0.04087,0.0204 -0.0424,0.0677 -0.06682,0.10023 -0.01889,0.0252 -0.04935,0.0406 -0.06682,0.0668 -0.0062,0.009 0.005,0.0234 0,0.0334 -0.007,0.0141 -0.02469,0.0203 -0.03341,0.0334 -0.01381,0.0207 -0.01579,0.0492 -0.03341,0.0668 -0.0079,0.008 -0.02553,-0.008 -0.03341,0 -0.0079,0.008 0.005,0.0234 0,0.0334 -0.110803,0.1108 0.01574,-0.0315 -0.03341,0.0668 -0.06952,0.13904 0.0024,-0.0357 -0.06682,0.0334 -0.0079,0.008 0.0079,0.0255 0,0.0334 -0.06912,0.0691 0.0027,-0.10563 -0.06682,0.0334 -0.04916,0.0983 0.07739,-0.044 -0.03341,0.0668 -0.01114,0.0111 -0.02635,0.0193 -0.03341,0.0334 -0.0094,0.0189 0.02122,0.0683 -0.03341,0.0668 -0.04629,-0.001 -0.08907,-0.0254 -0.133607,-0.0381"
        id="path8851"
        inkscape:connector-curvature="0" />
+    <path
+       d="m 271.56847,52.900453 -2.02502,-4.13849 -2.02756,4.13849 z"
+       style="fill:#e62b17;fill-opacity:1;stroke:#404040;stroke-width:0.07870259;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path4129-69"
+       inkscape:connector-curvature="0" />
+    <path
+       d="m 120.3397,152.86412 -2.02502,-4.13849 -2.02756,4.13849 z"
+       style="fill:#e62b17;fill-opacity:1;stroke:#404040;stroke-width:0.07870259;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path4129-8"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g6110"
+       transform="translate(0.58404357,0.17503982)">
+      <rect
+         style="fill:#2f3f60;fill-opacity:1;stroke:none;stroke-width:0.39090315;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect13892"
+         width="14.209791"
+         height="0.94494218"
+         x="195.94495"
+         y="257.18375" />
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot13894"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         transform="matrix(0.26458333,0,0,0.26458333,-0.03388082,12.242781)"><flowRegion
+           id="flowRegion13896"><rect
+             id="rect13898"
+             width="202.85715"
+             height="37.142857"
+             x="807.14288"
+             y="916.83911" /></flowRegion><flowPara
+           style="font-size:18.66666603px"
+           id="flowPara13900">Compressed air</flowPara></flowRoot>    </g>
+    <g
+       transform="translate(0.58404357,0.01189575)"
+       id="g6103">
+      <path
+         d="m 205.07613,250.54088 -2.02502,-4.13849 -2.02756,4.13849 z"
+         style="fill:#e62b17;fill-opacity:1;stroke:#404040;stroke-width:0.07870259;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         id="path4129-6"
+         inkscape:connector-curvature="0" />
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot13894-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:18.66666603px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+         transform="matrix(0.26458333,0,0,0.26458333,0.05500264,3.0323564)"><flowRegion
+           style="font-size:18.66666603px"
+           id="flowRegion13896-0"><rect
+             style="font-size:18.66666603px"
+             id="rect13898-9"
+             width="202.85715"
+             height="37.142857"
+             x="807.14288"
+             y="916.83911" /></flowRegion><flowPara
+           id="flowPara13900-2">Refuge bay</flowPara></flowRoot>    </g>
     <rect
-       style="fill:#2f3f60;fill-opacity:1;stroke:none;stroke-width:0.39090315;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect13892"
-       width="14.209791"
-       height="0.94494218"
-       x="195.56697"
-       y="262.98212" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot13894"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:'CMU Serif';-inkscape-font-specification:'CMU Serif';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
-       transform="matrix(0.26458333,0,0,0.26458333,1.7008929,17.94494)"><flowRegion
-         id="flowRegion13896"><rect
-           id="rect13898"
-           width="202.85715"
-           height="37.142857"
-           x="807.14288"
-           y="916.83911" /></flowRegion><flowPara
-         id="flowPara13900">Compressed air</flowPara></flowRoot>  </g>
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.15731461;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect6168"
+       width="62.003849"
+       height="23.158373"
+       x="190.87009"
+       y="241.72153" />
+  </g>
 </svg>
