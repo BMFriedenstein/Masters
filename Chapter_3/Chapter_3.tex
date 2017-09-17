@@ -4,7 +4,7 @@
 \vspace{38em}
 \hrulefill
 \\
-\enquote*{\textit{Great Design is iteration of good design.}} - Dr M. Cobanli\\
+\enquote{\textit{Great Design is iteration of good design.}} - Dr M. Cobanli\\
 \newpage
 \section{Introduction}
 This chapter details the implementation methodology of simulations to optimise mining compressed air systems. The method developed uses in insights gathered from the literature reviewed in \Cref{Beet verification table}.
@@ -205,6 +205,8 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	From the review of literature in \Cref{VerificationLit}, it was determined that \gls{mae} and the coefficient of determination are the most effective methods of measuring model accuracy. Therefore, for this study, both measures are utilised in the model verification. These measures are obtained by comparing the major simulation outputs (Total system power, flow and pressure) to actual data from the system. R-sqaured and \gls{mae} are calculated by applying the applicable methodologies discussed in \Cref{VerificationLit}.	
 	\par 
 	For this study, the selected verification constraints were selected as : \\ {$r^2 > 0.9 $ and $ Err_{\%} < 5\% $}\\ If these limits are met for the power, flow and pressure of the system, the model is considered accurate. As an extra measure relative error of the output for the minor model components should be $ > 85\%$ of the actual data. 
+	\par 
+	Additionally, periodically repeated simulations could be used to verify simulations more definitively. To perform the repeated simulation verification, the input variables should be updated for each new period. The output values of the simulation should then be compared with actual measurements. For each simulation, the verification constraints should be met.
 		
 	\subsection{Select simulation inputs}
 		The inputs of a simulation are any parameters that do not remain static or follow the same profile in day to day operation of the system. Examples of such parameters in a compressed air simulation are:
@@ -215,7 +217,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			\item Operational changes
 		\end{itemize} 
 	Changing the simulation baseline period for a calibrated simulation should only require the updating of the input parameters. \Cref{fig: Compressor schedule} shows an example of a changing compressor schedule where an input parameter would need to be updated in the simulation.	
-			\clearpage
+
 		\begin{figure}[h]
 			\centering
 			\fbox{\input{Graphs/3/CompSelection/CompSelection}}

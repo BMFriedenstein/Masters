@@ -5,7 +5,7 @@
 \hrulefill
 \\
 
-\enquote*{\textit{It doesn't matter how beautiful your theory is, it doesn't matter how smart you are. If it doesn't agree with experiment, it's wrong.}} - Richard P. Feynman\\
+\enquote{\textit{It doesn't matter how beautiful your theory is, it doesn't matter how smart you are. If it doesn't agree with experiment, it's wrong.}} - Richard P. Feynman\\
 \newpage
 \section{Introduction}
 This section will validate the simulation methodology through case studies. Mining compressed air systems were chosen as case studies based on the availability of data and the scope for energy and operational improvement. Two different mines were selected for the studies. 
@@ -215,7 +215,7 @@ The model components were calibrated so that the simulated outputs matched data 
 	\begin{figure}[h!]
 		\centering
 		\input{Graphs/4/KusVerify/Pressure/Pressure}
-		\caption{Comparing the pressure response of simulation to the actual measured pressure}
+		\caption{The compressor outlet pressure in the simulation compared to the actual measured pressure using actual measurements as setpoints}
 		\label{fig: Verification Pressure kusasalethu}
 	\end{figure}
 
@@ -251,7 +251,7 @@ The model components were calibrated so that the simulated outputs matched data 
 		(a)\\
 		\input{Graphs/4/KusVerify/Power/Power}
 		(b)\\
-		\caption{Verification of the total (a) flow and (b) power of the system using the actual pressure profile}
+		\caption{Verification of the total (a) flow and (b) power of the system}
 		\label{fig: Verification Power kusasalethu}
 	\end{figure}
 
@@ -287,13 +287,16 @@ The model components were calibrated so that the simulated outputs matched data 
 		\label{fig: RefugeBay Pressures.}
 	\end{figure} 
 	\subsection{Scenario 2. Closing off levels and inactive work areas}
-	The largest impact on energy costs can be achieved during the energy peak times. At mine B, blasting coincides with the evening energy peak. Typically, the air requirement during this period is lowered. However, due to the high prevalence of compressed air misuse, leaks and open valves, significant amounts of air is still used during these periods. Reducing pressure to areas during these times may lead to a major power and cost saving. 
+	\subsubsection{Scenario background}
+	The largest impact on energy costs can be achieved during the energy high demand time periods. At mine B, blasting coincides with the evening energy demand peak. Typically, the air requirement during this period is lowered. However, due to compressed air misuse, leaks and open valves, significant amounts of air is still used during this time. Reducing pressure to areas during these times may lead to a major power and cost saving. 
 	\par 
 	Closing off stope valves and reducing station pressure were identified as two strategies to reduce airflow during the evening peak. The station can not be closed completely as some services still require the air supply. 
 	\par 
-	Simulations were performed to identify the most suitable strategy and to quantify the effect of each on a single mining level. The level was modelled to include all the main leaks, refuge bays and drilling sections. 
+	Simulations were performed to identify the most suitable strategy and to quantify the effect of each on a single mining level. The level was modelled to include all the main leaks, refuge bays and drilling sections.  
+	\subsubsection{Underground investigation}
+	The components of the modelled were calibrated using manual measurements from an investigation of a mining level. A walkthrough inspection of the level was performed. Air users, leaks and inefficiencies were identified, quantified and mapped; the resultant schematic is provided in Appendix \ref{Manualinvestigation}.
 	\par 
-	The components of the modelled were calibrated using manual measurements from an investigation of the level. The simulation schematic for the level is shown in the simulation diagram shown in \Cref{fig: KUS Simulation level layout}. The results of the single level simulation can be expanded to other levels to obtain the total potential improvement that can be achieved.
+	Using the information from the level investigation, a simulation schematic for the level was developed. The simulation process schematic is shown in \Cref{fig: KUS Simulation level layout}. The results of the single level simulation can be expanded to other levels to obtain the total potential improvement that can be achieved.
 	\begin{figure}[h!]
 		\centering
 		\fbox{\includegraphics[angle=90,trim = 0 20cm 0 80cm, clip,height=0.95\textheight]{Images/A/StopeSim}}
@@ -301,6 +304,7 @@ The model components were calibrated so that the simulated outputs matched data 
 		\label{fig: KUS Simulation level layout}
 	\end{figure}	
 	\clearpage
+	\subsubsection{Simulated results}
 	Station control, in-stope control and a combination were simulated were all simulated for 105L. Station control means control of the pressure of at the station of the level. In-stope control is control of the is cut the airflow to the mining section during certain periods. \Cref{fig: 105 Flow savings} shows the effect the various interventions have on the flow for 105L compared to the baseline.
 
 	\begin{figure}[h!]
@@ -356,7 +360,7 @@ A simulation was done to estimate the potential savings of extending the evening
 	 A simulation model was developed to test scenarios. Two scenarios (refuge bay optimisations and per level flow optimisations) were simulated. The simulated interventions showed a \gls{ee} saving of up to 0.92 MW which would result in a cost saving of R5.17M with an additional pressure improvement for scenario 1. The results for scenario 2 showed a \gls{pc} impact of up to 2 MW with an annual energy cost saving of R2.5M. The results of the simulations were reported to the mine.
 \section{Case study 3: Periodic simulation analysis}
 	\subsection{Preamble}
-	Periodically Updating the inputs of a simulation could be used to verify simulation model accuracy. If the precision of simulation outputs remains for subsequent days, this would indicate that the model is correctly calibrated. Additionally, this process could be used to identify significant operational changes that occur within the system. This would cause the simulation outputs to differ from the actual measured parameters. 
+	Periodically updating the inputs of a simulation could be used to verify the compressed air model accuracy. If the precision of simulation outputs remains within constraints for subsequent days, this would indicate that the model is correctly calibrated. Additionally, this process could be used to identify significant operational changes that occur within the system. This would cause the simulation outputs to differ from the actual measured parameters. This information can be used to make improvements to the system.
 	\par 
 	A daily periodic simulation analysis was implemented between 2016/11/01 and 2016/11/30 using the periodic simulation methodology discussed in Chapter 3. The simulation model developed for case study A was used for the analysis. The simulation receives the data inputs shown in \Cref{table: Periodic inputs/outputs}.
 	\begin{table}[h!]
