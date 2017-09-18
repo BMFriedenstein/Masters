@@ -113,7 +113,8 @@ Verification was performed to ensure that simulated output accuracy was $>95$\%.
 \end{figure}
 \par
 The accuracy of the model was checked in more detail to ensure that each modelled parameter matched the actual measurement with high accuracy. \Cref{Table: A verification} shows the accuracy each measured simulation output in the model.
-\subsection{Scenario 1. Compressor set points}
+\subsection{Execute simulations}
+\subsubsection{Scenario 1. Compressor set points}
 The Eskom evening peak tariff time occurs during the blasting shift. During this time, the pressure requirements underground are lower than the rest of the day. Reducing pressure in the network reduces power as less work is required from the compressors. Additionally, losses caused by air leaks are reduced. However, lowering the pressure setpoint of the compressors requires independently controlling the air to the gold plant. 
 \par 
 The compressor set-points were reduced for the simulation model to 420 \glssymbol{kpa}, the minimum allowed compressor set-point during the drilling shift. The compressor schedule was changed to allow independent control of the gold plant pressure. Gold plant pressure was maintained at 490 \glssymbol{kpa}. 
@@ -126,7 +127,7 @@ The results of the simulation, shown, in \Cref{fig: CompSetpoints Results Beatri
 	\label{fig: CompSetpoints Results Beatrix}
 \end{figure}
 
-\subsection{Scenario 2. Control valves set points}
+\subsubsection{Scenario 2. Control valves set points}
 An alternative scenario is to reduce the pressure at the control valves at each level. By reducing pressure at the control, setpoints can be lowered to the minimum requirement per level. This reduction can lead to higher savings than could be achieved through compressor setpoint reduction. This scenario would be relatively easy to implement as it does not require any changes to the compressor control schedule.
 \par 
 Air pressure setpoints were reduced to 300 kPa at the underground control valves during the evening peak period. Analysis of the simulation results showed a 1MW average \gls{pc} saving. The intervention would lead to an annual cost saving of R0.91M.
@@ -136,7 +137,6 @@ Air pressure setpoints were reduced to 300 kPa at the underground control valves
 	\caption{Power savings}
 	\label{fig: Control Valve Results Beatrix}
 \end{figure}
-
 \subsection{Comparison of scenario results}
 Comparing the scenarios in \Cref{Table: A Comparison} showed that Scenario 2 had a larger peak energy impact than scenario 1. Further savings could be achieved through a combination of the two scenarios as well as investigating setpoint reductions during other periods of the day.
 \begin{table}[h!]
@@ -263,7 +263,6 @@ The model components were calibrated so that the simulated outputs matched data 
 		\caption{Verifying the pressure response of the system given the pressure set points as inputs}
 		\label{fig: Verification Pressure kusasalethu Setpoint}
 	\end{figure}
-
 	\subsection{Scenario 1. Refuge bay optimisation}
 	After an underground investigation, unnecessary refuge bay leaks were identified as a significant inefficiency that can be reduced. A test on a single mining level was performed to measure the potential flow saving of reducing refuge bay leaks. The test showed that by reducing refuge bay leaks, by closing the valves, would lead to an average air saving of $0.05$ $kg/s$ per refuge bay at normal operational pressures. This measurement was conservative as it was not possible to close all the refuge bays on the level for the test. 
 	\par 

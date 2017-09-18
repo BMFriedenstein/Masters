@@ -67,9 +67,9 @@ set cblabel "Guide vain position"
 set samples 10000
 set key off
 
-set object 1 circle at 0.1,494 size 0.1 fc rgb "#224499" fillstyle solid 0.85 front
-set object 2 circle at 15.39,0.1 size 0.1 fc rgb "#224499" fillstyle solid 0.85 front
-set object 3 circle at 6.02,447 size 0.1 fc rgb "#224499" fillstyle solid 0.85 front
+set object 1 circle at 0.1,494 size 0.1 fc rgb "#2F3F60" fillstyle solid 1 front
+set object 2 circle at 15.39,0.1 size 0.1 fc rgb "#2F3F60" fillstyle solid 1 front
+set object 3 circle at 6.02,447 size 0.1 fc rgb "#2F3F60" fillstyle solid 1 front
 set label "$f(x) = -2.586x^2 + 7.788 + 494$" at 9, 420 left 
 
-plot f(x) ls 17;
+plot f(x) ls 1;

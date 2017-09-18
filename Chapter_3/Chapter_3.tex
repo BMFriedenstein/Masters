@@ -9,7 +9,7 @@
 \section{Introduction}
 This chapter details the implementation methodology of simulations to optimise mining compressed air systems. The method developed uses in insights gathered from the literature reviewed in \Cref{Beet verification table}.
 \par 
-Implementation of a simulation is divided into three steps as shown in the flow diagram, \Cref{fig: Methodology}. Firstly, an investigation on the specific air network to is performed. The data acquired from the system survey is then utilised to develop and verify a simulation model. In the final step, scenarios are tested using simulations. The results are then quantified and prioritised. After the process has been reviewed, a simulation report is then produced and given to the responsible mine personnel.
+Implementation of a simulation is divided into three steps as shown in the flow diagram, \Cref{fig: Methodology}. Firstly, an investigation on the specific air network is performed. The data acquired from the system survey is then utilised to develop and verify a simulation model. In the final step, scenarios are tested using simulations. The results are then quantified and prioritised. After the process has been reviewed, a simulation report is then produced and given to the responsible mine personnel.
 
 \begin{figure}[h]
 	\centering
@@ -25,7 +25,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	\par 
 	Comprehensive and up to date process layouts illustrate a compressed air network's unique set-up, scale and location of instrumentation. More detailed layouts can provide per-level air consumption breakdowns of the network, refuge bays areas, mining cross-sections and identified inefficiencies. The layouts are vital to understand the system process and identify what data parameters will be required for the model. 
 	\par 
-	A baseline period that best represents the typical operation of the mine. Additionally, availability of data should be considered. The length of the baseline period is selected based on the scenarios that are to be tested; this can be changed later. For calibrating a compressed air system a 24 hours period of normal operation is usually sufficient. A longer period may be needed to verify the model. 
+	A baseline period that best represents the typical operation of the mine is selected. Additionally, availability of data should be considered. The length of the baseline period is selected based on the scenarios that are to be tested; this can be changed later. For calibrating a compressed air system a 24 hours period of normal operation is usually sufficient. A longer period may be needed to verify the model. 
 
 	\subsection{Investigate mining schedules}
 	A critical aspect of developing an accurate model of a mining compressed air system is the apprehension of the operational philosophy of the mine. The schedule for operations such as drilling, blasting or cleaning can have a major impact on compressed air requirements at different times of the day. By utilising the operational schedule, simulation scenarios can be optimised for the air requirements throughout the day.	
@@ -41,8 +41,8 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	\end{itemize} 
 	\par 
 	Therefore, a data verification methodology is utilised to ensure datasets are of high quality. 
-	\subsection{Resolve unavailable data}
-		Parameters that are required to develop the simulation model, such as flows, pressures, may not be actively logged by mine systems. It is often necessary to investigate alternative sources and methods to obtain the data. For example, for process elements where instrumentation is absent, estimations can be made from assumptions made using instrumentation on the network or spot inspections.
+	\subsection{Resolve missing data}
+		Data that is required to develop the simulation model, such as flows, pressures, may not be actively logged by mine systems. It is often necessary to investigate alternative sources and methods to obtain the data. For example, for process elements where instrumentation is absent, estimations can be made from assumptions made using instrumentation on the network or spot inspections.
 		\par 
 		Air network specifications such as piping sizes, technical layouts, major leak locations or specifications are often outdated or not recorded. Critical data should be obtained through audits and inspections of the system. If a manual inspection is not possible, estimations should be made from the available data. %\texttt{REMEMBER TO REFERENCE\\ SPECIFIC LOCATION LITERATURE}.
 	
@@ -102,7 +102,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		The pipe component may be used as a valve by controlling the open fraction between 0 and 1. Modelling the valve flow characteristics is discussed in \Cref{Controllers} \textit{Controllers}.
 		\subsubsection{Ambient conditions}
 		Ambient air condition underground and on the surface change the characteristics of the air, affecting the operation of the system. \Cref{fig: Ambient} shows the average summer air conditions. If no data is available for the specific simulation period, the conditions can be estimated by scaling this profile.
-		\begin{figure}[h]
+		\begin{figure}[h!]
 			\centering
 			\fbox{\input{Graphs/3/Ambient/Ambient}}
 			\caption{Average summer ambient air conditions at a South African gold mine}
@@ -118,12 +118,14 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		\end{itemize} 
 		The air compressor is a general, simplified model. It requires minimal user inputs by making several assumptions. This model is useful when parameters for a compressor are not available. Alternatively, the air compressor model is ideal when doing a quick or preliminary simulation. However, it is not ideal for detailed simulations which require more precision.
 		\par 
-		The dynamic compressor components are more complex, taking into account factors such as heat generated by \gls{polyCof} and inefficiencies within the process. Hence, the model can be used more accurately and for more complex simulations than the general compressor model. However, it should be noted that the dynamic compressor is simplified by several assumptions, for example, a constant efficiency at varying loads. 
+		The dynamic compressor components are more complex, taking into account factors such as heat generated by the polytropic process and mechanical inefficiencies. Hence, the model can be used more accurately and for more complex simulations than the general compressor model. However, it should be noted that the dynamic compressor is simplified by several assumptions, for example, a constant efficiency at varying loads. 
 		\par 	 
 		For most scenarios, the dynamic compressor model is most suitable. This component is modelled by fitting a quadratic curve through three points of operation to obtain an equation for corrected mass flow as a function of the pressure ratio. This characteristic curve of a compressor s shown in \Cref{fig: Compressor Curve} can be accurately estimated even when only one data point is available by making approximations for the zero flow and pressure points on the curve.
 		\par
+		
 		 Once the flow characteristics of the compressors are set, the efficiency and \gls{polyCof} parameters are calibrated such that the output power and air temperature match the actual or estimated outputs of the compressor.
-		\begin{figure}[h]
+		\par 
+		\begin{figure}[h!]
 			\centering
 			\fbox{\input{Graphs/3/AproxCurve/AproxCurve}}
 			\caption{Estimating the characteristic curve of a compressor by fitting a quadratic function to points of operation}
