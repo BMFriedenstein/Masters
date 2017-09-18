@@ -51,7 +51,7 @@ set style line 14 linecolor rgbcolor green_100 linewidth @my_line_width pt 13
 set style line 15 linecolor rgbcolor red_100 linewidth @my_line_width pt 11
 set style line 16 linecolor rgbcolor "#cacaca" linewidth @my_line_width pt 7
 set style line 17 linecolor rgbcolor "#224499" linewidth @my_line_width pt 2
-set style line 18 linecolor rgbcolor green_000 linewidth 1.5 pt 2
+set style line 18 linecolor rgbcolor green_000 linewidth @my_line_width pt 7
 set border 31 lw @my_axis_width lc rgb text_color
 set key out horiz bot center
 set grid lc rgb grid_color
