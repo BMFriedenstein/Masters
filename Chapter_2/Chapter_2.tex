@@ -430,10 +430,12 @@ This section will review literature regarding simulation usage in optimising min
 	\begin{tabular}{p{5cm}ccl}
 		\hline
 		Study & Year & Software & Scenarios\\
-		\hhline{====}
+		\hhline{====}\\
+		\shortstack[l]{Mousavi \textit{et al.} \cite{mousavi2014energy}\vspace{0.5em}} & \shortstack[l]{2014\vspace{0.5em}} & \shortstack[l]{Airmaster\\AirSim} & \shortstack[l]{Compressor energy modelling \vspace{0.5em}} \\
+		van Niekerk \textit{et al.} \cite{van2013value} & 2013 & KYPipe & Compressed air DSM project design \\
 		Bredenkamp \cite{Bredenkamp2013Masters} & 2013 & KYPipe & Compressor relocation \\
-		
-		\shortstack{Pascoe \cite{Pascoe2016Masters}  \vspace{0.5em}}&  \shortstack{2016\vspace{0.5em}} &  \shortstack[l]{\gls{ptb}\vspace{0.5em}} &  \shortstack[l]{ Optimised surface valve control. \\ Exchanging compressors}\\
+		\shortstack[l]{Zahlan and Asfour \cite{zahlan2015multi}\vspace{0.5em}} & \shortstack[l]{2015\vspace{0.5em}} & \shortstack[l]{MATLAB\vspace{0.5em}} & \shortstack[l]{Determining the optimal\\compressor location} \\
+		\shortstack{Pascoe \cite{Pascoe2016Masters}  \vspace{0.5em}}&  \shortstack{2016\vspace{0.5em}} &  \shortstack[l]{\gls{ptb}\vspace{0.5em}} &  \shortstack[l]{ Optimised surface valve control \\ Exchanging compressors}\\
 		\shortstack[l]{Maré \textit{et al.} \cite{Mare2017Evaluating}\vspace{0.5em}}& \shortstack{2017\vspace{0.5em}} &  \shortstack[l]{\gls{ptb}\vspace{0.5em}} & \shortstack[l]{Various compressor and \\ air network optimisations}\\
 		\hline
 	\end{tabular}
@@ -441,7 +443,8 @@ This section will review literature regarding simulation usage in optimising min
 \label{table: cm sim studies}
 	\end{table}
 \subsection{Review of compressed air simulation models} \label{simplfiedModels}
-
+\subsubsection{Compressor energy modelling}
+\subsubsection{Compressed air DSM project design}
 \subsubsection{Compressor relocation}
 Simulating compressor relocation requires air supply details that were neglected in the simplified simulation such models discussed in this section. Bredenkamp \cite{Bredenkamp2013Masters} therefore developed simulation models to test such compressor relocation scenarios. 
 \par
@@ -455,9 +458,10 @@ The model takes into account the location, supply capacity of each compressor, a
 \end{figure} 
 Bredenkamp did not follow a clear simulation methodology for developing the compressed air simulation. Bredenkamp utilised the residual difference to calibrate and verify the model parameters. Therefore, the simulation precision and could be improved by following a detailed methodology.
 \par 
-The result of Bredenkamp's simulation showed a potential energy cost saving for the mine of R170M over 13 years. The cost savings were proved it was feasible to purchase a new compressor at an estimated cos of R15M. Additional surface pressure delivery improvements were also identified from the simulation.
+The result of Bredenkamp's simulation showed a potential energy cost saving for the mine of R 170m over 13 years. The cost savings were proved it was feasible to purchase a new compressor at an estimated cos of R 15m. Additional surface pressure delivery improvements were also identified from the simulation.
 \par
 Increasing the detail of the demand components would provide valuable results, showing more particular effects that result from the simulated scenarios. For example, the specific delivery pressures at mining level as a result of the intervention. Additionally, more scenarios or scenario combinations could be simulated with potentially greater savings.
+\subsubsection{Determining the optimal compressor location}
 
 \subsubsection{Compressed air ring}
 Pascoe \cite{Pascoe2016Masters} developed a simulation model for a compressed air ring. The purpose of the simulation was to identify the benefits of reducing pressure during the blasting shift period through surface valve control. In a second case study, Pascoe used simulation to investigate the control benefits of exchanging a large compressor with two smaller compressors.
@@ -470,12 +474,12 @@ Pascoe \cite{Pascoe2016Masters} developed a simulation model for a compressed ai
 	\caption[Simplified compressed air ring model]{Simplified compressed air ring model. Adapted from Pascoe \cite{Pascoe2016Masters}}
 	\label{fig:Pascoe model}
 \end{figure}
-The methodology for simulation development used by Pascoe can be improves. For example, as was the case with Bredenkamp \cite{Bredenkamp2013Masters}, \cite{Pascoe2016Masters} utilised the residual difference to calibrate and verify the transient simulation output variables. The simulation precision could therefore be improved through the use of a suitable transient error calculation method as discussed in \Cref{VerificationLit}. Increasing the detail of the demand components could also add value.
+The methodology for simulation development used by Pascoe can be improved. For example, as was the case with Bredenkamp \cite{Bredenkamp2013Masters}, \cite{Pascoe2016Masters} utilised the residual difference to calibrate and verify the transient simulation output variables. The simulation precision could therefore be improved through the use of a suitable transient error calculation method as discussed in \Cref{VerificationLit}. Increasing the detail of the demand components could also add value.
 
 \subsubsection{Mine complex}
 Maré \textit{et al.} \cite{Mare2017Evaluating} developed a compressed air simulation for a mining complex. In the study \cite{Mare2017Evaluating} simulated and prioritised several scenarios with the goal of reducing energy and other operational costs. 
 \par
- Maré accurately modelled the individual compressors at each shaft in the mining complex. The detailed flow consumption at individual mining levels was found to be inaccurate. \cite{Mare2017Evaluating} therefore selected the process boundary for the model to include only the air flow consumption at the shaft. A process schematic for the simulation mode is shown in \Cref{fig:Mare model}.
+ Maré accurately modelled the individual compressors at each shaft in the mining complex. The detailed flow consumption at individual mining levels was found to be inaccurate. Therefore, the process boundaries for the model were selected to include only the air flow consumption at the shaft. A process schematic for the simulation mode is shown in \Cref{fig:Mare model}.
  
  \begin{figure}[h!]
  	\centering
@@ -484,13 +488,13 @@ Maré \textit{et al.} \cite{Mare2017Evaluating} developed a compressed air simul
  	\label{fig:Mare model}
  \end{figure}
 \par 
- Eight scenarios were simulated using the model. The combined results showed that there was a potential energy saving of R1.5M as well as an additional pressure improvement of 51 kPa. The infrastructure and resource costs were estimated to prioritise the interventions for the greatest financial benefit to the mines.	
+ Eight scenarios were simulated using the model. The combined results showed that there was a potential energy saving of R 1.5m as well as an additional pressure improvement of 51 kPa. The infrastructure and resource costs were estimated to prioritise the interventions for the greatest financial benefit to the mines.	
 \par
-	\cite{Mare2017Evaluating} used the residual difference to calibrate and verify the accuracy of the transient simulations. Therefore, the actual estimation error is greater than what is shown in the study. Through on site inspections and strategic measurements, the detail of the simulation model could be improved this could allow for more accurate simulations and more simulation scenarios.
+	Maré used the residual difference to calibrate and verify the accuracy of the transient simulations. Therefore, the actual estimation error is greater than what is shown in the study. Through on site inspections and strategic measurements, the detail of the simulation model could be improved this could allow for more accurate simulations and more simulation scenarios.
 %- van Tonder\\
 %- De Coning \\
 	\subsection{Summary}\label{Shortcomings of previous work}
-	Previous work in compressed air simulation was summarised and reviewed in this section. from the review of the literature, shortcomings and areas for improvement were identified. In general increasing the detail of simulation models could increase the accuracy and allow for more simulation scenarios.
+	Previous work in compressed air simulation was summarised and reviewed in this section. From the review of the literature, shortcomings and areas for improvement were identified. In general increasing the detail of simulation models could increase the accuracy and allow for more simulation scenarios.
 \section{Conclusion}
 In Chapter 2, a comprehensive study of relevant literature was performed. The literature study aimed to:
 \begin{itemize}
@@ -503,6 +507,6 @@ Compressed air background was provided. This included background regarding vario
 \par
 A review of previously achieved energy improvements in the compressed air was the performed. The literature was divided into studies that focus on improving the supply of compressed air and those that optimised the compressed air demand.
 \par
-The use of simulation and estimation in the mining industry was then reviewed. Estimation and benchmark procedures in literature were first discussed. The discussion was followed by a review of simulation usage in mining DSM. Simulation procedures from the literature were then reviewed. Various simulation software tools used in industry were compared. Finally, an analysis and comparison of verification procedures were performed.
+The use of simulation and estimation in the mining industry was then reviewed. Estimation and benchmark procedures in literature were first discussed. The discussion was followed by a review of simulation usage in mining \gls{dsm}. Simulation procedures from the literature were then reviewed. Various simulation software tools used in industry were compared. Finally, an analysis and comparison of verification procedures were performed.
 \par 
 	Finally, the use of compressed air simulation was reviewed.  The shortcomings, success and potential improvements of previous compressed air simulation studies were discussed.
