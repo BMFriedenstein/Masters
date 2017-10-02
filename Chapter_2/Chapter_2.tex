@@ -231,7 +231,8 @@ In this section, various subcomponents of compressed air networks were discussed
 	 Van Heerden \textit{et al.} \cite{van2014developing} developed a dynamic control system for a mine compressed air network. The controller utilised repeated simulation to estimate unmeasured and future parameters of the network. The estimated results were used to optimise the compressor control.
 	 \par
 	
-\subsection{Available simulation tools}
+\section{Simulation software tools}
+\subsubsection{Available tools}
 A software tool is required to create and execute/solve the compressed air simulations. In literature, a variety of software tools have been used to simulate industrial systems. A suitable software system for this study must be capable of producing accurate models of complex compressed air networks. The system should be able to solve for transient compressed air simulation scenarios with dynamic data and control inputs.
 \par 
 The development of system models should also not be excessively time-consuming. The software tools should also be able to handle missing data inputs and information that in common in mining systems. These were shortfalls of simulation tools noted by van Tonder \cite{vanTonder2014PhD} and Marais \cite{Mare2016PhD}.
@@ -246,6 +247,7 @@ The following simulation tools that may meet the criteria were identified :
 	\item REMS
 \end{itemize}
  \gls{ptb} was used for this study. \gls{ptb} was selected as it was developed specifically for simulation of mining systems. The design allows simpler and speedier development of system models as many components such as compressor mathematical models have already been pre-built \cite{Mare2016PhD}. 
+ \subsubsection{PTB background}
 %\Gls{ptb}
 %Mare \cite{Mare2016PhD} and Peach \cite{Peach2016Masters} investigated simulation software packages for mining systems; Identifying the strengths and limitations of each. 
  	\subsection{Simulation model verification strategies}\label{VerificationLit}
@@ -269,13 +271,13 @@ The equation is rewritten to get a relative error percentage:
  						$A$ & Actual system time series \\
  						$S$ & Simulation time series \\
  						$n$ & Data point \\
- 						$N$ & Number of Data point in simulation period \\
+ 						$N$ & Number of data points in simulation period \\
  					\end{tabular} 
  				\end{table}	
  			A major disadvantage of this method is that for transient simulation, the positive and negative errors for individual points can cancel out. This leads to a smaller resultant error than would be expected. The resultant error value can therefore not direct to any conclusive statements regarding the accuracy of the model \cite{sarin2010comparing}. This strategy is not recommended if used alone to verify transient simulations. 
  			\par 
  						
- 			Yu-jie Xu \textit{et al.} \cite{xu2016modeling} developed a steady state simulation of an absorption chiller. In the study \cite{xu2016modeling} utilised residual difference to measure the steady state error of an absorber model. The accepted margin of accuracy in the study was a relative steady state error of 5\%. 
+ 			Yu-jie Xu \textit{et al.} \cite{xu2016modeling} developed a steady state simulation of an absorption chiller. In the study, residual difference was utilised as a measure of the steady state error for an absorber model. The accepted margin of accuracy in the study was a relative steady state error of 5\%. 
  			
  		\subsubsection{Mean absolute error method}
  		The \gls{mae} verification method follows a similar calculation as in the Average residual difference method. However, as shown in \Cref{eq: Relative error}, the error is calculated individually for each point in the series. The average of the individual errors is the resultant error, \Cref{eq: Relative error 2}. The relative error percentage is obtained by dividing each error is by the Actual value at that time step as in \Cref{eq: Relative error}.
@@ -297,11 +299,11 @@ The equation is rewritten to get a relative error percentage:
  					$A$ & Actual system time series \\
  					$S$ & Simulation time series \\
  					$n$ & Data point \\
- 					$N$ & Number of Data point in simulation period \\
+ 					$N$ & Number of data points in simulation period \\
  				\end{tabular} 
  			\end{table} 
  		\subsubsection{Coefficient of determination}
- 		The Coefficient of correlation is the measure of how accurately a data series ($ x $) can be represented in a linear relationship with Data series ($ y $), i.e. $ y = mx+c$. The value for the coefficient ranges between $ -1 $ and $ 1 $ where a value of 1 indicates a perfect linear relationship between the series and a value of -1 represents a perfect negative linear relationship. A value of 0 indicates that there is no connection between the data series. The correlation coefficient can be calculated using equation \Cref{eq: Correlation coefficient}.\cite{sarin2010comparing}
+ 		The Coefficient of correlation is the measure of how accurately a data series ($ x $) can be represented in a linear relationship with Data series ($ y $), i.e. $ y = mx+c$. The value for the coefficient ranges between $ -1 $ and $ 1 $ where a value of 1 indicates a perfect linear relationship between the series and a value of -1 represents a perfect negative linear relationship. A value of 0 indicates that there is no connection between the data series. The correlation coefficient can be calculated using \Cref{eq: Correlation coefficient} \cite{sarin2010comparing}.
  		
  		\begin{equation}
  		\label{eq: Correlation coefficient}
@@ -320,11 +322,11 @@ The equation is rewritten to get a relative error percentage:
  		\end{table}	
  		The coefficient of determination or R-Square value can be calculated by squaring the correlation coefficient (r). 
  		\par 
- 			Kurnia \textit{et al.} \cite{kurnia2014simulation}, \cite{kurnia2014dust} developed a simulation for a novel underground mining ventilation system. \cite{kurnia2014simulation}, \cite{kurnia2014dust} selected the mathematical model with the highest precision when compared with historical data points. The chosen model had an R-Square value of 0.96 and a relative error 30 \%, using the mean absolute error method. 
+ 			Kurnia \textit{et al.} \cite{kurnia2014simulation}, \cite{kurnia2014dust} developed a simulation for a novel underground mining ventilation system. Kurnia selected the mathematical model with the highest precision when compared with historical data points. The chosen model had an R-Square value of 0.96 and a relative error 30 \%, using the mean absolute error method. 
  			
  		\subsubsection{Mean squared error}	
- 		In statistics, the \gls{mse} or \gls{rmse} is the average of the square of the error between the actual and estimated value. The value is always positive. A smaller value relates to a more accurate model.\footnote{University of Kentucky Department of Mathematics, "Estimators, Mean Square Error, and
- 			Consistency" [Online] \url{http://www.ms.uky.edu/~mai/sta321/mse.pdf}, [Accessed 3 March 2017].}
+ 		In statistics, the \gls{mse} or \gls{rmse} is the average of the square of the error between the actual and estimated value. The value is always positive. A smaller value relates to a more accurate model\footnote{University of Kentucky Department of Mathematics, "Estimators, Mean Square Error, and
+ 			Consistency" [Online] \url{http://www.ms.uky.edu/~mai/sta321/mse.pdf}, [Accessed 3 March 2017].}.
  			\begin{equation}
  				\label{eq: rmse}
  				MSE = \dfrac{1}{N}\sum_{n=1}^{N}{(A_{n} - S_{n})^2}
@@ -336,11 +338,11 @@ The equation is rewritten to get a relative error percentage:
  					$A$ & Actual system time series \\
  					$S$ & Simulation time series \\
  					$n$ & Data point \\
- 					$N$ & Number of Data point in simulation period \\
+ 					$N$ & Number of data points in simulation period \\
  			\end{tabular} 
  			\end{table}			
  		\subsubsection{Other methods}
- 		Many alternative methods or variations of the methods discussed are available to verify transient simulations. As an example, \cite{arndt2007integrated} looked at the percentage of relative errors under certain limits as well as a maximum relative error. The method is an improvement compared to the residual difference in ensuring transient simulation accuracy however the results are difficult to interpret.
+ 		Many alternative methods or variations of the methods discussed are available to verify transient simulations. As an example, Arndt \cite{arndt2007integrated} looked at the percentage of relative errors under certain limits as well as a maximum relative error. The method is an improvement compared to the residual difference in ensuring transient simulation accuracy however the results are difficult to interpret.
  		\par
  		Sarin \textit{et al.} \cite{sarin2010comparing} compared many methods. Some methods that have not been discussed in this study include:
  		\begin{itemize}
@@ -352,9 +354,9 @@ The equation is rewritten to get a relative error percentage:
  		\end{itemize}
  		The calculations in the above methods are relatively complex. However, they provide additional measures such as phase, magnitude and slope errors. These metrics could add value in verifying simulations.
  		\subsubsection{Comparing verification methods}
- 		The difference between the strategies is best shown using an example. Figure \Cref{fig:Philipp Difference verify} shows the output and actual power of a simulation of a mining system for a 24-hour duration. In the study \cite{Mare2016PhD} used \gls{mrd}, \Cref{eq: Average difference}, to determine the accuracy of a simulation model.
+ 		The difference between the strategies is best shown using an example. \Cref{fig:Philipp Difference verify} shows the output and actual power of a simulation of a mining system for a 24-hour duration. In the study Maré \cite{Mare2016PhD} used \gls{mrd}, \Cref{eq: Average difference}, to determine the accuracy of a simulation model.
  		\par 
- 		 With \gls{mrd}, positive and negative differences between the simulated and actual profiles cancel out. The average of the two power profiles were very similar. The calculated residual difference relative error was therefore calculated as 1.17\%. However, Using the relative \gls{mae}, \Cref{eq: Relative error}, applied to the same data series results in a relative error of 15.2\%. There is a significant 14\% difference between the two measures. The results of other verification methods applied on the example are provided in \Cref{Philip verification table}. 
+ 		 
  		
  	\begin{figure}[h!]
  		\centering
@@ -362,25 +364,27 @@ The equation is rewritten to get a relative error percentage:
  		\caption[Example of simulation error calculations]{Example of simulation error calculations. Data adapted from Marè \cite{Mare2016PhD}}
  		\label{fig:Philipp Difference verify}
  	\end{figure}
- 
+ With \gls{mrd}, positive and negative differences between the simulated and actual profiles cancel out. The average of the two power profiles were very similar. The calculated residual difference relative error was therefore calculated as 1.17\%. However, Using the relative \gls{mae}, \Cref{eq: Relative error}, applied to the same data series results in a relative error of 15.2\%. There is a significant 14\% difference between the two measures. 
+ \par
+ The results of other verification methods applied on the example are provided in \Cref{Philip verification table}. From the table it is clear that the accuracy of the simulation model is not as high as interpretred using the residual difference alone.
  \begin{table}[h!]
- 	\label{Philip verification table}
  	\centering
  	\begin{tabular}{lcr}
  		\hline
  		Verification method & Result & $Err_{\%}$\\
  		\hhline{===}
- 		Residual Difference     & 0.06 MW difference & 1.17\% \\
+ 		Residual difference     & 0.06 MW difference & 1.17\% \\
  		\gls{mae} 					 & 0.778 MW error & 15.2\% \\
  		\gls{mse} 				   & 1.236  & -\\
  		Coefficient of determination & $r^2 =0.857$  & -\\
  		\hline
  	\end{tabular} 
  \caption{Results of the comparison of verification methods.}
+ \label{Philip verification table}
  \end{table}
  
  	\par 
- 	Willmott \cite{willmott2005advantages} studied the Advantages of the use of mean absolute error \gls{mae} over the \gls{rmse} method in assessing model accuracy. In the study \cite{willmott2005advantages} concluded that the \gls{mse} measure is a function of \gls{mae} and therefore does not describe average error alone. From the analysis, \gls{mae} was described as the most natural and unambiguous measure of average error magnitude.
+ 	Willmott \cite{willmott2005advantages} studied the Advantages of the use of mean absolute error \gls{mae} over the \gls{rmse} method in assessing model accuracy. In the study Wilmott concluded that the \gls{mse} measure is a function of \gls{mae} and therefore does not describe average error alone. From the analysis, \gls{mae} was described as the most natural and unambiguous measure of average error magnitude.
 
  	\subsubsection{Verification usage in previous simulation studies}
  	Previous studies verified simulation accuracy through different methods and varying degrees of precision. \Cref{table: Verification studies} summarises these approaches. The majority of local literature utilised the mean residual difference to determine the estimation accuracy. However, from the literature it clear that the mean residual difference does not necessarily indicate model accuracy. 
@@ -403,13 +407,15 @@ The equation is rewritten to get a relative error percentage:
  			Du Plessis \textit{et al.}\cite{du2015development} 	& 2015 & Mean residual \% difference & $Err_{\%} <7\%$ \\
  			Pascoe \cite{Pascoe2016Masters} 					& 2016 & Mean residual \% difference & $Err_{\%} <5\%$ \\	
 			Peach \cite{Peach2016Masters}						& 2016 & Mean residual \% difference & Not specified\\
- 			Mare \cite{Mare2016PhD} 							& 2016 & Mean residual \% difference & $Err_{\%} <5\%$  \\	
+ 			Maré \cite{Mare2016PhD} 							& 2016 & Mean residual \% difference & $Err_{\%} <5\%$  \\	
  			Yu-jie-Xu \textit{et al.} \cite{xu2016modeling}		& 2016 & Mean residual \% difference & $Err_{\%} <5\%$ steady state \\
  			\hline
  		\end{tabular} 
  		\caption{Simulation verification methods that were implemented in previous studies.}
  		\label{table: Verification studies}
  	\end{table}
+ 
+ \Cref{table: Verification studies} shows the majority of local studies utilsed residual difference to determine simulation accuracy. However, literature has shown this is not valid method for transient simulation verification. International studies used correlation, \gls{mae} and \gls{mse} for verification.The accepted accuracy margin ranges from 3\% relative error to  up to 30\%. The majority of studies used either 5\% or 10\%  as the relative error cut-off.
  	\subsection{Summary}
  	In this section, the use of simulation and estimation techniques to identify improvements in the mining industry was reviewed. Estimation and benchmark procedures in literature were first discussed. A review of simulation usage in mining DSM for water, compressed air and cooling systems were then reviewed.
  	
