@@ -8,24 +8,25 @@
 \enquote{\textit{If I have seen further, it is by standing on the shoulders of giants.}} - Isaac Newton\\
 \clearpage
 \section{Introduction}
- This chapter will firstly provide relevant background on the operation and subcomponents of compressed air networks. A review of the literature regarding compressed air energy interventions will then be performed. This review will summarise previous work to improve the supply and demand efficiency of mining compressed air networks.
+ This chapter firstly provides relevant background on the operation and subcomponents of compressed air networks. A review of the literature regarding compressed air energy interventions was then be performed. This review summarised previous work to improve the supply and demand efficiency of mining compressed air networks.
 \par
-The use of simulation in mining systems will then be reviewed. This section will summarise the usage of mathematical estimation and simulations tools in the mining industry.  From the literature, available simulation tools, as well as simulation and verification procedures, will be discussed.
+The use of simulation in mining systems was then be reviewed. The section summarised the usage of mathematical estimation and simulations tools in the mining industry.  From the literature, available simulation tools, as well as simulation and verification procedures, were discussed.
 \par
-Finally, simulation usage in compressed air systems will be discussed. The section will summarise the work, as well as the successes and shortfalls, that has already been performed regarding simulation of large compressed air networks.
+Finally, simulation usage in compressed air systems was discussed. The section summarised the successes and shortfalls in previous compressed air simulation studies.
 \section{Background on mining compressed air networks}
 \subsection{Preamble}
 Compressed air is used extensively in a mine in surface and underground operations. This section provides background regarding mining compressed air networks. The section firstly discusses the components that make up a mining compressed air system. The typical functioning of the system is then examined. Finally, the instrumentation that is typically installed in compressed air networks is discussed.
 \subsection{Compressor air network components}
 \subsubsection{Compressors}
- \footnotetext[1]{Abc oil refining, "How centrifugal compressors operate" [Online] \url{http://abcoilrefining.blogspot.co.za/2012/03/how-centrifugal-compressors-operate.html}, [Accessed 15 August 2017].}
-
 Compressed air in mining is most commonly supplied by a centrifugal-type dynamic compressor \cite{Fouche2016Masters}, \cite{Booysen2012Masters}. These machines achieve compression as a result of the centrifugal force from the high-speed rotation of impellers in the air. An electric motor drives the rotating impeller.
 \par 
- Multi-stage impeller compressor designs, as shown in \Cref{fig: Compressor diagram}\footnotemark[1], are used to obtain higher  pressure ratios \cite{Fouche2016Masters}. The compression process is inefficient. Only about 5\% to 10\% of the input energy of the process is converted into energy that is used \cite{yang2009air}. 
+ Multi-stage impeller compressor designs, as shown in \Cref{fig: Compressor diagram}, are used to obtain higher  pressure ratios \cite{Fouche2016Masters}. The compression process is inefficient. Only about 5\% to 10\% of the input energy of the process is converted into energy that is used \cite{yang2009air}. 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \clearpage
+  \footnotetext[1]{Abc oil refining, "How centrifugal compressors operate" [Online] \url{http://abcoilrefining.blogspot.co.za/2012/03/how-centrifugal-compressors-operate.html}, [Accessed 15 August 2017].}
 \begin{figure}[h]
 	\centering
-	\fbox{\hspace{3.5cm}\input{Images/2/Compressor/compressor}\hspace{3cm}}
+	\fbox{\hspace{3.5cm}\input{Images/2/Compressor/compressor}\hspace{2.4cm}}
 	\caption[A scematic of a multistage centrifugal compressor]{A schematic of a multi-stage centrifugal compressor\protect \footnotemark[1]}
 	\label{fig: Compressor diagram}
 \end{figure}
@@ -35,25 +36,28 @@ Drilling is mainly performed in the production areas or stopes of a mine. Drill 
 \par
 Compressed air is used to power pneumatic rock drills within a mine. Pneumatic rock drills run at an efficiency of 2\%. The efficiency is low when compared to alternative rock drills such as electric, oil electro-hydraulic and hydro-powered drills that convert energy at an efficiency of between 20-31\% \cite{fraser2008saving}, \cite{vanTonder2010Masters}. 
 \subsubsection{Refuge bays}
-Refuge bays are installed underground in deep level mines to provide safety to miners in the event of an emergency. Due to safety regulations, most mines will utilise compressed air to deliver cool air to the chamber \cite{brake1999criteria}. \Cref{fig: Refuge Bay} shows an example of a compressed air inlet at an underground refuge bay. A muffler is installed to the end of the inlet air pipe to reduce noise.
+Refuge bays are installed underground in deep level mines to provide safety to miners in the event of an emergency. Due to safety regulations, most mines will utilise compressed air to deliver fresh air to the chamber \cite{brake1999criteria}. \Cref{fig: Refuge Bay} shows an example of a compressed air inlet at an underground refuge bay. A muffler is installed to the end of the inlet air pipe to reduce noise.
 \begin{figure}[h]
 	\centering
-	\fbox{\includegraphics[width=\textwidth]{Images/1/refugebaysmall}}
+	\fbox{\includegraphics[width=0.98\textwidth]{Images/1/refugebaysmall}}
 	\caption{An example of compressed air inlet in an underground refuge bay chamber of a mine.}
 	\label{fig: Refuge Bay}
 \end{figure}
-\par The provision of 1.42 $l/s$ of air per person at a pressure between 200 and 300 \gls{kpa} is required to provide oxygen and prevent any poisonousness gas entering the refuge \cite{brake1999criteria}.
+\par The provision of 1.42 $l/s$ of air per person at a pressure between 200 and 300 \gls{kpa} is required to provide oxygen and prevent any poisonous gas entering the refuge \cite{brake1999criteria}.
 \par
 Airflow in the refuge bays is controlled by a manual valve within the room. The manual valves are often misused by mine workers to cool the bay through decompression of the air. %[CitationNeeded]
 \subsubsection{Processing plants}
-Processing plants are constructed near gold and mines. They are used when extracting metal from the ore that is obtained from the mining operation.  These plants use compressed air for various systems, processes and equipment. 
+Processing plants are constructed near mines. They are used when extracting metal from the ore that is obtained from the mining operation.  These plants use compressed air for various systems, processes and equipment. 
 \par 
-Processing plants often share compressed air network with mine to save costs\cite{Marais2012PhD}. The plants use relatively small amounts of air compared to mines. However, plant processes have pressure requirements that differ from the rest of the air network. If the plant air supply is not isolated from the shaft's air system, energy optimisations can be complicated. 
+Processing plants often share a compressed air network with mine to save costs \cite{Marais2012PhD}. The plants use relatively small amounts of air compared to mines. However, plant processes have pressure requirements that differ from the rest of the air network. If the plant air supply is not isolated from the shaft's air system, energy optimisation can be complicated \cite{Kriel2014Masters}. 
 \subsubsection{Other compressed air users}
-Due to the availability underground, compressed air is utilised for several other applications. These usages include, pneumatic loaders or rock shovels, pneumatic cylinders, dam sediment agitation, cooling and ventilation and many other applications. This vast variety of applications also leads to misuse of compressed air. This leads to inefficient operation.
+Due to the availability underground, compressed air is utilised for several other applications. These usages include, pneumatic loaders or rock shovels, pneumatic cylinders, dam sediment agitation, cooling and ventilation and many other applications. This vast variety of applications also leads to misuse of compressed air. This leads to inefficient operation  \cite{Marais2012PhD}.
 \subsection{Operational schedule}
-On a typical mine, various operations are scheduled different times of the day. Depending on the activity taking place, many mines will control the pressure to meet the requirements of the tasks \cite{Kriel2014Masters}, \cite{Marais2012PhD}. \Cref{fig: Mining schedule} shows the schedule and pressure requirement on a typical deep level mine.\par 
-As shown in \Cref{fig: Mining schedule}, the pressure requirement changes depending on the activity taking place. The drilling shift typically has the highest pressure requirement while blasting shift requires the lowest. Schedules and operation philosophies can differ between mines. Different operational schedules require alternative pressure requirement profiles.
+On a typical mine, various operations are scheduled different times of the day. Depending on the activity taking place, many mines will control the pressure to meet the requirements of the tasks \cite{Marais2012PhD}, \cite{Kriel2014Masters}. \Cref{fig: Mining schedule} shows the schedule and pressure requirement on a typical deep level mine.
+\par 
+As shown in \Cref{fig: Mining schedule}, the pressure requirement changes depending on the activity taking place. The drilling shift typically has the highest pressure requirement while blasting shift requires the lowest. This shifting pressure require shows scope for optimisation. However, it has been observed that many mines do not effectively optimise their compressed air supply \cite{padachi2009energy}.
+Schedules and operation philosophies can differ between mines. Different operational schedules require alternative pressure requirement profiles.
+\par 
 \begin{figure}[h]
 	\centering
 	\fbox{\input{Graphs/1/MiningSchedule/MiningSchedule}}
@@ -61,7 +65,7 @@ As shown in \Cref{fig: Mining schedule}, the pressure requirement changes depend
 	\label{fig: Mining schedule}
 \end{figure}
 \subsection{Instrumentation}
-For large industrial systems, thorough instrumentation is necessary to monitor performance and equipment conditions throughout the system. In a mining compressed air network, instrumentation is installed to monitor flows, pressures, temperatures and other process parameters. Electrical instrumentation is also installed for sensing currents, power factors, voltages and power. Parameters that are often measured include valves input/output pressures and flows, valve and guide vane positions and air condition metrics are usually measured with instrumentation.	
+For large industrial systems, instrumentation is necessary to monitor performance and equipment conditions throughout the system. In a mining compressed air network, instrumentation is installed to monitor flows, pressures, temperatures and other process parameters. Electrical instrumentation is also installed for sensing currents, power factors, voltages and power. Parameters that are often measured include valves input/output pressures and flows, valve and guide vane positions and air condition metrics are usually measured with instrumentation.	
 \par
 \Glspl{scada} systems are used to monitor and control processes throughout the mine. The instrumentation and \gls{scada} are connected on a communication network.
 This communication between the underground \glspl{plc} and surface \gls{scada} is achieved using a substantial fibre optic network\cite{schroeder2009energy}. The \gls{scada} centralises instrumentation data from \glspl{plc} and instrumentation in the mine. The \gls{scada} is also used to control machines and control instrumentation by transmitting control signals over the network. 
@@ -69,26 +73,26 @@ This communication between the underground \glspl{plc} and surface \gls{scada} i
 In this section, various subcomponents of compressed air networks were discussed. These sub-components included compressors, processing plants as well as underground air users. The daily process scheduling and the effect on compressed air requirements were then reviewed. Finally, the typical instrumentation found in a mining compressed air system was summarised.
 \section{Review of compressed air energy interventions in industry}
 	\subsection{Preamble}
-		Compressed air improvement can be obtained through intervention in either the supply or demand processes of a compressed air system \cite{Kriel2014Masters}. Improvements in supply are achieved by increasing the efficiency of compressed air supply. Examples of these types of intervention include \gls{dcs}, compressor relocation, repairs and maintenance. 
+		Compressed air improvement can be obtained through intervention in either the supply or demand processes of a compressed air system \cite{Kriel2014Masters}. Improvements in supply are achieved by increasing the efficiency of compressed air supply. Examples air supply optimisation measures include \gls{dcs}, compressor relocation, repairs and maintenance \cite{Snyman2011Masters}.
 		\par
-		Due to the size of mining compressed air networks, there is often a larger scope for improvement in air demand. Improving the air usage is achieved by optimising air flow consumers, reducing leaks and through other interventions.
+		Due to the size of mining compressed air networks, there is often a larger scope for improvement in air demand. Improving the air usage is achieved by optimising air flow consumers, reducing leaks and through other interventions. Air demand optimisations include reducing unnecessary air use, optimising control and reducing system pressures usage \cite{kleingeld2010high}.
 		\par
-	 	 This section will review compressed air supply and demand interventions that have improved energy or operation efficiency the mining industry. From the literature, successes and shortcomings in studies will be discussed and analysed.
+	 	 This section will review compressed air supply and demand interventions that have improved energy or operational efficiency in the mining industry. From the literature, successes and shortcomings in studies will be discussed and analysed.
 	 	
 	\subsection{Strategies to improve compressed air supply}
 
 	%	\subsubsection{Compressor efficiency improvements}
 	%	- literature regarding 
 		\subsubsection{Optimising compressor control}
-		Compressors types and numbers can differ widely from mining compressed air systems. Compressor selection is crucial in these systems to match the correct compressors with the requirements of the system \cite{marais2010expert}.
+		The amount of available compressors as well as the compressor ratings can differ widely from mining compressed air systems. Compressor selection is crucial in these systems to match the correct compressors with the requirements of the system \cite{marais2010expert}.
 		\par 
-		In a study by Booysen \cite{Booysen2012Masters} found that many mines control compressors using fixed target pressure points that are much higher than required. In one system, compressor controllers were set to target 650 \glssymbol{kpa} to ensure pressure underground did not fall below 500 \glssymbol{kpa}. Use of high set-points can lead to excessive, wasteful blow-off air flow when the pressure exceeds maximum points.
+		In a study, Booysen \cite{Booysen2012Masters} found that many mines control compressors using fixed pressure points that are much higher than required. In one system, compressor controllers were set to target 650 \glssymbol{kpa} to ensure pressure underground did not fall below 500 \glssymbol{kpa}. Use of high set-points can lead to excessive, wasteful blow-off air flow when the pressure exceeds maximum operating points.
 		\par
-		 Booysen \cite{booysen2009optimising} showed through dynamic pressure set-point control\footnote{Matching the supplied pressure with the specific required air demand} and optimal compressor selection, energy savings can be achieved. In a case study, an average power reduction of 1.07 MW was achieved. The lead to an estimated energy cost saving of R3M.
+		 Booysen \cite{booysen2009optimising}, showed through dynamic pressure set-point control\footnote{Matching the supplied pressure with the specific required air demand} and optimal compressor selection, energy savings can be achieved. In a case study, an average power demand reduction of 1.07 MW was achieved. The energy improvement lead to an estimated cost saving of R 3m.
 		\par 
-	 	Optimising control of compressors to match the demand of the system can be complicated. \glspl{vsd} and guide-vane are used to control the capacity of the network. More effective power reductions can be achieved through the use of \gls{vsd} control \cite{Bredenkamp2013Masters}. However, installing the the speed controllers can be very costly.
+	 	Optimising control of compressors to match the demand of the system can be complicated. \glspl{vsd} and guide-vanes are used to control the capacity of the network. More effective power reductions can be achieved through the use of \gls{vsd} control \cite{Bredenkamp2013Masters}. However, installing the  controllers can be very costly.
 	 	\par 
-	 	 Running compressors at part load will reduce the efficiency. From literature, it has been shown electric motors will typical use 60-80\% of their rated power when operating at less than 50\% load \cite{Saidur2010}.
+	 	 Running compressors at part load will reduce the efficiency. From literature, it has been shown that electric motors will typical use 60-80\% of their rated power when operating at less than 50\% load \cite{Saidur2010}.
 	 	%S. Ruddell, “Energy saving with VSD controlled compressors,” ABB, 1 June 2011.
 	 	%[Online]. Available: http://www.abb.com/cawp/seitp202/
 	 	%d8c203f60e3796adc12578a200580d94.aspx. [Accessed 15 September 2014].
@@ -100,7 +104,7 @@ In this section, various subcomponents of compressed air networks were discussed
 		\subsubsection{Reconfiguring compressed air networks}
 			Some old mining compressed air systems have not been adequately maintained and improved. Often they cannot sufficiently supply air to meet the demand or air is provided from non-optimal sources. In a study by Bredenkamp \cite{Bredenkamp2013Masters}, reconfiguring of the air network was investigated to improve these systems.
 			\par 
-			In the study, Bredenkamp investigated interconnecting the compressed air systems of two mining shafts and relocating of a compressor. This strategy leads to an average power reduction of 1.7 MW and an estimated annual energy cost saving of R8.9M at the time.
+			In the study, Bredenkamp investigated interconnecting the compressed air systems of two mining shafts and relocating of a compressor. This strategy leads to an average power reduction of 1.7 MW and an estimated annual energy cost saving of R 8.9m at the time.
 			%\par 
 			%*** \textit{Discussion of Bredenkamp} shortcomings and successes ***
 			
@@ -108,11 +112,13 @@ In this section, various subcomponents of compressed air networks were discussed
 	Reducing the airflow demand is achieved by reducing unnecessary airflow such as leaks, optimising the operating pressure to match the demand\footnotemark[2] and by improving the efficiency of air usage or replacing equipment with non-pneumatic alternatives \cite{Snyman2011Masters}.
 		 \footnotetext[2]{Matching the supplied pressure with the required air demand. Optimising the supply is achieved by identifying the minimum required operating pressure for all times of the day as illustrated in \Cref{fig: Mining schedule}}
 		 \subsubsection{Leakage detection}	 
-		 Air leaks are a major inefficiency in mining compressed air systems. Improving leaks is a relatively easier method to reduce air demand and improve the efficiency of the system \cite{van2011sustaining}. Air leaks occur as a result of open pipes, fissure and breaks. Losses depend on the size of the leak and pressure in the network. \Cref{fig: Leak losses} shows the theoretical airflow through a pipe orifice as a function of leakage area and pressure\footnotemark[1] \cite{van2011sustaining}. showed that the system power consumption linearly increases with the amount of air leakage. Therefore, energy savings can be achieved through either reducing pressure or detecting and fixing leaks.
+		 Air leaks are a major inefficiency in mining compressed air systems. Improving leaks is an effective measure to reduce air demand and improve the efficiency of the system \cite{van2011sustaining}. However identifying leaks is difficult and time consuming.
+		 \par 
+		  Air leaks occur as a result of open pipes, fissures and breaks. Losses depend on the size of the leak and pressure in the network. \Cref{fig: Leak losses} shows the theoretical airflow through a pipe orifice as a function of leakage area and pressure\footnotemark[1]. van Tonder \cite{van2011sustaining} showed that the system power consumption linearly increases with the amount of air leakage. Therefore, energy savings can be achieved through either reducing pressure or detecting and fixing leaks.
 		 \begin{figure}[h]
 		 	\centering
 		 	\fbox{\hspace{2cm}\input{Graphs/2/Leak2/Leak2}\hspace{2cm}}
-		 	\caption[The leakage flow as a function of inlet pressure and leakage area]{ The leakage flow as a function of inlet pressure and leakage area\protect\footnotemark[1]}
+		 	\caption[The flow due to leakage as a function of inlet pressure and leakage area]{ The flow due to leakage as a function of inlet pressure and leakage area\protect\footnotemark[1]}
 		 	\label{fig: Leak losses}
 		 \end{figure}
 	 \footnotetext[1]{efunda, "Orifice Flowmeter Calculator." [Online] \url{http://www.efunda.com/formulae/fluids/calc_orifice_flowmeter.cfm}, [Accessed 18 October 2016]}
@@ -125,20 +131,28 @@ In this section, various subcomponents of compressed air networks were discussed
 		 	\item "Pigging"\footnote{The use of a device, "pig", within the pipe to perform inspections}
 		 	\item Soap water/visible dyes 
 		 \end{itemize}
-	 	 These methods are time and resource intensive, and many mines do not actively employ dedicated leakage detection and repair teams. Marais \textit{et al.} \cite{marais2009increased} investigated streamlining the leakage detection and repair process to increase energy savings through the use of \gls{calds}. The system was developed to allow centralised mobile leakage reporting. Usage of \gls{calds} in mines resulted in an increased leak detection rate. One mine reported 24 leaks in a single month. It was noted in the study that there difficulty quantifying the actual energy savings of the leakage repairs due to other interventions co-occurring.	
+	 	 These methods are time and resource intensive, and many mines do not actively employ dedicated leakage detection and repair teams. Marais \textit{et al.} \cite{marais2009increased} investigated streamlining the leakage detection and repair process to increase energy savings through the use of \gls{calds}. The system was developed to allow centralised mobile leakage reporting. Usage of \gls{calds} in mines resulted in an increased leak detection rate. One mine reported 24 leaks in a single month. It was noted in the study by Marais that there was difficulty quantifying the actual energy savings of the leakage repairs due to other interventions co-occurring.	
 		 
 		 \subsubsection{Underground control valves optimisation}
-		 Many mines utilise automated valves at critical locations or levels in the compressed air network. These valves control the pressure, restricting airflow from that point in the air network. Restricting airflow reduces losses resultant from network inefficiencies and leaks.
+		 
+		 \begin{figure}[h]
+		 	\centering
+		 	\fbox{\includegraphics[trim=-2cm -0.6cm -2cm -0.6cm, width=0.98\textwidth]{Images/2/ControlValve.pdf}}
+		 	\caption[An illustration of a control valve]{ An illustration of a control valve \cite{Kriel2014Masters}}
+		 	\label{fig: Control Valve Illustration}
+		 \end{figure}
+		 Many mines utilise automated valves, as illustrated in \Cref{fig: Control Valve Illustration}, at critical locations or on levels in the compressed air network. These valves control the pressure, restricting airflow from that point in the air network. Restricting airflow reduces losses resultant from network inefficiencies and leaks.
 		 \par 
-		 Kleingeld and Marais \cite{kleingeld2010high} found that optimising control valve control on mining levels can conservatively lead to between 20\% on mines where no control valves are installed. For systems that already have some form of network control, between 10 and 15\% savings can conservatively be achieved.
+		 Kleingeld and Marais \cite{kleingeld2010high} found that optimising control valve control on mining levels can conservatively lead to 20\% energy improvement on mines where no control valves are installed. For systems that already have some form of network control, between 10 and 15\% savings can conservatively be achieved.
 		 \par 
-		 From literature, the advantage of control valve optimisation is the significant savings that can be achieved with relatively short set-up up time. Savings can be reached incrementally with each control valve installation. Studies did not look at accurate estimations of savings or the shaft pressure improvements that result from control valve optimisation.	 
+		 From literature, the advantage of control valve optimisation is a significant savings that can be achieved with relatively short set-up up time. Savings can be reached incrementally with each control valve installation. Previous studies have looked at simplified estimations of energy improvement that may result from underground control valve optimisation. However, integrated simulation has not been used to accurately determine the energy savings and shaft pressure improvements that may occur \cite{kleingeld2010high}, \cite{marais2009increased}, \cite{Neser2008}, \cite{schroeder2009energy} %%%%%.	 
 		\subsubsection{Improving pneumatic rock drill efficiency}
 		 Pneumatic rock drills are one of the largest air consumers in a mine. However, Pneumatic drilling systems convert energy very inefficiently. Replacing pneumatic drills with more efficient alternatives such as hydraulic or pneumatic drills would lead to large energy savings \cite{Pascoe2016Masters}. Alternatively improving the efficiency of pneumatic drilling can have a significant energy impact on the system, without the cost and safety concerns of alternative drilling technologies.
 		 \par 
-		 In a study by Bester \textit{et al.} \cite{bester2013effect} looking at the effect of compressed air pressure on energy demand. Bester showed that between 2002 and 2013 compressed air and energy consumption per tonne of ore produced had steadily increased. The shift in Energy and air volume per tonne of produced ore over time is illustrated in \Cref{fig: Compressed energy and air flow per ton}. 
+		 In a study by Bester \textit{et al.} \cite{bester2013effect} looking at the effect of compressed air pressure on energy demand, Bester showed that between 2002 and 2013 compressed air and energy consumption per tonne of ore produced had steadily increased. The shift in energy and air volume per tonne of produced ore over time is illustrated in \Cref{fig: Compressed energy and air flow per ton}. 
 		 \par
-		 The increase of air consumption per \gls{t} was a result of reduced air pressure at the mining areas. The pressure reduction caused a drop in the drilling rate, leading to higher air consumption. Pressure measurements as low as 300 \gls{kpa} were recorded in these regions. Before 2002 the drilling pressure at the mining section (stopes), was maintained above 500 \gls{kpa} at most mines. 
+		 \footnotetext[1]{H. Heller, \enquote*{Compressor Performance Data,} Impala Platinum Mine UTS , 2002 - 2013.}
+		 The increase of air consumption per \gls{t} was a result of reduced air pressure at the mining areas. The pressure reduction caused a drop in the drilling rate, leading to higher air consumption. Pressure measurements as low as 300 kPa were recorded in these regions. In 2002 the drilling pressure at the mining section (stopes), was maintained above 500 kPa at most mines\footnotemark[1]. 
 		 \par 
 		 \begin{figure}[h]
 		 	\centering
@@ -146,24 +160,26 @@ In this section, various subcomponents of compressed air networks were discussed
 		 	\caption[The Compressed air energy and flow consumed per Tonne of ore produced]{The Compressed air energy and flow consumed per Tonne of ore produced. Adopted from Bester \textit{et al.}\cite{bester2013effect}}
 		 	\label{fig: Compressed energy and air flow per ton}
 		 \end{figure}
-		 From literature, it is shown that lowering the pressure reduces the efficiency and drill rate of rock drilling, leading to higher air consumption. Interventions that reduce systemic air losses or optimise supply can increase the pressure operating pressure. Increased pressure, during the drilling shift, may add more value than the energy cost savings that can be achieved at a lower pressure.
+		 From literature, it is shown that lowering the pressure reduces the efficiency and drill rate of rock drilling, leading to higher air consumption. Interventions that reduce systemic air losses or optimise supply can increase the operating pressure. Increased pressure, during the drilling shift, may add more value than the energy cost savings that can be achieved at a lower pressure \cite{bester2013effect}.
 	\subsection{Summary}
 	This section reviewed previous studies that had achieved energy improvements in compressed air. The literature was divided into studies that focus on improving the supply of compressed air and those that optimised the compressed air demand.
 	\par
 	Compressed air supply interventions included optimising compressor control and reconfiguring compressor networks. On the demand side, studies that investigated reducing leaks, optimising underground valve control and improving rock drill efficiency were discussed.
 \section{Use of simulations to identify improvements in mining systems}
 	\subsection{Preamble}
-	The value of simulation in the mining industry has been widely shown through its usage in \gls{dsm} initiatives. Simulation and estimation procedures have been widely applied to identify, and pre-emptively quantify the effect of energy interventions strategies for water reticulation cooling, compressed air and ventilation systems.
+	The value of simulation in the mining industry has been widely shown through its usage in \gls{dsm} initiatives. Simulation and estimation procedures have been widely applied to identify, and pre-emptively quantify the effect of energy interventions strategies for water reticulation, cooling, compressed air and ventilation systems of mines.
 	\par
 	 The purpose of this section is to summarise and discuss the work that has been done concerning estimation and simulation of mining systems. This section will also discuss simulation development procedures and verification methodologies that have been applied in literature.
 	
 	\subsection{Estimating energy savings on mining systems }
-	Estimation has been a vital tool in literature to obtain the potential energy impact that can be achieved from interventions on a mining system. Before new tools allowed for the quick development of simplified simulation models, estimation techniques were frequently used to determine the feasibility of energy interventions. The shortcomings of the estimation approach are that they typically rely on simplified system models that lead to high prediction error, limit the complexity of scenarios and input/output variables.
+	Estimation has been a vital tool to obtain the potential energy impact that can be achieved from interventions on a mining system. Before new tools allowed for the quick development of simplified simulation models, estimation techniques were frequently used to determine the feasibility of energy interventions. 
+	\par 
+	The shortcomings of the estimation approaches are that they typically rely on simplified system models. The simplifications lead to high prediction error, limit the complexity of scenarios and input/output variables.
 		\par 
 	Snyman \cite{Snyman2011Masters} used mathematical estimation to determine the expected power savings from initiatives on mining compressed air systems. Due to uncertainty in the estimations, \cite{Snyman2011Masters} predicted results were provided as a range between conservative and best-case estimates. The actual achieved energy impact would fall between these estimations. Snyman's model only estimated the average energy impact and could not provide a resultant power profile or other output variables such as pressure.
 		 	
 	\subsection{Benchmark modelling}
-		 Cilliers \cite{Cilliers2015PHD} developed \enquote{best practice models} using the \gls{cols} benchmarking method. These models provide an energy benchmark that can be used to identify the scope for energy improvement on mining systems. An example of a benchmark model for a mining compressed air system is shown in \Cref{fig: 3D Benchmark}. The model can be used to estimate optimal energy required as a function of the quantity of ore mined(T) and the depth of the  mining shaft (Z). Cilliers also developed benchmark models for mine cooling, water reticulation and ventilation systems.
+		 Cilliers \cite{Cilliers2015PHD} developed \enquote{best practice models} using the \gls{cols} benchmarking method. These models provide an energy benchmark that can be used to identify the scope for energy improvement on mining systems. An example of a benchmark model for a mining compressed air system is shown in \Cref{fig: 3D Benchmark}. The model can be used to estimate optimal energy required as a function of the quantity of ore mined (T) and the depth of the  mining shaft (Z). Cilliers also developed benchmark models for mine cooling, water reticulation and ventilation systems.
 		\begin{figure}[h!]
 			\centering
 			\fbox{\hspace{2cm}\input{Graphs/2/Benchmark/Benchmark}\hspace{2cm}}
@@ -177,12 +193,12 @@ In this section, various subcomponents of compressed air networks were discussed
 	%	\end{equation}			
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\subsection{Value of simulation in mining DSM}
-	Van Niekerk \cite{van2013value}, \cite{vanNiekerk2012Value} investigated the value of simulation models in mine \gls{dsm} projects. \cite{van2013value}, \cite{vanNiekerk2012Value} developed simulation models for compressed air and water reticulation systems using KYPipes's gas simulation engine. 
+	Van Niekerk \cite{van2013value}, \cite{vanNiekerk2012Value} investigated the value of simulation models in mine \gls{dsm} projects. Van Niekerk developed simulation models for compressed air and water reticulation systems using KYPipes's simulation engine. 
 	\par
 	%\subsubsection{Mine cooling systems}
-	Simulation has been used in studies as a tool to improve mine cooling. Holman \cite{Holman2014Masters} investigated improvements to mine cooling systems that improve performance and efficiency. In the study \cite{Holman2014Masters} used simplified \gls{ptb} simulation models to investigate cooling interventions.
+	Simulation has been used in studies as a tool to improve mine cooling. Holman \cite{Holman2014Masters} investigated improvements to mine cooling systems that improve performance and efficiency. In the study, \gls{ptb} was used to develop and solve simplified simulation models to investigate cooling interventions.
 	\par 
-	The scenario Holman simulated showed potential average power reduction of 136 kW which would lead to an annual energy cost saving of R0.55M. The study could be improved by increasing accuracy of the simulation. Power difference of as high as 31\% between the simulation and actual was observed for some time periods.
+	The scenario Holman simulated showed potential average power reduction of 136 kW which would lead to an annual energy cost saving of R 0.55m. The study could be improved by increasing accuracy of the simulation. Power difference of as high as 31\% between the simulation and actual was observed for some time periods.
 	\par
 	%\subsubsection{Mine de-watering systems}	
 	%\subsubsection{Mine compressed air systems}		
@@ -216,7 +232,7 @@ In this section, various subcomponents of compressed air networks were discussed
 	 \par
 	
 \subsection{Available simulation tools}
-A software tool is required to create and execute the compressed air simulations. In literature, a variety software tools have been used to simulate industrial systems. A suitable software system for this study must be capable of producing accurate models of complex compressed air network. The system should be able to solve for transient compressed air simulation scenarios with dynamic data and control inputs.
+A software tool is required to create and execute/solve the compressed air simulations. In literature, a variety of software tools have been used to simulate industrial systems. A suitable software system for this study must be capable of producing accurate models of complex compressed air networks. The system should be able to solve for transient compressed air simulation scenarios with dynamic data and control inputs.
 \par 
 The development of system models should also not be excessively time-consuming. The software tools should also be able to handle missing data inputs and information that in common in mining systems. These were shortfalls of simulation tools noted by van Tonder \cite{vanTonder2014PhD} and Marais \cite{Mare2016PhD}.
 \par
