@@ -24,7 +24,7 @@ Compressed air in mining is most commonly supplied by a centrifugal-type dynamic
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \clearpage
   \footnotetext[1]{Abc oil refining, "How centrifugal compressors operate" [Online] \url{http://abcoilrefining.blogspot.co.za/2012/03/how-centrifugal-compressors-operate.html}, [Accessed 15 August 2017].}
-\begin{figure}[h]
+\begin{figure}[!htbp]
 	\centering
 	\fbox{\hspace{3.5cm}\input{Images/2/Compressor/compressor}\hspace{2.4cm}}
 	\caption[A scematic of a multistage centrifugal compressor]{A schematic of a multi-stage centrifugal compressor\protect \footnotemark[1]}
@@ -37,7 +37,7 @@ Drilling is mainly performed in the production areas or stopes of a mine. Drill 
 Compressed air is used to power pneumatic rock drills within a mine. Pneumatic rock drills run at an efficiency of 2\%. The efficiency is low when compared to alternative rock drills such as electric, oil electro-hydraulic and hydro-powered drills that convert energy at an efficiency of between 20-31\% \cite{fraser2008saving}, \cite{vanTonder2010Masters}. 
 \subsubsection{Refuge bays}
 Refuge bays are installed underground in deep level mines to provide safety to miners in the event of an emergency. Due to safety regulations, most mines will utilise compressed air to deliver fresh air to the chamber \cite{brake1999criteria}. \Cref{fig: Refuge Bay} shows an example of a compressed air inlet at an underground refuge bay. A muffler is installed to the end of the inlet air pipe to reduce noise.
-\begin{figure}[h]
+\begin{figure}[!htbp]
 	\centering
 	\fbox{\includegraphics[width=0.98\textwidth]{Images/1/refugebaysmall}}
 	\caption{An example of compressed air inlet in an underground refuge bay chamber of a mine.}
@@ -58,7 +58,7 @@ On a typical mine, various operations are scheduled different times of the day. 
 As shown in \Cref{fig: Mining schedule}, the pressure requirement changes depending on the activity taking place. The drilling shift typically has the highest pressure requirement while blasting shift requires the lowest. This shifting pressure require shows scope for optimisation. However, it has been observed that many mines do not effectively optimise their compressed air supply \cite{padachi2009energy}.
 Schedules and operation philosophies can differ between mines. Different operational schedules require alternative pressure requirement profiles.
 \par 
-\begin{figure}[h]
+\begin{figure}[!htbp]
 	\centering
 	\fbox{\input{Graphs/1/MiningSchedule/MiningSchedule}}
 	\caption[A typical operation schedule of a deep level mine]{The typical operation schedule of a deep level mine \cite{Kriel2014Masters}}
@@ -115,7 +115,7 @@ In this section, various subcomponents of compressed air networks were discussed
 		 Air leaks are a major inefficiency in mining compressed air systems. Improving leaks is an effective measure to reduce air demand and improve the efficiency of the system \cite{van2011sustaining}. However identifying leaks is difficult and time consuming.
 		 \par 
 		  Air leaks occur as a result of open pipes, fissures and breaks. Losses depend on the size of the leak and pressure in the network. \Cref{fig: Leak losses} shows the theoretical airflow through a pipe orifice as a function of leakage area and pressure\footnotemark[1]. van Tonder \cite{van2011sustaining} showed that the system power consumption linearly increases with the amount of air leakage. Therefore, energy savings can be achieved through either reducing pressure or detecting and fixing leaks.
-		 \begin{figure}[h]
+		 \begin{figure}[!htbp]
 		 	\centering
 		 	\fbox{\hspace{2cm}\input{Graphs/2/Leak2/Leak2}\hspace{2cm}}
 		 	\caption[The flow due to leakage as a function of inlet pressure and leakage area]{ The flow due to leakage as a function of inlet pressure and leakage area\protect\footnotemark[1]}
@@ -135,7 +135,7 @@ In this section, various subcomponents of compressed air networks were discussed
 		 
 		 \subsubsection{Underground control valves optimisation}
 		 
-		 \begin{figure}[h]
+		 \begin{figure}[!htbp]
 		 	\centering
 		 	\fbox{\includegraphics[trim=-2cm -0.6cm -2cm -0.6cm, width=0.98\textwidth]{Images/2/ControlValve.pdf}}
 		 	\caption[An illustration of a control valve]{ An illustration of a control valve \cite{Kriel2014Masters}}
@@ -154,7 +154,7 @@ In this section, various subcomponents of compressed air networks were discussed
 		 \footnotetext[1]{H. Heller, \enquote*{Compressor Performance Data,} Impala Platinum Mine UTS , 2002 - 2013.}
 		 The increase of air consumption per \gls{t} was a result of reduced air pressure at the mining areas. The pressure reduction caused a drop in the drilling rate, leading to higher air consumption. Pressure measurements as low as 300 kPa were recorded in these regions. In 2002 the drilling pressure at the mining section (stopes), was maintained above 500 kPa at most mines\footnotemark[1]. 
 		 \par 
-		 \begin{figure}[h]
+		 \begin{figure}[!htbp]
 		 	\centering
 		 	\input{Graphs/1/EVperT/EVperT}
 		 	\caption[The Compressed air energy and flow consumed per Tonne of ore produced]{The Compressed air energy and flow consumed per Tonne of ore produced. Adopted from Bester \textit{et al.}\cite{bester2013effect}}
@@ -180,7 +180,7 @@ In this section, various subcomponents of compressed air networks were discussed
 		 	
 	\subsection{Benchmark modelling}
 		 Cilliers \cite{Cilliers2015PHD} developed \enquote{best practice models} using the \gls{cols} benchmarking method. These models provide an energy benchmark that can be used to identify the scope for energy improvement on mining systems. An example of a benchmark model for a mining compressed air system is shown in \Cref{fig: 3D Benchmark}. The model can be used to estimate optimal energy required as a function of the quantity of ore mined (T) and the depth of the  mining shaft (Z). Cilliers also developed benchmark models for mine cooling, water reticulation and ventilation systems.
-		\begin{figure}[h!]
+		\begin{figure}[!htbp]
 			\centering
 			\fbox{\hspace{2cm}\input{Graphs/2/Benchmark/Benchmark}\hspace{2cm}}
 			\caption[Energy benchmark model for a mining compressed air system]{Energy benchmark model for a mining compressed air system, adapted from Cilliers \cite{Cilliers2015PHD}}
@@ -265,7 +265,7 @@ The equation is rewritten to get a relative error percentage:
  				Err_{\%} = \left| \dfrac{1}{N} \sum_{n=1}^{N}{ \left(\dfrac{ A_{n} - S_{n}}{A_n}\right)} \right| \times 100 \%
  			\end{equation}
  			Where: \par 
- 				\begin{table}[h!]
+ 				\begin{table}[!htbp]
  					\centering
  					\begin{tabular}{cl}
  						$A$ & Actual system time series \\
@@ -293,7 +293,7 @@ The equation is rewritten to get a relative error percentage:
  			Err_{\%} = \dfrac{1}{N}\sum_{n=1}^{N}{\left|\dfrac{A_{n} - S_{n}}{A_{n}}\right| }\times 100 \%
  			\end{equation}
  			Where: \par
- 			\begin{table}[h!]
+ 			\begin{table}[!htbp]
  				\centering
  				\begin{tabular}{cl}
  					$A$ & Actual system time series \\
@@ -311,7 +311,7 @@ The equation is rewritten to get a relative error percentage:
  		\end{equation}
  		\par
  		Where \par
- 		\begin{table}[h!]
+ 		\begin{table}[!htbp]
  			\centering
  			\begin{tabular}{cl}
  				$A$ & Actual system time series \\
@@ -332,7 +332,7 @@ The equation is rewritten to get a relative error percentage:
  				MSE = \dfrac{1}{N}\sum_{n=1}^{N}{(A_{n} - S_{n})^2}
  			\end{equation}
  			Where: \par
- 			\begin{table}[h!]
+ 			\begin{table}[!htbp]
  				\centering
  				\begin{tabular}{cl}
  					$A$ & Actual system time series \\
@@ -358,7 +358,7 @@ The equation is rewritten to get a relative error percentage:
  		\par 
  		 
  		
- 	\begin{figure}[h!]
+ 	\begin{figure}[!htbp]
  		\centering
  		\input{Graphs/2/Verification/Verification}
  		\caption[Example of simulation error calculations]{Example of simulation error calculations. Data adapted from Marè \cite{Mare2016PhD}}
@@ -367,7 +367,7 @@ The equation is rewritten to get a relative error percentage:
  With \gls{mrd}, positive and negative differences between the simulated and actual profiles cancel out. The average of the two power profiles were very similar. The calculated residual difference relative error was therefore calculated as 1.17\%. However, Using the relative \gls{mae}, \Cref{eq: Relative error}, applied to the same data series results in a relative error of 15.2\%. There is a significant 14\% difference between the two measures. 
  \par
  The results of other verification methods applied on the example are provided in \Cref{Philip verification table}. From the table it is clear that the accuracy of the simulation model is not as high as interpretred using the residual difference alone.
- \begin{table}[h!]
+ \begin{table}[!htbp]
  	\centering
  	\begin{tabular}{lcr}
  		\hline
@@ -388,7 +388,7 @@ The equation is rewritten to get a relative error percentage:
 
  	\subsubsection{Verification usage in previous simulation studies}
  	Previous studies verified simulation accuracy through different methods and varying degrees of precision. \Cref{table: Verification studies} summarises these approaches. The majority of local literature utilised the mean residual difference to determine the estimation accuracy. However, from the literature it clear that the mean residual difference does not necessarily indicate model accuracy. 
- 	\begin{table}[h]
+ 	\begin{table}[!htbp]
  		\centering
  		\begin{tabular}{p{5cm}ccl}
  			\hline
@@ -425,7 +425,7 @@ The equation is rewritten to get a relative error percentage:
 \label{CompressorSimulation Literature}
 \subsection{Preamble}
 This section will review literature regarding simulation usage in optimising mining compressed air systems. Shortcomings identified from the literature that can be improved upon in this study will be addressed. The studies were reviewed in this section are summarised in table \Cref{table: cm sim studies}.
-	\begin{table}[h]
+	\begin{table}[!htbp]
 	\centering
 	\begin{tabular}{p{5cm}ccl}
 		\hline
@@ -450,7 +450,7 @@ Simulating compressor relocation requires air supply details that were neglected
 \par
 The model takes into account the location, supply capacity of each compressor, as well as the surface pipe distances. The model, as visualised in \Cref{fig: bredenkamp model}, simplifies the air demand to an outlet flow per shaft.
 \par
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\fbox{\includegraphics[trim = -0.5cm 1cm -0.5cm 0cm ,width=\textwidth]{Images/2/bredenkamp/model}}
 	\caption[Compressor relocation simulation model]{Compressor relocation simulation model. Adapted from Bredenkamp \cite{Bredenkamp2013Masters}}
@@ -468,7 +468,7 @@ Pascoe \cite{Pascoe2016Masters} developed a simulation model for a compressed ai
 \par 
  The model required complex supply side detail including modelling of the individual compressor, locations of compressors and pipe lengths and control valves. The demand aspect of the system was simplified to a single flow per shaft, decline or processing plant. A schematic of the simulation model is shown in \Cref{fig:Pascoe model}.
  \par
-\begin{figure}[h!]
+\begin{figure}[!htbp]
 	\centering
 	\fbox{\includegraphics[trim = -0.5cm 0.5cm -0.5cm 0.5cm ,width=\textwidth]{Images/2/pascoe/model}}
 	\caption[Simplified compressed air ring model]{Simplified compressed air ring model. Adapted from Pascoe \cite{Pascoe2016Masters}}
@@ -481,7 +481,7 @@ Maré \textit{et al.} \cite{Mare2017Evaluating} developed a compressed air simul
 \par
  Maré accurately modelled the individual compressors at each shaft in the mining complex. The detailed flow consumption at individual mining levels was found to be inaccurate. Therefore, the process boundaries for the model were selected to include only the air flow consumption at the shaft. A process schematic for the simulation mode is shown in \Cref{fig:Mare model}.
  
- \begin{figure}[h!]
+ \begin{figure}[!htbp]
  	\centering
  	\fbox{\includegraphics[trim = -0.5cm 0.5cm -0.5cm 0.5cm ,width=\textwidth]{Images/2/mare/model}}
  	\caption[Simulation model for a complex air network]{Simulation model for a complex air network. Adapted from Maré \textit{et al.} \cite{Mare2017Evaluating}}
