@@ -67,13 +67,13 @@ set xrange ["0:00":"24:00"]
 set xlabel 'Time of Day'
 set ylabel "Power $(MW)$";
 set yrange [0:6]
-set ytics 2 nomirror
+set ytics 1 nomirror
 
 set y2label 'Power Saving $(MW)$'
 set y2range [0:2]
 set y2tics 0.5 nomirror
 
-set size 1.3,0.75
+set size 1.3,1
 set datafile separator ","
 plot 'Power.csv' using 1:2 title "Baseline" with lines ls 1, \
      'Power.csv' using 1:3 title "Actual" with lines ls 4,\
