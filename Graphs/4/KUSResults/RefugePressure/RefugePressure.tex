@@ -80,7 +80,8 @@
     \setlength{\fboxrule}{0.5pt}%
     \setlength{\fboxsep}{1pt}%
 \begin{picture}(9360.00,5040.00)%
-    \gplgaddtomacro\gplbacktext{%
+
+    \gplgaddtomacro\gplfronttext{%
       \colorrgb{0.00,0.00,0.00}%
       \put(814,1309){\makebox(0,0)[r]{\strut{}$360$}}%
       \colorrgb{0.00,0.00,0.00}%
@@ -105,15 +106,14 @@
       \put(7626,704){\makebox(0,0){\strut{}20:00}}%
       \colorrgb{0.00,0.00,0.00}%
       \put(8962,704){\makebox(0,0){\strut{}00:00}}%
-    }%
-    \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%
       \put(176,2849){\rotatebox{-270}{\makebox(0,0){\strut{}Pressure $(kPa)$}}}%
       \put(4954,374){\makebox(0,0){\strut{}Time of Day}}%
       \csname LTb\endcsname%
       \put(4099,173){\makebox(0,0)[r]{\strut{}Baseline}}%
-      \put(8750,3650){\makebox(0,0)[r]{\strut{}Pressure improvement (kPa)}}%
       \csname LTb\endcsname%
+            \put(8750,3650){\makebox(0,0)[r]{\strut{}\scriptsize{Pressure improvement (kPa)}}}%
+      
       \put(7750,173){\makebox(0,0)[r]{\strut{}Optimisation}}%
      \put(3451,3968){\makebox(0,0){\strut{}\scriptsize{11}}}%
      \put(3674,3908){\makebox(0,0){\strut{}\scriptsize{15}}}%
