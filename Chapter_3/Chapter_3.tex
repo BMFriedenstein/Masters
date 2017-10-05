@@ -143,10 +143,12 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			\label{fig: Compressor models}
 		\end{figure}		
 
-		\subsubsection{Demand/leak}
+		\subsubsection{Demand}
 			A flow demand represents any air flow leaving the network. Flows leaving the network include any air consuming equipment such as drills and agitators as well as losses like air leaks and open pipes. The air flow is dependent on pressure and the specific resistance to flow of the outlet. 
 			\par 
-			The resistance of the flow demand can be obtained using the inlet pressure, outlet pressure and flow. If the flow is not known, a reasonably accurate estimation can be made by calculating the expected flow from the size of the outlet. The air demand may vary throughout the day. For example, a mining section may utilise more machines during certain periods of the day. A schedule is used to replicate this in the simulation. \Cref{fig: Demand component} shows how a calibrated air demand or leak is integrated into the simulation.
+			The resistance of the flow demand can be obtained using the inlet pressure, outlet pressure and flow. If the flow is not known, a reasonably accurate estimation can be made by calculating the expected flow from the size of the outlet. This estimation will affect the accuracy however.
+			\par
+			 The air demand may vary throughout the day. For example, a mining section may utilise more machines during certain periods of the day. A schedule and flow profile is used to replicate this in the simulation. \Cref{fig: Demand component} shows how a calibrated air demand or leak is integrated into the simulation model on \gls{ptb}.
 			\begin{figure}[h]
 				\centering
 				\fbox{\includegraphics[trim =-12cm 0.5cm -12cm 0.5cm, width=\textwidth]{Images/3/AirDemand}}
@@ -156,17 +158,18 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		\subsubsection{Compressed air control}\label{Controllers}
 			Simulation components require dynamic control to replicate the operation of the actual air network. Control is typically implemented on compressors and valves throughout the network to follow setpoints and schedules. It is important to not only include the controllers in the simulation but to replicate any nonlinearities, limitations and response delays related to specific types of control. Implementing these control factors will ensure the model reacts in the same way the actual network would, improving accuracy.
 			\par 
-			On a typical mine, compressors power is controlled to ensure that the discharge pressure matches a specified setpoint. This control is achieved through either \glspl{vsd} (or \glspl{vfd}) and guide vane control. \glspl{vfd} provide a broad range of power control and can be estimated using a \gls{pi} controller as shown in \Cref{fig: Controller models}. The discharge pressure is used as feedback for the control system. 
+			On a typical mine, a compressor's power output is controlled to ensure that the discharge pressure matches a specified setpoint. This control is achieved through either \glspl{vsd} (or \glspl{vfd}) and guide vane control. On \gls{ptb} valve or compressor control can be replicated using a \gls{pi} controller as shown in \Cref{fig: Controller models}. For the control system models in \Cref{fig: Controller models}, outlet pressure is used as feedback to the compressor and valve controller. 
+			\par 
 			
-	\begin{figure}[h]
+	\begin{figure}[h!]
 		\centering
 		\fbox{\includegraphics[trim =-4cm 0 -4cm 0cm, width=\textwidth]{Images/3/Controller}}
 		\caption[Control components in Process Toolbox]{Control components in Process Toolbox}
 		\label{fig: Controller models}
 	\end{figure}
-		Guide vanes are most commonly used in mining to control compressors. Guide vane control entails controlling the position of the inlet guide vane. The guide vane is opened or closed to control the compressors discharge pressure. Manipulating the guide vane position will affect the power the compressor inputs into the system. 
+		Guide vanes are most commonly used in mining air systems to control compressors. Guide vane control entails controlling the position of the inlet guide vane. The guide vane is opened or closed to control the compressors discharge pressure. Manipulating the guide vane position will affect the output power the compressor inputs into the system. 
 		\par 
-		\Cref{fig: Guide vane position} shows the relationship between power and guide vane position. The relationship can be estimated as a linear function where a guide vane position of 40\% relates to an output power of about 60\% of the maximum power. When more pressure is required than can be obtained with the guide vanes fully opened, another compressor is needed to operate. 
+		\Cref{fig: Guide vane position} shows the relationship between power and guide vane position. A linear relation between guide vane position and compressor output can be used to estimated effect of guide vane control. The model should take into account the minimum guide vane position limit that is typically set at around 40\% open. As illustrated in \Cref{fig: Guide vane position} this control position maps to an output power for the compressor of about 60\% of the maximum power. When more pressure is required than can be obtained with the guide vanes fully opened, another compressor is needed to operate. 
 		\begin{figure}[h]
 			\centering
 			\fbox{\input{Graphs/1/GuideVainPosition/GuideVainPosition}}
@@ -176,9 +179,10 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	
 	\footnotetext[1]{Data recorded from a guide vane controlled compressor on a mine over a period of six months}
 	
-		A guide vane controller is modelled using a \gls{pi} controller. However, the nonlinear limitations of guide vane control, as represented in \Cref{fig: Guide vane position}, must be implemented in the controller. The control limitation is applied in the model by using a minimum control output limit that matches the minimum power reduction achieved by closing the guide vane to its minimum position. For example, a \gls{pi} controller for the compressor from \Cref{fig: Guide vane position} would have a minimum control output of approximately 60\%.
+		In \gls{ptb}, the guide vane controller is modelled using a \gls{pi} controller. The non-linear limitations of guide vane control must be implemented in the controller. The control limitation is applied in the model by using a minimum control output limit that matches the minimum power reduction achieved by closing the guide vane to its minimum position. 
 		\par 
 		Mines utilise control valves at underground sections to adjust the pressure at individual mining stations independently \cite{Heyns2014Masters}. Controlling of valve components is performed similarly as control of the compressor components. \Cref{fig: Controller models} shows the outlet pressure is used as feedback for a \gls{pi} controller. The control output is mapped to the valve fraction of a pipe component.
+
 		\begin{figure}[h]
 			\centering
 			\fbox{\includegraphics[ width=0.8\textwidth]{Images/3/Valve.jpg}}
@@ -190,7 +194,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		\par 
 		After-cooling reduces the compressed air temperature out of the compressors. This cooling can affect the operation of the network. Hence, including after-cooling to the simulation model should improve accuracy.
 		\par
-		Modelling the after-cooling is achieved using a heat transfer node can be added to the outlet of the compressor component. The heat transfer parameters shown in \Cref{table: After cooling inputs} should be calibrated such that the air temperature matches after-cooled air temperature measurements. An assumption of 40 $^\circ$\gls{c} can be used if no measurements are available.
+		Modelling the after-cooling is achieved in \gls{ptb} using a heat transfer node at the outlet of the compressor component model. The heat transfer parameters shown in \Cref{table: After cooling inputs} should be calibrated such that the air temperature matches after-cooled air temperature measurements. An assumption of 40 $^\circ$\gls{c} can be used if no measurements are available.
 		\begin{table}
 			\centering
 			\begin{tabular}{lll}
@@ -208,9 +212,9 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	Depending on the accuracy requirement, after-cooling can be excluded from the simulation. Post after-cooling, compressed air is usually still warmer than ambient conditions. Air temperatures underground can be accurately matched by including heat transfer for compressed air pipelines.
 	
 	\subsection{Verify the simulation model}
-	From the review of literature in \Cref{VerificationLit}, it was determined that \gls{mae} and the coefficient of determination are the most effective methods of measuring model accuracy. Therefore, for this study, both measures are utilised in the model verification. These measures are obtained by comparing the major simulation outputs (Total system power, flow and pressure) to actual data from the system. R-sqaured and \gls{mae} are calculated by applying the applicable methodologies discussed in \Cref{VerificationLit}.	
+	From the review of literature in \Cref{VerificationLit}, it was determined that \gls{mae} and the coefficient of determination are the most effective methods of measuring model accuracy. Therefore, for this study, both measures are utilised in the model verification. These measures are obtained by comparing the major simulation outputs (Total system power, flow and pressure) to actual data from the system. R-sqaured and \gls{mae} metrics are calculated by applying the applicable methodologies discussed in \Cref{VerificationLit}.	
 	\par 
-	For this study, the selected verification constraints were selected as : \\ {$r^2 > 0.9 $ and $ Err_{\%} < 5\% $}\\ If these limits are met for the power, flow and pressure of the system, the model is considered accurate. As an extra measure relative error of the output for the minor model components should be $ > 85\%$ of the actual data. 
+	For this study, the selected verification constraints were selected as : \\ {$r^2 > 0.9 $ and $ Err_{\%} < 5\% $}\\ If these limits are met for the power, flow and pressure of the system, the model is considered accurate. As an extra measure relative error of the output for the minor model components should be $ > 85\%$ of the actual data. To obtain the true error of the model, instrumentation measurement error should combined with the calculated simulation error.
 	\par 
 	Additionally, periodically repeated simulations could be used to verify simulations more definitively. To perform the repeated simulation verification, the input variables should be updated for each new period. The output values of the simulation should then be compared with actual measurements. For each simulation, the verification constraints should be met.
 		
@@ -231,9 +235,19 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			\label{fig: Compressor schedule}
 		\end{figure}
 	\subsection{Periodic simulation}	
-		Periodic simulation refers to the repetition of simulations over subsequent periods to determine the sequential accuracy of the model. Sequential accuracy is important to verify the model is valid in general and not just a single period. This simulation will also indicate where operation changes have occurred as the simulation accuracy will be reduced.
+		Periodic simulation refers to the repetition of simulations over subsequent periods to determine the sequential accuracy of the model. Sequential accuracy is important to verify the model is valid in general and not just a single period. This simulation will also indicate where operational changes have occurred as the simulation accuracy will be reduced.
 		\par 
-		The following process is followed to implement periodic simulation: Simulation input data is collected periodically for each simulation interval, this information includes only inputs that vary days to days such as schedules, air conditions and measured flows. Once the input values are collected, they limitations into the compressed air model. The simulation performed, and the output data is exported for analysis. The simulated data is then compared with the actual operation of the system and major discrepancies are identified. This process is triggered periodically.
+		The following process, as illustrated in \Cref{fig: PeriodicProcess}, was followed to implement periodic simulation: 
+		\begin{itemize}
+			\item Collect simulation input data periodically for each simulation interval
+			\item Import input data series into simulation model
+			\item Execute/solve the simulation
+			\item Export the output simulation values
+			\item Compare output data with the systems actual operation and identify major discrepancies
+			\item Trigger the process periodically
+		\end{itemize}
+	%%%%%%%%%%%%%
+	\clearpage
 		\begin{figure}[h]
 			\centering
 			\fbox{\includegraphics[trim =1.0cm 3.9cm 0.76cm 1cm,width=\textwidth]{Graphs/4/PeriodicProcess/PeriodicProcess.pdf}}
@@ -241,14 +255,15 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			\label{fig: PeriodicProcess}
 		\end{figure}
 	
+	
 	\subsection{Summary}	
 In this section, the subprocesses required for the simulation model development and verification were discussed. First, a method for selection of the model boundaries and parameters were discussed. A discussion on modelling procedure for compressed air sub components then followed. The verification process and the selection of accuracy limits were then discussed concerning the analysis performed in section \Cref{VerificationLit}. The simulation input selection procedure was then reviewed. Finally, a procedure for repeated/periodic simulation was provided.
 
 \section{Implement the simulation}
 	\subsection{Preamble}
-		Once a simulation has been developed and verified, the implementation of interventions and scenarios then follows. In this section, the approach of implementation the simulation methodology, and analysis of interventions will be discussed.
+		Once a simulation has been developed and verified, the implementation of interventions and scenarios then follows. In this section, the approach of implementing the simulation methodology, and analysis of interventions will be discussed.
 	\subsection{Execute simulation scenarios}
-		At this point, the simulation model has been verified using historical data. The verified output data series is now used as baseline upon which the success of improvements scenarios can be quantified.  The simulation inputs of the model are now adjusted to create the desired scenario. For example to create a scenario where a specific compressor is shut down over a period, the input schedule of the compressor is adjusted in the simulation model.
+		At this point, the simulation model has been verified using historical data. The verified output data series is now used as a baseline upon which interventions can be quantified.  The simulation inputs of the model are now adjusted to create the desired scenario. For example to create a scenario where a specific compressor is shut down over a period, the input schedule of the compressor is adjusted in the simulation model.
 		\par
 		The simulation is then executed, and this process is repeated for each of the scenarios. For each scenario, the desired output parameters must be exported for further analysis.
 
@@ -262,8 +277,8 @@ In this section, the subprocesses required for the simulation model development 
 		\end{figure} 
 		\footnotetext[1]{Eskom, "2017/18 Tariffs and charges" [Online] \url{http://www.eskom.co.za/CustomerCare/TariffsAndCharges/Pages/Tariffs_And_Charges.aspx}, [Accessed 28 June 2017]}
 		
-		For power data, the expected annual energy cost saving can be calculated using average weekday energy saving and the tariff structure provided by Eskom. The energy supplier's weekday \gls{tou}tariffs for both the high demand (Jun - Aug) and low demand (Sep - May) seasons are shown in \Cref{fig: Tariff}.
-
+		For power data, the expected annual energy cost saving can be calculated using average weekday energy saving and the tariff structure provided by Eskom. The energy supplier's weekday \gls{tou} tariffs for both the high demand (Jun - Aug) and low demand (Sep - May) seasons are shown in \Cref{fig: Tariff}.
+		\par 
 		\begin{figure}[h]
 			\centering
 			\input{Graphs/3/tariff/tariff}
@@ -271,12 +286,18 @@ In this section, the subprocesses required for the simulation model development 
 			\label{fig: Tariff}
 		\end{figure}
 		
-		Estimating the cost benefit for improvements in pressure delivery is harder to quantify. Instead, the average pressure benefit should for a period be provided in kPa. For example, \enquote{The simulation indicated an $x$ MW saving with an additional pressure improvement of $y$ kPa during the drilling shift}.
+		Estimating the cost benefit for improvements in pressure delivery is harder to quantify. Instead, the average pressure benefit for a period should be provided in kPa. For example, \enquote{The simulation indicated an $x$ MW saving with an additional pressure improvement of $y$ kPa during the drilling shift}.
 
 		\subsection{Report results to the mine}
-		Once the benefits for each simulated scenario has been calculated and quantified, the interventions should be prioritised in the order of greatest benefit for the mine. The implementation costs and pay back periods of the interventions can also be considered in this process.
+		Once the benefits for each simulated scenario has been calculated and quantified, the interventions should be prioritised in the order of the greatest benefit for the mine. The implementation costs and pay back periods of the interventions can also be considered in this process.
 		\par
-		The results and recommendations should be submitted to responsible mine personal in the form of a report. At this point, the process of implementation becomes the mine's responsibility. The mine may require further validation of the results through practical testing.
+		The results and recommendations should be submitted to responsible mine personnel in the form of a report, an example report is shown in \Cref{fig: Report example}. At this point, the process of implementation becomes the mine's responsibility. The mine may require further validation of the results through practical testing.
+		\begin{figure}[h]
+			\centering
+			\fbox{\includegraphics[width=0.98\textwidth]{Images/3/ReportExample.pdf}}
+			\caption{An example of a simulation report that is submitted to the mine personnel}
+			\label{fig: Report example}
+		\end{figure}
 
 	\subsection{Summary}
 	This section discussed the of implantation of the simulation procedure. Implementation involves execution of the simulation scenarios, followed by the numerical calculation and quantification of energy cost savings and other benefits. Finally, the procedure to report findings to the mine is given.
