@@ -111,7 +111,7 @@ Verification was performed to ensure that simulated output accuracy was $>95$\%.
 \end{table}
 \par
 The accuracy of the simulation was checked in more detail to ensure that the sub-component outputs matched the actual measurement with high accuracy. \Cref{Table: A verification}(Appendix \ref{Verification}) shows the precision each measured simulation output in the model.
-\subsection{Execute simulations}
+\subsection{Execution of simulation scenarios}
 \subsubsection{Scenario 1. Compressor set points}
 The Eskom evening peak tariff time occurs during the blasting shift. During this time, the pressure requirements underground are lower than the rest of the day. Reducing pressure in the network reduces power as less work is required from the compressors. Additionally, losses caused by air leaks are reduced. However, lowering the pressure setpoint of the compressors requires independently controlling the air to the gold plant. 
 \par 
@@ -265,8 +265,14 @@ The model components were calibrated so that the simulated outputs matched data 
 	Due to the size of the mine, extending these tests to include the rest of the mining sections was not practical.  Therefore,  the benefits of an intervention on the entire mine could not accurately be determined from practical tests. Using simulation the typical operation with can be accurately compared with the intervention scenario to quantify the potential financial and operational benefits throughout a given period.
 	\par
 	The simulation model boundaries were updated to include refuge bay leaks on each level. For each refuge chamber, an air leak was added to the model by utilising per level layouts indicating locations of refuge bays. These leaks were modelled as flow demands using the data from the initial refuge bay tests. The overall mass flow of the system was maintained to ensure model accuracy. 
+	\begin{figure}[h]
+		\centering
+		\fbox{\includegraphics[trim =-20cm 60cm -20cm 60cm,width=\textwidth, clip=true]{Images/A/RefBaySim2}}
+		\caption{Addition of the refuge bay flow demands in the simulation model.}
+		\label{fig: Refuge bay layout}
+	\end{figure}
 	\par
-	By adding the flow components in the same location in the actual network, the pressure is each chamber is correctly modelled. The full simulation model schematic is shown in (Appedix \ref{Schematics})\Cref{fig: Refuge bay layout}. The updated simulation was re-checked with actual data from the network. This model was then used as a baseline to quantify saving for the scenario.
+	By adding the flow components in the same location in the actual network, the pressure is each chamber is correctly modelled. The full simulation model schematic is shown in \Cref{fig: Refuge bay layout}. The updated simulation was re-checked with actual data from the network. This model was then used as a baseline to quantify saving for the scenario.
 	\par 
 	\begin{figure}[h!]
 		\centering
@@ -277,8 +283,6 @@ The model components were calibrated so that the simulated outputs matched data 
 	Recreating the optimised scenario was modelled by setting the refuge bay flow components to 0 $kg/s$. The simulation was performed and the output data compared to the baseline. \Cref{fig: RefugeBay Power.} shows the baseline power compared to the optimised scenario. The comparison showed a potential 0.92 MW improvement in \gls{ee} through optimisation of refuge bay leaks. The optimised scenario would lead to R 5.13m in energy cost saving for the mine.
 	\par
 	An additional pressure benefit was identified during the drilling shift, shown in \Cref{fig: RefugeBay Pressures.}. The reduced flow lead to an average pressure increase of about 15 \glssymbol{kpa} during the drilling period. The pressure increase could lead to a general improvement in drilling efficiency and potentially increase the rate of production. This improvement may have a greater benefit to the mine than the energy cost savings.
-	%%%%%%
-	\clearpage
 	\begin{figure}[h!]
 		\centering
 		\input{Graphs/4/KUSResults/RefugePressure/RefugePressure}
@@ -289,17 +293,17 @@ The model components were calibrated so that the simulated outputs matched data 
 	\subsubsection{Scenario background}
 	The largest impact on energy costs can be achieved during the energy high demand periods. At mine B, blasting coincides with the evening energy demand peak. Typically, the air requirement during this period is lowered. However, due to compressed air misuse, leaks and open valves, significant amounts of air is still used during this time. Reducing pressure to areas during these times may lead to a major power and cost saving. 
 	\par 
-	Closing off stope valves and reducing station pressure were identified as two strategies to reduce airflow during the evening peak. The station cannot be closed completely as some services still require the air supply. 
+	Closing off valves at inactive work areas and reducing station pressure were identified as two strategies to reduce airflow during the evening peak. The station cannot be closed completely as some services require the air supply at all times. 
 	\par 
 	Simulations were performed to identify the most suitable strategy and to quantify the effect of each on a single mining level. The level was modelled to include all the main leaks, refuge bays and drilling sections.  
 	\subsubsection{Underground investigation}
-	The components of the modelled were calibrated using manual measurements from an investigation of a mining level. A walkthrough inspection of the level was performed. Air users, leaks and inefficiencies were identified, quantified and mapped; the resultant schematic is provided in Appendix \ref{Manualinvestigation}.
+	105L is the most active production level at Mine B. An investigation was therefore performed to identify all the air users, leaks and inefficiencies  at the level. A walkthrough manual inspection of the level was performed. Air users, leaks and inefficiencies were identified, quantified and mapped; the resultant schematic is provided in Appendix \ref{Manualinvestigation}. The results were then used to develop a detailed model of the level in \gls{ptb}. 
 	\par 
-	A simulation schematic for the level was developed using the information from the level investigation. The simulation process schematic is shown in \Cref{fig: KUS Simulation level layout}. The results of the single level simulation can be expanded to other levels to obtain the total potential improvement that can be achieved.
+	The simulation process schematic of the level is shown in \Cref{fig: KUS Simulation level layout}. This model was then used to simulate various station and working area air optimisation scenarios. When compared to the baseline the effect of each scenario for a single mining level can be determined. The results may then be used to estimate the benefit for a generalised control philosophy applied to all active mining levels.
 	\begin{figure}[h!]
 		\centering
 		\fbox{\includegraphics[angle=90,trim = 0 20cm 0 80cm, clip,height=0.95\textheight]{Images/A/StopeSim}}
-		\caption{Underground level layout}
+		\caption{Underground level simulation layout}
 		\label{fig: KUS Simulation level layout}
 	\end{figure}	
 	\clearpage
@@ -359,9 +363,11 @@ A simulation was done to estimate the potential savings of extending the evening
 	 A simulation model was developed to test scenarios. Two scenarios (refuge bay optimisations and per level flow optimisations) were simulated. The simulated interventions showed an \gls{ee} saving of up to 0.92 MW which would result in a cost saving of R 5.17m with an additional pressure improvement for scenario 1. The results for scenario 2 showed a \gls{pc} impact of up to 2 MW with an annual energy cost saving of R 2.5m. The results of the simulations were reported to the mine.
 \section{Case study 3: Periodic simulation analysis}
 	\subsection{Preamble}
-	Periodically updating the inputs of a simulation could be used to verify the compressed air model accuracy. If the precision of simulation outputs remains within constraints for subsequent days, this would indicate that the model is correctly calibrated. Additionally, this process could be used to identify significant operational changes that occur within the system. The operational changes would cause the simulation outputs to differ from the actual measured parameters. This information can be used to make improvements to the system.
+	Periodically updating the inputs of a simulation could be used to verify the compressed air model accuracy. If the precision of simulation outputs remains within constraints for subsequent days, this would indicate that the model is correctly calibrated. This analysis can be can therefore ensure that the model is up to date.
 	\par 
-	A daily periodic simulation analysis was implemented between 2016/11/01 and 2016/11/30 using the periodic simulation methodology discussed in Chapter 3. The simulation model developed for case study A was used for the analysis. The simulation receives the data inputs shown in \Cref{table: Periodic inputs/outputs}.
+	 Additionally, this process could be used to identify significant operational changes that occur within the system. The operational changes would cause the simulation outputs to differ from the actual measured parameters. This information can be used to make improvements to the system.
+	\par 
+	A daily periodic simulation analysis was developed for the periods between 2016/11/01 and 2016/11/30 using the periodic simulation methodology discussed in Chapter 3. The simulation model that was developed in case study 2 was used for the analysis. The simulation receives the following data inputs, as shown in \Cref{table: Periodic inputs/outputs}.
 	\begin{table}[h!]
 		\centering
 		\begin{tabular}{ll}
@@ -378,7 +384,7 @@ A simulation was done to estimate the potential savings of extending the evening
 
 \subsection{Results}
 
- The process was triggered daily. For each period, data inputs shown in \Cref{table: Periodic inputs/outputs} were imported into the model, the simulation was then processed, and the outputs are compared with the real system parameters. \Cref{fig: Periodic simulation} shows the average daily accuracy of the simulated total system power, flow and the shaft pressure per period.
+ The simulation was triggered for 24 hour periods. For each period, the data inputs shown in \Cref{table: Periodic inputs/outputs} were imported into the model, the simulation was then processed, and the outputs are compared with the real system parameters. NO human interference in the model to calibrate or modify the model was performed. \Cref{fig: Periodic simulation} shows the average daily accuracy of the simulated total system power, flow and the shaft pressure per period.
 	 \par 
  
 	\begin{figure}[h!]
@@ -387,20 +393,22 @@ A simulation was done to estimate the potential savings of extending the evening
 		\caption{The flow, pressure and power error percentages for daily periodic simulations over a month}
 		\label{fig: Periodic simulation}
 	\end{figure} 
-The accuracy of the process parameters of the simulation was within 5\% for the duration of the periodic simulation. However, From the 2016/11/07, the accuracy of the simulated power dropped by between 10 and 15 percent. The average daily power of the system up to that point was approximately 12.5 MW. A 15\% simulation error then relates to 1.9 MW difference between simulated and actual values. This error suggests a major shift in operation of the system.
+The accuracy of the process parameters of the simulation was within 5\% for the duration of the periodic simulation. However, From the 2016/11/07, the accuracy of the simulated power dropped by between 10 and 15\%. The average daily power of the system up to that point was approximately 12.5 MW. A 15\% simulation error then relates to 1.9 MW difference between simulated and actual values. This error suggests a major shift in operation of the system.
 \par 
-An analysis was done to try to determine the source of the discrepancy. From the data, it was identified that the simulated power for compressor 1 was the source of the different A look at the actual power measurement for compressor one show drop compared to normal operation by almost 2 MW. At the same time, the power used per kg/s of air seemed to have dropped. \Cref{fig: MeasurementAccuracy.} shows the average daily power for compressor 1 (blue), compared to the air mass flow per Watt(yellow). 
-\par
-	\begin{figure}[h!]
-		\centering
-		\input{Graphs/4/PeriodicRange/PeriodicRange}
-		\caption{Supply efficiency and compressor 1's average power output over the time of the periodic analysis}
-		\label{fig: MeasurementAccuracy.}
-	\end{figure} 
+\begin{figure}[h!]
+	\centering
+	\input{Graphs/4/PeriodicRange/PeriodicRange}
+	\caption{Supply efficiency and compressor 1's average power output over the time of the periodic analysis}
+	\label{fig: MeasurementAccuracy.}
+\end{figure} 
 
+An analysis was done to try and determine the source of the discrepancy. From the data, it was identified that the simulated power for compressor 1 was the source of the difference. Checking the actual power measurement for compressor 1 showed almost a 2 MW drop in power compared to compressor's output in the initial period. At the same time, the specific power lowered. This drop in specific power is illustrated in \Cref{fig: MeasurementAccuracy.} which shows the average daily power for compressor 1 (blue), compared to the specific power(yellow). 
+\par
+	
 A 2 MW shift in power is not likely; the results likely indicate that there was a fault in the power metering starting from 2016/11/07. A measurement error explains the perceived increase in efficiency over the same period as less power is measure then is being provided.  In this situation, the simulated power measurement is a more accurate metric for compressor 1’s power over this period.
+
  \subsection{Validation}
-To validation of misreadings from the power meter from comparing independent power data for the substation to the combined individual compressors meters.\Cref{fig: Corrected Periodic simulation} shows the measured power from the two sources. By comparing the compressor power to the independent data, it is clear that there is an error in measurement as hypothesised.
+Data from independent power meters was compared to the measurements used in the analysis.  \Cref{fig: Corrected Periodic simulation} compares the measured power from the two data sources. By comparing the compressor power to the independent data, it is clear that there is an error in measurement as suggested by the periodic simulation analysis.
 	\begin{figure}[h!]
 		\centering
 		\input{Graphs/4/PeriodicValidation/PeriodicValidation}
@@ -409,9 +417,11 @@ To validation of misreadings from the power meter from comparing independent pow
 	\end{figure} 
 	
 	\subsection{Summary}
-	An investigation into periodic or repeated simulation was performed. Using the simulation model for Mine B, the periodic simulation methodology was implemented. The results indicated that the model was valid for consecutive days in the test range and identified an error in power measurement. Further analysis is recommended to determine how long a simulation model can remain valid before calibration is required.
+	An investigation into periodic or repeated simulation was performed. Using the simulation model that was developed for Mine B, the periodic simulation methodology was implemented for the duration of a month. The results indicated that the model's process parameters, with the exception of power,  were accurate for the duration of the analysis.
+	\par 
+	 A shift in output power for a compressor for power was identified as a result of error in power measurement. Further analysis is recommended to determine how long a simulation model could be expected to remain valid before re-calibration is required.
 \section{Potential benefit for SA mines}
-There are approximately 75 operational gold and \gls{pgm} mines in South Africa, as illustrated in \Cref{fig: Mine map} \footnote{ Chamber of Mines, [Online] \url{http://www.chamberofmines.org.za/sa-mining/gold}, [Accessed 16-06-2017]}$^,$\footnote{ Chamber of Mines, [Online] \url{http://www.chamberofmines.org.za/sa-mining/platinum}, [Accessed 16-06-2017]}. Each mine utilises compressed air for underground processes. By utilising the compressed air simulation methodology in this study, the mines could collectively achieve significant energy and cost savings for the industry. 
+There are approximately 75 operational gold and \gls{pgm} mines in South Africa, as illustrated in \Cref{fig: Mine map} \footnote{ Chamber of Mines, [Online] \url{http://www.chamberofmines.org.za/sa-mining/gold}, [Accessed 16-06-2017]}$^,$\footnote{ Chamber of Mines, [Online] \url{http://www.chamberofmines.org.za/sa-mining/platinum}, [Accessed 16-06-2017]}. Whilst their are some mines that utilise hydraulic systems, most mine use compressed air for underground processes. By utilising the compressed air simulation methodology in this study, these mines could collectively achieve significant energy and cost savings for the industry. 
 \par 
 	\begin{figure}[h!]
 		\centering
@@ -419,7 +429,12 @@ There are approximately 75 operational gold and \gls{pgm} mines in South Africa,
 		\caption[Gold and Platinum group metal mines in South Africa]{Gold and \gls{pgm} mines in South Africa$^{1,2}$}
 		\label{fig: Mine map}
 	\end{figure}
-In this study, the simulated interventions resulted in savings of (on average) 0.69 MW \gls{ee} or 1.025 $ MW $ \gls{pc}. Assuming similar intervention were identified, through simulation for all gold and platinum mines. A potential energy saving of approximately 50 MW \gls{ee} or 75 $ MW $ \gls{pc} could be achieved. The combined cost saving for these interventions would amount to up to R 400m \gls{pa}.
+In this study, the simulated interventions resulted in savings of (on average) 0.69 MW \gls{ee} or 1.025 $ MW $ \gls{pc}. Using the following assumptions:
+\begin{itemize}
+	\item There are 75 operational mines
+	\item Similar savings could be identified for compressed at 60\% of the operational mines
+\end{itemize} 
+A potential energy Was saving of approximately 30 MW \gls{ee} or 45 $ MW $ \gls{pc} could be achieved. The combined cost saving for these interventions would amount to up to R 240m \gls{pa}. 
 \clearpage
 \section{Conclusion}
 Chapter 4 aimed to validate the methodology developed in Chapter 3. This validation was achieved through the implementation of two case studies South African gold mines. A third case study was performed to analyse and validate the value repeated/periodic simulation.
