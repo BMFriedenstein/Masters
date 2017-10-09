@@ -195,7 +195,9 @@ In this section, various subcomponents of compressed air networks were discussed
 	%	\end{equation}			
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\subsection{Value of simulation in mining DSM}
-	Van Niekerk \cite{van2013value}, \cite{vanNiekerk2012Value} investigated the value of simulation models in mine \gls{dsm} projects. Van Niekerk developed simulation models for compressed air and water reticulation systems using KYPipes's simulation engine. 
+	Van Niekerk \textit{et.al} \cite{van2013value}, \cite{vanNiekerk2012Value} investigated the value of simulation models in mine \gls{dsm} projects. Van Niekerk developed simulation models for compressed air and water reticulation systems using KYPipes' simulation engine. 
+	\par 
+	The studies by Van Niekerk \textit{et.al} showed that simplified simulations can be used to quickly estimate  energy cost benefits of proposed \gls{dsm} projects. The studies focused solely on energy cost saving potential from \gls{dsm} projects. Detailed simulation model was not investigated in favour of (quick to develop) simplified compressed air models.
 	\par
 	%\subsubsection{Mine cooling systems}
 	Simulation has been used in studies as a tool to improve mine cooling. Holman \cite{Holman2014Masters} investigated improvements to mine cooling systems that improve performance and efficiency. In the study, \gls{ptb} was used to develop and solve simplified simulation models to investigate cooling interventions.
@@ -204,7 +206,8 @@ In this section, various subcomponents of compressed air networks were discussed
 	\par
 	%\subsubsection{Mine de-watering systems}	
 	%\subsubsection{Mine compressed air systems}		
-	Simulation has added great value for mining compressed air \gls{dsm}. A detailed literature discussion of compressed air simulation applications is discussed in Section \ref{CompressorSimulation Literature}.
+	Simulation has added great value in improving and optimising mining compressed air systems
+	. A detailed review of compressed air simulation applications is discussed in Section \ref{CompressorSimulation Literature}.
 	\subsection{Simulation procedure}
 	A structured simulation procedure is required to achieve the objectives of the study. Previous studies from literature have focussed on how simulation software tools work rather than the simulation procedure that was followed \cite{Mare2016PhD}.
 	\par
@@ -233,7 +236,7 @@ In this section, various subcomponents of compressed air networks were discussed
 	 Van Heerden \textit{et al.} \cite{van2014developing} developed a dynamic control system for a mine compressed air network. The controller utilised repeated simulation to estimate unmeasured and future parameters of the network. The estimated results were used to optimise the compressor control.
 	 \par
 	
-\section{Simulation software tools}
+\subsection{Simulation software tools}
 \subsubsection{Available tools}
 A software tool is required to create and execute/solve the compressed air simulations. In literature, a variety of software tools have been used to simulate industrial systems. A suitable software system for this study must be capable of producing accurate models of complex compressed air networks. The system should be able to solve for transient compressed air simulation scenarios with dynamic data and control inputs.
 \par 
@@ -250,7 +253,15 @@ The following simulation tools that may meet the criteria were identified :
 \end{itemize}
  \gls{ptb} was used for this study. \gls{ptb} was selected as it was developed specifically for simulation of mining systems. The design allows simpler and speedier development of system models as many components such as compressor mathematical models have already been pre-built \cite{Mare2016PhD}. 
  \subsubsection{PTB background}
- \gls*{ptb} is 
+ \gls*{ptb} is a transient system simulation and optimisation tool. The software was designed for usage in mining and industrial thermal hydraulic systems. \gls{ptb} provides a graphics user interface to intuitively develop system models by dragging and dropping components. The interface is shown in \Cref{fig: PTB UI}.
+ \par 
+\begin{figure}[h!]
+ 	\centering
+ 	\fbox{\includegraphics[trim=0 0.2cm 0 0.7cm,clip=true, width=0.98\textwidth]{Images/2/PTB}}
+ 	\caption{The graphical interface of the PTB simulation tool}
+ 	\label{fig: PTB UI}
+ \end{figure}
+\gls{ptb} System models consist of combinations of nodes and pipes, an example of a model schematic is shown in \Cref{fig: PTB UI}. Other component models such as compressors, variable flow demands, and controllers are available in the component library. A methodology for the development of compressed air system models in PTB is explained in detail in Chapter 3.
 %\Gls{ptb}
 %Mare \cite{Mare2016PhD} and Peach \cite{Peach2016Masters} investigated simulation software packages for mining systems; Identifying the strengths and limitations of each. 
  	\subsection{Simulation model verification strategies}\label{VerificationLit}
@@ -429,7 +440,7 @@ The equation is rewritten to get a relative error percentage:
 \section{Review of the use of simulation in compressed air optimisation}
 \label{CompressorSimulation Literature} \label{simplfiedModels}
 \subsection{Preamble}
-This section will review literature regarding simulation usage in optimising compressed air systems. Shortcomings identified from the literature that can be improved upon in this study will be addressed. The studies that were reviewed in this section are summarised in table \Cref{table: cm sim studies}.
+This section will review literature regarding simulation usage in optimising compressed air systems. Shortcomings identified from the literature that can be improved upon in this study will be addressed. The studies that were reviewed in this section are summarised in \Cref{table: cm sim studies}.
 	\begin{table}[!htbp]
 	\centering
 	\begin{tabular}{p{5cm}ccl}
@@ -438,9 +449,7 @@ This section will review literature regarding simulation usage in optimising com
 		\hhline{====}\\
 		
 		\shortstack[l]{Mousavi \textit{et al.} \cite{mousavi2014energy}\vspace{0.5em}} & \shortstack[l]{2014\vspace{0.5em}} & \shortstack[l]{Airmaster\\AirSim} & \shortstack[l]{Compressor energy modelling \vspace{0.5em}}\vspace{0.5em} \\
-		
-		van Niekerk \textit{et al.} \cite{van2013value} & 2013 & KYPipe & Compressed air DSM project design \\
-		
+				
 		Bredenkamp \cite{Bredenkamp2013Masters} & 2013 & KYPipe & Compressor relocation \vspace{0.5em}\\
 		
 		\shortstack[l]{Zahlan and Asfour \cite{zahlan2015multi}\vspace{0.5em}} & \shortstack[l]{2015\vspace{0.5em}} & \shortstack[l]{MATLAB\vspace{0.5em}} & \shortstack[l]{Determining the optimal\\compressor location} \vspace{0.5em}\\
@@ -456,7 +465,7 @@ This section will review literature regarding simulation usage in optimising com
 	\end{table}
 
 \subsection{Compressor energy modelling}
-\subsection{Compressed air DSM project design}
+
 \subsection{Determining the optimal compressor location}
 Determining the optimal location for a compressor can improve the efficiency of an air network. This improvement can lead to significant energy cost savings. In a study, Zahlan and Asfour \cite{zahlan2015multi} investigated the use of simulation to solve this problem in the manufacturing industry. 
 \par 
@@ -466,7 +475,7 @@ User preference was taken into account by determining a parameter of the extent 
 \par
 \begin{figure}[!htbp]
 	\centering
-	\fbox{\includegraphics[width=0.75\textwidth]{Images/2/Zones/zones.pdf}}
+	\fbox{\hspace{1cm}\includegraphics[width=0.75\textwidth]{Images/2/Zones/zones.pdf}\hspace{1cm}}
 	\caption[Simulated energy consumption matrix]{Resultant energy consumption matrix. Adapted from Zahlan and Asfour \cite{zahlan2015multi}}
 	\label{fig: EnergyconsumptionMatrix}
 \end{figure}
