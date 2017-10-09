@@ -1,6 +1,5 @@
 %Chapter 3
 \chapter{Developing a simulation methodology}
-\thispagestyle{empty}
 \vspace{38em}
 \hrulefill
 \\
@@ -13,7 +12,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 
 \begin{figure}[h]
 	\centering
-	\fbox{\includegraphics[trim=0.5cm 0.8cm 0.5cm 0.5cm,width=\textwidth]{Graphs/3/Methodology/Methodology.pdf}}
+	\fbox{\includegraphics[trim=0.5cm 0.8cm 0.5cm 0.5cm,width=0.98\textwidth]{Graphs/3/Methodology/Methodology.pdf}}
 	\caption{Flow diagram of the methodology for this study}
 	\label{fig: Methodology}
 \end{figure}
@@ -57,7 +56,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	
 	 \begin{figure}[h]
 	 	\centering
-	 	\fbox{\hspace{0.125\textwidth}\includegraphics[trim=0 3cm 0 0, width=0.75\textwidth]{Images/3/Detail.pdf}\hspace{0.125\textwidth}}
+	 	\fbox{\hspace{0.125\textwidth}\includegraphics[trim=0 1cm 0 0, width=0.73\textwidth]{Images/3/Detail.pdf}\hspace{0.125\textwidth}}
 	 	\caption{ Selecting boundaries for the simulation model}
 	 	\label{fig: Sensitivity}
 	 \end{figure}
@@ -96,7 +95,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		Where the pressure difference $\Delta P $ is a function of:
 		\begin{table}[h!]
 			\centering
-			\begin{tabular}{ll}
+			\begin{tabular}{cl}
 				\hline
 				Parameter & Definition\\
 				\hline
@@ -138,7 +137,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 		Once the models are accurately calibrated, the compressor component integrates into the air network in the arrangement shown in \Cref{fig: Compressor models}. The Compressor is connected to the inlet air source via an inlet pipe and air node and the rest of the network via an air node and outlet pipe. The additional pipe components allow the inlet and outlet conditions to be monitored and controlled in the simulation.
 		\begin{figure}[h]
 			\centering
-			\fbox{\includegraphics[trim =-4cm 0 -4cm 0cm, width=\textwidth]{Images/3/Compressors}}
+			\fbox{\includegraphics[trim =-4cm 0 -4cm 0cm, width=0.98\textwidth]{Images/3/Compressors}}
 			\caption{Integrating the compressor component into the simulation}
 			\label{fig: Compressor models}
 		\end{figure}		
@@ -151,7 +150,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			 The air demand may vary throughout the day. For example, a mining section may utilise more machines during certain periods of the day. A schedule and flow profile is used to replicate this in the simulation. \Cref{fig: Demand component} shows how a calibrated air demand or leak is integrated into the simulation model on \gls{ptb}.
 			\begin{figure}[h]
 				\centering
-				\fbox{\includegraphics[trim =-12cm 0.5cm -12cm 0.5cm, width=\textwidth]{Images/3/AirDemand}}
+				\fbox{\includegraphics[trim =-12cm 0.5cm -12cm 0.5cm, width=0.98\textwidth]{Images/3/AirDemand}}
 				\caption{Implementing flow demands and leaks into the simulation} 
 				\label{fig: Demand component}
 			\end{figure}
@@ -163,7 +162,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 			
 	\begin{figure}[h!]
 		\centering
-		\fbox{\includegraphics[trim =-4cm 0 -4cm 0cm, width=\textwidth]{Images/3/Controller}}
+		\fbox{\includegraphics[trim =-4cm 0 -4cm 0cm, width=0.98\textwidth]{Images/3/Controller}}
 		\caption[Control components in Process Toolbox]{Control components in Process Toolbox}
 		\label{fig: Controller models}
 	\end{figure}
@@ -250,7 +249,7 @@ Implementation of a simulation is divided into three steps as shown in the flow 
 	\clearpage
 		\begin{figure}[h]
 			\centering
-			\fbox{\includegraphics[trim =1.0cm 3.9cm 0.76cm 1cm,width=\textwidth]{Graphs/4/PeriodicProcess/PeriodicProcess.pdf}}
+			\fbox{\includegraphics[trim =1.0cm 3.9cm 0.76cm 1cm,width=0.98\textwidth]{Graphs/4/PeriodicProcess/PeriodicProcess.pdf}}
 			\caption{The periodic simulation process that was followed in this analysis}
 			\label{fig: PeriodicProcess}
 		\end{figure}

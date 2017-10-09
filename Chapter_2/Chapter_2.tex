@@ -26,7 +26,7 @@ Compressed air in mining is most commonly supplied by a centrifugal-type dynamic
   \footnotetext[1]{Abc oil refining, \enquote{How centrifugal compressors operate,} [Online] \url{http://abcoilrefining.blogspot.co.za/2012/03/how-centrifugal-compressors-operate.html}, [Accessed 15 August 2017].}
 \begin{figure}[!htbp]
 	\centering
-	\fbox{\hspace{3.5cm}\input{Images/2/Compressor/compressor}\hspace{2.4cm}}
+	\fbox{\hspace{3cm}\input{Images/2/Compressor/compressor}\hspace{2.2cm}}
 	\caption[A scematic of a multistage centrifugal compressor]{A schematic of a multi-stage centrifugal compressor\protect \footnotemark[1]}
 	\label{fig: Compressor diagram}
 \end{figure}
@@ -117,18 +117,20 @@ In this section, various subcomponents of compressed air networks were discussed
 		  Air leaks occur as a result of open pipes, fissures and breaks. Losses depend on the size of the leak and pressure in the network. \Cref{fig: Leak losses} shows the theoretical airflow through a pipe orifice as a function of leakage area and pressure\footnotemark[1]. van Tonder \cite{van2011sustaining} showed that the system power consumption linearly increases with the amount of air leakage. Therefore, energy savings can be achieved through either reducing pressure or detecting and fixing leaks.
 		 \begin{figure}[!htbp]
 		 	\centering
-		 	\fbox{\hspace{2cm}\input{Graphs/2/Leak2/Leak2}\hspace{2cm}}
+		 	\fbox{\hspace{1.5cm}\input{Graphs/2/Leak2/Leak2}\hspace{1.5cm}}
 		 	\caption[The flow due to leakage as a function of inlet pressure and leakage area]{ The flow due to leakage as a function of inlet pressure and leakage area\protect\footnotemark[1]}
 		 	\label{fig: Leak losses}
 		 \end{figure}
 	 \footnotetext[1]{efunda, \enquote{Orifice Flowmeter Calculator.} [Online] \url{http://www.efunda.com/formulae/fluids/calc_orifice_flowmeter.cfm}, [Accessed 18 October 2016]}
+	 \footnotetext[2]{Leakage detection by using strategically placed measurement equipment and smart computer systems}
+	 \footnotetext[3]{The use of a device, \enquote{pig}, within the pipe to perform inspections}
 	 \par 
 		 Leaks are often not easily detected through visual methods. In industry, many techniques can be employed to detect air leaks. Pascoe \cite{Pascoe2016Masters} and van Tonder \cite{vanTonder2010Masters} summarised these techniques as follows:
 		 \begin{itemize}
 		 	\item Audible detection (Walk and report)
 		 	\item Ultrasonic detection
-		 	\item Intelligent systems\footnote{Leakage detection by using strategically placed measurement equipment and smart computer systems}
-		 	\item \enquote{Pigging}\footnote{The use of a device, \enquote{pig}, within the pipe to perform inspections}
+		 	\item Intelligent systems\footnotemark[2]
+		 	\item \enquote{Pigging}\footnotemark[3]
 		 	\item Soap water/visible dyes 
 		 \end{itemize}
 	 	 These methods are time and resource intensive, and many mines do not actively employ dedicated leakage detection and repair teams. Marais \textit{et al.} \cite{marais2009increased} investigated streamlining the leakage detection and repair process to increase energy savings through the use of \gls{calds}. The system was developed to allow centralised mobile leakage reporting. Usage of \gls{calds} in mines resulted in an increased leak detection rate. One mine reported 24 leaks in a single month. It was noted in the study by Marais that there was difficulty quantifying the actual energy savings of the leakage repairs due to other interventions co-occurring.	
@@ -182,7 +184,7 @@ In this section, various subcomponents of compressed air networks were discussed
 		 Cilliers \cite{Cilliers2015PHD} developed \enquote{best practice models} using the \gls{cols} benchmarking method. These models provide an energy benchmark that can be used to identify the scope for energy improvement on mining systems. An example of a benchmark model for a mining compressed air system is shown in \Cref{fig: 3D Benchmark}. The model can be used to estimate optimal energy required as a function of the quantity of ore mined (T) and the depth of the  mining shaft (Z). Cilliers also developed benchmark models for mine cooling, water reticulation and ventilation systems.
 		\begin{figure}[!htbp]
 			\centering
-			\fbox{\hspace{2cm}\input{Graphs/2/Benchmark/Benchmark}\hspace{2cm}}
+			\fbox{\hspace{1.5cm}\input{Graphs/2/Benchmark/Benchmark}\hspace{1.5cm}}
 			\caption[Energy benchmark model for a mining compressed air system]{Energy benchmark model for a mining compressed air system, adapted from Cilliers \cite{Cilliers2015PHD}}
 			\label{fig: 3D Benchmark}
 		\end{figure}
@@ -248,6 +250,7 @@ The following simulation tools that may meet the criteria were identified :
 \end{itemize}
  \gls{ptb} was used for this study. \gls{ptb} was selected as it was developed specifically for simulation of mining systems. The design allows simpler and speedier development of system models as many components such as compressor mathematical models have already been pre-built \cite{Mare2016PhD}. 
  \subsubsection{PTB background}
+ \gls*{ptb} is 
 %\Gls{ptb}
 %Mare \cite{Mare2016PhD} and Peach \cite{Peach2016Masters} investigated simulation software packages for mining systems; Identifying the strengths and limitations of each. 
  	\subsection{Simulation model verification strategies}\label{VerificationLit}
@@ -392,7 +395,7 @@ The equation is rewritten to get a relative error percentage:
  	 \Cref{table: Verification studies} shows the majority of local studies utilsed residual difference to determine simulation accuracy. However, literature has shown this is not valid method for transient simulation verification. International studies used correlation, \gls{mae} and \gls{mse} for verification.The accepted accuracy margin ranges from 3\% relative error to  up to 30\%. The majority of studies used either 5\% or 10\%  as the relative error cut-off.
  	\begin{table}[!htbp]
  		\centering
- 		\begin{tabular}{p{5cm}ccl}
+ 		\begin{tabular}{p{4cm}ccl}
  			\hline
  			Study & Year & Verification method & Accepted margin\\
  			\hhline{====}
@@ -456,14 +459,14 @@ This section will review literature regarding simulation usage in optimising com
 \subsection{Compressed air DSM project design}
 \subsection{Determining the optimal compressor location}
 Determining the optimal location for a compressor can improve the efficiency of an air network. This improvement can lead to significant energy cost savings. In a study, Zahlan and Asfour \cite{zahlan2015multi} investigated the use of simulation to solve this problem in the manufacturing industry. 
-\cite
+\par 
 To determine the optimal compressor location, Zahlan and Asfour divided the manufacturing facility into a matrix rectilinear zones. A mathematical model was developed in MATLAB to determine the energy consumption of the compressors when located at each zone.
 \par 
-User preference was taken into account by determining a parameter of the extent of the user preference for each zone in the matrix. The user preference parameter and energy savings per zone were weighted and summed to arrive at the optimal zone. \Cref{EnergyconsumptionMatrix} shows the simulated energy consumption for the compressors at each zone location. The energy consumption was thereafter combined with a user preference matrix to determine the optimum compressor location.
+User preference was taken into account by determining a parameter of the extent of the user preference for each zone in the matrix. The user preference parameter and energy savings per zone were weighted and summed to arrive at the optimal zone. \Cref{fig: EnergyconsumptionMatrix} shows the simulated energy consumption for the compressors at each zone location. The energy consumption was thereafter combined with a user preference matrix to determine the optimum compressor location.
 \par
 \begin{figure}[!htbp]
 	\centering
-	\fbox{\includegraphics[width=0.6\textwidth]{Images/2/Zones/zones.pdf}}
+	\fbox{\includegraphics[width=0.75\textwidth]{Images/2/Zones/zones.pdf}}
 	\caption[Simulated energy consumption matrix]{Resultant energy consumption matrix. Adapted from Zahlan and Asfour \cite{zahlan2015multi}}
 	\label{fig: EnergyconsumptionMatrix}
 \end{figure}
@@ -473,7 +476,7 @@ The approach to determining the optimum compressor location would not be suitabl
 \par
 \begin{figure}[!htbp]
 	\centering
-	\fbox{\includegraphics[trim = -0.5cm 1cm -0.5cm 0cm ,width=\textwidth]{Images/2/bredenkamp/model}}
+	\fbox{\includegraphics[trim = -0.5cm 1cm -0.5cm 0cm ,width=0.98\textwidth]{Images/2/bredenkamp/model}}
 	\caption[Compressor relocation simulation model]{Compressor relocation simulation model. Adapted from Bredenkamp \cite{Bredenkamp2013Masters}}
 	\label{fig: bredenkamp model}
 \end{figure}
@@ -490,7 +493,7 @@ Pascoe \cite{Pascoe2016Masters} developed a simulation model for a compressed ai
  \par
 \begin{figure}[!htbp]
 	\centering
-	\fbox{\includegraphics[trim = -0.5cm 0.5cm -0.5cm 0.5cm ,width=\textwidth]{Images/2/pascoe/model}}
+	\fbox{\includegraphics[trim = -0.5cm 0.5cm -0.5cm 0.5cm ,width=0.98\textwidth]{Images/2/pascoe/model}}
 	\caption[Simplified compressed air ring model]{Simplified compressed air ring model. Adapted from Pascoe \cite{Pascoe2016Masters}}
 	\label{fig:Pascoe model}
 \end{figure}
@@ -503,7 +506,7 @@ Maré \textit{et al.} \cite{Mare2017Evaluating} developed a compressed air simul
  
  \begin{figure}[!htbp]
  	\centering
- 	\fbox{\includegraphics[trim = -0.5cm 0.5cm -0.5cm 0.5cm ,width=\textwidth]{Images/2/mare/model}}
+ 	\fbox{\includegraphics[trim = -0.5cm 0.5cm -0.5cm 0.5cm ,width=0.98\textwidth]{Images/2/mare/model}}
  	\caption[Simulation model for a complex air network]{Simulation model for a complex air network. Adapted from Maré \textit{et al.} \cite{Mare2017Evaluating}}
  	\label{fig:Mare model}
  \end{figure}
