@@ -174,7 +174,7 @@ A case study was implemented on a mine compressed air network in the Freestate. 
 	\par 
 	Data related to the mines scheduling as well as critical limits and setpoints of the compressed air system was obtained from various mine personnel. From this, a general understanding of the operation was obtained.  Critical data parameters such as Power, pressures and flows of the system were gathered from the \gls{scada} as well other data measurement sources. This information will be used to develop and calibrate the simulation model.
 	\par 
-	Strategic level investigations were performed on the significant mining levels to map and measure the locations and air usage for the cross-sections, refuge bays, major leaks and other compressed air consumers on each level. An example of a resultant schematic from the underground investigation is shown in \Cref{fig: KUS Underground level layout}. The information gathered from the system investigations was then utilised to develop and calibrate a simulation model.
+	Strategic level investigations were performed on the significant mining levels to map and measure the locations and air usage for the cross-sections, refuge bays, major leaks and other compressed air consumers on each level. An example of a resultant schematic from the underground investigation is shown in \Cref{fig: KUS Underground level layout} (Appendix \ref{Manualinvestigation}). The information gathered from the system investigations was then utilised to develop and calibrate a simulation model.
 	\begin{figure}[h!]
 		\centering
 		\fbox{\includegraphics[trim =0.5cm 0.8cm 2.5cm 0.2cm,width=0.98\textwidth]{Graphs/4/KUSLayout1/KUSLayout1.pdf}}
@@ -190,8 +190,8 @@ From the investigation, the compressed air network was modelled in \gls{ptb}. Th
 	\item After cooling reduced compressed air temperature from $ 100 ^o $ \gls{c} to $ 40 ^o $ \gls{c}
 	\item Typical underground air conditions
 \end{itemize}
- The boundaries of the baseline simulation were selected based on the available data for the system. The developed simulation model is shown in \Cref{fig: KUS Baseline model}. For maximum accuracy, the simulation step size was set to the two minutes to match the resolution available from the data source.
-The model components were calibrated so that the simulated outputs matched data from the real system. The process flow diagram for the simulation is shown in \Cref{fig: KUS Baseline model}. The model data inputs and outputs are described in \Cref{table: Mine A inputs/outputs}.
+ The boundaries of the baseline simulation were selected based on the available data for the system. The developed simulation model is shown in \Cref{fig: KUS Baseline model} (Appendix \ref{Schematics}). For maximum accuracy, the simulation step size was set to the two minutes to match the resolution available from the data source.
+The model components were calibrated so that the simulated outputs matched data from the real system. The process flow diagram for the simulation is shown in \Cref{fig: KUS Baseline model} (Appendix \ref{Schematics}). The model data inputs and outputs are described in \Cref{table: Mine B inputs/outputs}.
 
 \begin{table}[h!]
 	\centering
@@ -233,7 +233,7 @@ The model components were calibrated so that the simulated outputs matched data 
 	 \end{figure}
  %%%%%%%%%%%%%%%
 	\clearpage
-	Once the power and flow parameters were verified with an acceptable error, the actual pressure set-point profile was imported to the compressor controllers. The simulated outlet pressure was then compared to the actual measured pressure and setpoint. This comparison is shown in \Cref{fig: Verification Pressure kusasalethu Setpoint}. The error of the compressor outlet pressure was acceptable at 0.98\%. The measured flows for all measured subcomponents were independently verified to ensure system accuracy. A comparison between simulation outputs and physical measurements is shown in \Cref{Table: B verification}(Appendix \ref{Verification}).
+	Once the power and flow parameters were verified with an acceptable error, the actual pressure set-point profile was imported to the compressor controllers. The simulated outlet pressure was then compared to the actual measured pressure and setpoint. This comparison is shown in \Cref{fig: Verification Pressure kusasalethu Setpoint}. The error of the compressor outlet pressure was acceptable at 0.98\%. The measured flows for all measured subcomponents were independently verified to ensure system accuracy. A comparison between simulation outputs and physical measurements is shown in \Cref{Table: B verification} (Appendix \ref{Verification}).
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{p{0.5cm}p{8cm}p{5cm}r}
@@ -352,6 +352,8 @@ A simulation was done to estimate the potential savings of extending the evening
 		\caption{Comparison of the simulated scenarios}
 		\label{Table: B Comparison}
 	\end{table}
+\par
+Validation of the simulated scenarios is not available for Case study 2 as physical implementation or tests of the scenarios were not yet performed as of this study.
 	%\subsection{Validation of results}
 %	- Awaiting results on manual tests
 %	- 
