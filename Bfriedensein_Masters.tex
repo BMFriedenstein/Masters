@@ -26,6 +26,16 @@
 	heightrounded,
 }
 
+% Table Captions
+\usepackage{caption}
+\usepackage[normalem]{ulem}
+\DeclareCaptionFormat{test}{#1#2#3\par}
+\DeclareCaptionLabelFormat{test}{\small\uline{#1~#2}}
+\DeclareCaptionTextFormat{test}{\small\expandafter\uline\expandafter{\expandafter#1}}
+\DeclareCaptionLabelSeparator{test}{\small\uline{:~}}
+
+\captionsetup[table]{justification = justified, singlelinecheck = false, position=above,labelformat=test,textformat=test,labelseparator=test}
+
 %%Chapter formatting 
 \usepackage{titlesec}
 \titleformat{\chapter}[display]
