@@ -190,7 +190,7 @@ Implementation of a simulation model is divided into three steps as shown in the
 		\par 
 		After-cooling reduces the output air temperature of the compressors. This cooling can affect the operation of the network. Hence, including after-cooling in the simulation model should improve accuracy.
 		\par
-		Modelling the after-cooling is achieved in \gls{ptb} using a heat transfer node at the outlet of the compressor component model. The heat transfer parameters shown in \Cref{table: After cooling inputs} should be calibrated such that the air temperature matches after-cooled air temperature measurements. An assumption of 40$^\circ$\gls{c} can be used if no measurements are available.
+		Modelling the after-cooling is achieved in \gls{ptb} using a heat transfer node at the outlet of the compressor component model. The heat transfer parameters shown in \Cref{table: After cooling inputs} should be calibrated such that the air temperature matches after-cooled air temperature measurements. An assumption of 40$^\circ$\gls{c} can be used if no measurements are available.\\
 		\begin{table}
 			\caption{The input parameters for the after-cooling simulation model}
 			\centering
@@ -244,7 +244,7 @@ Implementation of a simulation model is divided into three steps as shown in the
 			\item Trigger the process periodically
 		\end{itemize}
 	%%%%%%%%%%%%%
-	\clearpage
+	%\clearpage
 		\begin{figure}[h]
 			\centering
 			\fbox{\includegraphics[trim =0.4cm 0.4cm 0.4cm 0.4cm,width=0.98\textwidth]{Graphs/4/PeriodicProcess/PeriodicProcess.pdf}}
