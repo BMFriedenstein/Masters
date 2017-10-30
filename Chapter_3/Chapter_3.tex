@@ -131,6 +131,7 @@ Implementation of a simulation model is divided into three steps as shown in the
 			\caption{Estimating the characteristic curve of a compressor by fitting a quadratic function to points of operation}
 			\label{fig: Compressor Curve}
 		\end{figure}
+	\clearpage
 		Once the models have been accurately calibrated, the compressor component integrates into the air network in the arrangement shown in \Cref{fig: Compressor models}. The compressor is connected to the inlet air source via an inlet pipe and air node, and the rest of the network via an air node and outlet pipe. The additional pipe components allow the inlet and outlet conditions to be monitored and controlled in the simulation.
 		\begin{figure}[h]
 			\centering
@@ -173,7 +174,7 @@ Implementation of a simulation model is divided into three steps as shown in the
 			\label{fig: Guide vane position}
 		\end{figure}
 	
-	\footnotetext[1]{Data recorded from a guide vane controlled compressor on a mine over a period of six months}
+	\footnotetext[1]{Data recorded from a guide vane controlled compressor on a mine over a period of six months\\}
 	
 		In \gls{ptb}, the guide vane controller is modelled using a \gls{pi} controller. The non-linear limitations of guide vane control must be implemented in the controller. The control limitation is applied in the model by using a minimum control output limit that matches the minimum power reduction achieved by closing the guide vane to its minimum position. 
 		\par 
@@ -181,7 +182,7 @@ Implementation of a simulation model is divided into three steps as shown in the
 
 		\begin{figure}[h]
 			\centering
-			\fbox{\includegraphics[ width=0.8\textwidth]{Images/3/Valve.jpg}}
+			\fbox{\includegraphics[ width=0.75\textwidth]{Images/3/Valve.jpg}}
 			\caption[An example of a compressed air control valve]{An example of a compressed air control valve\cite{van2015implementation}} 
 			\label{fig: Control}
 		\end{figure}
@@ -190,8 +191,9 @@ Implementation of a simulation model is divided into three steps as shown in the
 		\par 
 		After-cooling reduces the output air temperature of the compressors. This cooling can affect the operation of the network. Hence, including after-cooling in the simulation model should improve accuracy.
 		\par
-		Modelling the after-cooling is achieved in \gls{ptb} using a heat transfer node at the outlet of the compressor component model. The heat transfer parameters shown in \Cref{table: After cooling inputs} should be calibrated such that the air temperature matches after-cooled air temperature measurements. An assumption of 40$^\circ$\gls{c} can be used if no measurements are available.\\
-		\begin{table}
+		Modelling the after-cooling is achieved in \gls{ptb} using a heat transfer node at the outlet of the compressor component model. The heat transfer parameters shown in \Cref{table: After cooling inputs} should be calibrated such that the air temperature matches after-cooled air temperature measurements. An assumption of 40$^\circ$\gls{c} can be used if no measurements are available. 
+\\
+		\begin{table}[h!]
 			\caption{The input parameters for the after-cooling simulation model}
 			\centering
 			\begin{tabular}{lll}
@@ -205,6 +207,7 @@ Implementation of a simulation model is divided into three steps as shown in the
 			\end{tabular}
 		\label{table: After cooling inputs}
 		\end{table}
+	\\
 	Depending on the accuracy requirement, after-cooling can be excluded from the simulation. Post after-cooling, compressed air is usually still warmer than ambient conditions. Air temperatures underground can be accurately matched by including heat transfer for compressed air pipelines.
 	
 	\subsection{Verify the simulation model}
@@ -213,6 +216,7 @@ Implementation of a simulation model is divided into three steps as shown in the
 	For this study, the selected verification constraints were selected as : \\ {$r^2 > 0.9 $ and $ Err_{\%} < 5\% $}\\ 
 	If these limits are met for the power, flow and pressure of the system, the model is considered accurate. As an extra measure, the relative error of the output for the minor model components should be $ > 85\%$ of the actual data. To obtain the true error of the model, instrumentation measurement error should be combined with the calculated simulation error.
 	\par 
+	\clearpage
 	Furthermore, periodically repeated simulations could be used to verify simulations more definitively. To perform the repeated simulation verification, the input variables should be updated for each new period. The output values of the simulation should then be compared with actual measurements. For each simulation, the verification constraints should be met.
 		
 	\subsection{Select simulation inputs}
@@ -234,6 +238,7 @@ Implementation of a simulation model is divided into three steps as shown in the
 	\subsection{Periodic simulation}	
 		Periodic simulation refers to the repetition of simulations over subsequent periods to determine the sequential accuracy of the model. Sequential accuracy is important to verify that the model is valid in general and not just for a single period. This simulation will also indicate where operational changes have occurred as the simulation accuracy will be reduced.
 		\par 
+		\clearpage
 		The following procedure, as illustrated in \Cref{fig: PeriodicProcess}, was followed to implement periodic simulation: 
 		\begin{itemize}
 			\item Collect simulation input data periodically for each simulation interval
@@ -273,7 +278,7 @@ In this section, the subprocesses required for the development and verification 
 			\label{fig: Savings Power.}
 		\end{figure} 
 		\footnotetext[1]{Eskom, \enquote{2017/18 Tariffs and charges,} [Online] \url{http://www.eskom.co.za/CustomerCare/TariffsAndCharges/Pages/Tariffs_And_Charges.aspx}, [Accessed 28 June 2017]}
-		
+		\clearpage
 		For power data, the expected annual energy cost saving can be calculated using the average weekday energy saving and the tariff structure provided by Eskom. The energy supplier's weekday \gls{tou} tariffs for both the high demand (Jun -- Aug) and the low demand (Sep -- May) seasons are shown in \Cref{fig: Tariff}.
 		\par 
 		\begin{figure}[h]
@@ -289,6 +294,7 @@ In this section, the subprocesses required for the development and verification 
 		Once the benefits for each simulated scenario have been calculated and quantified, the interventions should be prioritised according to the greatest benefit for the mine. The implementation costs and pay-back periods of the interventions can also be considered in this process.
 		\par
 		The results and recommendations should be submitted to responsible mine personnel in the form of a report (an example report is shown in \Cref{fig: Report example}). At this point, the process of implementation becomes the mine's responsibility. The mine may require further validation of the results through practical testing.
+		\clearpage
 		\begin{figure}[h]
 			\centering
 			\fbox{\includegraphics[width=0.98\textwidth]{Images/3/ReportExample.pdf}}
