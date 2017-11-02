@@ -27,7 +27,7 @@ Implementation of a simulation model is divided into three steps as shown in the
 	\par 
 	A baseline period\footnote{A period that best reflects the typical operation before implementation of an energy intervention. This period is then compared with a period post-intervention implementation to determine the improvements.} that best represents the typical operation of the mine must be selected. Furthermore, availability of data should be considered. The length of the baseline period is selected based on the scenarios that are to be tested; this can be changed later. For calibrating a compressed air system, a 24-hour period of normal operation is usually sufficient. A longer period may be needed to verify the model. 
 
-	\subsection{Investigate mining schedules}
+	\subsection{Investigate operation schedules}
 	A critical aspect of developing an accurate model of a mining compressed air system is to take note of the operational philosophy of the mine. The schedule for operations such as drilling, blasting or cleaning may have a major impact on compressed air requirements at different times of the day. By utilising the operational schedule, simulation scenarios can be optimised for the different air requirements throughout the day.	
 	
 	\subsection{Verify data accuracy}
@@ -140,7 +140,7 @@ Implementation of a simulation model is divided into three steps as shown in the
 			\label{fig: Compressor models}
 		\end{figure}		
 
-		\subsubsection{Demand}
+		\subsubsection{Air flow demand}
 			A flow demand represents any air flow leaving the network. Flows leaving the network include any air-consuming equipment such as drills and agitators as well as losses by means of air leaks and open pipes. The air flow is dependent on pressure and the specific resistance to flow of the outlet. 
 			\par 
 			The resistance of the flow demand can be obtained using the inlet pressure, outlet pressure and flow. If the flow is not known, a reasonably accurate estimation can be made by calculating the expected flow from the size of the outlet. However, his estimation will affect the accuracy.
@@ -152,7 +152,7 @@ Implementation of a simulation model is divided into three steps as shown in the
 				\caption{Implementing flow demands and leaks into the simulation} 
 				\label{fig: Demand component}
 			\end{figure}
-		\subsubsection{Compressed air control}\label{Controllers}
+		\subsubsection{Compressed air controllers}\label{Controllers}
 			Simulation components require dynamic control to replicate the operation of the actual air network. Control is typically implemented on compressors and valves throughout the network to follow  set-points and schedules. It is important to not only include the controllers in the simulation but to replicate any nonlinearities, limitations and response delays related to specific types of control. Implementing these control factors will ensure that the model reacts in the same way as the actual network would, thus improving accuracy.
 			\par 
 			On a typical mine, a compressor's power output is controlled to ensure that the discharge pressure matches a specified  set-point. This control is achieved through either \glspl{vsd} (or \glspl{vfd}) and guide vane control. On \gls{ptb}, valve or compressor control can be replicated using a \gls{pi} controller as shown in \Cref{fig: Controller models}. For the control system models in \Cref{fig: Controller models}, outlet pressure is used as feedback to the compressor and a valve controller. 
@@ -186,7 +186,7 @@ Implementation of a simulation model is divided into three steps as shown in the
 			\caption[An example of a compressed air control valve]{An example of a compressed air control valve\cite{van2015implementation}} 
 			\label{fig: Control}
 		\end{figure}
-		\subsubsection{Compressed air after-cooling}
+		\subsubsection{Compressor after-cooling}
 		The air compression process generates significant heat. Compressed air at high temperatures contains a significant amount of water vapour. After-coolers are installed on compressed air systems to prevent condensation in the air network, to improve the system capacity and to protect equipment from excessive heat \cite{schroeder2009energy}.
 		\par 
 		After-cooling reduces the output air temperature of the compressors. This cooling can affect the operation of the network. Hence, including after-cooling in the simulation model should improve accuracy.
