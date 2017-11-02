@@ -256,13 +256,14 @@ The following simulation tools that may meet the criteria were identified :
  \subsubsection{PTB background}
  \gls*{ptb} is a transient system simulation and optimisation tool and the software was designed for use in mining and industrial thermal hydraulic systems. \gls{ptb} provides a graphical user interface to develop system models by dragging and dropping components intuitively. The interface is shown in \Cref{fig: PTB UI}.
  \par 
+
 \begin{figure}[h!]
  	\centering
- 	\fbox{\includegraphics[trim=0 0.2cm 0 0.7cm,clip=true, width=0.98\textwidth]{Images/2/PTB}}
+ 	\fbox{\includegraphics[trim=0 3.75cm 0 0.7cm,clip=true, width=0.98\textwidth]{Images/2/PTB}}
  	\caption{The graphical interface of the PTB simulation tool}
  	\label{fig: PTB UI}
  \end{figure}
-\gls{ptb} System models consist of combinations of nodes and pipes (see an example of a model schematic in \Cref{fig: PTB UI}). Other component models such as compressors, variable flow demands and controllers are available in the component library. A methodology for the development of compressed air system models in PTB is explained in detail in Chapter 3.
+ \gls{ptb} System models consist of combinations of nodes and pipes (see an example of a model schematic in \Cref{fig: PTB UI}). Other component models such as compressors, variable flow demands and controllers are available in the component library. A methodology for the development of compressed air system models in PTB is explained in detail in Chapter 3.
 %\Gls{ptb}
 %Mare \cite{Mare2016PhD} and Peach \cite{Peach2016Masters} investigated simulation software packages for mining systems; Identifying the strengths and limitations of each. 
  	\subsection{Simulation model verification strategies}\label{VerificationLit}
@@ -289,7 +290,7 @@ The equation is rewritten to obtain a relative error percentage:
  						$N$ & Number of data points in simulation period \\
  					\end{tabular} 
  				\end{table}	
- 			\clearpage
+ 			
  			A major disadvantage of this method is that for transient simulation, the positive and negative errors for individual points can cancel out. This leads to a smaller than expected resultant error that cannot guide the reader to any conclusive statements regarding the accuracy of the model \cite{sarin2010comparing}. If used alone, this strategy is not recommended for verifying transient simulations. 
  			\par 
  						
@@ -320,7 +321,7 @@ The equation is rewritten to obtain a relative error percentage:
  			\end{table} 
  		\subsubsection{Coefficient of determination}
  		The coefficient of correlation is the measure of how accurately a data series ($ x $) can be represented in a linear relationship with data series ($ y $), i.e. $ y = mx+c$. The value of the coefficient ranges between $ -1 $ and $ 1 $ where a value of 1 indicates a perfect linear relationship between the series and a value of $ -1 $ represents a perfect negative linear relationship. A value of 0 indicates that there is no connection between the data series. The correlation coefficient can be calculated using \Cref{eq: Correlation coefficient} \cite{sarin2010comparing}.
- 		
+ 		\clearpage
  		\begin{equation}
  		\label{eq: Correlation coefficient}
  		r = \dfrac{\sum_{n=1}^{N}(A_n - \bar{A})(S_n - \bar{S})}{\sqrt{\sum_{n=1}^{N}(A_n - \bar{A})^2 \cdot \sum_{n=1}^{N}(M_n - \bar{A})^2}}
@@ -370,7 +371,7 @@ The equation is rewritten to obtain a relative error percentage:
  		\end{itemize}
  		The calculations used in the above methods are relatively complex. However, they provide additional measures such as phase, magnitude and slope errors. These metrics could add value in verifying simulations.
  		\subsubsection{Comparing verification methods}
- 		The difference between the strategies is best shown using an example. \Cref{fig:Philipp Difference verify} shows the output and actual power of a simulation of a mining system for a 24-hour duration. In the study by Maré \cite{Mare2016PhD}, \gls{mrd} (\Cref{eq: Average difference} ), was used to determine the accuracy of a simulation model.
+ 		The difference between the strategies is best shown using an example. \Cref{fig:Philipp Difference verify} shows the output and actual power of a simulation of a mining system for a 24-hour duration. In the study by Maré \cite{Mare2016PhD}, \gls{mrd} (\Cref{eq: Average difference}), was used to determine the accuracy of a simulation model.
  		\par 
  		 With \gls{mrd}, positive and negative differences between the simulated and actual profiles were cancelled out and the averages of the two power profiles were very similar. The residual difference relative error was therefore calculated as 1.17\%. However, using the relative \gls{mae} (\Cref{eq: Relative error})  and applying it to the same data series resulted in a relative error of 15.2\%. There is a significant 14\% difference between the two measures. 
  		  \par
