@@ -140,7 +140,7 @@ Implementation of a simulation model is divided into three steps as shown in the
 			\label{fig: Compressor models}
 		\end{figure}		
 
-		\subsubsection{Air flow demand}
+		\subsubsection{Air flow demands}
 			A flow demand represents any air flow leaving the network. Flows leaving the network include any air-consuming equipment such as drills and agitators as well as losses by means of air leaks and open pipes. The air flow is dependent on pressure and the specific resistance to flow of the outlet. 
 			\par 
 			The resistance of the flow demand can be obtained using the inlet pressure, outlet pressure and flow. If the flow is not known, a reasonably accurate estimation can be made by calculating the expected flow from the size of the outlet. However, his estimation will affect the accuracy.
@@ -305,9 +305,15 @@ In this section, the subprocesses required for the development and verification 
 	\subsection{Summary}
 	This section discussed the implementation of the simulation procedure, which involves execution of the simulation scenarios, followed by the numerical calculation and quantification of energy cost savings and other benefits. Finally, a procedure for reporting findings to the mine is proposed.
 \section{Conclusion}
-The aim of Chapter 3 was to provide a methodology to develop compressed air simulations. The method was broken down into three steps:
+The aim of Chapter 3 was to provide a methodology to develop compressed air simulations. The method (represented graphically in \Cref{fig: flow diagram}) was broken down into three main steps:
 \begin{enumerate}
 	\item The \textbf{investigation} step involved obtaining and verifying data and information regarding the compressed air network. Processes to resolve scenarios where data can not be obtained were also suggested.
 	\item In the next step, a procedure for \textbf{developing and verifying a simulation model} was provided. This procedure also described the selection of model and simulation parameters, the development of subcomponent models, as well as a verification procedure A methodology for repeated/periodic simulation was also provided.
 	\item The final step involved the \textbf{execution} of the simulation followed by proposed methods to calculate, quantify and report the potential benefits of the simulated scenarios.
 \end{enumerate}
+\begin{figure}[h]
+	\centering
+	\fbox{\includegraphics[width=\textwidth]{Graphs/3/flow.pdf}}
+	\caption{Graphical representation of the methodology}
+	\label{fig: flow diagram}
+\end{figure}
