@@ -6,7 +6,6 @@
 \usepackage{csquotes}
 %Uk english text 
 \usepackage{babel}
-
 %Bibliography
 \usepackage[square,comma,numbers]{natbib}
 %List of accronyms, Nomenclature
@@ -210,12 +209,12 @@ I would like to acknowledge the following people for the contributions towards c
 
 \clearpage
 
-\renewcommand{\arraystretch}{1.2}
-\linespread{1}
+\renewcommand{\arraystretch}{1}
+\linespread{0.1}
 %List of symbals
 %List of abreviations
 	\addcontentsline{toc}{chapter}{Abbreviations and nomenclature}
-	\printglossary[type=\acronymtype]
+	\printglossary[title=Abbreviations,type=\acronymtype]
 	\newpage
 	\printglossary[title=Nomenclature]
 	\newpage

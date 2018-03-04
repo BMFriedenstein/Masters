@@ -8,7 +8,7 @@
 \section{Introduction}
 This section will validate the developed simulation methodology by means of case studies. Mining compressed air systems were chosen as suitable case studies based on the availability of data and the scope for energy and operational improvement. Two different mines were selected for the study. 
 \par 
-Three case studies were performed. In Case Study 1 and 2, improvements were simulated on mine A and mine B respectively. In Case Study 3, periodic simulation analysis was implemented by using the simulation developed for Case Study 2. Based on the results of the three case studies, the potential benefits of compressed air simulations for the South Africa mining industry are next estimated and discussed.
+Three case studies were performed. In Case Study 1 and 2, improvements were simulated on mine A and mine B respectively. In Case Study 3, periodic simulation analysis was implemented by using the simulation developed for Case Study 2. Based on the results of the three case studies, the potential benefits of compressed air simulations for the South African mining industry are then estimated and discussed.
 
 \section{Case Study 1: Simulated improvements on mine A}
 \subsection{System investigation}
@@ -41,7 +41,7 @@ The simulation component models were developed and calibrated using the respecti
 \begin{itemize}
 	\item The effect of compressed air after-cooling is negligible
 	\item Heat transfer over the pipe length is negligible
-	\item Underground air conditions are typical
+	\item Underground air conditions are typical\footnote{Typical air conditions were obtained from trends of logged measurement from similar mines.}
 	\item Surface ambient air conditions follow normal summer trends
 \end{itemize} 
 The model components were calibrated so that the simulated outputs matched data from the real system. The process flow diagram for the simulation is shown in \Cref{fig: BEET Baseline model} (Appendix \ref{Schematics}), while the model data inputs and outputs are described in \Cref{table: Mine A inputs/outputs}.\\
@@ -89,16 +89,16 @@ Verification was performed to ensure that simulated output accuracy was $>95$\%.
 		&Verification method & Result & $Err_{\%}$\\
 		\hhline{====}
 		\multicolumn{4}{l}{\textbf{ Total Flow}}\\
-		&Residual Difference  & 0.25 kg/s & 2.73\% \\
-		&\gls{mae} 					 & 0.27 kg/s error & 3.0\% \\
+		&Residual Difference  & 0.25 $kg/s$ & 2.73\% \\
+		&\gls{mae} 					 & 0.27 $kg/s$ error & 3.0\% \\
 		&Coefficient of determination & $r^2 =0.99$ & -\\ 
 		\multicolumn{4}{l}{\textbf{ Total power}}\\
 		&Residual Difference  & 0.02 MW & 0.57\% \\
-		&\gls{mae} 					 & 0.14 MW error & 2.78\% \\
+		&\gls{mae} 					 & 0.14 $MW$ error & 2.78\% \\
 		&Coefficient of determination & $r^2 =0.91$ & -\\ 
 		\multicolumn{4}{l}{\textbf{ Compressor outlet pressure}}\\
-		&Residual Difference  &0.03 kPa & 0.01\% \\
-		&\gls{mae} 					 & 0.21 kPa error & 0.03\% \\
+		&Residual Difference  &0.03 $kPa$ & 0.01\% \\
+		&\gls{mae} 					 & 0.21 \textbf{kPa} error & 0.03\% \\
 		&Coefficient of determination & $r^2 =0.99$ & -\\
 		\hline
 	\end{tabular} 
@@ -110,9 +110,9 @@ The accuracy of the simulation was checked in more detail to ensure that the sub
 \subsubsection{Scenario 1: Compressor set points}
 The Eskom evening peak tariff time occurs during the blasting shift. During this time, the underground pressure requirements are lower than for the rest of the day. Reducing pressure in the network reduces power, as less work is required from the compressors. In addition, losses caused by air leaks are reduced. However, lowering the pressure  set-point of the compressors requires that the air to the gold plant be independently controlled. 
 \par 
-The compressor  set-points were reduced for the simulation model to 420 \glssymbol{kpa}; the minimum allowed compressor  set-point during the drilling shift. The compressor schedule was changed to allow independent control of the gold plant pressure, which was maintained at 490 \glssymbol{kpa}. 
+The compressor  set-points were reduced for the simulation model to 420 $kPa$; the minimum allowed compressor  set-point during the drilling shift. The compressor schedule was changed to allow independent control of the gold plant pressure, which was maintained at 490 $kPa$. 
 \par 
-The results of the simulation, shown, in \Cref{fig: CompSetpoints Results Beatrix}, indicated an average power reduction of 0.46MW \gls{pc}. This energy optimisation relates to R0.37m per year energy cost saving to the mine.
+The results of the simulation, shown, in \Cref{fig: CompSetpoints Results Beatrix}, indicated an average power reduction of 0.46 $MW$ \gls{pc}. This energy optimisation relates to R0.37m per year energy cost saving to the mine.
 %%%%%
 \clearpage 
 \begin{figure}[!htbp]
@@ -125,7 +125,7 @@ The results of the simulation, shown, in \Cref{fig: CompSetpoints Results Beatri
 \subsubsection{Scenario 2: Control valves set points}
 An alternative scenario was to reduce the pressure at the control valves at each level. By reducing pressure at the control,  set-points could be lowered to the minimum requirement per level. This reduction could lead to higher savings than could be achieved through compressor set-point reduction. The scenario would be relatively easy to implement as it would not require any changes to the compressor control schedule.
 \par 
-Air pressure  set-points were reduced to 300 kPa at the underground control valves during the evening peak period. Analysis of the simulation results showed a 1MW average \gls{pc} saving. The intervention would lead to a \gls{pa} cost saving of R0.91m.
+Air pressure  set-points were reduced to 300 $kPa$ at the underground control valves during the evening peak period. Analysis of the simulation results showed a 1 $MW$ average \gls{pc} saving. The intervention would lead to a \gls{pa} cost saving of R0.91m.
 \begin{figure}[h!]
 	\centering
 	\input{Graphs/4/BeetResults/ValveSetpoints/ValveSetpoints}
@@ -144,10 +144,10 @@ A comparison of the scenarios (see \Cref{Table: A Comparison}) showed that Scena
 		Scenario & Power saving & Cost saving \gls{pa} \\
 		\hhline{===} 
 		\multicolumn{3}{l}{\textbf{Scenario 1 results}} \\
-		Reducing compressor  set-points & $ 0.46 $ MW \gls{pc} & R0.37m \\
+		Reducing compressor  set-points & $ 0.46 $ $MW$ \gls{pc} & R0.37m \\
 		\\
 		\multicolumn{3}{l}{\textbf{Scenario 2 results}} \\
-		Reducing underground pressure during evening peak& 1.0 MW \gls{pc} & R0.91m\\
+		Reducing underground pressure during evening peak& 1.0 $MW$ \gls{pc} & R0.91m\\
 		\hline
 	\end{tabular}
 	
@@ -155,7 +155,7 @@ A comparison of the scenarios (see \Cref{Table: A Comparison}) showed that Scena
 \end{table}
 
 \subsection{Validation of results}
-Scenario 2 was implemented on the actual compressed air system. An energy saving of just under 1 MW \gls{pc} was recorded when compared with the 2016 power baseline profile. These results matched the simulated scenario closely. \Cref{fig: Actual permormance beet} shows the practical result compared with the simulated and baseline power profiles. The average evening peak power clip achieved on the actual system was 0.95 MW. This energy improvement was within a 5\% error of the simulated result.
+Scenario 2 was implemented on the actual compressed air system. An energy saving of just under 1 $MW$ \gls{pc} was recorded when compared with the 2016 power baseline profile. These results matched the simulated scenario closely. \Cref{fig: Actual permormance beet} shows the practical result compared with the simulated and baseline power profiles. The average evening peak power clip achieved on the actual system was 0.95 $MW$. This energy improvement was within a 5\% error of the simulated result.
 \begin{figure}[h!]
 	\centering
 	\input{Graphs/4/BeetValidate/BeetValidate}
@@ -163,7 +163,7 @@ Scenario 2 was implemented on the actual compressed air system. An energy saving
 	\label{fig: Actual permormance beet}
 \end{figure}
 \subsection{Summary}
-A case study was implemented on a mine compressed air network in the Free State. Following the simulation methodology, an investigation was performed to gather data and identify potential interventions. A simulation model that was developed to test scenarios revealed a \gls{pc} saving of 1 MW, which would result in a cost saving of R0.9m. The simulation was validated with results from implementation on the actual system.
+A case study was implemented on a mine compressed air network in the Free State. Following the simulation methodology, an investigation was performed to gather data and identify potential interventions. A simulation model that was developed to test scenarios revealed a \gls{pc} saving of 1 $MW$, which would result in a cost saving of R0.9m. The simulation was validated with results from implementation on the actual system.
 \section{Case Study 2: Simulated improvements on mine B}
 	\subsection{System investigation}
 	Case Study 2 was performed at a large South African gold mine. The mine utilises five compressors to supply compressed air to various surface and underground operations. An investigation was carried out to gather the data and information required to build a simulation model of the network as well as to identify potential cost-saving simulation scenarios.
@@ -186,7 +186,7 @@ A case study was implemented on a mine compressed air network in the Free State.
 Based on the investigation, a compressed air network was modelled in \gls{ptb}. The methodology described in Chapter 3 was utilised in this process, and the following assumptions were made to simplify the model development:
 \begin{itemize}
 	\item After-cooling reduced compressed air temperature from $ 100 ^o $ \gls{c} to $ 40 ^o $ \gls{c}
-	\item Typical underground air conditions existed
+	\item Typical underground air conditions existed\footnote{Typical air conditions were obtained from trends of logged measurement from similar mines.}
 \end{itemize}
  The boundaries of the baseline simulation were selected based on the available data for the system. For maximum accuracy, the simulation step size was set to the two minutes to match the resolution that was available from the data source.
 The model components were calibrated so that the simulated outputs matched data from the real system. The process flow diagram for the simulation is shown in \Cref{fig: KUS Baseline model} (Appendix \ref{Schematics}). The model data inputs and outputs are described in \Cref{table: Mine B inputs/outputs}.
@@ -209,7 +209,6 @@ The model components were calibrated so that the simulated outputs matched data 
 	\subsubsection{Verification of the simulation model}
 	The verification methodology was used to verify the simulation model by comparing the simulation outputs to actual measured values. Since the compressor's outlet pressure often does not match the  set-point, the measured outlet pressure was used as set points for the compressors to verify the power and flow outputs. The  set-points ensured that the pressure in the network was identical to that of the actual system.
 	\par 
-
  With the simulated network pressure almost identical to the actual, the power and air-flow outputs were compared with outputs from the physical system. \Cref{fig: Verification Power kusasalethu} and \Cref{fig: Verification Flow kusasalethu} show the comparison of the total power and flow of the system with the physically measured values for that same period. The relative error of these process parameters compared to the real network was $1.02 \%$ and $1.36 \%$ respectively. This simulation error was within the acceptable error limits. A summary of the  verification metric for the major process totals is provided in \Cref{Kus verification table}.
  \par
 	\begin{figure}[h!]
@@ -243,16 +242,16 @@ The model components were calibrated so that the simulated outputs matched data 
 		&Verification method & Result & $Err_{\%}$\\
 		\hhline{====}
 		 \multicolumn{4}{l}{\textbf{ Total Flow}}\\
-		&Residual Difference  & 0.22 kg/s & 0.53\% \\
-		&\gls{mae} 					 & 0.43 kg/s error & 1.02\% \\
+		&Residual Difference  & 0.22 $kg/s$ & 0.53\% \\
+		&\gls{mae} 					 & 0.43 $kg/s$ error & 1.02\% \\
 		&Coefficient of determination & $r^2 =0.99$ & -\\ 
 		 \multicolumn{4}{l}{\textbf{ Total power}}\\
-		&Residual Difference  & 0.05 MW & 0.39\% \\
-		&\gls{mae} 					 & 0.16 MW error & 1.36\% \\
+		&Residual Difference  & 0.05 $MW$ & 0.39\% \\
+		&\gls{mae} 					 & 0.16 $MW$ error & 1.36\% \\
 		&Coefficient of determination & $r^2 =0.91$ & -\\ 
 		 \multicolumn{4}{l}{\textbf{ Compressor outlet pressure}}\\
-		&Residual Difference  & 2.79 kPa & 0.71\% \\
-		&\gls{mae} 					 & 3.85 kPa error & 0.98\% \\
+		&Residual Difference  & 2.79 $kPa$ & 0.71\% \\
+		&\gls{mae} 					 & 3.85 $kPa$ error & 0.98\% \\
 		&Coefficient of determination & $r^2 =0.890$ & -\\
 		 	\hline
 	\end{tabular} 
@@ -280,7 +279,7 @@ The model components were calibrated so that the simulated outputs matched data 
 		\caption{Baseline system power compared to system power when refuge bay leaks were reduced}
 		\label{fig: RefugeBay Power.}
 	\end{figure} 
-	A recreation the optimised scenario was modelled by setting the refuge bay flow components to 0 $kg/s$. The simulation was performed and the output data was compared to the baseline. \Cref{fig: RefugeBay Power.} shows the baseline power compared to the optimised scenario. The comparison revealed a potential 0.92 MW improvement in \gls{ee} through the optimisation of refuge bay leaks. The optimised scenario would lead to R5.13m in energy cost savings for the mine.
+	A recreation the optimised scenario was modelled by setting the refuge bay flow components to 0 $kg/s$. The simulation was performed and the output data was compared to the baseline. \Cref{fig: RefugeBay Power.} shows the baseline power compared to the optimised scenario. The comparison revealed a potential 0.92 $MW$ improvement in \gls{ee} through the optimisation of refuge bay leaks. The optimised scenario would lead to R5.13m in energy cost savings for the mine.
 	\par
 	An additional pressure benefit was identified during the drilling shift, as shown in \Cref{fig: RefugeBay Pressures.}. The reduced flow leads to an average pressure increase of about 15 \glssymbol{kpa} during the drilling period, which could lead to a general improvement in drilling efficiency and potentially increase the rate of production. Such improvement may well have a greater benefit to the mine than the intended energy cost savings.
 	\begin{figure}[h!]
@@ -316,7 +315,7 @@ The model components were calibrated so that the simulated outputs matched data 
 		\caption{Flow reduction during blasting period for 105 Level}
 		\label{fig: 105 Flow savings}
 	\end{figure}
-Station control had the largest impact on the flow usage for the level. This result reflects the power reduction achieved by each intervention as shown in \Cref{fig: Station vs stope}. The impact was 0.4 and 0.7 MW for the stope and station interventions respectively.
+Station control had the largest impact on the flow usage for the level. This result reflects the power reduction achieved by each intervention as shown in \Cref{fig: Station vs stope}. The impact was 0.4 and 0.7 $MW$ for the stope and station interventions respectively.
 	
 	\begin{figure}[h!]
 		\centering
@@ -324,7 +323,7 @@ Station control had the largest impact on the flow usage for the level. This res
 		\caption{Comparing simulated flow interventions on 105 Level}
 		\label{fig: Station vs stope}
 	\end{figure}
-A simulation was done to estimate the potential savings of extending the evening station control to other levels.  The flow demands for levels 95 to 115 were updated to match the flow saving achieved in the 105 Level simulation. The savings obtained in generalised station control simulation was 2.0 MW \gls{pc}, as shown in \Cref{fig: General station optimise}. It was calculated that this would lead to an annual energy cost saving of R2.5m.
+A simulation was done to estimate the potential savings of extending the evening station control to other levels.  The flow demands for levels 95 to 115 were updated to match the flow saving achieved in the 105 Level simulation. The savings obtained in generalised station control simulation was 2.0 $MW$ \gls{pc}, as shown in \Cref{fig: General station optimise}. It was calculated that this would lead to an annual energy cost saving of R2.5m.
 \begin{figure}[h!]
 	\centering
 	\input{Graphs/4/KUSResults/General/Power}
@@ -345,12 +344,12 @@ A simulation was done to estimate the potential savings of extending the evening
 			 \vspace{0.5em}Scenario & \vspace{0.5em}Power saving & \vspace{0.5em}Cost saving (\gls{pa}) & \vspace{0.5em}Additional benefit \\
 			\hline
 			\multicolumn{4}{l}{\textbf{Scenario 1}} \\
-			Refuge bay leakage reduction & $ 0.92 $ MW \gls{ee} & R5.17m & Increase in drilling pressure \\
+			Refuge bay leakage reduction & $ 0.92 $ $MW$ \gls{ee} & R5.17m & Increase in drilling pressure \\
 			 
 			\multicolumn{4}{l}{\textbf{Scenario 2}} \\
-			105 Level peak time in-Stope control & $ 0.4 $ MW \gls{pc} & R$ 0.3 $m& - \\
-			105 Level peak time Station control & $ 0.7 $ MW \gls{pc} & R$ 2.5 $m& - \\
-			General peak time Station control & $ 2.0 $ MW \gls{pc} & R$ 2.5 $m& - \\
+			105 Level peak time in-Stope control & $ 0.4 $ $MW$ \gls{pc} & R$ 0.3 $m& - \\
+			105 Level peak time Station control & $ 0.7 $ $MW$ \gls{pc} & R$ 2.5 $m& - \\
+			General peak time Station control & $ 2.0 $ $MW$ \gls{pc} & R$ 2.5 $m& - \\
 			\hline 
 		\end{tabular}
 		\label{Table: B Comparison}
@@ -363,7 +362,7 @@ Validation of the simulated scenarios is not available for Case Study 2, as phys
 	\subsection{Summary}
 	A second case study was performed on a mine compressed air network to gather data and identify potential interventions. This investigation included underground spot checks and measurements.
 	\par 
-	 A simulation model was developed to test scenarios. Two scenarios (refuge bay optimisations and per level flow optimisations) were simulated. The simulated interventions showed an \gls{ee} saving of up to 0.92 MW, which would result in a cost saving of R5.17m with an additional pressure improvement for Scenario 1. The results for Scenario 2 showed a \gls{pc} impact of up to 2 MW with an annual energy cost saving of R2.5m. The results of the simulations were reported to the mine.
+	 A simulation model was developed to test scenarios. Two scenarios (refuge bay optimisations and per level flow optimisations) were simulated. The simulated interventions showed an \gls{ee} saving of up to 0.92 $MW$, which would result in a cost saving of R5.17m with an additional pressure improvement for Scenario 1. The results for Scenario 2 showed a \gls{pc} impact of up to 2 $MW$ with an annual energy cost saving of R2.5m. The results of the simulations were reported to the mine.
 \section{Case Study 3: Periodic simulation analysis}
 	\subsection{Preamble}
 	Periodic updating of the inputs of a simulation could be used to verify the accuracy of the compressed air model. If the precision of simulation outputs remains within constraints for subsequent days, this would indicate that the model was correctly calibrated and up to date.
@@ -398,7 +397,7 @@ Validation of the simulated scenarios is not available for Case Study 2, as phys
 		\caption{Flow, pressure and power error percentages for daily periodic simulations over a month}
 		\label{fig: Periodic simulation}
 	\end{figure} 
-The process parameters of the simulation were accurate within 5\% for the duration of the periodic simulation. However, from 2016/11/07, the accuracy of the simulated power dropped by between 10 and 15\%. The average daily power of the system up to that point was approximately 12.5 MW. A 15\% simulation error then relateds to 1.9 MW difference between simulated and actual values. This error suggested a major shift in operation of the system.
+The process parameters of the simulation were accurate within 5\% for the duration of the periodic simulation. However, from 2016/11/07, the accuracy of the simulated power dropped by between 10 and 15\%. The average daily power of the system up to that point was approximately 12.5 $MW$. A 15\% simulation error then related to 1.9 $MW$ difference between simulated and actual values. This error suggested a major shift in operation of the system.
 \par 
 \begin{figure}[h!]
 	\centering
@@ -407,10 +406,10 @@ The process parameters of the simulation were accurate within 5\% for the durati
 	\label{fig: MeasurementAccuracy.}
 \end{figure} 
 
-An analysis was done to try to determine the source of the discrepancy. From the data, it was identified that the simulated power for Compressor 1 was the source of the difference. Checking the actual power measurement for Compressor 1 showed almost a 2 MW drop in power compared to compressor's output in the initial period. At the same time, the amount specific power lowered. This drop in specific power is illustrated in \Cref{fig: MeasurementAccuracy.}, which shows the average daily power for Compressor 1 (blue), compared to the specific power (yellow). 
+An analysis was done to try to determine the source of the discrepancy. From the data, it was identified that the simulated power for Compressor 1 was the source of the difference. Checking the actual power measurement for Compressor 1 showed almost a 2 $MW$ drop in power compared to compressor's output in the initial period. At the same time, the amount specific power lowered. This drop in specific power is illustrated in \Cref{fig: MeasurementAccuracy.}, which shows the average daily power for Compressor 1 (blue), compared to the specific power (yellow). 
 \par
 	
-A 2 MW shift in power was not likely, the results probably indicate that there was a fault in the power metering starting from 2016/11/07. A measurement error explains the perceived increase in efficiency over the same period as less power was being measured then was actually being used. In this situation, the simulated power measurement is a more accurate metric for Compressor 1’s power over this period.
+A 2 $MW$ shift in power was not likely, the results probably indicate that there was a fault in the power metering starting from 2016/11/07. A measurement error explains the perceived increase in efficiency over the same period as less power was being measured then was actually being used. In this situation, the simulated power measurement is a more accurate metric for Compressor 1’s power over this period.
 
  \subsection{Validation}
 Data from independent power meters was compared to the measurements used in the analysis.  \Cref{fig: Corrected Periodic simulation} compares the measured power from the two data sources. By comparing the compressor power data to the independent data, it is clear that there is an error in measurement as suggested by the periodic simulation analysis.
@@ -435,24 +434,24 @@ There are approximately 75 operational gold and \gls{pgm} mines in South Africa,
 		\caption[Gold and Platinum group metal mines in South Africa]{Gold and \gls{pgm} mines in South Africa$^{1,2}$}
 		\label{fig: Mine map}
 	\end{figure}
-In this study, the simulated interventions resulted in savings of (on average) 0.69 MW \gls{ee} or 1.025 $ MW $ \gls{pc}, assuming the following:
+In this study, the simulated interventions resulted in savings of (on average) 0.69 $MW$ \gls{ee} or 1.025 $ MW $ \gls{pc}, assuming the following:
 \begin{itemize}
 	\item There are 75 operational mines
 	\item Similar savings could be identified for compressed at 60\% of the operational mines
 \end{itemize} 
-A potential energy saving of approximately 30 MW \gls{ee} or 45 $ MW $ \gls{pc} could be achieved. The combined cost saving for these interventions would amount to R240m \gls{pa}. 
+A potential energy saving of approximately 30 $MW$ \gls{ee} or 45 $ MW $ \gls{pc} could be achieved. The combined cost saving for these interventions would amount to R240m \gls{pa}. 
 
 \section{Conclusion}
 Chapter 4 aimed to validate the methodology developed in Chapter 3. This validation was achieved through the implementation of two case studies at South African gold mines. A third case study was performed to analyse and validate the value of repeated/periodic simulation.
 \par 
 In Case Study 1, the compressed air network for a gold-mining complex consisting of three mining shafts was investigated. A simulation model was developed, and the accuracy was verified using typical operations obtained from historical data. Two scenarios were simulated, by optimising compressor set-points and reducing pressure during the evening energy peak.
 \par 
-The results showed that there was a potential P.C. power reduction of 0.46 and 1.0 MW respectively. The reduction in power during the energy peak times could lead to a potential cost reduction of up to R0.91m. The result was validated using results of actual tests on the system.
+The results showed that there was a potential P.C. power reduction of 0.46 and 1.0 $MW$ respectively. The reduction in power during the energy peak times could lead to a potential cost reduction of up to R0.91m. The result was validated using results of actual tests on the system.
 \par
 In Case Study 2, the same procedure was applied to another gold mine. This mine consisted of a main and sub-shaft. An investigation was made to gather data and identify potential interventions. The investigation included underground spot checks and measurements.
 \par 
-A simulation model was developed for the system and two scenarios were simulated using the developed model. The simulations showed an \gls{ee} saving of up to 0.92 MW for Scenario 1 and a \gls{pc} impact of up to 2 MW for Scenario 2. This intervention could lead to an energy cost saving of R5.17m for the mine. Additional pressure improvements were identified in Case Study 1 and the results were reported to the mine.
+A simulation model was developed for the system and two scenarios were simulated using the developed model. The simulations showed an \gls{ee} saving of up to 0.92 $MW$ for Scenario 1 and a \gls{pc} impact of up to 2 $MW$ for Scenario 2. This intervention could lead to an energy cost saving of R5.17m for the mine. Additional pressure improvements were identified in Case Study 1 and the results were reported to the mine.
 \par
 Case Study 3 was performed to validate the periodic or repeated simulation methodology. The results showed that the simulation model remained valid for consecutive days in the tested date range. Faulty power measurements were also identified from the results. Further analysis was recommended to determine how long a simulation model could remain valid before re-calibration was required.
 \par 
-Finally, the result of the large-scale implementation of compressed air simulation in South African gold and \gls{pgm} mines was estimated. A conservative estimation showed that a potential power reduction of 50 MW \gls{ee} or 75 $ MW $ \gls{pc} could be obtained. This energy improvement would lead to a significant total energy cost saving of R400m \gls{pa}.
+Finally, the result of the large-scale implementation of compressed air simulation in South African gold and \gls{pgm} mines was estimated. A conservative estimation showed that a potential power reduction of 50 $MW$ \gls{ee} or 75 $ MW $ \gls{pc} could be obtained. This energy improvement would lead to a significant total energy cost saving of R400m \gls{pa}.
