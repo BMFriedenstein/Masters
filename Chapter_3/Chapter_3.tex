@@ -7,9 +7,9 @@
 \enquote{\textit{Great Design is iteration of good design.}} - Dr M. Cobanli\\
 \newpage
 \section{Introduction}
-This chapter provides details about the development and implementation methodology of simulations to optimise compressed air systems in the mining industry. The method that was developed uses insights gathered from the literature that had bee reviewed (see \Cref{Chap2}). The \gls{ptb} simulation software was used for this study. However, the methodology can be adapted for an equivalent alternative tool.
+This chapter provides details about the development and implementation methodology of simulations to optimise compressed air systems in the mining industry. The method that was developed uses insights gathered from the literature that had been reviewed (see \Cref{Chap2}). The \gls{ptb} simulation software was used for this study. However, the methodology can be adapted for an equivalent alternative tool.
 \par 
-Implementation of a simulation model is divided into three steps as shown in the flow diagram in \Cref{fig: Methodology}. Firstly, the specific air network is investigated. The data acquired from the system survey is then utilised to develop and verify a simulation model. In the final step, scenarios are tested using simulations. The results are then quantified and prioritised. After the process has been reviewed, a simulation report is then produced and given to the responsible mine personnel. Each step will be discussed in more detail in the section that follows.
+Implementation of a simulation model is divided into three steps as shown in the flow diagram in \Cref{fig: Methodology}. Firstly, the specific air network is investigated. The data acquired from the system survey is then utilised to develop and verify a simulation model. In the final step, scenarios are tested using simulations. The results are then quantified and prioritised. After the process has been reviewed, a simulation report is produced and given to the responsible mine personnel. Each step will be discussed in more detail in the section that follows.
 
 \begin{figure}[h]
 	\centering
@@ -20,18 +20,19 @@ Implementation of a simulation model is divided into three steps as shown in the
 \section{Investigate the system}
 	\subsection{Preamble}
 		Developing a detailed simulation model of a compressed air network requires thorough comprehension of the inner workings of the system. This section will discuss the investigations needed to obtain the required understanding.
+		\clearpage
 	\subsection{Acquire data} % 
-	The first step in investigating the system is to acquire the data and understanding that will be required to model the functioning of a compressed air system. Such a system survey will need access to resources such as data storage systems, instrumentation, and communication with relevant engineers and personnel.
+	The first step in investigating the system is to acquire the data and understanding that will be required to model the functioning of a compressed air system. Such a system survey will need access to resources such as data storage systems and instrumentation, and communication with relevant engineers and personnel.
 	\par 
 	Comprehensive and up-to-date process layouts illustrate a compressed air network's unique set-up, scale and the location of instrumentation. More detailed layouts can provide per-level air consumption breakdowns of the network, refuge bays areas, mining cross-sections and identified inefficiencies. The layouts are vital to understand the system process and identify what data parameters will be required for the simulation model. 
 	\par 
-	A baseline period\footnote{A period that best reflects the typical operation before implementation of an energy intervention. This period is then compared with a period post-intervention implementation to determine the improvements.} that best represents the typical operation of the mine must be selected. Furthermore, availability of data should be considered. The length of the baseline period is selected based on the scenarios that are to be tested; this can be changed later. For calibrating a compressed air system, a 24-hour period of normal operation is usually sufficient. A longer period may be needed to verify the model. 
+	A baseline period\footnote{A period that best reflects the typical operation before implementation of an energy intervention. This period is then compared with a period after the intervention has been implemented to determine the improvements.} that best represents the typical operation of the mine must be selected. Furthermore, availability of data should be considered. The length of the baseline period is selected based on the scenarios that are to be tested; this can be changed later. For calibrating a compressed air system, a 24-hour period of normal operation is usually sufficient. A longer period may be needed to verify the model. 
 
 	\subsection{Investigate operation schedules}
 	A critical aspect of developing an accurate model of a mining compressed air system is to take note of the operational philosophy of the mine. The schedule for operations such as drilling, blasting or cleaning may have a major impact on compressed air requirements at different times of the day. By utilising the operational schedule, simulation scenarios can be optimised for the different air requirements throughout the day.	
 	
 	\subsection{Verify data accuracy}
-	Data verification involves a process where data is evaluated to ensure accuracy. It is important to verify data that is used for model development as an accurate representation of the operation of a system can only be achieved if data of high quality is used \cite{gous2016data}. The factors that influence a dataset's quality, accuracy and integrity can be summarised as follows:
+	Data verification involves a process where data is evaluated to ensure accuracy. It is important to verify data that is used for model development, as an accurate representation of the operation of a system can only be achieved if data of high quality is used \cite{gous2016data}. The factors that influence a dataset's quality, accuracy and integrity can be summarised as follows:
 	\begin{itemize}
 		\item Conversion of measurement value \cite{meijsen2015verification}
 		\item Storage and collection of the system \cite{vanNiekerk2016quantification}, \cite{Jansevan2016structuring}
@@ -40,18 +41,18 @@ Implementation of a simulation model is divided into three steps as shown in the
 		\item Data abnormalities \cite{gous2016data}
 	\end{itemize} 
 	\par 
-	Therefore, a data verification methodology is utilised to ensure that datasets are of a high quality. In this study, a dataset is built comprising of all the available mining sensors for a 24 hour period of the systems operation. In this study the following checks are performed to verify a data-sets quality:
+	Therefore, a data verification methodology is utilised to ensure that datasets are of a high quality. In this study, a dataset is built comprising of all the available mining sensors for a 24-hour period of the systems operation. The following checks are performed to verify the quality of a data-sets:
 	\begin{enumerate}
-		\item Is there missing patches in data?
+		\item Are there missing patches in data?
 		\item Are the measured values spiking or stagnating?
-		\item Do the values fall in the expected range and follow a typical trend identified from historical data? For example if a compressor has a maximum power rating 4 $MW$ and historical data has shown the machine has operated between 3 and 4 $MW$. Values outside this range could indicate bad readings.
+		\item Do the values fall in the expected range and follow a typical trend identified from historical data? For example if a compressor has a maximum power rating of 4 $MW$ and historical data shows the machine operates between 3 and 4 $MW$. Values outside this range could indicate bad readings.
 		\item Do values from independent measurement devices concur? For example, in a case where there are independent flow measurements for pipelines that diverge from a main line. Assuming there are no losses between the measurement devices, the flow through the main pipe should be equal to the sum of measured flows through the divergent pipes.
-		\item Do related parameters follow the same trends. For example assuming a constant air flow demand, the amount of air flow in a network should correlate with the pressure of the system.
+		\item Do related parameters follow the same trends? For example assuming a constant air flow demand, the amount of air flow in a network should correlate with the pressure of the system.
 	\end{enumerate} 
-If the dataset passes all the checks, or if the failed check are explainable or can be corrected, the dataset is regarded as of high enough standard to be used in the simulation.
+If the dataset passes all the checks, or if the failed checks are explainable or can be corrected, the dataset is regarded as of high enough standard to be used in the simulation.
 
 	\subsection{Resolve missing data}
-		Data that is required to develop the simulation model, such as flows and pressures, may not be actively logged by mine systems. It is often necessary to investigate alternative sources and methods to obtain the data. For example, for process elements where instrumentation is absent, estimations can be made based on assumptions regarding instrumentation on the network or based on spot inspections.
+		Data that is required to develop the simulation model, such as flows and pressures, may not be actively logged by mine systems. It is often necessary to investigate alternative sources and methods to obtain the data. For example, for process elements where instrumentation is absent, estimations can be made based on assumptions regarding instrumentation on the network, or based on spot inspections.
 		\par 
 		Air network specifications such as piping sizes, technical layouts, major leak locations or specifications are often outdated or not recorded. Critical data should be obtained through audits and inspections of the system. If a manual inspection is not possible, estimations should be made from the available data. %\texttt{REMEMBER TO REFERENCE\\ SPECIFIC LOCATION LITERATURE}.
 	
@@ -62,16 +63,17 @@ If the dataset passes all the checks, or if the failed check are explainable or 
 	Compressed air networks are comprised of components such as compressors, valves, pipes and other components. This section will discuss the development, calibration and verification of component models that make up a compressed air simulation model. 
 	
 	\subsection{Select the process boundaries and simulation parameters}
-	The simulation boundaries determine the detail based on which the system process is modelled. For a simple compressed air model, the boundaries can be set around the compressor house. This model would then include only the compressor components, inlet and outlet air flows. Alternatively, a more complex model can be developed by choosing boundaries to include more aspects of the process such as specific flows on mining levels.\par 
+	The simulation boundaries determine the detail based on which the system process is modelled. For a simple compressed air model, the boundaries can be set around the compressor house. This model would then include only the compressor components, inlet and outlet air flows. Alternatively, a more complex model can be developed by choosing boundaries to include more aspects of the process, such as specific flows on mining levels.\par 
 	 \begin{figure}[h]
 	 	\centering
 	 	\fbox{\hspace{0.05\textwidth}\includegraphics[width=0.88\textwidth]{Images/3/Detail.pdf}\hspace{0.05\textwidth}}
 	 	\caption{Selecting boundaries for the simulation model}
 	 	\label{fig: Sensitivity}
 	 \end{figure}
+ \clearpage
 	The process boundaries should be selected based on the input data available, the accuracy targets and the available time and resources. A more detailed model will allow more accurate simulation. However, it may take more time and resources to obtain the data required to calibrate the model. \Cref{fig: Sensitivity} contains an example of different boundary selection for the same system.
 	\par
-	Period and data step sizes of the simulation are just as important. The period or duration of the simulation should be determined to ensure that the effects of a scenario are fully tested. Previous studies commonly simulated a \enquote{typical} 24-hour period of operation, and most mining compressed air systems follow daily trends and patterns. Therefore, there is no need to simulate a longer period as day-to-day results would be very similar. A longer simulation may be required for cases where the system operation varies from day to day.
+	Period and data step sizes of the simulation are just as important. The period or duration of the simulation should be determined to ensure that the effects of a scenario are fully tested. Previous studies commonly simulated a \enquote{typical} 24-hour period of operation, and most mining compressed air systems follow daily trends and patterns. Therefore, there is no need to simulate a longer period, as day-to-day results would be very similar. A longer simulation may be required for cases where the system operation varies from day to day.
 	\par 
 	The simulation step size indicates the data resolution. A lower step size will result in a more accurate simulation of the system. However, the processing and data analysis may be affected. In this study, the smallest available step size\footnote{The minimum step size is determined from the logging interval of the input data instrumentation. For example, if all input data is logged at 10-minute intervals, the minimum step size would be 10 minutes.} was selected to ensure that the simulated results would achieve the desired precision. 
 	\par 
@@ -87,7 +89,7 @@ If the dataset passes all the checks, or if the failed check are explainable or 
 	\end{figure}
 	\subsection{Model the air network components}
 		\subsubsection{Ambient conditions}
-		Ambient air conditions underground and on the surface changes the characteristics of the air, and affects the operation of the system. \Cref{fig: Ambient} shows the average summer air conditions. If no data is available for the specific simulation period, the conditions can be estimated by scaling this profile.
+		Ambient air conditions underground and on the surface change the characteristics of the air, and affects the operation of the system. \Cref{fig: Ambient} shows the average summer air conditions. If no data is available for the specific simulation period, the conditions can be estimated by scaling this profile.
 		\begin{figure}[h!]
 			\centering
 			\fbox{\input{Graphs/3/Ambient/Ambient}}
@@ -95,9 +97,18 @@ If the dataset passes all the checks, or if the failed check are explainable or 
 			\label{fig: Ambient}
 		\end{figure}
 		\par
-		The assumption is made that underground conditions remain constant at each mining level. Pressure and temperature increase with depth as a result of auto compression and rock face temperature. Therefore, the conditions can be estimated using only the depth at each level.
+		The assumption is made that underground conditions remain constant at each mining level. Pressure and temperature increase with depth as a result of auto compression and rock face temperature. Therefore, the conditions can be estimated using only the depth at each level and historically logged data.
+		\par
+		In PTB an air condition is configured using the interface shown in \Cref{fig: BoundaryInput}. The interface allows the user to enter pressure, temperature and humidity profiles for the simulation period as well as a relative elevation of the node in the network.
+		\clearpage
+		\begin{figure}[h]
+			\centering
+			\fbox{\includegraphics[width=0.6\textwidth]{Images/BoundaryInput.png}}
+			\caption{PTB air boundary configuration interface}
+			\label{fig: BoundaryInput}
+		\end{figure}
 		\subsubsection{Air pipes}
-		Pressure losses occur over compressed air networks due to friction within the pipe. These losses should be taken into account in the simulation for large piping networks. A pipe model is used to account for these losses which are defined by the \textit{Darcy-Weisbach equation}\footnote{ B. Glenn, \enquote*{The Darcy–Weisbach Equation,}[Online] \url{https://bae.okstate.edu/faculty-sites/Darcy/DarcyWeisbach/Darcy-WeisbachEq.htm}, [Accessed 20-05-2017]}:
+		Pressure losses occur over compressed air networks due to friction within the pipe. These losses should be taken into account in the simulation for large piping networks. A pipe model is used to account for these losses, which are defined by the \textit{Darcy-Weisbach equation}\footnote{ B. Glenn, \enquote*{The Darcy–Weisbach Equation,}[Online] \url{https://bae.okstate.edu/faculty-sites/Darcy/DarcyWeisbach/Darcy-WeisbachEq.htm}, [Accessed 20-05-2017]}:
 		$$\Delta P = \frac{f L \rho V^2}{2 D}$$
 		Where the pressure difference $\Delta P $ is a function of:
 		\begin{table}[h!]
@@ -117,9 +128,19 @@ If the dataset passes all the checks, or if the failed check are explainable or 
 		\end{table}
 		
 		The pipe component may be used as a valve by controlling the open fraction between 0 and 1. Modelling the valve flow characteristics is discussed in \Cref{Controllers} - \textit{Compressed air controllers}.
+		\begin{figure}[h!]
+			\centering
+			\fbox{\includegraphics[width=0.6\textwidth]{Images/PipeInput.png}}
+			\caption{PTB air pipe configuration interface}
+			\label{fig: PipeInput}
+		\end{figure}
+		\par
+		A pipe section can be configured on PTB using the interface shown in \Cref{fig: PipeInput}. If the pipe parameters are known, they can be entered with the calculate function to configure the pipe. If the parameters are not known, the default values may be used. These values can then be tweaked whilst calibrating the model to ensure the input and output conditions match actual measurements.
+		\par
+		The configuration parameters of the component include a mass flow given inlet and outlet pressure and temperature, an elevation, a check valve pressure (used to induce one-way valve behaviour), and finally a valve fraction profile. 
 		
 		\subsubsection{Compressors}
-		The following three compressor models were investigated, each with varying complexity. The models are:
+		The following three compressor models were investigated, each with varying complexity
 		\begin{itemize}
 			\item Air compressor model
 			\item Dynamic compressor model
@@ -127,20 +148,27 @@ If the dataset passes all the checks, or if the failed check are explainable or 
 		\end{itemize} 
 		The air compressor is a general, simplified model that requires minimal user input by making several assumptions. This model is useful when parameters for a compressor are not available. Alternatively, the air compressor model is ideal when doing a quick or preliminary simulation. However, it is not ideal for detailed simulations that require more precision.
 		\par 
-		The dynamic compressor components are more complex, and they take into account factors such as heat generated by the polytropic process and mechanical inefficiencies. Hence, the model can be used more accurately and for more complex simulations than the general compressor model. However, it should be noted that the dynamic compressor is simplified by several assumptions, for example, a constant efficiency at varying loads. 
+		\clearpage
+		The dynamic compressor components are more complex, and they take into account factors such as heat generated by the polytropic process and mechanical inefficiencies. The model works by creating a pressure ratio in the network, inducing a flow. Hence, the model can be used more accurately and for more complex simulations than the general compressor model. However, it should be noted that the dynamic compressor is simplified by several assumptions, for example, a constant efficiency at varying loads. 
+		\par 
+		Another compressor model, the positive displacement compressor, generates pressure by forcing a flow in the network. When using this model, the flow rate is not a function of the pressure ratio. This limits the model as multiple compressors cannot be configured in series.
 		\par 	 
 		For most scenarios, the dynamic compressor model is very suitable. The dynamic compressor is modelled by fitting a quadratic curve through three points of operation to obtain an equation for corrected mass flow as a function of the pressure ratio. This characteristic curve of a compressor (as shown in \Cref{fig: Compressor Curve}) can be accurately estimated even when only one data point is available by making approximations for the zero flow and pressure points on the curve.
-		\par
-		
-		 Once the flow characteristics of the compressors are set, the efficiency and \gls{polyCof} parameters are calibrated such that the output power and air temperature match the actual or estimated outputs of the compressor.
-		\par 
 		\begin{figure}[h!]
 			\centering
 			\fbox{\input{Graphs/3/AproxCurve/AproxCurve}}
 			\caption{Estimating the characteristic curve of a compressor by fitting a quadratic function to points of operation}
 			\label{fig: Compressor Curve}
 		\end{figure}
-
+		\par
+		\begin{figure}[h]
+			\centering
+			\fbox{\includegraphics[width=0.6\textwidth]{Images/CompressorInput.png}}
+			\caption{PTB air compressor model configuration interface}
+			\label{fig: CompressorInput}
+		\end{figure}
+		\Cref{fig: CompressorInput} shows the configuration parameters for the air compressor model. The model requires a pressure ratio, flow and efficiency rating at the three points of operation previously discussed. In addition, the relative elevation of the compressor, polytropic coefficient and additional flow and efficiency factors are necessary to accurately model the compressor. Once the flow characteristics of the compressors are configured, the efficiency and \gls{polyCof} parameters are calibrated such that the output power and air temperature match the actual or estimated outputs of the compressor.
+		\par 
 		Once the models have been accurately calibrated, the compressor component integrates into the air network in the arrangement shown in \Cref{fig: Compressor models}. The compressor is connected to the inlet air source via an inlet pipe and air node, and the rest of the network via an air node and outlet pipe. The additional pipe components allow the inlet and outlet conditions to be monitored and controlled in the simulation.
 		\begin{figure}[h]
 			\centering
@@ -150,11 +178,18 @@ If the dataset passes all the checks, or if the failed check are explainable or 
 		\end{figure}		
 
 		\subsubsection{Air flow demands}
-			A flow demand represents any air flow leaving the network. Flows leaving the network include any air-consuming equipment such as drills and agitators as well as losses by means of air leaks and open pipes. The air flow is dependent on pressure and the specific resistance to flow of the outlet. 
+			A flow demand represents any air flow leaving the network. Flows leaving the network include any air-consuming equipment such as drills and agitators, as well as losses by means of air leaks and open pipes. The air flow is dependent on pressure and the specific resistance to flow of the outlet. 
 			\par 
-			The resistance of the flow demand can be obtained using the inlet pressure, outlet pressure and flow. If the flow is not known, a reasonably accurate estimation can be made by calculating the expected flow from the size of the outlet. However, his estimation will affect the accuracy.
+			\clearpage
+			The resistance of the flow demand can be obtained using the inlet pressure, outlet pressure and flow. If the flow is not known, a reasonably accurate estimation can be made by calculating the expected flow from the size of the outlet. However, this estimation will affect the accuracy.
 			\par
-			 The air demand may vary throughout the day. For example, a mining section may utilise more machines during certain periods of the day. A schedule and flow profile is used to replicate this in the simulation. \Cref{fig: Demand component} shows how a calibrated air demand or leak is integrated into the simulation model on \gls{ptb}.
+			\begin{figure}[h]
+				\centering
+				\fbox{\includegraphics[width=0.6\textwidth]{Images/DemandInput.png}}
+				\caption{PTB air demand component configuration interface}
+				\label{fig: DemandInput}
+			\end{figure}
+		The air demand component is calibrated on PTB using the interface shown in \Cref{fig: DemandInput}. The component allows for flow, input pressure, output pressure, temperature and elevation profiles to be set for the period of the simulation. This is especially useful when modelling air usage as air demand may vary throughout the day. For example, a mining section may utilise more machines during certain periods of the day. A schedule and flow profile is used to replicate this in the simulation. \Cref{fig: Demand component} shows how a calibrated air demand or leak is integrated into the simulation model on \gls{ptb}.
 			\begin{figure}[h]
 				\centering
 				\fbox{\includegraphics[trim =-12cm 0.5cm -12cm 0.5cm, width=0.98\textwidth]{Images/3/AirDemand}}
@@ -162,9 +197,9 @@ If the dataset passes all the checks, or if the failed check are explainable or 
 				\label{fig: Demand component}
 			\end{figure}
 		\subsubsection{Compressed air controllers}\label{Controllers}
-			Simulation components require dynamic control to replicate the operation of the actual air network. Control is typically implemented on compressors and valves throughout the network to modulate according to set-points and schedules. It is important to not only include the controllers in the simulation but to replicate any nonlinearities, limitations and response delays related to specific types of control. Implementing these control factors will ensure that the model reacts in the same way as the actual network would, thus improving accuracy.
+			Simulation components require dynamic control to replicate the operation of the actual air network. Control is typically implemented on compressors and valves throughout the network to modulate according to set-points and schedules. It is important to not only include the controllers in the simulation, but to replicate any nonlinearities, limitations and response delays related to specific types of control. Implementing these control factors will ensure that the model reacts in the same way as the actual network would, thus improving accuracy.
 			\par 
-			On a typical mine, a compressor's power output is controlled to ensure that the discharge pressure matches a specified  set-point. This control is achieved through either \glspl{vsd} (or \glspl{vfd}) or guide vane control. On \gls{ptb}, valve or compressor control can be replicated using a \gls{pi} controller as shown in \Cref{fig: Controller models}. For the control system models in \Cref{fig: Controller models}, outlet pressure is used as feedback to the compressor and a valve controller. 
+			On a typical mine, a compressor's power output is controlled to ensure that the discharge pressure matches a specified  set-point. This control is achieved through either Variable Speed Drives (\glspl{vsd}) (or \glspl{vfd}) or guide vane control. In \gls{ptb}, valve or compressor control can be replicated using a \gls{pi} controller as shown in \Cref{fig: Controller models}. For the control system models in \Cref{fig: Controller models}, outlet pressure is used as feedback to the compressor and a valve controller. 
 			\par 
 			
 	\begin{figure}[h!]
@@ -173,7 +208,7 @@ If the dataset passes all the checks, or if the failed check are explainable or 
 		\caption[Control components in Process Toolbox]{Control components in Process Toolbox}
 		\label{fig: Controller models}
 	\end{figure}
-		Guide vanes are used to control pressure/flow of compressors in mining air systems. Guide vane control entails controlling the position of the inlet guide vane. The guide vane is opened or closed to control the compressors discharge pressure. Manipulating the guide vane position will affect the output power that the compressor imparts into the system. 
+		Guide vanes are used to control pressure/flow of compressors in mining air systems. Guide vane control entails controlling the position of the inlet guide vane. The guide vane is opened or closed to control the compressor's discharge pressure. Manipulating the guide vane position will affect the output power that the compressor imparts into the system. 
 		\par 
 		\Cref{fig: Guide vane position} shows the relationship between power and guide vane position. A relationship between guide vane position and compressor output can be used to estimate the effect of guide vane control. The model should take into account the minimum guide vane position limit that is typically set at around 40\% open. As illustrated in \Cref{fig: Guide vane position}, this control position maps to an electrical power for the compressor of about 60\% of the maximum rated power for the compressor. When a higher pressure is required by the mine than can be obtained with all the compressor guide vanes fully opened, another compressor is needed to operate in the system. 
 		\begin{figure}[h]
@@ -218,12 +253,21 @@ If the dataset passes all the checks, or if the failed check are explainable or 
 		\end{table}
 	\\
 	Depending on the accuracy requirement, after-cooling can be excluded from the simulation. Post after-cooling, compressed air is usually still warmer than ambient conditions. Air temperatures underground can be accurately matched by including heat transfer for compressed air pipelines.
-	
+	\subsubsection{Model calibration process}
+	Once the network of component models has been constructed, calibration is performed to ensure the model reacts to input and output conditions with minimal error when compared to the actual system. Component models were calibrated individually as follows:
+	\begin{itemize}
+		\item Guess or estimate a starting configuration for the component model
+		\item Run a simulation using known input and output conditions
+		\item Determine the simulation error for the component
+		\item Adjust component configuration 
+		\item Repeat steps 2 to 4 until the error is reduced to an acceptable level
+	\end{itemize} 
+	Once all component models have been accurately calibrated, the simulation model should be verified.
 	\subsection{Verify the simulation model}
 	Based on the review of literature in \Cref{VerificationLit}, it was determined that \gls{mae} and the coefficient of determination are the most effective methods for measuring model accuracy. Therefore, both measures are utilised in the model verification in this study. These measures are obtained by comparing the major simulation outputs (total system power, flow and pressure) to actual data from the system. R-squared and \gls{mae} metrics are calculated by applying the applicable methodologies discussed in \Cref{VerificationLit}.	
 	\par 
-	For this study, the selected verification constraints were selected as : \\ {$r^2 > 0.9 $ and $ Err_{\%} < 5\% $}\\ 
-	For the purposes of of this study, if all these limits are met for the power, flow and pressure of the system, the model is considered accurate. As an extra measure, the relative error of the output for the minor model components should be $ > 85\%$ of the actual data. To obtain the true error of the model, instrumentation measurement error should be combined with the calculated simulation error.
+	For this study, the selected verification constraints were selected as: \\ {$r^2 > 0.9 $ and $ Err_{\%} < 5\% $}\\ 
+	For the purposes of this study, the model is considered accurate if all these limits are met for the power, flow and pressure of the system. As an extra measure, the relative error of the output for the minor model components should be $ > 85\%$ of the actual data. To obtain the true error of the model, instrumentation measurement error should be combined with the calculated simulation error.
 	\par 
 	Furthermore, periodically repeated simulations could be used to verify simulations more definitively. To perform the repeated simulation verification, the input variables should be updated for each new period. The output values of the simulation should then be compared with actual measurements. For each simulation, the verification constraints should be met.
 		
@@ -235,7 +279,10 @@ If the dataset passes all the checks, or if the failed check are explainable or 
 			\item Air demands
 			\item Operational changes
 		\end{itemize} 
-	Changing the simulation baseline period for a calibrated simulation should require only the updating of the input parameters. \Cref{fig: Compressor schedule} shows an example of a changing compressor schedule where an input parameter would need to be updated in the simulation.	
+	Assuming the air conditions remain relatively similar, changing the simulation baseline period for a calibrated simulation should require only the updating of the input parameters. \par  \clearpage
+	In reality, a change in input will affect the flow properties within the network. Specifically, changing fluid parameters will affect friction factors. However, in this dissertation, pipe losses were significantly simplified. The assumption was also made that the difference in input conditions between baseline will have a negligible effect on model accuracy.
+	\par
+	In \Cref{fig: Compressor schedule}, an example is shown of a changing compressor schedule where an input parameter would need to be updated in the simulation.	
 
 		\begin{figure}[h]
 			\centering
@@ -244,7 +291,7 @@ If the dataset passes all the checks, or if the failed check are explainable or 
 			\label{fig: Compressor schedule}
 		\end{figure}
 	\subsection{Periodic simulation}	
-		Periodic simulation refers to the repetition of simulations over subsequent periods to determine the sequential accuracy of the model. Sequential accuracy is important to verify that the model is valid in general and not just for a single period. This simulation will also indicate where operational changes have occurred as the simulation accuracy will be reduced.
+		Periodic simulation refers to the repetition of simulations over subsequent periods to determine the sequential accuracy of the model. Sequential accuracy is important to verify that the model is valid in general and not just for a single period. This simulation will also indicate where operational changes have occurred, as the simulation accuracy will be reduced.
 		\par 
 		The following procedure, as illustrated in \Cref{fig: PeriodicProcess}, was followed to implement periodic simulation: 
 		\begin{itemize}
@@ -252,7 +299,7 @@ If the dataset passes all the checks, or if the failed check are explainable or 
 			\item Import input data series into the simulation model
 			\item Execute/solve the simulation
 			\item Export the output simulation values
-			\item Compare output data with the systems actual operation and identify major discrepancies
+			\item Compare output data with the system's actual operation and identify major discrepancies
 			\item Trigger the process periodically
 		\end{itemize}
 	%%%%%%%%%%%%%
@@ -265,18 +312,20 @@ If the dataset passes all the checks, or if the failed check are explainable or 
 		\end{figure}
 	
 	\subsection{Summary}	
-In this section, the sub-processes required for the development and verification of a simulation model were discussed. First, a method for selecting the model boundaries and parameters were reviewed, followed by a discussion on the modelling procedure for compressed air sub-components. The verification process and the selection of accuracy limits were next (see the analysis performed in section \Cref{VerificationLit}). The simulation input selection procedure was also reviewed and a procedure was provided for repeated/periodic simulation.
+In this section, the sub-processes required for the development and verification of a simulation model were discussed. First, a method for selecting the model boundaries and parameters were reviewed, followed by a discussion on the modelling procedure for compressed air sub-components. 
+\par 
+The verification process and the selection of accuracy limits were next (see the analysis performed in Section \Cref{VerificationLit}). The simulation input selection procedure was also reviewed and a procedure was provided for repeated/periodic simulation.
 
 \section{Implement the simulation}
 	\subsection{Preamble}
 		Once a simulation has been developed and verified, the implementation of interventions and scenarios follows. In this section, the approach towards implementing the simulation methodology, and an analysis of interventions will be discussed.
 	\subsection{Execute simulation scenarios}
-		At this point, the simulation model has been verified using historical data. The verified output data series is now used as a baseline upon which interventions can be quantified. The simulation inputs of the model have now been adjusted to create the desired scenario. For example to create a scenario where a specific compressor is shut down over a period, the input schedule of the compressor is adjusted in the simulation model.
+		At this point, the simulation model has been verified using historical data. The verified output data series is now used as a baseline upon which interventions can be quantified. The simulation inputs of the model have now been adjusted to create the desired scenario. For example, to create a scenario where a specific compressor is shut down over a period, the input schedule of the compressor is adjusted in the simulation model.
 		\par
 		The simulation is then executed, and this process is repeated for each of the scenarios. For each scenario, the desired output parameters must be exported for further analysis.
 
 	\subsection{Quantify operational benefit}
-		With the data for each of the simulated scenarios exported, the relative improvement compared with the baseline should now be quantified. This comparison is achieved by analysing the differences between the theoretical baseline and optimised data series as shown visually in \Cref{fig: Savings Power.}. The theoretical improvement was achieved by reducing the power of baseline data series between 16:00 and 00:00. To quantify the benefit, the saving series is calculated by subtracting the the optimised series from the baseline:
+		With the data for each of the simulated scenarios exported, the relative improvement compared with the baseline should now be quantified. This comparison is achieved by analysing the differences between the theoretical baseline and optimised data series, as shown visually in \Cref{fig: Savings Power.}. The theoretical improvement was achieved by reducing the power of the baseline data series between 16:00 and 00:00. To quantify the benefit, the saving series is calculated by subtracting the optimised series from the baseline:
 		$$Saving_n = Benchmark_n - Optimised_n$$
 		The average power, pressure or flow improvement is then quantified as follows:
 		$$Saving_{Ave} = \sum_{n=1}^{N}{\left( \frac{Saving_n}{N}\right)}$$
@@ -316,9 +365,9 @@ In this section, the sub-processes required for the development and verification
 \section{Conclusion}
 The aim of Chapter 3 was to provide a methodology to develop compressed air simulations. The method (represented graphically in \Cref{fig: flow diagram}) was broken down into three main steps:
 \begin{enumerate}
-	\item The \textbf{investigation} step involved obtaining and verifying data and information regarding the compressed air network. Processes to resolve scenarios where data can not be obtained were also suggested.
+	\item The \textbf{investigation} step involved obtaining and verifying data and information regarding the compressed air network. Processes to resolve scenarios where data cannot be obtained, were also suggested.
 	\item In the next step, a procedure for \textbf{developing and verifying a simulation model} was provided. This procedure also described the selection of model and simulation parameters, the development of subcomponent models, as well as a verification procedure A methodology for repeated/periodic simulation was also provided.
-	\item The final step involved the \textbf{execution} of the simulation followed by proposed methods to calculate, quantify and report the potential benefits of the simulated scenarios.
+	\item The final step involved the \textbf{execution} of the simulation, followed by proposed methods to calculate, quantify and report the potential benefits of the simulated scenarios.
 \end{enumerate}
 \begin{figure}[h]
 	\centering
