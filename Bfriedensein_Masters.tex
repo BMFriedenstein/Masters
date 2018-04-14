@@ -104,7 +104,7 @@
 	opacity=1,
 	angle=0,
 	contents={%
-		\includegraphics[width=\paperwidth,height=\paperheight]{Images/frontpage.pdf}
+		\includegraphics[width=\paperwidth,height=\paperheight]{Images/frontpage3.pdf}
 	}%
 }
 \usepackage{datetime}
@@ -118,7 +118,7 @@
 
 \usepackage[ protrusion=true, expansion=true, final, babel ]{microtype}
 %disable Ligatures (for word ocr conversion)
-\DisableLigatures{encoding = *, family = * }
+%\DisableLigatures{encoding = *, family = * }
 
  
  % Colors
@@ -130,26 +130,40 @@
 \pagenumbering{roman}	
 % Title page
 \begin{titlepage}
-	\BgThispage	
-		\vspace{0cm}
-		\begin{center}
-			\textbf{\singlespacing\huge{Simulating operational improvements on mine compressed air systems}\\
-			}\par
-			\vspace{3cm}
-			\LARGE{ \textbf{BM Friedenstein \\28354516} }
-		\end{center}
+	\BgThispage	% Insert pdf background on this page
 	
-	\vspace{2cm}
+% Title, name and orcid number
+	\begin{center}
+		\textbf{\singlespacing\huge{\vspace{4cm}Simulating operational improvements on mine compressed air systems}\\
+		}		
+		\vspace{1cm} % Spaceing after title
+		\LARGE{ \textbf{BM Friedenstein } }\\
+		\LARGE{ \textbf{\hspace{2.5cm}orcid.org 0000-0002-3041-6520 } }\\
+	\end{center}	
+
+	\vspace{0cm}% spacing between title and submission statement	
 	
-\begin{flushleft}
-	{\singlespacing\centering \large Dissertation submitted in fulfilment of the requirements for the \\ degree {\color{MasterBlue} \textit{Master of Engineering}} in {\color{MasterBlue}Electrical and Electronic \\ Engineering} at the Potchefstroom Campus of the North-West\\ University\\
+% Submission statement
+	{
+		\singlespacing\centering \large Dissertation submitted in fulfilment of the requirements for the \\ degree {\color{MasterBlue} \textit{Master of Engineering}} in {\color{MasterBlue}Electrical and Electronic  Engineering} at the \\ North-West University\\
 	}
-	\vspace{2cm}
-	{\large \setlength{\parindent}{0.5cm} Supervisor: Dr JF van Rensburg \\
+
+	\vspace{4cm} % Spacing after statement
+	
+% Super visor
+	{
+		\centering{ \large \setlength{\parindent}{0.5cm} Supervisor: \hspace{1.5cm} Dr JF van Rensburg
+	} \\
+	
 	\vspace{1cm}
-	\large{Examination October 2017}\\		
+
+% Last info	
+	\begin{flushleft}
+		\large{ Graduation May 2018}\\	
+		\large{ Student number: 28354516}\\	
+	\end{flushleft}
+		
 	}
-\end{flushleft}
 \end{titlepage}
 \clearpage
 
@@ -179,7 +193,7 @@ In this study, a simulation methodology was developed and investigations were co
 	 \par
 Two case studies were evaluated. For each case study, various scenarios were simulated. In Case Study 1, two air network intervention scenarios were tested on a compressed air system. The results showed that energy cost savings of R0.91m could be achieved. The simulation results were very similar to tests later performed on the physical systems.
 	 \par 
-The results of Case Study 2 showed that by reducing air usage at refuge bays, an average power reduction of 1 megawatt (MW) could be achieved. The improvement in efficiency would potentially lead to R5.2m in annual energy cost savings. In addition, a significant improvement of 15 kPa in system pressure during the drilling period was identified. Other scenarios showed annual energy cost savings of up to R2.5m.
+The results of Case Study 2 showed that by reducing air usage at refuge bays, an average power reduction of 1 megawatt ($MW$) could be achieved. The improvement in efficiency would potentially lead to R5.2m in annual energy cost savings. In addition, a significant improvement of 15 kPa in system pressure during the drilling period was identified. Other scenarios showed annual energy cost savings of up to R2.5m.
 	 \par 
 An additional analysis was performed to assess the use of periodically repeated simulations. The results demonstrated that operational changes in a system could be identified  through repeated simulations. It would therefore be possible to use this information for further improvement and cost savings.
 	 \par

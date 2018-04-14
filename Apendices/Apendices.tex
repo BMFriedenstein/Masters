@@ -31,7 +31,7 @@
 \begin{figure}[h!]
 	\centering
 	\fbox{\includegraphics[trim =0cm 0 0cm 0cm,width=0.8\textwidth]{Images/A/Kus/surface}}
-	\caption{Mine B simulation schematic -- surface air users}
+	\caption{Mine B simulation schematic -- Surface air users}
 	\label{fig: KUS surface model}
 \end{figure}
 \clearpage
@@ -63,6 +63,44 @@
 %		\caption{Mine B: Simulation process flow diagram for the station isolation stope control.}
 %		\label{fig: Stope layout}
 %	\end{figure}
+\newpage
+\chapter{\hspace{0.3cm}Error Calculations}\label{Firstprinciplecalcualtions}
+
+The mean residual difference ($\bar{R}$), Mean Absolute Error (MAE) and the coefficient of determination were determined in the verification step of the methodology. The following calculation was utilised for total flow, power and compressor outlet pressure in each case. 
+
+\begin{equation}
+Mean\ residual\ difference\ \left(\bar{R} \right) = \left| \dfrac{1}{720} \sum_{n=1}^{720}{ \left( A_{n} - S_{n}\right)} \right|
+\end{equation}
+
+\begin{equation}
+Mean\ absolute\ error\ \left(MAE\right) = \dfrac{1}{720}\sum_{n=1}^{720}{\left|A_{n} - S_{n}\right| }
+\end{equation}
+
+\begin{equation}
+\label{eq: Correlation coefficient}
+r = \dfrac{\sum_{n=1}^{720}(A_n - \bar{A})(S_n - \bar{S})}{\sqrt{\sum_{n=1}^{720}(A_n - \bar{A})^2 \cdot \sum_{n=1}^{720}(S_n - \bar{S})^2}}
+\end{equation}
+\par A simulation resolution of 2 minutes relates to $N=720$ for a 24 hour simulation period.\\
+\begin{table}[h!]
+	\caption{Error calculation input data}
+	\centering
+	\begin{tabular}{p{0.5cm}|p{2.8cm}|p{2.8cm}}
+		\hline
+		n &Actual (A) & Simulation (S)\\
+		\hline
+		1 & $A_1$ & $S_1$\\
+		2 & $A_2$ & $S_2$\\
+		3 & $A_3$ & $S_3$\\
+		$\cdot \cdot \cdot$ & $\cdot \cdot \cdot$ & $\cdot \cdot \cdot$\\
+		$\cdot \cdot \cdot$ & $\cdot \cdot \cdot$ & $\cdot \cdot \cdot$\\
+		$\cdot \cdot \cdot$ & $\cdot \cdot \cdot$ & $\cdot \cdot \cdot$\\
+		718 & $A_{718}$ & $S_{718}$\\
+		719 & $A_{719}$ & $S_{719}$\\
+		720 & $A_720$ & $S_720$\\		
+		\hline
+	\end{tabular} 
+\end{table}
+
 \chapter{\hspace{0.3cm}Model components verification}\label{Verification}
 \newpage
 \begin{table}[h!]
